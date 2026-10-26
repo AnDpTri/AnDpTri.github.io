@@ -1,4 +1,5 @@
 import {MonochromeSignal} from './signal.js';
+import {fontAssets} from './assets/fonts/load.js';
 
 // Shared by the live visuals and the offline audio preview (seconds after connect).
 export const CONNECTION_BEATS=Object.freeze([
@@ -8,9 +9,13 @@ export const CONNECTION_BEATS=Object.freeze([
  {at:17.3,phase:'settle'}, {at:17.8,phase:'complete'}
 ]);
 const $=s=>document.querySelector(s);
-const dataURL=blob=>new Promise((resolve,reject)=>{const r=new FileReader();r.onload=()=>resolve(r.result);r.onerror=reject;r.readAsDataURL(blob);});
+const clockFormat=new Intl.DateTimeFormat('en-GB',{hour:'2-digit',minute:'2-digit',second:'2-digit',hour12:false});
 const imageFrom=async src=>{const image=new Image();image.src=src;await image.decode();return image;};
-async function resource(url){const r=await fetch(url);if(!r.ok)throw Error(`Connection resource: ${r.status}`);return r;}
+function snapshotStyles(){
+ // CSSOM is already parsed and available, even when HTTP caching is disabled.
+ return [...document.styleSheets].filter(sheet=>sheet.href&&['style.css','opening.css'].includes(new URL(sheet.href).pathname.split('/').pop()))
+  .flatMap(sheet=>[...sheet.cssRules].map(rule=>rule.cssText)).join('\n');
+}
 
 // Render the existing DOM, with its existing stylesheet and fonts, into the tear.
 // No imitation profile, changed content or delayed entrance is involved.
@@ -19,7 +24,7 @@ async function photographProfile(css,fonts,opening=false){
  const root=document.createElement('div');root.setAttribute('xmlns','http://www.w3.org/1999/xhtml');
  root.className=opening?'snapshot intro-active':'snapshot';
  root.style.cssText=`width:${width}px;height:${height}px;overflow:hidden;background:#0a0a0a;color:#eeeeea;font:16px/1.65 'IBM Plex Mono',monospace;--bg:#0a0a0a;--panel:#101010;--ink:#eeeeea;--muted:#a5a5a1;--line:#363636`;
- const style=document.createElement('style');style.textContent=css.replaceAll('body:after','.snapshot:after').replaceAll('body:before','.snapshot:before')+fonts+' #page{width:100%}';root.append(style);
+ const style=document.createElement('style');style.textContent=css.replace(/body::?(before|after)/g,'.snapshot::$1')+fonts+' #page{width:100%}';root.append(style);
  if(opening){
   const live=$('#opening'),clone=live.cloneNode(true),surfaces=[...live.querySelectorAll('canvas')];
   clone.querySelectorAll('canvas').forEach((copy,i)=>{
@@ -56,18 +61,16 @@ export class Opening{
   if(words[phase])$('#opening-announcement').textContent=words[phase];
  }
  async prepare(){
-  let done=0;const total=7;
+  let done=0;const total=6;
   const track=async task=>{const result=await task;done++;this.loaded=done/total;return result;};
-  const css=track(Promise.all(['style.css','opening.css'].map(url=>resource(url).then(r=>r.text()))).then(s=>s.join('\n')));
-  const font=track(resource('assets/fonts/font-3.woff2').then(r=>r.blob()).then(dataURL));
-  const display=track(resource('assets/fonts/font-0.woff2').then(r=>r.blob()).then(dataURL));
+  const css=track(Promise.resolve(snapshotStyles()));
+  const font=track(fontAssets);
   const map=track(Promise.race([imageFrom('eyecatch/assets/signal-map.png'),this.skipReady.then(()=>{
    const canvas=document.createElement('canvas');canvas.width=canvas.height=1;
    const ctx=canvas.getContext('2d');ctx.fillStyle='rgb(128,0,0)';ctx.fillRect(0,0,1,1);return canvas;
   })]));
   const ready=track(Promise.race([this.mainReady,this.skipReady]));
-  const [styles,mono,sans,measured]=await Promise.all([css,font,display,map,ready]);
-  const fonts=`@font-face{font-family:'IBM Plex Mono';font-weight:400;src:url('${mono}')}@font-face{font-family:'Be Vietnam Pro';font-weight:900;font-style:italic;src:url('${sans}')}`; // taste-skill-ignore: embeds the unchanged profile's actual font bytes into its capture.
+  const [styles,fonts,measured]=await Promise.all([css,font,map,ready]);
   this.capture=()=>photographProfile(styles,fonts);
   this.capturePanic=()=>photographProfile(styles,fonts,true);
   this.picture=await track(this.capture());
@@ -93,9 +96,10 @@ export class Opening{
   });
  }
  renderText(t){
-  const v=this.visitor,title=$('#boot-title'),status=$('#boot-status'),log=$('#system-log');
-  v.time=new Date().toLocaleTimeString('en-GB',{hour12:false});
-  const put=(text,detail,lines)=>{if(title.dataset.copy!==text){title.textContent=text;title.dataset.copy=text;}status.textContent=detail;log.textContent=lines;};
+  const v=this.visitor,{title,status,log,boot}=this.dom;
+  const second=Math.floor(Date.now()/1000);
+  if(v.second!==second){v.second=second;v.time=clockFormat.format(new Date());}
+  const put=(text,detail,lines)=>{if(title.dataset.copy!==text){title.textContent=text;title.dataset.copy=text;}if(status.textContent!==detail)status.textContent=detail;if(log.textContent!==lines)log.textContent=lines;};
   if(this.phase==='calm'){
    put('Link established.', 'Opening An’s personal file.',`archive.mount / personal_file.enc\nread-only session requested\n${t>1.1?'guest channel ready':'waiting for handshake_'}`);
    if(!title.querySelector('.boot-cursor')){const cursor=document.createElement('span');cursor.className='boot-cursor';cursor.textContent='_';cursor.setAttribute('aria-hidden','true');title.append(cursor);}
@@ -111,13 +115,16 @@ export class Opening{
   if(this.phase==='panic'){
    const p=t-6.6;
    put('STOP!','Terminate this session.',context+`\n[EFAULT] display.sync: H_SYNC / unlock\n[ETIMEDOUT] archive.guard: no response\n${this.input??'stdin: HALT INPUT'}\n${p>1?'display.sync: KEEP CHANNEL OPEN':''}`);
-   if(!this.reduced.matches){const j=Math.sin(t*73)*Math.min(7,p*4);$('#boot').style.transform=`translate(${j}px,${Math.sin(t*31)*2}px)`;log.style.transform=`translateX(${Math.sin(t*109)*5}px)`;log.style.textShadow=Math.floor(t*12)%4===0?'5px 0 currentColor, 13px 0 #ff777750':'none';}
+   if(!this.reduced.matches){const j=Math.sin(t*73)*Math.min(7,p*4);boot.style.transform=`translate(${j}px,${Math.sin(t*31)*2}px)`;log.style.transform=`translateX(${Math.sin(t*109)*5}px)`;log.style.textShadow=Math.floor(t*12)%4===0?'5px 0 currentColor, 13px 0 #ff777750':'none';}
   }
  }
  renderSignal(t){
-  const card=$('#signal-card'),text=card.querySelector('p');
-  const bounds=text.getBoundingClientRect();
-  const width=Math.max(0,card.clientWidth-bounds.width),height=Math.max(0,card.clientHeight-bounds.height);
+  const {card,text}=this.dom;
+  if(!this.signalBounds){
+   const bounds=text.getBoundingClientRect();
+   this.signalBounds={width:Math.max(0,card.clientWidth-bounds.width),height:Math.max(0,card.clientHeight-bounds.height)};
+  }
+  const {width,height}=this.signalBounds;
   // Same rigid wall reflection as eyecatch/effect.js, at 330 CSS px/s.
   // Keep its final measured slope (349.6200 : 166.5751), with no easing or squash.
   const speed=330/Math.hypot(349.6200,166.5751);
@@ -149,6 +156,10 @@ export class Opening{
  }
  async run(){
   const opening=$('#opening'),boot=$('#boot'),card=$('#signal-card');
+  this.dom={boot,card,text:card.querySelector('p'),title:$('#boot-title'),status:$('#boot-status'),log:$('#system-log')};
+  this.signalBounds=null;
+  // A font becoming available or a viewport change invalidates the bounce extent.
+  void fontAssets.then(()=>{this.signalBounds=null;},()=>{});
   // A lost WebGL context cannot be reused by getContext() on the same canvas.
   // Give each replay a fresh surface after releasing the preceding GPU resources.
   const previous=$('#intro-canvas'),canvas=previous.cloneNode(false);previous.replaceWith(canvas);
@@ -177,7 +188,7 @@ export class Opening{
   try{
    await this.connect();const started=this.activeClock();let lastError=-1,collapsed=false;
    this.collapseCanvas=document.createElement('canvas');this.collapseCanvas.style.cssText='position:absolute;inset:0;width:100%;height:100%;z-index:4';this.collapseCanvas.hidden=true;opening.append(this.collapseCanvas);
-   const resize=()=>{this.visitor.viewport=`${innerWidth} × ${innerHeight}`;if(this.capture&&this.prepared){this.prepared=false;this.capture().then(picture=>{this.picture=picture;this.signal?.setPicture(picture);}).catch(error=>{this.fallback=error.message;this.signal?.destroy();this.signal=null;}).finally(()=>{this.prepared=true;});}};addEventListener('resize',resize);
+   const resize=()=>{this.signalBounds=null;this.visitor.viewport=`${innerWidth} × ${innerHeight}`;if(this.capture&&this.prepared){this.prepared=false;this.capture().then(picture=>{this.picture=picture;this.signal?.setPicture(picture);}).catch(error=>{this.fallback=error.message;this.signal?.destroy();this.signal=null;}).finally(()=>{this.prepared=true;});}};addEventListener('resize',resize);
    try{
     await new Promise((resolve,reject)=>{
      const draw=()=>{
@@ -196,7 +207,7 @@ export class Opening{
         this.reacquiredAt??=this.signal&&!this.reduced.matches?t:t-2.5;
        }
        // Real loading gates reacquisition, but never abbreviates the narrative.
-       const beat=[...CONNECTION_BEATS].reverse().find(b=>t>=b.at);
+       let beat=CONNECTION_BEATS[0];for(const candidate of CONNECTION_BEATS){if(t<candidate.at)break;beat=candidate;}
        if(!this.skipRequested&&t>=15.3&&this.prepared&&this.reacquiredAt===null){
         if(this.signal&&!this.reduced.matches){
          // Freeze and photograph the actual last NO SIGNAL frame before tearing it.
@@ -239,6 +250,9 @@ export class Opening{
    cancelAnimationFrame(this.frame);removeEventListener('pointermove',pointer);removeEventListener('pointerdown',pointer);removeEventListener('keydown',key);
    skipButton.removeEventListener('click',skip);skipButton.hidden=true;skipButton.disabled=false;
    this.collapseCanvas?.remove();this.signal?.destroy();canvas.style.visibility='hidden';this.prepared=false;this.reacquiredAt=null;
+   // Release the two full-viewport captures, their embedded data, and GPU wrapper.
+   this.signal=null;this.picture=null;this.lastPicture=null;this.collapseCanvas=null;
+   this.capture=null;this.capturePanic=null;this.skipSource=null;
   }
   void preparation;
  }

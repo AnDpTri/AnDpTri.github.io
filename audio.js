@@ -26,7 +26,7 @@ export class AudioScore {
       // Called directly inside a trusted gesture, before any await.
       await this.context.resume();
       this.next=this.context.currentTime+.015;
-      if(!this.timer)this.timer=setInterval(()=>this.schedule(),MIX.interval);
+      if(this.enabled)this.startScheduler();
       this.updateGain();return this.context.state==='running';
     } catch {return false;} // Unsupported audio must never block the portfolio.
   }
@@ -37,7 +37,9 @@ export class AudioScore {
       node.gain.cancelScheduledValues(t);node.gain.setTargetAtTime(value,t,.018);
     }
   }
-  setEnabled(value){this.enabled=value;this.updateGain();}
+  startScheduler(){if(!this.timer)this.timer=setInterval(()=>this.schedule(),MIX.interval);}
+  stopScheduler(){clearInterval(this.timer);this.timer=null;}
+  setEnabled(value){this.enabled=value;if(!value)this.stopScheduler();this.updateGain();}
   cancelNotes(t) {
     for(const voice of this.voices){
       voice.gain.gain.cancelScheduledValues(t);voice.gain.gain.setTargetAtTime(0,t,.006);
@@ -139,6 +141,6 @@ export class AudioScore {
   }
   async visibility(hidden) {
     if(!this.context)return;
-    try{if(hidden){this.cancelNotes(this.context.currentTime);await this.context.suspend();}else if(this.enabled){await this.context.resume();this.next=this.context.currentTime+.012;}}catch{/* browser interruption */}
+    try{if(hidden){this.stopScheduler();this.cancelNotes(this.context.currentTime);await this.context.suspend();}else if(this.enabled){await this.context.resume();this.next=this.context.currentTime+.012;this.startScheduler();}}catch{/* browser interruption */}
   }
 }

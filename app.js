@@ -1,9 +1,10 @@
 import {AudioScore} from './audio.js';
 import {Opening} from './opening.js?v=1793018626';
+import {fontAssets} from './assets/fonts/load.js';
 const $ = selector => document.querySelector(selector);
 const reduced = matchMedia('(prefers-reduced-motion: reduce)');
 const opening = $('#opening'), page = $('#page');
-const mainReady = Promise.all([document.fonts.ready, new Promise(resolve => document.readyState === 'complete' ? resolve() : addEventListener('load', resolve, {once:true}))]);
+const mainReady = Promise.all([fontAssets.catch(()=>{}), document.fonts.ready, new Promise(resolve => document.readyState === 'complete' ? resolve() : addEventListener('load', resolve, {once:true}))]);
 const score=new AudioScore();
 try{score.enabled=localStorage.getItem('thepeak.sound')!=='off';}catch{/* private storage */}
 const soundButton=$('#sound-toggle');
