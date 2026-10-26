@@ -28,11 +28,14 @@ updateSound();
 let finished=true, runId=0, replayPending=false;
 const connection=new Opening({score,cue,updateSound,mainReady,activeClock,reduced});
 window.__openingDebug={get phase(){return connection.phase;},get elapsed(){return connection.elapsed;},get loaded(){return connection.loaded;},get fallback(){return connection.fallback;},get webgl(){return !!connection.signal;}};
-async function runOpening(){
+const SEEN_KEY='thepeak.seen';
+const hasSeen=()=>{try{return localStorage.getItem(SEEN_KEY)==='1';}catch{return false;}};
+async function runOpening({returning=false}={}){
   if(!finished)return;
   finished=false;runId++;
   syncAmbient();
-  try{await connection.run();}catch(error){connection.fallback=error.message;}finally{
+  try{await connection.run({returning});}catch(error){connection.fallback=error.message;}finally{
+    try{localStorage.setItem(SEEN_KEY,'1');}catch{/* private storage: behave as a first visit every time */}
     opening.hidden=true;page.inert=false;document.body.classList.remove('intro-active');document.querySelector('#opening-controls').style.visibility='';
     finished=true;if(connection.phase!=='complete'){score.phase('complete');cue('complete');}updateSound();
     replayPending=false;syncAmbient();
@@ -175,4 +178,5 @@ if(/iPad|iPhone|iPod/.test(navigator.userAgent)||(navigator.platform==='MacIntel
   prompt.addEventListener('blur',()=>{viewport.content=original;});
 }
 updateClock();updateNetwork();addEventListener('online',updateNetwork);addEventListener('offline',updateNetwork);
-void runOpening();
+void runOpening({returning:hasSeen()});
+$('#replay')?.addEventListener('click',()=>execute('logout'));

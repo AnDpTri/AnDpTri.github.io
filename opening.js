@@ -87,11 +87,13 @@ export class Opening{
     if(event?.type==='keydown'&&(event.repeat||event.isComposing||['Tab','Shift','Control','Alt','Meta'].includes(event.key)))return;
     // The sound toggle has its own gesture, never starts the timeline accidentally.
     if(event?.target?.closest?.('#sound-toggle,#skip-opening'))return;
+    // Return visit: the first screen waits; a click or key is the same as pressing skip.
+    if(this.returning&&event&&event.type!=='skip'){this.skipNow?.();return;}
     clearTimeout(timer);removeEventListener('pointerdown',finish);removeEventListener('keydown',finish);$('#jack-in').hidden=true;this.finishConnect=null;
     if(event&&this.score.enabled)void this.score.unlock().then(this.updateSound);
     this.cue(event?'jack-in':'silent-timeout');resolve();
    };
-   const timer=setTimeout(()=>finish(),6000);addEventListener('pointerdown',finish);addEventListener('keydown',finish);
+   const timer=this.returning?0:setTimeout(()=>finish(),6000);addEventListener('pointerdown',finish);addEventListener('keydown',finish);
    this.finishConnect=()=>finish({type:'skip'});
   });
  }
@@ -154,7 +156,8 @@ export class Opening{
    if(width>0){ctx.drawImage(this.lastPicture,(w-width)/2,(h-height)/2,width,height);ctx.fillStyle='#eee';ctx.fillRect((w-width)/2,h/2,Math.max(2,width),p<.76?2:3);}
   }
  }
- async run(){
+ async run({returning=false}={}){
+  this.returning=returning;
   const opening=$('#opening'),boot=$('#boot'),card=$('#signal-card');
   this.dom={boot,card,text:card.querySelector('p'),title:$('#boot-title'),status:$('#boot-status'),log:$('#system-log')};
   this.signalBounds=null;
@@ -177,7 +180,7 @@ export class Opening{
    if(this.score.enabled)void this.score.unlock().then(this.updateSound);
    this.finishConnect?.();
   };
-  skipButton.addEventListener('click',skip);
+  this.skipNow=skip;skipButton.addEventListener('click',skip);
   opening.hidden=false;$('#page').inert=true;document.body.classList.add('intro-active');scrollTo({top:0,behavior:'instant'});
   boot.hidden=false;boot.style.cssText='';$('#system-log').style.cssText='';card.hidden=true;canvas.style.visibility='hidden';
   this.setPhase('calm');this.renderText(0);

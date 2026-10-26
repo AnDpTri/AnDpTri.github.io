@@ -55,3 +55,8 @@ body{min-height:100dvh;padding-bottom:var(--keyboard-space,0px)}
   .command-chips button:hover>span{background:var(--ink)}
   .command-chips button:active>span,.command-chips button.is-pressed>span{background:var(--ink);color:#101010}
 }
+
+/* Small, quiet replay control; the hit area is enlarged without changing the layout. */
+#replay{position:relative;margin-left:.9em;padding:0;border:0;background:none;color:inherit;font:inherit;cursor:pointer;opacity:.7;text-decoration:none}
+#replay::after{content:"";position:absolute;inset:-14px -10px}
+#replay:hover,#replay:focus-visible{opacity:1;color:var(--ink,#eeeeea)}
