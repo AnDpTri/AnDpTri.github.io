@@ -1,0 +1,16 @@
+{
+ "first": 20,
+ "count": 61,
+ "ranges": [
+  [
+   20,
+   80
+  ]
+ ],
+ "fps": 24,
+ "pattern": "neon-{n}.webp",
+ "pad": 4,
+ "width": 1920,
+ "height": 1080,
+ "note": "Source frames k (k=1 -> source 12.8317 s), recording logo/UI removed by exemplar inpainting; main local time of frame k = (k-1)/24"
+}

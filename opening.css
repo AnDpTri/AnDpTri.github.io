@@ -1,0 +1,32 @@
+/* Version B is a full-screen connection, separate from the preserved profile. */
+#opening{background:#000;padding:clamp(24px,5vw,80px);overflow:hidden;color:#eee;font-family:'Be Vietnam Pro',Arial,sans-serif}
+#boot{max-width:none;margin:0;width:100%;align-self:center;transform-origin:center}
+#opening #boot-title{font:900 clamp(52px,9vw,136px)/1.05 'Be Vietnam Pro',Arial,sans-serif;letter-spacing:-.055em;margin:0 0 32px;max-width:14ch}
+#opening #boot-status{font:400 clamp(16px,2vw,24px)/1.5 Arial,sans-serif;color:#eee;margin:0 0 32px;max-width:50ch}
+.boot-cursor{animation:blink 1.3s steps(1) infinite}
+#system-log{font:400 clamp(13px,1.4vw,20px)/1.6 'IBM Plex Mono',monospace;white-space:pre-wrap;overflow-wrap:anywhere;margin:0;max-width:100%;height:5em;overflow:hidden;color:#bdbdbd}
+#opening #jack-in{display:block;animation:none;min-height:48px;font:400 16px/1.5 Arial,sans-serif!important;text-decoration:underline;text-underline-offset:7px;padding:12px 0;margin:8px 0 0;text-align:left}
+#opening #intro-canvas{z-index:2;visibility:hidden}
+#signal-card{position:absolute;inset:0;display:grid;place-items:center;z-index:3;background:#000}
+#signal-card p{position:absolute;left:0;top:0;white-space:nowrap;font:italic 900 clamp(32px,6.8vw,94px)/1 'Be Vietnam Pro',Arial,sans-serif;margin:0;letter-spacing:.04em}
+#opening[data-phase=alarm] #boot-title,#opening[data-phase=panic] #boot-title{color:#ff5252}
+#opening[data-phase=alarm] #system-log,#opening[data-phase=panic] #system-log{color:#ff7777;height:17.6em}
+#opening[data-phase=alarm] #boot-status,#opening[data-phase=panic] #boot-status{color:#ff7777}
+#opening[data-phase=alarm] #boot-title{font-size:clamp(58px,11vw,158px)}
+#opening[data-phase=panic] #boot-title{font-size:clamp(70px,13vw,184px);max-width:12ch}
+#opening[data-phase=alarm] #boot,#opening[data-phase=panic] #boot{align-self:start;padding-top:3vh}
+.opening-sr{position:absolute;width:1px;height:1px;padding:0;overflow:hidden;clip-path:inset(50%);white-space:nowrap}
+/* The existing sound control stays usable; the black/silence beat is absolute. */
+.intro-active #sound-toggle{background:#000}
+.intro-active:has(#opening[data-phase=blackout]) #hud{visibility:hidden}
+.intro-active:before,.intro-active:after{display:none}
+@media(max-width:540px){
+  #opening{padding:24px}
+  #opening #boot-title{font-size:58px;margin-bottom:24px}
+  #opening #boot-status{font-size:18px;max-width:28ch;margin-bottom:24px}
+  #system-log{font-size:13px;line-height:1.6;height:8em}
+  #opening[data-phase=alarm] #boot-title{font-size:66px}
+  #opening[data-phase=panic] #boot-title{font-size:76px}
+  #opening[data-phase=alarm] #system-log,#opening[data-phase=panic] #system-log{height:17.6em}
+}
+@media(prefers-reduced-motion:reduce){#opening #boot-title{font-size:clamp(48px,8vw,100px)}#opening #system-log{height:8em}}
