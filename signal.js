@@ -1,5 +1,6 @@
 // The measured map contains displacement / static coverage, never source imagery.
-// One build → burst → settle envelope; all outputs are strictly monochrome.
+// One build → burst → settle envelope; the profile stays monochrome.
+// The outgoing screen keeps its live colours until the tear replaces it.
 const vertex=`attribute vec2 position;varying vec2 uv;
 void main(){uv=vec2((position.x+1.)*.5,(1.-position.y)*.5);gl_Position=vec4(position,0.,1.);}`;
 const fragment=`precision highp float;
@@ -27,9 +28,9 @@ void main(){
  float burst=smoothstep(.08,.2,p)*(1.-smoothstep(.29,.58,p));
  float noise=max(m.b*force,burst*.65)*snow;
  vec3 source=texture2D(outgoing,clamp(q,0.,1.)).rgb;
- float c=mix(dot(source,vec3(.2126,.7152,.0722)),luma,reveal);c=mix(c,.86,noise);
- c=mix(c,dot(texture2D(picture,uv).rgb,vec3(.2126,.7152,.0722)),smoothstep(.88,1.,p));
- gl_FragColor=vec4(vec3(c),1.);
+ vec3 c=mix(source,vec3(luma),reveal);c=mix(c,vec3(.86),noise);
+ c=mix(c,vec3(dot(texture2D(picture,uv).rgb,vec3(.2126,.7152,.0722))),smoothstep(.88,1.,p));
+ gl_FragColor=vec4(c,1.);
 }`;
 export class MonochromeSignal{
  constructor(canvas,map){

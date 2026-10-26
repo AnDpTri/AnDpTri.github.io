@@ -16,11 +16,16 @@
 #opening[data-phase=panic] #boot-title{font-size:clamp(70px,13vw,184px);max-width:12ch}
 #opening[data-phase=alarm] #boot,#opening[data-phase=panic] #boot{align-self:start;padding-top:3vh}
 .opening-sr{position:absolute;width:1px;height:1px;padding:0;overflow:hidden;clip-path:inset(50%);white-space:nowrap}
-/* The existing sound control stays usable; the black/silence beat is absolute. */
+/* Opening controls stay reachable throughout the sequence. */
 .intro-active #sound-toggle{background:#000}
-.intro-active:has(#opening[data-phase=blackout]) #hud{visibility:hidden}
+#opening-controls{display:flex;align-items:center;gap:8px}
+.intro-active #hud>#opening-controls{visibility:visible}
+#skip-opening{font:inherit;white-space:nowrap;min-height:32px;padding:0 6px}
+.intro-active #skip-opening{pointer-events:auto;background:#000}
+#skip-opening:disabled{cursor:wait}
 .intro-active:before,.intro-active:after{display:none}
 @media(max-width:540px){
+  #skip-opening{min-height:36px;padding:0}
   #opening{padding:24px}
   #opening #boot-title{font-size:58px;margin-bottom:24px}
   #opening #boot-status{font-size:18px;max-width:28ch;margin-bottom:24px}

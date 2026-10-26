@@ -26,7 +26,7 @@ async function runOpening(){
   try{await connection.run();}catch(error){connection.fallback=error.message;}finally{
     opening.hidden=true;page.inert=false;document.body.classList.remove('intro-active');
     finished=true;if(connection.phase!=='complete'){score.phase('complete');cue('complete');}updateSound();
-    if(runId>1){$('#name').tabIndex=-1;$('#name').focus({preventScroll:true});}
+    if(runId>1||connection.skipRequested){$('#name').tabIndex=-1;$('#name').focus({preventScroll:true});}
     if(location.hash){try{document.querySelector(location.hash)?.scrollIntoView();}catch{}}
   }
 }

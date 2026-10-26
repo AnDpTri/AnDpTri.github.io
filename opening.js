@@ -17,11 +17,20 @@ async function resource(url){const r=await fetch(url);if(!r.ok)throw Error(`Conn
 async function photographProfile(css,fonts,opening=false){
  const width=innerWidth,height=innerHeight;
  const root=document.createElement('div');root.setAttribute('xmlns','http://www.w3.org/1999/xhtml');
- root.className='snapshot';
+ root.className=opening?'snapshot intro-active':'snapshot';
  root.style.cssText=`width:${width}px;height:${height}px;overflow:hidden;background:#0a0a0a;color:#eeeeea;font:16px/1.65 'IBM Plex Mono',monospace;--bg:#0a0a0a;--panel:#101010;--ink:#eeeeea;--muted:#a5a5a1;--line:#363636`;
  const style=document.createElement('style');style.textContent=css.replaceAll('body:after','.snapshot:after').replaceAll('body:before','.snapshot:before')+fonts+' #page{width:100%}';root.append(style);
- if(opening){const clone=$('#opening').cloneNode(true);clone.querySelectorAll('canvas').forEach(c=>c.remove());root.append(clone);}
- else root.append($('#page').cloneNode(true),$('#hud').cloneNode(true));
+ if(opening){
+  const live=$('#opening'),clone=live.cloneNode(true),surfaces=[...live.querySelectorAll('canvas')];
+  clone.querySelectorAll('canvas').forEach((copy,i)=>{
+   const surface=surfaces[i];
+   if(surface.hidden||getComputedStyle(surface).visibility==='hidden'||!surface.width||!surface.height){copy.remove();return;}
+   const image=document.createElement('img');
+   for(const {name,value} of copy.attributes)image.setAttribute(name,value);
+   image.src=surface.toDataURL();copy.replaceWith(image);
+  });root.append(clone);
+ }
+ else{root.append($('#page').cloneNode(true),$('#hud').cloneNode(true));root.querySelector('#skip-opening').hidden=true;}
  const xml=new XMLSerializer().serializeToString(root);
  const svg=`<svg xmlns="http://www.w3.org/2000/svg" width="${width}" height="${height}"><foreignObject width="100%" height="100%">${xml}</foreignObject></svg>`;
  const image=await imageFrom('data:image/svg+xml;charset=utf-8,'+encodeURIComponent(svg));
@@ -50,8 +59,11 @@ export class Opening{
   const css=track(Promise.all(['style.css','opening.css'].map(url=>resource(url).then(r=>r.text()))).then(s=>s.join('\n')));
   const font=track(resource('assets/fonts/font-3.woff2').then(r=>r.blob()).then(dataURL));
   const display=track(resource('assets/fonts/font-0.woff2').then(r=>r.blob()).then(dataURL));
-  const map=track(imageFrom('eyecatch/assets/signal-map.png'));
-  const ready=track(this.mainReady);
+  const map=track(Promise.race([imageFrom('eyecatch/assets/signal-map.png'),this.skipReady.then(()=>{
+   const canvas=document.createElement('canvas');canvas.width=canvas.height=1;
+   const ctx=canvas.getContext('2d');ctx.fillStyle='rgb(128,0,0)';ctx.fillRect(0,0,1,1);return canvas;
+  })]));
+  const ready=track(Promise.race([this.mainReady,this.skipReady]));
   const [styles,mono,sans,measured]=await Promise.all([css,font,display,map,ready]);
   const fonts=`@font-face{font-family:'IBM Plex Mono';font-weight:400;src:url('${mono}')}@font-face{font-family:'Be Vietnam Pro';font-weight:900;font-style:italic;src:url('${sans}')}`; // taste-skill-ignore: embeds the unchanged profile's actual font bytes into its capture.
   this.capture=()=>photographProfile(styles,fonts);
@@ -69,12 +81,13 @@ export class Opening{
    const finish=event=>{
     if(event?.type==='keydown'&&(event.repeat||event.isComposing||['Tab','Shift','Control','Alt','Meta'].includes(event.key)))return;
     // The sound toggle has its own gesture, never starts the timeline accidentally.
-    if(event?.target?.closest?.('#sound-toggle'))return;
-    clearTimeout(timer);removeEventListener('pointerdown',finish);removeEventListener('keydown',finish);$('#jack-in').hidden=true;
+    if(event?.target?.closest?.('#sound-toggle,#skip-opening'))return;
+    clearTimeout(timer);removeEventListener('pointerdown',finish);removeEventListener('keydown',finish);$('#jack-in').hidden=true;this.finishConnect=null;
     if(event&&this.score.enabled)void this.score.unlock().then(this.updateSound);
     this.cue(event?'jack-in':'silent-timeout');resolve();
    };
    const timer=setTimeout(()=>finish(),6000);addEventListener('pointerdown',finish);addEventListener('keydown',finish);
+   this.finishConnect=()=>finish({type:'skip'});
   });
  }
  renderText(t){
@@ -140,6 +153,18 @@ export class Opening{
   this.phase=null;this.elapsed=0;this.loaded=0;this.input=null;this.signal=null;this.lastPicture=null;this.visitor=visitor();this.prepared=false;this.reacquiredAt=null;this.panicCaptured=false;this.burst=false;this.fallback=null;
   this.signalStart={x:Math.random(),y:Math.random(),dx:Math.random()<.5?-1:1,dy:Math.random()<.5?-1:1};
   this.signalCapturing=false;this.signalCaptured=false;this.signalFrozenAt=null;this.lastSignalAt=null;
+  this.capture=null;this.capturePanic=null;this.skipRequested=false;this.skipStarted=false;this.skipCaptured=false;this.skipSource=null;
+  this.skipReady=new Promise(resolve=>{this.resolveSkip=resolve;});
+  const skipButton=$('#skip-opening');skipButton.hidden=false;skipButton.disabled=false;
+  const skip=()=>{
+   if(this.skipRequested||this.phase==='complete')return;
+   this.skipRequested=true;skipButton.disabled=true;this.resolveSkip();
+   // Serialize the current DOM and visible canvas surfaces at the click itself.
+   if(this.capturePanic)this.skipSource=this.capturePanic().catch(()=>null);
+   if(this.score.enabled)void this.score.unlock().then(this.updateSound);
+   this.finishConnect?.();
+  };
+  skipButton.addEventListener('click',skip);
   opening.hidden=false;$('#page').inert=true;document.body.classList.add('intro-active');scrollTo({top:0,behavior:'instant'});
   boot.hidden=false;boot.style.cssText='';$('#system-log').style.cssText='';card.hidden=true;canvas.style.visibility='hidden';
   this.setPhase('calm');this.renderText(0);
@@ -156,9 +181,20 @@ export class Opening{
      const draw=()=>{
       try{
        const t=this.elapsed=(this.activeClock()-started)/1000;
+       if(this.skipRequested){
+        if(!this.prepared){this.frame=requestAnimationFrame(draw);return;}
+        if(!this.skipStarted){
+         this.skipStarted=true;this.reacquiredAt=null;this.burst=false;
+         if(this.signal&&!this.reduced.matches){
+          void (this.skipSource??this.capturePanic()).then(picture=>{if(!picture)throw Error('Opening capture unavailable');this.signal?.setSource(picture);}).catch(error=>{this.fallback=error.message;this.signal?.destroy();this.signal=null;}).finally(()=>{this.skipCaptured=true;});
+         }else this.skipCaptured=true;
+        }
+        if(!this.skipCaptured){this.frame=requestAnimationFrame(draw);return;}
+        this.reacquiredAt??=this.signal&&!this.reduced.matches?t:t-2.5;
+       }
        // Real loading gates reacquisition, but never abbreviates the narrative.
        const beat=[...CONNECTION_BEATS].reverse().find(b=>t>=b.at);
-       if(t>=15.3&&this.prepared&&this.reacquiredAt===null){
+       if(!this.skipRequested&&t>=15.3&&this.prepared&&this.reacquiredAt===null){
         if(this.signal&&!this.reduced.matches){
          // Freeze and photograph the actual last NO SIGNAL frame before tearing it.
          if(!this.signalCapturing){
@@ -169,14 +205,14 @@ export class Opening{
         }else this.reacquiredAt=t;
        }
        const since=this.reacquiredAt===null?null:t-this.reacquiredAt;
-       const next=t<15.3?beat.phase:since===null?'no-signal':since<2?'reacquire':since<2.5?'settle':'complete';
+       const next=!this.skipRequested&&t<15.3?beat.phase:since===null?'no-signal':since<2?'reacquire':since<2.5?'settle':'complete';
        this.setPhase(next);
        if(['calm','unease','alarm','panic'].includes(this.phase))this.renderText(t);
        if(['alarm','panic'].includes(this.phase)){
         this.score.intensity=Math.min(1,(t-4.2)/4.5);const slot=Math.floor(t*(this.phase==='panic'?7:3));
         if(slot!==lastError){lastError=slot;this.cue('error-burst');}
        }
-       if(t>8.55&&!this.panicCaptured&&this.capturePanic){this.panicCaptured=true;void this.capturePanic().then(picture=>{this.lastPicture=picture;}).catch(()=>{});}
+       if(!this.skipRequested&&t>8.55&&!this.panicCaptured&&this.capturePanic){this.panicCaptured=true;void this.capturePanic().then(picture=>{this.lastPicture=picture;}).catch(()=>{});}
        if(this.phase==='collapse'){
         if(!collapsed){collapsed=true;this.lastPicture??=this.picture??document.createElement('canvas');this.collapseCanvas.width=innerWidth;this.collapseCanvas.height=innerHeight;}
         this.renderCollapse(t);
@@ -198,6 +234,7 @@ export class Opening{
    }finally{removeEventListener('resize',resize);}
   }finally{
    cancelAnimationFrame(this.frame);removeEventListener('pointermove',pointer);removeEventListener('pointerdown',pointer);removeEventListener('keydown',key);
+   skipButton.removeEventListener('click',skip);skipButton.hidden=true;skipButton.disabled=false;
    this.collapseCanvas?.remove();this.signal?.destroy();canvas.style.visibility='hidden';this.prepared=false;this.reacquiredAt=null;
   }
   void preparation;
