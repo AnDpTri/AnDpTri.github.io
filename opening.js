@@ -240,3 +240,6 @@ export class Opening{
   void preparation;
  }
 }
+
+// Esc skips the opening from the keyboard too.
+addEventListener('keydown',e=>{if(e.key==='Escape'){const b=document.querySelector('#skip-opening');if(b&&!b.hidden&&!b.disabled)b.click();}});
