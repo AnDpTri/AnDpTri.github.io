@@ -115,5 +115,5 @@ async function runSkip(width,phase,time,keyboard){
   const compare=(a,b)=>{let differentSamples=0,maxDifference=0,squared=0;for(let i=0;i<a.length;i++){const delta=Math.abs(a[i]-b[i]);if(delta)differentSamples++;maxDifference=Math.max(maxDifference,delta);squared+=delta*delta;}return {differentSamples,maxDifference,rmsDifference:Math.sqrt(squared/a.length)};};
   return {samples:buffers[0].length,beforeAfter:compare(buffers[0],buffers[1]),baselineRepeat:compare(buffers[0],buffers[2])};
  });console.log('audio comparison',audio);assert(audio.beforeAfter.maxDifference<=1e-5&&audio.beforeAfter.rmsDifference<=1e-7);results.push({test:'offline audio PCM',...audio,pass:true});await page.close();
- console.log(JSON.stringify({passed:results.length,results},null,2));fs.writeFileSync(path.join(__dirname,process.env.VERIFY_MEDIA_ONLY?'media-verification.json':'verification.json'),JSON.stringify({passed:results.length,results},null,2));
+ console.log(JSON.stringify({passed:results.length,results},null,2));fs.writeFileSync(path.join(__dirname,process.env.VERIFY_OUT||(process.env.VERIFY_MEDIA_ONLY?'media-verification.json':'verification.json')),JSON.stringify({passed:results.length,results},null,2));
 })().catch(error=>{console.error(error);process.exitCode=1;}).finally(async()=>{await browser?.close();});

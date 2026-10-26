@@ -1,0 +1,527 @@
+{
+  "checks": [
+    {
+      "name": "baseline: one AudioContext across 5 replays",
+      "pass": true
+    },
+    {
+      "name": "after: one AudioContext across 5 replays",
+      "pass": true
+    },
+    {
+      "name": "replay: DOM nodes stable after GC",
+      "pass": true
+    },
+    {
+      "name": "replay: listeners stable after GC",
+      "pass": true
+    },
+    {
+      "name": "handover heading focus without scroll",
+      "pass": true
+    },
+    {
+      "name": "command: help",
+      "pass": true
+    },
+    {
+      "name": "command: whoami",
+      "pass": true
+    },
+    {
+      "name": "command: projects --all",
+      "pass": true
+    },
+    {
+      "name": "command: contact",
+      "pass": true
+    },
+    {
+      "name": "command: sudo",
+      "pass": true
+    },
+    {
+      "name": "command: hack",
+      "pass": true
+    },
+    {
+      "name": "command: thepeak",
+      "pass": true
+    },
+    {
+      "name": "command: not-a-command",
+      "pass": true
+    },
+    {
+      "name": "command: clear",
+      "pass": true
+    },
+    {
+      "name": "Escape clears prompt",
+      "pass": true
+    },
+    {
+      "name": "history up",
+      "pass": true
+    },
+    {
+      "name": "history down",
+      "pass": true
+    },
+    {
+      "name": "output log is polite live region",
+      "pass": true
+    },
+    {
+      "name": "prompt accessible name",
+      "pass": true
+    },
+    {
+      "name": "chip accessible name: help",
+      "pass": true
+    },
+    {
+      "name": "chip accessible name: projects",
+      "pass": true
+    },
+    {
+      "name": "chip accessible name: contact",
+      "pass": true
+    },
+    {
+      "name": "chip accessible name: logout ↗",
+      "pass": true
+    },
+    {
+      "name": "skip link in keyboard order",
+      "pass": true
+    },
+    {
+      "name": "skip link visible on keyboard focus",
+      "pass": true
+    },
+    {
+      "name": "skip reaches main",
+      "pass": true
+    },
+    {
+      "name": "resize after opening: no overflow",
+      "pass": true
+    },
+    {
+      "name": "keyboard viewport simulation: prompt above HUD",
+      "pass": true
+    },
+    {
+      "name": "pinch zoom is not treated as a keyboard",
+      "pass": true
+    },
+    {
+      "name": "keyboard space resets",
+      "pass": true
+    },
+    {
+      "name": "mobile tap targets >=44 CSS px",
+      "pass": true
+    },
+    {
+      "name": "chip transparent hit padding works",
+      "pass": true
+    },
+    {
+      "name": "hidden tab pauses ambient",
+      "pass": true
+    },
+    {
+      "name": "hidden tab has zero repeating JS timers",
+      "pass": true
+    },
+    {
+      "name": "visible tab resumes ambient",
+      "pass": true
+    },
+    {
+      "name": "reduced motion updates live",
+      "pass": true
+    },
+    {
+      "name": "all 9 commands open real tabs",
+      "pass": true
+    },
+    {
+      "name": "low power {\"hardwareConcurrency\":4,\"deviceMemory\":8}",
+      "pass": true
+    },
+    {
+      "name": "low power {\"hardwareConcurrency\":8,\"deviceMemory\":4}",
+      "pass": true
+    },
+    {
+      "name": "iOS viewport policy applies on focus",
+      "pass": true
+    },
+    {
+      "name": "mobile touch submit works",
+      "pass": true
+    },
+    {
+      "name": "mobile touch --all expands archive",
+      "pass": true
+    },
+    {
+      "name": "mobile touch feedback",
+      "pass": true
+    },
+    {
+      "name": "iOS viewport policy restores on blur",
+      "pass": true
+    },
+    {
+      "name": "touch mobile has no horizontal scroll",
+      "pass": true
+    },
+    {
+      "name": "no console errors",
+      "pass": true
+    }
+  ],
+  "replays": [
+    {
+      "label": "baseline",
+      "samples": [
+        {
+          "replay": 0,
+          "heap": {
+            "usedSize": 2374672,
+            "totalSize": 3260416,
+            "embedderHeapUsedSize": 1106112,
+            "backingStorageSize": 244123
+          },
+          "dom": {
+            "documents": 2,
+            "nodes": 434,
+            "jsEventListeners": 48
+          },
+          "audioContexts": 1,
+          "voices": 0
+        },
+        {
+          "replay": 1,
+          "heap": {
+            "usedSize": 2421072,
+            "totalSize": 3260416,
+            "embedderHeapUsedSize": 1203088,
+            "backingStorageSize": 244155
+          },
+          "dom": {
+            "documents": 2,
+            "nodes": 426,
+            "jsEventListeners": 48
+          },
+          "audioContexts": 1,
+          "voices": 0
+        },
+        {
+          "replay": 2,
+          "heap": {
+            "usedSize": 2489304,
+            "totalSize": 3260416,
+            "embedderHeapUsedSize": 1207848,
+            "backingStorageSize": 244155
+          },
+          "dom": {
+            "documents": 2,
+            "nodes": 426,
+            "jsEventListeners": 48
+          },
+          "audioContexts": 1,
+          "voices": 0
+        },
+        {
+          "replay": 3,
+          "heap": {
+            "usedSize": 2498000,
+            "totalSize": 3260416,
+            "embedderHeapUsedSize": 1211200,
+            "backingStorageSize": 244155
+          },
+          "dom": {
+            "documents": 2,
+            "nodes": 426,
+            "jsEventListeners": 48
+          },
+          "audioContexts": 1,
+          "voices": 0
+        },
+        {
+          "replay": 4,
+          "heap": {
+            "usedSize": 2514296,
+            "totalSize": 3260416,
+            "embedderHeapUsedSize": 1217312,
+            "backingStorageSize": 244155
+          },
+          "dom": {
+            "documents": 2,
+            "nodes": 426,
+            "jsEventListeners": 48
+          },
+          "audioContexts": 1,
+          "voices": 0
+        },
+        {
+          "replay": 5,
+          "heap": {
+            "usedSize": 2515416,
+            "totalSize": 3260416,
+            "embedderHeapUsedSize": 1220720,
+            "backingStorageSize": 244155
+          },
+          "dom": {
+            "documents": 2,
+            "nodes": 426,
+            "jsEventListeners": 48
+          },
+          "audioContexts": 1,
+          "voices": 0
+        }
+      ]
+    },
+    {
+      "label": "after",
+      "samples": [
+        {
+          "replay": 0,
+          "heap": {
+            "usedSize": 2394856,
+            "totalSize": 3260416,
+            "embedderHeapUsedSize": 1445704,
+            "backingStorageSize": 249186
+          },
+          "dom": {
+            "documents": 3,
+            "nodes": 487,
+            "jsEventListeners": 58
+          },
+          "audioContexts": 1,
+          "voices": 0
+        },
+        {
+          "replay": 1,
+          "heap": {
+            "usedSize": 2441212,
+            "totalSize": 3260416,
+            "embedderHeapUsedSize": 1562760,
+            "backingStorageSize": 249213
+          },
+          "dom": {
+            "documents": 3,
+            "nodes": 479,
+            "jsEventListeners": 58
+          },
+          "audioContexts": 1,
+          "voices": 0
+        },
+        {
+          "replay": 2,
+          "heap": {
+            "usedSize": 2509756,
+            "totalSize": 3260416,
+            "embedderHeapUsedSize": 1567408,
+            "backingStorageSize": 249213
+          },
+          "dom": {
+            "documents": 3,
+            "nodes": 479,
+            "jsEventListeners": 58
+          },
+          "audioContexts": 1,
+          "voices": 0
+        },
+        {
+          "replay": 3,
+          "heap": {
+            "usedSize": 2527052,
+            "totalSize": 3260416,
+            "embedderHeapUsedSize": 1571160,
+            "backingStorageSize": 249213
+          },
+          "dom": {
+            "documents": 3,
+            "nodes": 479,
+            "jsEventListeners": 58
+          },
+          "audioContexts": 1,
+          "voices": 0
+        },
+        {
+          "replay": 4,
+          "heap": {
+            "usedSize": 2542564,
+            "totalSize": 3260416,
+            "embedderHeapUsedSize": 1576960,
+            "backingStorageSize": 249213
+          },
+          "dom": {
+            "documents": 3,
+            "nodes": 479,
+            "jsEventListeners": 58
+          },
+          "audioContexts": 1,
+          "voices": 0
+        },
+        {
+          "replay": 5,
+          "heap": {
+            "usedSize": 2543488,
+            "totalSize": 3260416,
+            "embedderHeapUsedSize": 1580632,
+            "backingStorageSize": 249213
+          },
+          "dom": {
+            "documents": 3,
+            "nodes": 479,
+            "jsEventListeners": 58
+          },
+          "audioContexts": 1,
+          "voices": 0
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "targets": [
+    {
+      "name": "AN / personal_file.enc",
+      "visual": {
+        "width": 133.5,
+        "height": 16.5
+      },
+      "hit": {
+        "width": 133.5,
+        "height": 44
+      }
+    },
+    {
+      "name": "all-projects",
+      "visual": {
+        "width": 84,
+        "height": 24.5
+      },
+      "hit": {
+        "width": 84,
+        "height": 44
+      }
+    },
+    {
+      "name": "andanghoang0@gmail.com ↗",
+      "visual": {
+        "width": 172.8125,
+        "height": 19.796875
+      },
+      "hit": {
+        "width": 172.8125,
+        "height": 44
+      }
+    },
+    {
+      "name": "github.com/AnDpTri ↗",
+      "visual": {
+        "width": 144,
+        "height": 19.796875
+      },
+      "hit": {
+        "width": 144,
+        "height": 44
+      }
+    },
+    {
+      "name": "prompt",
+      "visual": {
+        "width": 257.28125,
+        "height": 44
+      },
+      "hit": {
+        "width": 257.28125,
+        "height": 44
+      }
+    },
+    {
+      "name": "↵",
+      "visual": {
+        "width": 27.3125,
+        "height": 33
+      },
+      "hit": {
+        "width": 44,
+        "height": 44
+      }
+    },
+    {
+      "name": "help",
+      "visual": {
+        "width": 52.40625,
+        "height": 44
+      },
+      "hit": {
+        "width": 52.40625,
+        "height": 44
+      }
+    },
+    {
+      "name": "projects",
+      "visual": {
+        "width": 78.8125,
+        "height": 44
+      },
+      "hit": {
+        "width": 78.8125,
+        "height": 44
+      }
+    },
+    {
+      "name": "contact",
+      "visual": {
+        "width": 72.203125,
+        "height": 44
+      },
+      "hit": {
+        "width": 72.203125,
+        "height": 44
+      }
+    },
+    {
+      "name": "logout ↗",
+      "visual": {
+        "width": 78.8125,
+        "height": 44
+      },
+      "hit": {
+        "width": 78.8125,
+        "height": 44
+      }
+    },
+    {
+      "name": "sound-toggle",
+      "visual": {
+        "width": 57.609375,
+        "height": 44
+      },
+      "hit": {
+        "width": 57.609375,
+        "height": 44
+      }
+    }
+  ],
+  "opened": [
+    "https://github.com/AnDpTri/Top6-Phenikaa-AI-Hackathon-2026",
+    "https://github.com/AnDpTri/mvtec-anomaly-detection",
+    "https://github.com/AnDpTri/katana-zero-vi",
+    "https://github.com/AnDpTri/Traffic-Sign-Detection",
+    "http://localhost:4191/eyecatch/",
+    "https://github.com/AnDpTri/GEOMETRIC_GAZE_ESTIMATION",
+    "https://github.com/AnDpTri/nlp_chuan_hoa_dia_chi",
+    "https://github.com/AnDpTri/Viettel-Software",
+    "https://github.com/AnDpTri/viettel-backend-practice"
+  ]
+}

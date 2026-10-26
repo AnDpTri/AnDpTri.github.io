@@ -14,6 +14,7 @@
   <noscript><link rel="stylesheet" href="assets/fonts/fonts.css"></noscript>
 </head>
 <body>
+  <a class="skip-link" href="#main">Skip to personal file</a>
   <div id="opening" hidden aria-label="Personal file connection sequence">
     <canvas id="intro-canvas" aria-hidden="true"></canvas>
     <div id="boot">
@@ -27,7 +28,7 @@
   </div>
   <div id="page">
     <header class="masthead"><a href="#main">AN / <span>personal_file.enc</span></a><span>PUBLIC READ ACCESS</span></header>
-    <main id="main" class="terminal" aria-label="AnDpTri terminal portfolio">
+    <main id="main" class="terminal" tabindex="-1" aria-label="AnDpTri terminal portfolio">
       <div class="titlebar"><span class="window-mark" aria-hidden="true">[ &gt;_ ]</span><span>andptri@thepeak:~</span><span class="clearance">CLASSIFIED <span>/ CLEARANCE: GRANTED</span></span></div>
       <div class="session">
         <p class="login">last login: <time id="last-login">26 Oct 2026</time> from 192.0.2.26 <span>// guest session</span></p>
@@ -66,7 +67,7 @@
         <section class="shell" aria-label="Interactive terminal">
           <div id="command-history" role="log" aria-live="polite" aria-relevant="additions"></div>
           <form id="prompt-form" autocomplete="off"><label for="prompt"><span class="prompt-user">guest@thepeak</span>:~$</label><input id="prompt" name="command" type="text" spellcheck="false" autocapitalize="off" aria-label="Terminal command" placeholder="type help" maxlength="160"><span class="cursor" aria-hidden="true">█</span><button class="run-command" type="submit" aria-label="Run command">↵</button></form>
-          <div class="command-chips" aria-label="Quick commands"><button type="button" data-command="help">help</button><button type="button" data-command="projects">projects</button><button type="button" data-command="contact">contact</button><button type="button" data-command="logout">logout ↗</button></div>
+          <div class="command-chips" aria-label="Quick commands"><button type="button" data-command="help"><span>help</span></button><button type="button" data-command="projects"><span>projects</span></button><button type="button" data-command="contact"><span>contact</span></button><button type="button" data-command="logout"><span>logout ↗</span></button></div>
           <p class="shell-note">Read the file. Explore the work. Leave a message.</p>
         </section>
       </div>

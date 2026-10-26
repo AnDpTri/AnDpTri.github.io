@@ -1,0 +1,7215 @@
+{
+  "label": "baseline",
+  "network": "fast4g",
+  "run": 2,
+  "browser": "155.0.8059.85",
+  "completed": {
+    "at": 21180.20000001788,
+    "focus": "",
+    "scrollY": 0,
+    "fonts": "loaded",
+    "fallback": null
+  },
+  "idle": {
+    "seconds": 8,
+    "taskMs": 81.55800000000025,
+    "scriptMs": 7.009999999999961,
+    "layoutMs": 7.437999999999945
+  },
+  "actions": [
+    {
+      "name": "typing",
+      "start": 29257.5,
+      "end": 29689.59999999404,
+      "events": [
+        {
+          "name": "keydown",
+          "start": 29258.80000001192,
+          "duration": 16,
+          "processing": 1.300000011920929,
+          "id": 5738
+        },
+        {
+          "name": "keypress",
+          "start": 29258.80000001192,
+          "duration": 16,
+          "processing": 4.799999982118607,
+          "id": 5738
+        },
+        {
+          "name": "beforeinput",
+          "start": 29261.20000001788,
+          "duration": 16,
+          "processing": 0,
+          "id": 0
+        },
+        {
+          "name": "input",
+          "start": 29263.30000001192,
+          "duration": 16,
+          "processing": 0,
+          "id": 0
+        },
+        {
+          "name": "keydown",
+          "start": 29379.80000001192,
+          "duration": 16,
+          "processing": 0.4000000059604645,
+          "id": 5752
+        },
+        {
+          "name": "keypress",
+          "start": 29379.80000001192,
+          "duration": 16,
+          "processing": 2.0999999940395355,
+          "id": 5752
+        },
+        {
+          "name": "beforeinput",
+          "start": 29380.40000000596,
+          "duration": 16,
+          "processing": 0.19999998807907104,
+          "id": 0
+        },
+        {
+          "name": "input",
+          "start": 29381.70000001788,
+          "duration": 16,
+          "processing": 0,
+          "id": 0
+        }
+      ],
+      "paintProxies": [
+        {
+          "type": "keydown",
+          "start": 29259.80000001192,
+          "toNextPaint": 12.099999994039536
+        },
+        {
+          "type": "keydown",
+          "start": 29318.20000001788,
+          "toNextPaint": 7.0999999940395355
+        },
+        {
+          "type": "keydown",
+          "start": 29380.20000001788,
+          "toNextPaint": 9.399999976158142
+        },
+        {
+          "type": "keydown",
+          "start": 29442,
+          "toNextPaint": 6.4000000059604645
+        }
+      ],
+      "long": []
+    },
+    {
+      "name": "help",
+      "start": 29760.30000001192,
+      "end": 30001.09999999404,
+      "events": [
+        {
+          "name": "keydown",
+          "start": 29794.5,
+          "duration": 32,
+          "processing": 0.4000000059604645,
+          "id": 5773
+        },
+        {
+          "name": "keypress",
+          "start": 29794.5,
+          "duration": 32,
+          "processing": 8.599999994039536,
+          "id": 5773
+        },
+        {
+          "name": "beforeinput",
+          "start": 29795.40000000596,
+          "duration": 24,
+          "processing": 0,
+          "id": 0
+        },
+        {
+          "name": "click",
+          "start": 29795.40000000596,
+          "duration": 24,
+          "processing": 8.400000005960464,
+          "id": 5773
+        },
+        {
+          "name": "keyup",
+          "start": 29804.70000001788,
+          "duration": 16,
+          "processing": 0.20000001788139343,
+          "id": 5773
+        }
+      ],
+      "paintProxies": [
+        {
+          "type": "keydown",
+          "start": 29795,
+          "toNextPaint": 17.80000001192093
+        },
+        {
+          "type": "click",
+          "start": 29795.80000001192,
+          "toNextPaint": 17.099999994039536
+        }
+      ],
+      "long": []
+    },
+    {
+      "name": "projects",
+      "start": 30019.5,
+      "end": 30233.80000001192,
+      "events": [
+        {
+          "name": "keydown",
+          "start": 30030.09999999404,
+          "duration": 16,
+          "processing": 0.4000000059604645,
+          "id": 5780
+        },
+        {
+          "name": "keypress",
+          "start": 30030.09999999404,
+          "duration": 16,
+          "processing": 4.199999988079071,
+          "id": 5780
+        },
+        {
+          "name": "beforeinput",
+          "start": 30031.5,
+          "duration": 16,
+          "processing": 0,
+          "id": 0
+        },
+        {
+          "name": "click",
+          "start": 30031.5,
+          "duration": 16,
+          "processing": 3.7999999821186066,
+          "id": 5780
+        },
+        {
+          "name": "keyup",
+          "start": 30036.30000001192,
+          "duration": 16,
+          "processing": 0.29999998211860657,
+          "id": 5780
+        }
+      ],
+      "paintProxies": [
+        {
+          "type": "keydown",
+          "start": 30030.5,
+          "toNextPaint": 12.400000005960464
+        },
+        {
+          "type": "click",
+          "start": 30031.70000001788,
+          "toNextPaint": 11.199999988079071
+        }
+      ],
+      "long": []
+    },
+    {
+      "name": "projects --all",
+      "start": 30255.09999999404,
+      "end": 30482.30000001192,
+      "events": [
+        {
+          "name": "keydown",
+          "start": 30266.70000001788,
+          "duration": 32,
+          "processing": 0.5,
+          "id": 5787
+        },
+        {
+          "name": "keypress",
+          "start": 30266.70000001788,
+          "duration": 32,
+          "processing": 7.800000011920929,
+          "id": 5787
+        },
+        {
+          "name": "beforeinput",
+          "start": 30269.09999999404,
+          "duration": 32,
+          "processing": 0,
+          "id": 0
+        },
+        {
+          "name": "click",
+          "start": 30269.09999999404,
+          "duration": 32,
+          "processing": 7.4000000059604645,
+          "id": 5787
+        },
+        {
+          "name": "keyup",
+          "start": 30277.20000001788,
+          "duration": 24,
+          "processing": 0.19999998807907104,
+          "id": 5787
+        }
+      ],
+      "paintProxies": [
+        {
+          "type": "keydown",
+          "start": 30268.70000001788,
+          "toNextPaint": 19.5
+        },
+        {
+          "type": "click",
+          "start": 30269.30000001192,
+          "toNextPaint": 18.900000005960464
+        }
+      ],
+      "long": []
+    },
+    {
+      "name": "open 1",
+      "start": 30498.70000001788,
+      "end": 30747.40000000596,
+      "events": [
+        {
+          "name": "keydown",
+          "start": 30508.70000001788,
+          "duration": 72,
+          "processing": 0.4000000059604645,
+          "id": 5794
+        },
+        {
+          "name": "keypress",
+          "start": 30508.70000001788,
+          "duration": 72,
+          "processing": 27.900000005960464,
+          "id": 5794
+        },
+        {
+          "name": "beforeinput",
+          "start": 30509.5,
+          "duration": 72,
+          "processing": 0,
+          "id": 0
+        },
+        {
+          "name": "click",
+          "start": 30509.5,
+          "duration": 72,
+          "processing": 27.700000017881393,
+          "id": 5794
+        },
+        {
+          "name": "keyup",
+          "start": 30538.90000000596,
+          "duration": 40,
+          "processing": 0,
+          "id": 5794
+        }
+      ],
+      "paintProxies": [
+        {
+          "type": "keydown",
+          "start": 30509,
+          "toNextPaint": 51
+        },
+        {
+          "type": "click",
+          "start": 30509.59999999404,
+          "toNextPaint": 50.5
+        }
+      ],
+      "long": []
+    },
+    {
+      "name": "open 2",
+      "start": 30769.20000001788,
+      "end": 31009.70000001788,
+      "events": [
+        {
+          "name": "keydown",
+          "start": 30781.09999999404,
+          "duration": 56,
+          "processing": 0.30000001192092896,
+          "id": 5801
+        },
+        {
+          "name": "keypress",
+          "start": 30781.09999999404,
+          "duration": 56,
+          "processing": 25.599999994039536,
+          "id": 5801
+        },
+        {
+          "name": "beforeinput",
+          "start": 30781.90000000596,
+          "duration": 56,
+          "processing": 0,
+          "id": 0
+        },
+        {
+          "name": "click",
+          "start": 30781.90000000596,
+          "duration": 56,
+          "processing": 25.30000001192093,
+          "id": 5801
+        },
+        {
+          "name": "keyup",
+          "start": 30809.80000001192,
+          "duration": 24,
+          "processing": 0.30000001192092896,
+          "id": 5801
+        }
+      ],
+      "paintProxies": [
+        {
+          "type": "keydown",
+          "start": 30781.5,
+          "toNextPaint": 45.30000001192093
+        },
+        {
+          "type": "click",
+          "start": 30782.09999999404,
+          "toNextPaint": 44.900000005960464
+        }
+      ],
+      "long": []
+    },
+    {
+      "name": "open 3",
+      "start": 31033.40000000596,
+      "end": 31289.30000001192,
+      "events": [
+        {
+          "name": "keydown",
+          "start": 31044.59999999404,
+          "duration": 72,
+          "processing": 0.5999999940395355,
+          "id": 5808
+        },
+        {
+          "name": "keypress",
+          "start": 31044.59999999404,
+          "duration": 72,
+          "processing": 29.80000001192093,
+          "id": 5808
+        },
+        {
+          "name": "beforeinput",
+          "start": 31045.70000001788,
+          "duration": 72,
+          "processing": 0,
+          "id": 0
+        },
+        {
+          "name": "click",
+          "start": 31045.90000000596,
+          "duration": 72,
+          "processing": 29,
+          "id": 5808
+        },
+        {
+          "name": "keyup",
+          "start": 31076.70000001788,
+          "duration": 40,
+          "processing": 0.19999998807907104,
+          "id": 5808
+        }
+      ],
+      "paintProxies": [
+        {
+          "type": "keydown",
+          "start": 31045.09999999404,
+          "toNextPaint": 47
+        },
+        {
+          "type": "click",
+          "start": 31045.90000000596,
+          "toNextPaint": 46.599999994039536
+        }
+      ],
+      "long": []
+    },
+    {
+      "name": "open 4",
+      "start": 31314.80000001192,
+      "end": 31571.59999999404,
+      "events": [
+        {
+          "name": "keydown",
+          "start": 31326.70000001788,
+          "duration": 72,
+          "processing": 0.30000001192092896,
+          "id": 5815
+        },
+        {
+          "name": "keypress",
+          "start": 31326.70000001788,
+          "duration": 72,
+          "processing": 27.69999998807907,
+          "id": 5815
+        },
+        {
+          "name": "beforeinput",
+          "start": 31327.5,
+          "duration": 72,
+          "processing": 0.09999999403953552,
+          "id": 0
+        },
+        {
+          "name": "click",
+          "start": 31327.59999999404,
+          "duration": 72,
+          "processing": 27.5,
+          "id": 5815
+        },
+        {
+          "name": "keyup",
+          "start": 31358.20000001788,
+          "duration": 16,
+          "processing": 0,
+          "id": 5815
+        }
+      ],
+      "paintProxies": [
+        {
+          "type": "keydown",
+          "start": 31327.20000001788,
+          "toNextPaint": 44.79999998211861
+        },
+        {
+          "type": "click",
+          "start": 31327.59999999404,
+          "toNextPaint": 44.5
+        }
+      ],
+      "long": []
+    },
+    {
+      "name": "open 5",
+      "start": 31593.59999999404,
+      "end": 31834.09999999404,
+      "events": [
+        {
+          "name": "keydown",
+          "start": 31604.80000001192,
+          "duration": 56,
+          "processing": 0.20000001788139343,
+          "id": 5822
+        },
+        {
+          "name": "keypress",
+          "start": 31604.80000001192,
+          "duration": 56,
+          "processing": 27.099999994039536,
+          "id": 5822
+        },
+        {
+          "name": "beforeinput",
+          "start": 31605.40000000596,
+          "duration": 56,
+          "processing": 0,
+          "id": 0
+        },
+        {
+          "name": "click",
+          "start": 31605.40000000596,
+          "duration": 56,
+          "processing": 26.900000005960464,
+          "id": 5822
+        },
+        {
+          "name": "keyup",
+          "start": 31634.30000001192,
+          "duration": 32,
+          "processing": 0,
+          "id": 5822
+        }
+      ],
+      "paintProxies": [
+        {
+          "type": "keydown",
+          "start": 31605.20000001788,
+          "toNextPaint": 41.599999994039536
+        },
+        {
+          "type": "click",
+          "start": 31605.59999999404,
+          "toNextPaint": 41.20000001788139
+        }
+      ],
+      "long": []
+    },
+    {
+      "name": "open 6",
+      "start": 31856.09999999404,
+      "end": 32114.90000000596,
+      "events": [
+        {
+          "name": "keydown",
+          "start": 31867.30000001192,
+          "duration": 64,
+          "processing": 0.5,
+          "id": 5829
+        },
+        {
+          "name": "keypress",
+          "start": 31867.30000001192,
+          "duration": 64,
+          "processing": 27.5,
+          "id": 5829
+        },
+        {
+          "name": "beforeinput",
+          "start": 31868.59999999404,
+          "duration": 64,
+          "processing": 0,
+          "id": 0
+        },
+        {
+          "name": "click",
+          "start": 31868.59999999404,
+          "duration": 64,
+          "processing": 27.099999994039536,
+          "id": 5829
+        },
+        {
+          "name": "keyup",
+          "start": 31898.30000001192,
+          "duration": 32,
+          "processing": 0,
+          "id": 5829
+        }
+      ],
+      "paintProxies": [
+        {
+          "type": "keydown",
+          "start": 31868.09999999404,
+          "toNextPaint": 52.5
+        },
+        {
+          "type": "click",
+          "start": 31868.90000000596,
+          "toNextPaint": 51.69999998807907
+        }
+      ],
+      "long": []
+    },
+    {
+      "name": "open 7",
+      "start": 32138.70000001788,
+      "end": 32378.5,
+      "events": [
+        {
+          "name": "keydown",
+          "start": 32152.80000001192,
+          "duration": 40,
+          "processing": 0.29999998211860657,
+          "id": 5836
+        },
+        {
+          "name": "keypress",
+          "start": 32152.80000001192,
+          "duration": 40,
+          "processing": 24.5,
+          "id": 5836
+        },
+        {
+          "name": "beforeinput",
+          "start": 32153.59999999404,
+          "duration": 40,
+          "processing": 0,
+          "id": 0
+        },
+        {
+          "name": "click",
+          "start": 32153.59999999404,
+          "duration": 40,
+          "processing": 24.299999982118607,
+          "id": 5836
+        },
+        {
+          "name": "keyup",
+          "start": 32179.70000001788,
+          "duration": 16,
+          "processing": 0.19999998807907104,
+          "id": 5836
+        }
+      ],
+      "paintProxies": [
+        {
+          "type": "keydown",
+          "start": 32153.20000001788,
+          "toNextPaint": 38.39999997615814
+        },
+        {
+          "type": "click",
+          "start": 32153.70000001788,
+          "toNextPaint": 38.29999998211861
+        }
+      ],
+      "long": []
+    },
+    {
+      "name": "open 8",
+      "start": 32403.59999999404,
+      "end": 32640,
+      "events": [
+        {
+          "name": "keydown",
+          "start": 32415.30000001192,
+          "duration": 48,
+          "processing": 0.4000000059604645,
+          "id": 5843
+        },
+        {
+          "name": "keypress",
+          "start": 32415.30000001192,
+          "duration": 48,
+          "processing": 22.19999998807907,
+          "id": 5843
+        },
+        {
+          "name": "beforeinput",
+          "start": 32416,
+          "duration": 48,
+          "processing": 0,
+          "id": 0
+        },
+        {
+          "name": "click",
+          "start": 32416,
+          "duration": 48,
+          "processing": 22.099999994039536,
+          "id": 5843
+        },
+        {
+          "name": "keyup",
+          "start": 32441.59999999404,
+          "duration": 16,
+          "processing": 0.20000001788139343,
+          "id": 5843
+        }
+      ],
+      "paintProxies": [
+        {
+          "type": "keydown",
+          "start": 32415.70000001788,
+          "toNextPaint": 41
+        },
+        {
+          "type": "click",
+          "start": 32416.09999999404,
+          "toNextPaint": 40.70000001788139
+        }
+      ],
+      "long": []
+    },
+    {
+      "name": "open 9",
+      "start": 32661,
+      "end": 32902.09999999404,
+      "events": [
+        {
+          "name": "keydown",
+          "start": 32672.20000001788,
+          "duration": 40,
+          "processing": 0.10000002384185791,
+          "id": 5850
+        },
+        {
+          "name": "keypress",
+          "start": 32672.20000001788,
+          "duration": 40,
+          "processing": 23,
+          "id": 5850
+        },
+        {
+          "name": "beforeinput",
+          "start": 32673,
+          "duration": 40,
+          "processing": 0,
+          "id": 0
+        },
+        {
+          "name": "click",
+          "start": 32673,
+          "duration": 40,
+          "processing": 22.700000017881393,
+          "id": 5850
+        },
+        {
+          "name": "keyup",
+          "start": 32697.90000000596,
+          "duration": 16,
+          "processing": 0.20000001788139343,
+          "id": 5850
+        }
+      ],
+      "paintProxies": [
+        {
+          "type": "keydown",
+          "start": 32672.59999999404,
+          "toNextPaint": 37
+        },
+        {
+          "type": "click",
+          "start": 32673,
+          "toNextPaint": 36.80000001192093
+        }
+      ],
+      "long": []
+    },
+    {
+      "name": "contact",
+      "start": 32923.80000001192,
+      "end": 33135.59999999404,
+      "events": [
+        {
+          "name": "keydown",
+          "start": 32936,
+          "duration": 32,
+          "processing": 0.3999999761581421,
+          "id": 5857
+        },
+        {
+          "name": "keypress",
+          "start": 32936,
+          "duration": 32,
+          "processing": 3.9000000059604645,
+          "id": 5857
+        },
+        {
+          "name": "beforeinput",
+          "start": 32936.80000001192,
+          "duration": 32,
+          "processing": 0,
+          "id": 0
+        },
+        {
+          "name": "click",
+          "start": 32936.80000001192,
+          "duration": 32,
+          "processing": 3.4000000059604645,
+          "id": 5857
+        },
+        {
+          "name": "keyup",
+          "start": 32941.20000001788,
+          "duration": 32,
+          "processing": 0.20000001788139343,
+          "id": 5857
+        }
+      ],
+      "paintProxies": [
+        {
+          "type": "keydown",
+          "start": 32936.40000000596,
+          "toNextPaint": 12.900000005960464
+        },
+        {
+          "type": "click",
+          "start": 32937,
+          "toNextPaint": 12.300000011920929
+        }
+      ],
+      "long": []
+    },
+    {
+      "name": "sudo",
+      "start": 33153.59999999404,
+      "end": 33370,
+      "events": [
+        {
+          "name": "keydown",
+          "start": 33163.20000001788,
+          "duration": 16,
+          "processing": 0.20000001788139343,
+          "id": 5864
+        },
+        {
+          "name": "keypress",
+          "start": 33163.20000001788,
+          "duration": 16,
+          "processing": 2.5999999940395355,
+          "id": 5864
+        },
+        {
+          "name": "beforeinput",
+          "start": 33164,
+          "duration": 16,
+          "processing": 0,
+          "id": 0
+        },
+        {
+          "name": "click",
+          "start": 33164,
+          "duration": 16,
+          "processing": 2.4000000059604645,
+          "id": 5864
+        },
+        {
+          "name": "keyup",
+          "start": 33166.90000000596,
+          "duration": 16,
+          "processing": 0,
+          "id": 5864
+        }
+      ],
+      "paintProxies": [
+        {
+          "type": "keydown",
+          "start": 33163.59999999404,
+          "toNextPaint": 10.800000011920929
+        },
+        {
+          "type": "click",
+          "start": 33164,
+          "toNextPaint": 10.400000005960464
+        }
+      ],
+      "long": []
+    },
+    {
+      "name": "hack",
+      "start": 33390.80000001192,
+      "end": 33602.5,
+      "events": [
+        {
+          "name": "keydown",
+          "start": 33402.80000001192,
+          "duration": 16,
+          "processing": 0.3999999761581421,
+          "id": 5871
+        },
+        {
+          "name": "keypress",
+          "start": 33402.80000001192,
+          "duration": 16,
+          "processing": 4.9000000059604645,
+          "id": 5871
+        },
+        {
+          "name": "beforeinput",
+          "start": 33403.59999999404,
+          "duration": 16,
+          "processing": 0,
+          "id": 0
+        },
+        {
+          "name": "click",
+          "start": 33403.80000001192,
+          "duration": 16,
+          "processing": 4.699999988079071,
+          "id": 5871
+        },
+        {
+          "name": "keyup",
+          "start": 33409,
+          "duration": 16,
+          "processing": 0.09999999403953552,
+          "id": 5871
+        }
+      ],
+      "paintProxies": [
+        {
+          "type": "keydown",
+          "start": 33403.20000001788,
+          "toNextPaint": 14.599999994039536
+        },
+        {
+          "type": "click",
+          "start": 33403.80000001192,
+          "toNextPaint": 14.299999982118607
+        }
+      ],
+      "long": []
+    },
+    {
+      "name": "thepeak",
+      "start": 33617,
+      "end": 33881.09999999404,
+      "events": [
+        {
+          "name": "keydown",
+          "start": 33624,
+          "duration": 80,
+          "processing": 0.20000001788139343,
+          "id": 5878
+        },
+        {
+          "name": "keypress",
+          "start": 33624,
+          "duration": 80,
+          "processing": 45.69999998807907,
+          "id": 5878
+        },
+        {
+          "name": "beforeinput",
+          "start": 33628.40000000596,
+          "duration": 72,
+          "processing": 0,
+          "id": 0
+        },
+        {
+          "name": "click",
+          "start": 33628.40000000596,
+          "duration": 72,
+          "processing": 45.400000005960464,
+          "id": 5878
+        },
+        {
+          "name": "keyup",
+          "start": 33674.5,
+          "duration": 32,
+          "processing": 0.20000001788139343,
+          "id": 5878
+        }
+      ],
+      "paintProxies": [
+        {
+          "type": "keydown",
+          "start": 33628,
+          "toNextPaint": 55.900000005960464
+        },
+        {
+          "type": "click",
+          "start": 33628.40000000596,
+          "toNextPaint": 55.5
+        }
+      ],
+      "long": []
+    },
+    {
+      "name": "unknown",
+      "start": 33900.20000001788,
+      "end": 34112.5,
+      "events": [
+        {
+          "name": "keydown",
+          "start": 33909.5,
+          "duration": 16,
+          "processing": 0.4000000059604645,
+          "id": 5885
+        },
+        {
+          "name": "keypress",
+          "start": 33909.5,
+          "duration": 16,
+          "processing": 2.699999988079071,
+          "id": 5885
+        },
+        {
+          "name": "beforeinput",
+          "start": 33910.5,
+          "duration": 16,
+          "processing": 0,
+          "id": 0
+        },
+        {
+          "name": "click",
+          "start": 33910.5,
+          "duration": 16,
+          "processing": 2.5,
+          "id": 5885
+        },
+        {
+          "name": "keyup",
+          "start": 33913.5,
+          "duration": 16,
+          "processing": 0,
+          "id": 5885
+        }
+      ],
+      "paintProxies": [
+        {
+          "type": "keydown",
+          "start": 33910,
+          "toNextPaint": 10.5
+        },
+        {
+          "type": "click",
+          "start": 33910.5,
+          "toNextPaint": 10.099999994039536
+        }
+      ],
+      "long": []
+    },
+    {
+      "name": "clear",
+      "start": 34133,
+      "end": 34349.5,
+      "events": [
+        {
+          "name": "keydown",
+          "start": 34140.90000000596,
+          "duration": 16,
+          "processing": 0.19999998807907104,
+          "id": 5892
+        },
+        {
+          "name": "keypress",
+          "start": 34140.90000000596,
+          "duration": 16,
+          "processing": 3.9000000059604645,
+          "id": 5892
+        },
+        {
+          "name": "beforeinput",
+          "start": 34141.70000001788,
+          "duration": 16,
+          "processing": 0,
+          "id": 0
+        },
+        {
+          "name": "click",
+          "start": 34141.70000001788,
+          "duration": 16,
+          "processing": 3.699999988079071,
+          "id": 5892
+        }
+      ],
+      "paintProxies": [
+        {
+          "type": "keydown",
+          "start": 34141.30000001192,
+          "toNextPaint": 11.099999994039536
+        },
+        {
+          "type": "click",
+          "start": 34141.70000001788,
+          "toNextPaint": 10.799999982118607
+        }
+      ],
+      "long": []
+    },
+    {
+      "name": "mute",
+      "start": 34364.70000001788,
+      "end": 34720,
+      "events": [
+        {
+          "name": "keydown",
+          "start": 34373.59999999404,
+          "duration": 152,
+          "processing": 0.4000000059604645,
+          "id": 5899
+        },
+        {
+          "name": "keypress",
+          "start": 34373.59999999404,
+          "duration": 152,
+          "processing": 140.09999999403954,
+          "id": 5899
+        },
+        {
+          "name": "beforeinput",
+          "start": 34374.40000000596,
+          "duration": 152,
+          "processing": 0,
+          "id": 0
+        },
+        {
+          "name": "click",
+          "start": 34374.59999999404,
+          "duration": 152,
+          "processing": 139.7999999821186,
+          "id": 5899
+        },
+        {
+          "name": "keyup",
+          "start": 34515.30000001192,
+          "duration": 16,
+          "processing": 0,
+          "id": 5899
+        }
+      ],
+      "paintProxies": [
+        {
+          "type": "keydown",
+          "start": 34374.09999999404,
+          "toNextPaint": 151.60000002384186
+        },
+        {
+          "type": "click",
+          "start": 34374.70000001788,
+          "toNextPaint": 151.2999999821186
+        }
+      ],
+      "long": [
+        {
+          "start": 34373.90000000596,
+          "duration": 140
+        }
+      ]
+    },
+    {
+      "name": "mute",
+      "start": 34742.59999999404,
+      "end": 34952.20000001788,
+      "events": [
+        {
+          "name": "keydown",
+          "start": 34753.59999999404,
+          "duration": 32,
+          "processing": 0.30000001192092896,
+          "id": 5906
+        },
+        {
+          "name": "keypress",
+          "start": 34753.59999999404,
+          "duration": 32,
+          "processing": 3.699999988079071,
+          "id": 5906
+        },
+        {
+          "name": "beforeinput",
+          "start": 34754.40000000596,
+          "duration": 32,
+          "processing": 0,
+          "id": 0
+        },
+        {
+          "name": "click",
+          "start": 34754.40000000596,
+          "duration": 32,
+          "processing": 3.300000011920929,
+          "id": 5906
+        },
+        {
+          "name": "keyup",
+          "start": 34758.30000001192,
+          "duration": 24,
+          "processing": 0,
+          "id": 5906
+        }
+      ],
+      "paintProxies": [
+        {
+          "type": "keydown",
+          "start": 34754,
+          "toNextPaint": 12
+        },
+        {
+          "type": "click",
+          "start": 34754.59999999404,
+          "toNextPaint": 11.600000023841858
+        }
+      ],
+      "long": []
+    },
+    {
+      "name": "chip help",
+      "start": 34954.09999999404,
+      "end": 35200.40000000596,
+      "events": [
+        {
+          "name": "pointerout",
+          "start": 34977.20000001788,
+          "duration": 32,
+          "processing": 0,
+          "id": 0
+        },
+        {
+          "name": "pointerover",
+          "start": 34977.20000001788,
+          "duration": 32,
+          "processing": 0.20000001788139343,
+          "id": 0
+        },
+        {
+          "name": "pointerenter",
+          "start": 34977.20000001788,
+          "duration": 32,
+          "processing": 0,
+          "id": 0
+        },
+        {
+          "name": "pointerenter",
+          "start": 34977.20000001788,
+          "duration": 32,
+          "processing": 0,
+          "id": 0
+        },
+        {
+          "name": "pointerenter",
+          "start": 34977.20000001788,
+          "duration": 32,
+          "processing": 0,
+          "id": 0
+        },
+        {
+          "name": "mouseout",
+          "start": 34977.20000001788,
+          "duration": 32,
+          "processing": 0,
+          "id": 0
+        },
+        {
+          "name": "mouseover",
+          "start": 34977.20000001788,
+          "duration": 32,
+          "processing": 0,
+          "id": 0
+        },
+        {
+          "name": "pointerdown",
+          "start": 34977.30000001192,
+          "duration": 32,
+          "processing": 2.199999988079071,
+          "id": 5913
+        },
+        {
+          "name": "mousedown",
+          "start": 34977.30000001192,
+          "duration": 32,
+          "processing": 0,
+          "id": 0
+        },
+        {
+          "name": "pointerup",
+          "start": 34977.40000000596,
+          "duration": 32,
+          "processing": 0.10000002384185791,
+          "id": 5913
+        },
+        {
+          "name": "mouseup",
+          "start": 34977.40000000596,
+          "duration": 32,
+          "processing": 0.19999998807907104,
+          "id": 0
+        },
+        {
+          "name": "click",
+          "start": 34977.40000000596,
+          "duration": 32,
+          "processing": 4.300000011920929,
+          "id": 5913
+        },
+        {
+          "name": "pointerout",
+          "start": 34993.59999999404,
+          "duration": 16,
+          "processing": 0,
+          "id": 0
+        },
+        {
+          "name": "pointerleave",
+          "start": 34993.59999999404,
+          "duration": 16,
+          "processing": 0,
+          "id": 0
+        },
+        {
+          "name": "pointerleave",
+          "start": 34993.59999999404,
+          "duration": 16,
+          "processing": 0,
+          "id": 0
+        },
+        {
+          "name": "pointerover",
+          "start": 34993.59999999404,
+          "duration": 16,
+          "processing": 0.20000001788139343,
+          "id": 0
+        },
+        {
+          "name": "pointerenter",
+          "start": 34993.59999999404,
+          "duration": 16,
+          "processing": 0,
+          "id": 0
+        },
+        {
+          "name": "pointerenter",
+          "start": 34993.59999999404,
+          "duration": 16,
+          "processing": 0,
+          "id": 0
+        },
+        {
+          "name": "pointerenter",
+          "start": 34993.59999999404,
+          "duration": 16,
+          "processing": 0,
+          "id": 0
+        },
+        {
+          "name": "mouseout",
+          "start": 34993.59999999404,
+          "duration": 16,
+          "processing": 0,
+          "id": 0
+        },
+        {
+          "name": "mouseover",
+          "start": 34993.59999999404,
+          "duration": 16,
+          "processing": 0,
+          "id": 0
+        }
+      ],
+      "paintProxies": [
+        {
+          "type": "pointerover",
+          "start": 34978.70000001788,
+          "toNextPaint": 22.799999982118607
+        },
+        {
+          "type": "click",
+          "start": 34987.40000000596,
+          "toNextPaint": 14.199999988079071
+        },
+        {
+          "type": "pointerover",
+          "start": 34994.30000001192,
+          "toNextPaint": 7.299999982118607
+        }
+      ],
+      "long": []
+    },
+    {
+      "name": "chip projects",
+      "start": 35202.09999999404,
+      "end": 35540.80000001192,
+      "events": [
+        {
+          "name": "pointerout",
+          "start": 35323.90000000596,
+          "duration": 32,
+          "processing": 0,
+          "id": 0
+        },
+        {
+          "name": "pointerleave",
+          "start": 35323.90000000596,
+          "duration": 32,
+          "processing": 0,
+          "id": 0
+        },
+        {
+          "name": "pointerleave",
+          "start": 35323.90000000596,
+          "duration": 32,
+          "processing": 0,
+          "id": 0
+        },
+        {
+          "name": "pointerleave",
+          "start": 35323.90000000596,
+          "duration": 32,
+          "processing": 0,
+          "id": 0
+        },
+        {
+          "name": "pointerover",
+          "start": 35323.90000000596,
+          "duration": 32,
+          "processing": 0,
+          "id": 0
+        },
+        {
+          "name": "pointerenter",
+          "start": 35323.90000000596,
+          "duration": 32,
+          "processing": 0,
+          "id": 0
+        },
+        {
+          "name": "pointerenter",
+          "start": 35323.90000000596,
+          "duration": 32,
+          "processing": 0,
+          "id": 0
+        },
+        {
+          "name": "mouseout",
+          "start": 35323.90000000596,
+          "duration": 32,
+          "processing": 0,
+          "id": 0
+        },
+        {
+          "name": "mouseover",
+          "start": 35323.90000000596,
+          "duration": 32,
+          "processing": 0,
+          "id": 0
+        },
+        {
+          "name": "pointerdown",
+          "start": 35324.09999999404,
+          "duration": 32,
+          "processing": 1.5,
+          "id": 5920
+        },
+        {
+          "name": "mousedown",
+          "start": 35324.09999999404,
+          "duration": 32,
+          "processing": 0.09999999403953552,
+          "id": 0
+        },
+        {
+          "name": "pointerup",
+          "start": 35324.09999999404,
+          "duration": 32,
+          "processing": 0.09999999403953552,
+          "id": 5920
+        },
+        {
+          "name": "mouseup",
+          "start": 35324.09999999404,
+          "duration": 32,
+          "processing": 0,
+          "id": 0
+        },
+        {
+          "name": "click",
+          "start": 35324.09999999404,
+          "duration": 32,
+          "processing": 3.9000000059604645,
+          "id": 5920
+        },
+        {
+          "name": "pointerout",
+          "start": 35338.30000001192,
+          "duration": 16,
+          "processing": 0.09999999403953552,
+          "id": 0
+        },
+        {
+          "name": "pointerleave",
+          "start": 35338.30000001192,
+          "duration": 16,
+          "processing": 0,
+          "id": 0
+        },
+        {
+          "name": "pointerleave",
+          "start": 35338.30000001192,
+          "duration": 16,
+          "processing": 0,
+          "id": 0
+        },
+        {
+          "name": "pointerover",
+          "start": 35338.30000001192,
+          "duration": 16,
+          "processing": 0.19999998807907104,
+          "id": 0
+        },
+        {
+          "name": "pointerenter",
+          "start": 35338.30000001192,
+          "duration": 16,
+          "processing": 0,
+          "id": 0
+        },
+        {
+          "name": "pointerenter",
+          "start": 35338.30000001192,
+          "duration": 16,
+          "processing": 0,
+          "id": 0
+        },
+        {
+          "name": "pointerenter",
+          "start": 35338.30000001192,
+          "duration": 16,
+          "processing": 0,
+          "id": 0
+        },
+        {
+          "name": "mouseout",
+          "start": 35338.30000001192,
+          "duration": 16,
+          "processing": 0,
+          "id": 0
+        },
+        {
+          "name": "mouseover",
+          "start": 35338.30000001192,
+          "duration": 16,
+          "processing": 0,
+          "id": 0
+        }
+      ],
+      "paintProxies": [
+        {
+          "type": "pointerover",
+          "start": 35324.80000001192,
+          "toNextPaint": 21.900000005960464
+        },
+        {
+          "type": "click",
+          "start": 35330.40000000596,
+          "toNextPaint": 16.30000001192093
+        },
+        {
+          "type": "pointerover",
+          "start": 35339,
+          "toNextPaint": 7.700000017881393
+        }
+      ],
+      "long": []
+    },
+    {
+      "name": "chip contact",
+      "start": 35542,
+      "end": 35773.40000000596,
+      "events": [
+        {
+          "name": "pointerout",
+          "start": 35563.09999999404,
+          "duration": 32,
+          "processing": 0.09999999403953552,
+          "id": 0
+        },
+        {
+          "name": "pointerleave",
+          "start": 35563.09999999404,
+          "duration": 32,
+          "processing": 0,
+          "id": 0
+        },
+        {
+          "name": "pointerleave",
+          "start": 35563.09999999404,
+          "duration": 32,
+          "processing": 0,
+          "id": 0
+        },
+        {
+          "name": "pointerleave",
+          "start": 35563.09999999404,
+          "duration": 32,
+          "processing": 0,
+          "id": 0
+        },
+        {
+          "name": "pointerover",
+          "start": 35563.09999999404,
+          "duration": 32,
+          "processing": 0,
+          "id": 0
+        },
+        {
+          "name": "pointerenter",
+          "start": 35563.09999999404,
+          "duration": 32,
+          "processing": 0,
+          "id": 0
+        },
+        {
+          "name": "pointerenter",
+          "start": 35563.09999999404,
+          "duration": 32,
+          "processing": 0,
+          "id": 0
+        },
+        {
+          "name": "mouseout",
+          "start": 35563.09999999404,
+          "duration": 32,
+          "processing": 0,
+          "id": 0
+        },
+        {
+          "name": "mouseover",
+          "start": 35563.09999999404,
+          "duration": 32,
+          "processing": 0,
+          "id": 0
+        },
+        {
+          "name": "pointerdown",
+          "start": 35563.20000001788,
+          "duration": 32,
+          "processing": 0.800000011920929,
+          "id": 5927
+        },
+        {
+          "name": "mousedown",
+          "start": 35563.20000001788,
+          "duration": 32,
+          "processing": 0,
+          "id": 0
+        },
+        {
+          "name": "pointerup",
+          "start": 35563.30000001192,
+          "duration": 32,
+          "processing": 0,
+          "id": 5927
+        },
+        {
+          "name": "mouseup",
+          "start": 35563.30000001192,
+          "duration": 32,
+          "processing": 0,
+          "id": 0
+        },
+        {
+          "name": "click",
+          "start": 35563.30000001192,
+          "duration": 32,
+          "processing": 5.399999976158142,
+          "id": 5927
+        }
+      ],
+      "paintProxies": [
+        {
+          "type": "pointerover",
+          "start": 35564,
+          "toNextPaint": 14.900000005960464
+        },
+        {
+          "type": "click",
+          "start": 35568.30000001192,
+          "toNextPaint": 10.699999988079071
+        }
+      ],
+      "long": []
+    },
+    {
+      "name": "--all",
+      "start": 35775.20000001788,
+      "end": 36007.90000000596,
+      "events": [
+        {
+          "name": "pointerout",
+          "start": 35804,
+          "duration": 16,
+          "processing": 0.09999999403953552,
+          "id": 0
+        },
+        {
+          "name": "pointerleave",
+          "start": 35804,
+          "duration": 16,
+          "processing": 0,
+          "id": 0
+        },
+        {
+          "name": "pointerleave",
+          "start": 35804,
+          "duration": 16,
+          "processing": 0,
+          "id": 0
+        },
+        {
+          "name": "pointerleave",
+          "start": 35804,
+          "duration": 16,
+          "processing": 0,
+          "id": 0
+        },
+        {
+          "name": "pointerover",
+          "start": 35804,
+          "duration": 16,
+          "processing": 0.20000001788139343,
+          "id": 0
+        },
+        {
+          "name": "pointerenter",
+          "start": 35804,
+          "duration": 16,
+          "processing": 0,
+          "id": 0
+        },
+        {
+          "name": "pointerenter",
+          "start": 35804,
+          "duration": 16,
+          "processing": 0,
+          "id": 0
+        },
+        {
+          "name": "pointerenter",
+          "start": 35804,
+          "duration": 16,
+          "processing": 0,
+          "id": 0
+        },
+        {
+          "name": "mouseout",
+          "start": 35804,
+          "duration": 16,
+          "processing": 0,
+          "id": 0
+        },
+        {
+          "name": "mouseover",
+          "start": 35804,
+          "duration": 16,
+          "processing": 0,
+          "id": 0
+        },
+        {
+          "name": "pointerdown",
+          "start": 35804.09999999404,
+          "duration": 16,
+          "processing": 1.800000011920929,
+          "id": 5934
+        },
+        {
+          "name": "mousedown",
+          "start": 35804.09999999404,
+          "duration": 16,
+          "processing": 0,
+          "id": 0
+        },
+        {
+          "name": "pointerup",
+          "start": 35804.09999999404,
+          "duration": 16,
+          "processing": 0.09999999403953552,
+          "id": 5934
+        },
+        {
+          "name": "mouseup",
+          "start": 35804.09999999404,
+          "duration": 16,
+          "processing": 0,
+          "id": 0
+        },
+        {
+          "name": "click",
+          "start": 35804.09999999404,
+          "duration": 16,
+          "processing": 0.5999999940395355,
+          "id": 5934
+        }
+      ],
+      "paintProxies": [
+        {
+          "type": "pointerover",
+          "start": 35805.30000001192,
+          "toNextPaint": 15.199999988079071
+        },
+        {
+          "type": "click",
+          "start": 35811.20000001788,
+          "toNextPaint": 9.5
+        }
+      ],
+      "long": []
+    },
+    {
+      "name": "hover 1",
+      "start": 36015.59999999404,
+      "end": 36271.09999999404,
+      "events": [
+        {
+          "name": "pointerout",
+          "start": 36057.30000001192,
+          "duration": 32,
+          "processing": 0,
+          "id": 0
+        },
+        {
+          "name": "pointerover",
+          "start": 36057.30000001192,
+          "duration": 32,
+          "processing": 0.19999998807907104,
+          "id": 0
+        },
+        {
+          "name": "pointerenter",
+          "start": 36057.30000001192,
+          "duration": 32,
+          "processing": 0,
+          "id": 0
+        },
+        {
+          "name": "pointerenter",
+          "start": 36057.30000001192,
+          "duration": 32,
+          "processing": 0,
+          "id": 0
+        },
+        {
+          "name": "pointerenter",
+          "start": 36057.30000001192,
+          "duration": 32,
+          "processing": 0,
+          "id": 0
+        },
+        {
+          "name": "pointerenter",
+          "start": 36057.30000001192,
+          "duration": 32,
+          "processing": 0,
+          "id": 0
+        },
+        {
+          "name": "pointerenter",
+          "start": 36057.30000001192,
+          "duration": 32,
+          "processing": 0,
+          "id": 0
+        },
+        {
+          "name": "pointerenter",
+          "start": 36057.30000001192,
+          "duration": 32,
+          "processing": 1.0999999940395355,
+          "id": 0
+        },
+        {
+          "name": "pointerenter",
+          "start": 36057.30000001192,
+          "duration": 32,
+          "processing": 0,
+          "id": 0
+        },
+        {
+          "name": "pointerenter",
+          "start": 36057.30000001192,
+          "duration": 32,
+          "processing": 0,
+          "id": 0
+        },
+        {
+          "name": "mouseout",
+          "start": 36057.30000001192,
+          "duration": 32,
+          "processing": 0,
+          "id": 0
+        },
+        {
+          "name": "mouseover",
+          "start": 36057.30000001192,
+          "duration": 32,
+          "processing": 0,
+          "id": 0
+        }
+      ],
+      "paintProxies": [
+        {
+          "type": "pointerover",
+          "start": 36065.5,
+          "toNextPaint": 10.700000017881393
+        }
+      ],
+      "long": []
+    },
+    {
+      "name": "hover 2",
+      "start": 36284.09999999404,
+      "end": 36537.30000001192,
+      "events": [
+        {
+          "name": "pointerout",
+          "start": 36325.09999999404,
+          "duration": 32,
+          "processing": 0.09999999403953552,
+          "id": 0
+        },
+        {
+          "name": "pointerover",
+          "start": 36325.09999999404,
+          "duration": 32,
+          "processing": 0.20000001788139343,
+          "id": 0
+        },
+        {
+          "name": "pointerenter",
+          "start": 36325.09999999404,
+          "duration": 32,
+          "processing": 0,
+          "id": 0
+        },
+        {
+          "name": "pointerenter",
+          "start": 36325.09999999404,
+          "duration": 32,
+          "processing": 0,
+          "id": 0
+        },
+        {
+          "name": "pointerenter",
+          "start": 36325.09999999404,
+          "duration": 32,
+          "processing": 0,
+          "id": 0
+        },
+        {
+          "name": "pointerenter",
+          "start": 36325.09999999404,
+          "duration": 32,
+          "processing": 0,
+          "id": 0
+        },
+        {
+          "name": "pointerenter",
+          "start": 36325.09999999404,
+          "duration": 32,
+          "processing": 0,
+          "id": 0
+        },
+        {
+          "name": "pointerenter",
+          "start": 36325.09999999404,
+          "duration": 32,
+          "processing": 0.29999998211860657,
+          "id": 0
+        },
+        {
+          "name": "pointerenter",
+          "start": 36325.09999999404,
+          "duration": 32,
+          "processing": 0,
+          "id": 0
+        },
+        {
+          "name": "pointerenter",
+          "start": 36325.09999999404,
+          "duration": 32,
+          "processing": 0,
+          "id": 0
+        },
+        {
+          "name": "mouseout",
+          "start": 36325.09999999404,
+          "duration": 32,
+          "processing": 0,
+          "id": 0
+        },
+        {
+          "name": "mouseover",
+          "start": 36325.09999999404,
+          "duration": 32,
+          "processing": 0,
+          "id": 0
+        }
+      ],
+      "paintProxies": [
+        {
+          "type": "pointerover",
+          "start": 36333.70000001788,
+          "toNextPaint": 6.899999976158142
+        }
+      ],
+      "long": []
+    },
+    {
+      "name": "hover 3",
+      "start": 36553.70000001788,
+      "end": 36798.90000000596,
+      "events": [
+        {
+          "name": "pointerout",
+          "start": 36592,
+          "duration": 32,
+          "processing": 0,
+          "id": 0
+        },
+        {
+          "name": "pointerover",
+          "start": 36592,
+          "duration": 32,
+          "processing": 0.30000001192092896,
+          "id": 0
+        },
+        {
+          "name": "pointerenter",
+          "start": 36592,
+          "duration": 32,
+          "processing": 0,
+          "id": 0
+        },
+        {
+          "name": "pointerenter",
+          "start": 36592,
+          "duration": 32,
+          "processing": 0,
+          "id": 0
+        },
+        {
+          "name": "pointerenter",
+          "start": 36592,
+          "duration": 32,
+          "processing": 0,
+          "id": 0
+        },
+        {
+          "name": "pointerenter",
+          "start": 36592,
+          "duration": 32,
+          "processing": 0,
+          "id": 0
+        },
+        {
+          "name": "pointerenter",
+          "start": 36592,
+          "duration": 32,
+          "processing": 0,
+          "id": 0
+        },
+        {
+          "name": "pointerenter",
+          "start": 36592,
+          "duration": 32,
+          "processing": 0.4000000059604645,
+          "id": 0
+        },
+        {
+          "name": "pointerenter",
+          "start": 36592,
+          "duration": 32,
+          "processing": 0,
+          "id": 0
+        },
+        {
+          "name": "pointerenter",
+          "start": 36592,
+          "duration": 32,
+          "processing": 0,
+          "id": 0
+        },
+        {
+          "name": "mouseout",
+          "start": 36592,
+          "duration": 32,
+          "processing": 0,
+          "id": 0
+        },
+        {
+          "name": "mouseover",
+          "start": 36592,
+          "duration": 32,
+          "processing": 0,
+          "id": 0
+        }
+      ],
+      "paintProxies": [
+        {
+          "type": "pointerover",
+          "start": 36600.80000001192,
+          "toNextPaint": 7.5999999940395355
+        }
+      ],
+      "long": []
+    },
+    {
+      "name": "hover 4",
+      "start": 36817.5,
+      "end": 37064.5,
+      "events": [
+        {
+          "name": "pointerout",
+          "start": 36857.80000001192,
+          "duration": 32,
+          "processing": 0.19999998807907104,
+          "id": 0
+        },
+        {
+          "name": "pointerover",
+          "start": 36857.80000001192,
+          "duration": 32,
+          "processing": 0.30000001192092896,
+          "id": 0
+        },
+        {
+          "name": "pointerenter",
+          "start": 36857.80000001192,
+          "duration": 32,
+          "processing": 0,
+          "id": 0
+        },
+        {
+          "name": "pointerenter",
+          "start": 36857.80000001192,
+          "duration": 32,
+          "processing": 0,
+          "id": 0
+        },
+        {
+          "name": "pointerenter",
+          "start": 36857.80000001192,
+          "duration": 32,
+          "processing": 0,
+          "id": 0
+        },
+        {
+          "name": "pointerenter",
+          "start": 36857.80000001192,
+          "duration": 32,
+          "processing": 0,
+          "id": 0
+        },
+        {
+          "name": "pointerenter",
+          "start": 36857.80000001192,
+          "duration": 32,
+          "processing": 0,
+          "id": 0
+        },
+        {
+          "name": "pointerenter",
+          "start": 36857.80000001192,
+          "duration": 32,
+          "processing": 0.4000000059604645,
+          "id": 0
+        },
+        {
+          "name": "pointerenter",
+          "start": 36857.80000001192,
+          "duration": 32,
+          "processing": 0,
+          "id": 0
+        },
+        {
+          "name": "pointerenter",
+          "start": 36857.80000001192,
+          "duration": 32,
+          "processing": 0,
+          "id": 0
+        },
+        {
+          "name": "mouseout",
+          "start": 36857.80000001192,
+          "duration": 32,
+          "processing": 0,
+          "id": 0
+        },
+        {
+          "name": "mouseover",
+          "start": 36857.80000001192,
+          "duration": 32,
+          "processing": 0,
+          "id": 0
+        }
+      ],
+      "paintProxies": [
+        {
+          "type": "pointerover",
+          "start": 36865.90000000596,
+          "toNextPaint": 7.5
+        }
+      ],
+      "long": []
+    },
+    {
+      "name": "hover 5",
+      "start": 37085.30000001192,
+      "end": 37327.90000000596,
+      "events": [
+        {
+          "name": "pointerout",
+          "start": 37126.80000001192,
+          "duration": 32,
+          "processing": 0.09999999403953552,
+          "id": 0
+        },
+        {
+          "name": "pointerover",
+          "start": 37126.80000001192,
+          "duration": 32,
+          "processing": 0.30000001192092896,
+          "id": 0
+        },
+        {
+          "name": "pointerenter",
+          "start": 37126.80000001192,
+          "duration": 32,
+          "processing": 0,
+          "id": 0
+        },
+        {
+          "name": "pointerenter",
+          "start": 37126.80000001192,
+          "duration": 32,
+          "processing": 0,
+          "id": 0
+        },
+        {
+          "name": "pointerenter",
+          "start": 37126.80000001192,
+          "duration": 32,
+          "processing": 0,
+          "id": 0
+        },
+        {
+          "name": "pointerenter",
+          "start": 37126.80000001192,
+          "duration": 32,
+          "processing": 0,
+          "id": 0
+        },
+        {
+          "name": "pointerenter",
+          "start": 37126.80000001192,
+          "duration": 32,
+          "processing": 0,
+          "id": 0
+        },
+        {
+          "name": "pointerenter",
+          "start": 37126.80000001192,
+          "duration": 32,
+          "processing": 0.29999998211860657,
+          "id": 0
+        },
+        {
+          "name": "pointerenter",
+          "start": 37126.80000001192,
+          "duration": 32,
+          "processing": 0,
+          "id": 0
+        },
+        {
+          "name": "pointerenter",
+          "start": 37126.80000001192,
+          "duration": 32,
+          "processing": 0,
+          "id": 0
+        },
+        {
+          "name": "mouseout",
+          "start": 37126.80000001192,
+          "duration": 32,
+          "processing": 0,
+          "id": 0
+        },
+        {
+          "name": "mouseover",
+          "start": 37126.80000001192,
+          "duration": 32,
+          "processing": 0,
+          "id": 0
+        }
+      ],
+      "paintProxies": [
+        {
+          "type": "pointerover",
+          "start": 37133.09999999404,
+          "toNextPaint": 7.800000011920929
+        }
+      ],
+      "long": []
+    },
+    {
+      "name": "logout",
+      "start": 37352.30000001192,
+      "end": 37578.59999999404,
+      "events": [
+        {
+          "name": "keydown",
+          "start": 37367.80000001192,
+          "duration": 32,
+          "processing": 0.4000000059604645,
+          "id": 5941
+        },
+        {
+          "name": "keypress",
+          "start": 37367.80000001192,
+          "duration": 32,
+          "processing": 2.5,
+          "id": 5941
+        },
+        {
+          "name": "beforeinput",
+          "start": 37368.90000000596,
+          "duration": 24,
+          "processing": 0,
+          "id": 0
+        },
+        {
+          "name": "click",
+          "start": 37369,
+          "duration": 24,
+          "processing": 2,
+          "id": 5941
+        },
+        {
+          "name": "keyup",
+          "start": 37371.70000001788,
+          "duration": 24,
+          "processing": 0,
+          "id": 5941
+        },
+        {
+          "name": "pointerover",
+          "start": 37374.5,
+          "duration": 24,
+          "processing": 0.20000001788139343,
+          "id": 0
+        },
+        {
+          "name": "pointerenter",
+          "start": 37374.5,
+          "duration": 24,
+          "processing": 0,
+          "id": 0
+        },
+        {
+          "name": "pointerenter",
+          "start": 37374.5,
+          "duration": 24,
+          "processing": 0,
+          "id": 0
+        },
+        {
+          "name": "pointerenter",
+          "start": 37374.5,
+          "duration": 24,
+          "processing": 0,
+          "id": 0
+        },
+        {
+          "name": "pointerenter",
+          "start": 37374.5,
+          "duration": 24,
+          "processing": 0,
+          "id": 0
+        },
+        {
+          "name": "mouseover",
+          "start": 37374.5,
+          "duration": 24,
+          "processing": 0,
+          "id": 0
+        }
+      ],
+      "paintProxies": [
+        {
+          "type": "pointerover",
+          "start": 37359.30000001192,
+          "toNextPaint": 5.799999982118607
+        },
+        {
+          "type": "keydown",
+          "start": 37368.30000001192,
+          "toNextPaint": 14.099999994039536
+        },
+        {
+          "type": "click",
+          "start": 37369.09999999404,
+          "toNextPaint": 13.300000011920929
+        },
+        {
+          "type": "pointerover",
+          "start": 37376.09999999404,
+          "toNextPaint": 6.300000011920929
+        }
+      ],
+      "long": []
+    }
+  ],
+  "events": [
+    {
+      "name": "pointerover",
+      "start": 2706.300000011921,
+      "duration": 32,
+      "processing": 1.2000000178813934,
+      "id": 0
+    },
+    {
+      "name": "pointerenter",
+      "start": 2706.300000011921,
+      "duration": 32,
+      "processing": 0,
+      "id": 0
+    },
+    {
+      "name": "pointerenter",
+      "start": 2706.300000011921,
+      "duration": 32,
+      "processing": 0.09999999403953552,
+      "id": 0
+    },
+    {
+      "name": "pointerenter",
+      "start": 2706.300000011921,
+      "duration": 32,
+      "processing": 0,
+      "id": 0
+    },
+    {
+      "name": "pointerenter",
+      "start": 2706.300000011921,
+      "duration": 32,
+      "processing": 0,
+      "id": 0
+    },
+    {
+      "name": "pointerenter",
+      "start": 2706.300000011921,
+      "duration": 32,
+      "processing": 0,
+      "id": 0
+    },
+    {
+      "name": "pointerenter",
+      "start": 2706.300000011921,
+      "duration": 32,
+      "processing": 0,
+      "id": 0
+    },
+    {
+      "name": "mouseover",
+      "start": 2706.300000011921,
+      "duration": 32,
+      "processing": 0,
+      "id": 0
+    },
+    {
+      "name": "pointerdown",
+      "start": 2706.5999999940395,
+      "duration": 32,
+      "processing": 5.100000023841858,
+      "id": 5731
+    },
+    {
+      "name": "mousedown",
+      "start": 2706.5999999940395,
+      "duration": 32,
+      "processing": 0,
+      "id": 0
+    },
+    {
+      "name": "pointerout",
+      "start": 2706.5999999940395,
+      "duration": 32,
+      "processing": 0,
+      "id": 0
+    },
+    {
+      "name": "pointerleave",
+      "start": 2706.5999999940395,
+      "duration": 32,
+      "processing": 0,
+      "id": 0
+    },
+    {
+      "name": "pointerleave",
+      "start": 2706.5999999940395,
+      "duration": 32,
+      "processing": 0,
+      "id": 0
+    },
+    {
+      "name": "pointerover",
+      "start": 2706.5999999940395,
+      "duration": 32,
+      "processing": 0.4000000059604645,
+      "id": 0
+    },
+    {
+      "name": "mouseout",
+      "start": 2706.5999999940395,
+      "duration": 32,
+      "processing": 0,
+      "id": 0
+    },
+    {
+      "name": "mouseover",
+      "start": 2706.5999999940395,
+      "duration": 32,
+      "processing": 0,
+      "id": 0
+    },
+    {
+      "name": "pointerup",
+      "start": 2706.5999999940395,
+      "duration": 32,
+      "processing": 0.5999999940395355,
+      "id": 5731
+    },
+    {
+      "name": "mouseup",
+      "start": 2706.5999999940395,
+      "duration": 32,
+      "processing": 0,
+      "id": 0
+    },
+    {
+      "name": "click",
+      "start": 2706.5999999940395,
+      "duration": 32,
+      "processing": 0.4000000059604645,
+      "id": 5731
+    },
+    {
+      "name": "pointerout",
+      "start": 11445,
+      "duration": 32,
+      "processing": 0.19999998807907104,
+      "id": 0
+    },
+    {
+      "name": "pointerleave",
+      "start": 11445,
+      "duration": 32,
+      "processing": 0,
+      "id": 0
+    },
+    {
+      "name": "pointerleave",
+      "start": 11445,
+      "duration": 32,
+      "processing": 0,
+      "id": 0
+    },
+    {
+      "name": "pointerover",
+      "start": 11445,
+      "duration": 32,
+      "processing": 0,
+      "id": 0
+    },
+    {
+      "name": "mouseout",
+      "start": 11445,
+      "duration": 32,
+      "processing": 0,
+      "id": 0
+    },
+    {
+      "name": "mouseover",
+      "start": 11445,
+      "duration": 32,
+      "processing": 0,
+      "id": 0
+    },
+    {
+      "name": "pointerout",
+      "start": 12022.5,
+      "duration": 24,
+      "processing": 0.19999998807907104,
+      "id": 0
+    },
+    {
+      "name": "pointerover",
+      "start": 12022.5,
+      "duration": 24,
+      "processing": 0.5,
+      "id": 0
+    },
+    {
+      "name": "pointerenter",
+      "start": 12022.5,
+      "duration": 24,
+      "processing": 0.10000002384185791,
+      "id": 0
+    },
+    {
+      "name": "mouseout",
+      "start": 12022.5,
+      "duration": 24,
+      "processing": 0,
+      "id": 0
+    },
+    {
+      "name": "mouseover",
+      "start": 12022.5,
+      "duration": 24,
+      "processing": 0,
+      "id": 0
+    },
+    {
+      "name": "pointerout",
+      "start": 13092.700000017881,
+      "duration": 24,
+      "processing": 0,
+      "id": 0
+    },
+    {
+      "name": "pointerover",
+      "start": 13092.700000017881,
+      "duration": 24,
+      "processing": 0.19999998807907104,
+      "id": 0
+    },
+    {
+      "name": "pointerenter",
+      "start": 13092.700000017881,
+      "duration": 24,
+      "processing": 0,
+      "id": 0
+    },
+    {
+      "name": "mouseout",
+      "start": 13092.700000017881,
+      "duration": 24,
+      "processing": 0,
+      "id": 0
+    },
+    {
+      "name": "mouseover",
+      "start": 13092.700000017881,
+      "duration": 24,
+      "processing": 0,
+      "id": 0
+    },
+    {
+      "name": "pointerout",
+      "start": 18164.30000001192,
+      "duration": 32,
+      "processing": 0,
+      "id": 0
+    },
+    {
+      "name": "pointerleave",
+      "start": 18164.30000001192,
+      "duration": 32,
+      "processing": 0,
+      "id": 0
+    },
+    {
+      "name": "pointerover",
+      "start": 18164.30000001192,
+      "duration": 32,
+      "processing": 0.19999998807907104,
+      "id": 0
+    },
+    {
+      "name": "pointerenter",
+      "start": 18164.30000001192,
+      "duration": 32,
+      "processing": 0,
+      "id": 0
+    },
+    {
+      "name": "mouseout",
+      "start": 18164.30000001192,
+      "duration": 32,
+      "processing": 0,
+      "id": 0
+    },
+    {
+      "name": "mouseover",
+      "start": 18164.30000001192,
+      "duration": 32,
+      "processing": 0,
+      "id": 0
+    },
+    {
+      "name": "keydown",
+      "start": 29258.80000001192,
+      "duration": 16,
+      "processing": 1.300000011920929,
+      "id": 5738
+    },
+    {
+      "name": "keypress",
+      "start": 29258.80000001192,
+      "duration": 16,
+      "processing": 4.799999982118607,
+      "id": 5738
+    },
+    {
+      "name": "beforeinput",
+      "start": 29261.20000001788,
+      "duration": 16,
+      "processing": 0,
+      "id": 0
+    },
+    {
+      "name": "input",
+      "start": 29263.30000001192,
+      "duration": 16,
+      "processing": 0,
+      "id": 0
+    },
+    {
+      "name": "keydown",
+      "start": 29379.80000001192,
+      "duration": 16,
+      "processing": 0.4000000059604645,
+      "id": 5752
+    },
+    {
+      "name": "keypress",
+      "start": 29379.80000001192,
+      "duration": 16,
+      "processing": 2.0999999940395355,
+      "id": 5752
+    },
+    {
+      "name": "beforeinput",
+      "start": 29380.40000000596,
+      "duration": 16,
+      "processing": 0.19999998807907104,
+      "id": 0
+    },
+    {
+      "name": "input",
+      "start": 29381.70000001788,
+      "duration": 16,
+      "processing": 0,
+      "id": 0
+    },
+    {
+      "name": "keydown",
+      "start": 29711.20000001788,
+      "duration": 32,
+      "processing": 11.400000005960464,
+      "id": 5766
+    },
+    {
+      "name": "beforeinput",
+      "start": 29714.20000001788,
+      "duration": 32,
+      "processing": 0,
+      "id": 0
+    },
+    {
+      "name": "input",
+      "start": 29720.70000001788,
+      "duration": 24,
+      "processing": 0,
+      "id": 0
+    },
+    {
+      "name": "beforeinput",
+      "start": 29750.09999999404,
+      "duration": 16,
+      "processing": 0,
+      "id": 0
+    },
+    {
+      "name": "input",
+      "start": 29752.5,
+      "duration": 16,
+      "processing": 0,
+      "id": 0
+    },
+    {
+      "name": "keydown",
+      "start": 29794.5,
+      "duration": 32,
+      "processing": 0.4000000059604645,
+      "id": 5773
+    },
+    {
+      "name": "keypress",
+      "start": 29794.5,
+      "duration": 32,
+      "processing": 8.599999994039536,
+      "id": 5773
+    },
+    {
+      "name": "beforeinput",
+      "start": 29795.40000000596,
+      "duration": 24,
+      "processing": 0,
+      "id": 0
+    },
+    {
+      "name": "click",
+      "start": 29795.40000000596,
+      "duration": 24,
+      "processing": 8.400000005960464,
+      "id": 5773
+    },
+    {
+      "name": "keyup",
+      "start": 29804.70000001788,
+      "duration": 16,
+      "processing": 0.20000001788139343,
+      "id": 5773
+    },
+    {
+      "name": "beforeinput",
+      "start": 30009.20000001788,
+      "duration": 16,
+      "processing": 0.19999998807907104,
+      "id": 0
+    },
+    {
+      "name": "keydown",
+      "start": 30030.09999999404,
+      "duration": 16,
+      "processing": 0.4000000059604645,
+      "id": 5780
+    },
+    {
+      "name": "keypress",
+      "start": 30030.09999999404,
+      "duration": 16,
+      "processing": 4.199999988079071,
+      "id": 5780
+    },
+    {
+      "name": "beforeinput",
+      "start": 30031.5,
+      "duration": 16,
+      "processing": 0,
+      "id": 0
+    },
+    {
+      "name": "click",
+      "start": 30031.5,
+      "duration": 16,
+      "processing": 3.7999999821186066,
+      "id": 5780
+    },
+    {
+      "name": "keyup",
+      "start": 30036.30000001192,
+      "duration": 16,
+      "processing": 0.29999998211860657,
+      "id": 5780
+    },
+    {
+      "name": "beforeinput",
+      "start": 30244.5,
+      "duration": 16,
+      "processing": 0,
+      "id": 0
+    },
+    {
+      "name": "input",
+      "start": 30246,
+      "duration": 16,
+      "processing": 0,
+      "id": 0
+    },
+    {
+      "name": "keydown",
+      "start": 30266.70000001788,
+      "duration": 32,
+      "processing": 0.5,
+      "id": 5787
+    },
+    {
+      "name": "keypress",
+      "start": 30266.70000001788,
+      "duration": 32,
+      "processing": 7.800000011920929,
+      "id": 5787
+    },
+    {
+      "name": "beforeinput",
+      "start": 30269.09999999404,
+      "duration": 32,
+      "processing": 0,
+      "id": 0
+    },
+    {
+      "name": "click",
+      "start": 30269.09999999404,
+      "duration": 32,
+      "processing": 7.4000000059604645,
+      "id": 5787
+    },
+    {
+      "name": "keyup",
+      "start": 30277.20000001788,
+      "duration": 24,
+      "processing": 0.19999998807907104,
+      "id": 5787
+    },
+    {
+      "name": "beforeinput",
+      "start": 30489.80000001192,
+      "duration": 16,
+      "processing": 0,
+      "id": 0
+    },
+    {
+      "name": "keydown",
+      "start": 30508.70000001788,
+      "duration": 72,
+      "processing": 0.4000000059604645,
+      "id": 5794
+    },
+    {
+      "name": "keypress",
+      "start": 30508.70000001788,
+      "duration": 72,
+      "processing": 27.900000005960464,
+      "id": 5794
+    },
+    {
+      "name": "beforeinput",
+      "start": 30509.5,
+      "duration": 72,
+      "processing": 0,
+      "id": 0
+    },
+    {
+      "name": "click",
+      "start": 30509.5,
+      "duration": 72,
+      "processing": 27.700000017881393,
+      "id": 5794
+    },
+    {
+      "name": "keyup",
+      "start": 30538.90000000596,
+      "duration": 40,
+      "processing": 0,
+      "id": 5794
+    },
+    {
+      "name": "beforeinput",
+      "start": 30758.59999999404,
+      "duration": 24,
+      "processing": 0.20000001788139343,
+      "id": 0
+    },
+    {
+      "name": "input",
+      "start": 30761.30000001192,
+      "duration": 24,
+      "processing": 0,
+      "id": 0
+    },
+    {
+      "name": "keydown",
+      "start": 30781.09999999404,
+      "duration": 56,
+      "processing": 0.30000001192092896,
+      "id": 5801
+    },
+    {
+      "name": "keypress",
+      "start": 30781.09999999404,
+      "duration": 56,
+      "processing": 25.599999994039536,
+      "id": 5801
+    },
+    {
+      "name": "beforeinput",
+      "start": 30781.90000000596,
+      "duration": 56,
+      "processing": 0,
+      "id": 0
+    },
+    {
+      "name": "click",
+      "start": 30781.90000000596,
+      "duration": 56,
+      "processing": 25.30000001192093,
+      "id": 5801
+    },
+    {
+      "name": "keyup",
+      "start": 30809.80000001192,
+      "duration": 24,
+      "processing": 0.30000001192092896,
+      "id": 5801
+    },
+    {
+      "name": "beforeinput",
+      "start": 31022.70000001788,
+      "duration": 16,
+      "processing": 0,
+      "id": 0
+    },
+    {
+      "name": "keydown",
+      "start": 31044.59999999404,
+      "duration": 72,
+      "processing": 0.5999999940395355,
+      "id": 5808
+    },
+    {
+      "name": "keypress",
+      "start": 31044.59999999404,
+      "duration": 72,
+      "processing": 29.80000001192093,
+      "id": 5808
+    },
+    {
+      "name": "beforeinput",
+      "start": 31045.70000001788,
+      "duration": 72,
+      "processing": 0,
+      "id": 0
+    },
+    {
+      "name": "click",
+      "start": 31045.90000000596,
+      "duration": 72,
+      "processing": 29,
+      "id": 5808
+    },
+    {
+      "name": "keyup",
+      "start": 31076.70000001788,
+      "duration": 40,
+      "processing": 0.19999998807907104,
+      "id": 5808
+    },
+    {
+      "name": "beforeinput",
+      "start": 31305.20000001788,
+      "duration": 24,
+      "processing": 0,
+      "id": 0
+    },
+    {
+      "name": "input",
+      "start": 31307.30000001192,
+      "duration": 24,
+      "processing": 0,
+      "id": 0
+    },
+    {
+      "name": "keydown",
+      "start": 31326.70000001788,
+      "duration": 72,
+      "processing": 0.30000001192092896,
+      "id": 5815
+    },
+    {
+      "name": "keypress",
+      "start": 31326.70000001788,
+      "duration": 72,
+      "processing": 27.69999998807907,
+      "id": 5815
+    },
+    {
+      "name": "beforeinput",
+      "start": 31327.5,
+      "duration": 72,
+      "processing": 0.09999999403953552,
+      "id": 0
+    },
+    {
+      "name": "click",
+      "start": 31327.59999999404,
+      "duration": 72,
+      "processing": 27.5,
+      "id": 5815
+    },
+    {
+      "name": "keyup",
+      "start": 31358.20000001788,
+      "duration": 16,
+      "processing": 0,
+      "id": 5815
+    },
+    {
+      "name": "beforeinput",
+      "start": 31581.20000001788,
+      "duration": 16,
+      "processing": 0,
+      "id": 0
+    },
+    {
+      "name": "input",
+      "start": 31583,
+      "duration": 16,
+      "processing": 0,
+      "id": 0
+    },
+    {
+      "name": "keydown",
+      "start": 31604.80000001192,
+      "duration": 56,
+      "processing": 0.20000001788139343,
+      "id": 5822
+    },
+    {
+      "name": "keypress",
+      "start": 31604.80000001192,
+      "duration": 56,
+      "processing": 27.099999994039536,
+      "id": 5822
+    },
+    {
+      "name": "beforeinput",
+      "start": 31605.40000000596,
+      "duration": 56,
+      "processing": 0,
+      "id": 0
+    },
+    {
+      "name": "click",
+      "start": 31605.40000000596,
+      "duration": 56,
+      "processing": 26.900000005960464,
+      "id": 5822
+    },
+    {
+      "name": "keyup",
+      "start": 31634.30000001192,
+      "duration": 32,
+      "processing": 0,
+      "id": 5822
+    },
+    {
+      "name": "beforeinput",
+      "start": 31844.40000000596,
+      "duration": 16,
+      "processing": 0,
+      "id": 0
+    },
+    {
+      "name": "input",
+      "start": 31846,
+      "duration": 16,
+      "processing": 0,
+      "id": 0
+    },
+    {
+      "name": "keydown",
+      "start": 31867.30000001192,
+      "duration": 64,
+      "processing": 0.5,
+      "id": 5829
+    },
+    {
+      "name": "keypress",
+      "start": 31867.30000001192,
+      "duration": 64,
+      "processing": 27.5,
+      "id": 5829
+    },
+    {
+      "name": "beforeinput",
+      "start": 31868.59999999404,
+      "duration": 64,
+      "processing": 0,
+      "id": 0
+    },
+    {
+      "name": "click",
+      "start": 31868.59999999404,
+      "duration": 64,
+      "processing": 27.099999994039536,
+      "id": 5829
+    },
+    {
+      "name": "keyup",
+      "start": 31898.30000001192,
+      "duration": 32,
+      "processing": 0,
+      "id": 5829
+    },
+    {
+      "name": "beforeinput",
+      "start": 32126.5,
+      "duration": 16,
+      "processing": 0,
+      "id": 0
+    },
+    {
+      "name": "input",
+      "start": 32128.30000001192,
+      "duration": 16,
+      "processing": 0.09999999403953552,
+      "id": 0
+    },
+    {
+      "name": "keydown",
+      "start": 32152.80000001192,
+      "duration": 40,
+      "processing": 0.29999998211860657,
+      "id": 5836
+    },
+    {
+      "name": "keypress",
+      "start": 32152.80000001192,
+      "duration": 40,
+      "processing": 24.5,
+      "id": 5836
+    },
+    {
+      "name": "beforeinput",
+      "start": 32153.59999999404,
+      "duration": 40,
+      "processing": 0,
+      "id": 0
+    },
+    {
+      "name": "click",
+      "start": 32153.59999999404,
+      "duration": 40,
+      "processing": 24.299999982118607,
+      "id": 5836
+    },
+    {
+      "name": "keyup",
+      "start": 32179.70000001788,
+      "duration": 16,
+      "processing": 0.19999998807907104,
+      "id": 5836
+    },
+    {
+      "name": "beforeinput",
+      "start": 32389.80000001192,
+      "duration": 16,
+      "processing": 0.19999998807907104,
+      "id": 0
+    },
+    {
+      "name": "input",
+      "start": 32392.30000001192,
+      "duration": 16,
+      "processing": 0,
+      "id": 0
+    },
+    {
+      "name": "keydown",
+      "start": 32415.30000001192,
+      "duration": 48,
+      "processing": 0.4000000059604645,
+      "id": 5843
+    },
+    {
+      "name": "keypress",
+      "start": 32415.30000001192,
+      "duration": 48,
+      "processing": 22.19999998807907,
+      "id": 5843
+    },
+    {
+      "name": "beforeinput",
+      "start": 32416,
+      "duration": 48,
+      "processing": 0,
+      "id": 0
+    },
+    {
+      "name": "click",
+      "start": 32416,
+      "duration": 48,
+      "processing": 22.099999994039536,
+      "id": 5843
+    },
+    {
+      "name": "keyup",
+      "start": 32441.59999999404,
+      "duration": 16,
+      "processing": 0.20000001788139343,
+      "id": 5843
+    },
+    {
+      "name": "beforeinput",
+      "start": 32651.20000001788,
+      "duration": 24,
+      "processing": 0.09999999403953552,
+      "id": 0
+    },
+    {
+      "name": "input",
+      "start": 32652.90000000596,
+      "duration": 24,
+      "processing": 0,
+      "id": 0
+    },
+    {
+      "name": "keydown",
+      "start": 32672.20000001788,
+      "duration": 40,
+      "processing": 0.10000002384185791,
+      "id": 5850
+    },
+    {
+      "name": "keypress",
+      "start": 32672.20000001788,
+      "duration": 40,
+      "processing": 23,
+      "id": 5850
+    },
+    {
+      "name": "beforeinput",
+      "start": 32673,
+      "duration": 40,
+      "processing": 0,
+      "id": 0
+    },
+    {
+      "name": "click",
+      "start": 32673,
+      "duration": 40,
+      "processing": 22.700000017881393,
+      "id": 5850
+    },
+    {
+      "name": "keyup",
+      "start": 32697.90000000596,
+      "duration": 16,
+      "processing": 0.20000001788139343,
+      "id": 5850
+    },
+    {
+      "name": "beforeinput",
+      "start": 32912.59999999404,
+      "duration": 16,
+      "processing": 0.10000002384185791,
+      "id": 0
+    },
+    {
+      "name": "input",
+      "start": 32914,
+      "duration": 16,
+      "processing": 0.19999998807907104,
+      "id": 0
+    },
+    {
+      "name": "keydown",
+      "start": 32936,
+      "duration": 32,
+      "processing": 0.3999999761581421,
+      "id": 5857
+    },
+    {
+      "name": "keypress",
+      "start": 32936,
+      "duration": 32,
+      "processing": 3.9000000059604645,
+      "id": 5857
+    },
+    {
+      "name": "beforeinput",
+      "start": 32936.80000001192,
+      "duration": 32,
+      "processing": 0,
+      "id": 0
+    },
+    {
+      "name": "click",
+      "start": 32936.80000001192,
+      "duration": 32,
+      "processing": 3.4000000059604645,
+      "id": 5857
+    },
+    {
+      "name": "keyup",
+      "start": 32941.20000001788,
+      "duration": 32,
+      "processing": 0.20000001788139343,
+      "id": 5857
+    },
+    {
+      "name": "beforeinput",
+      "start": 33143,
+      "duration": 16,
+      "processing": 0.09999999403953552,
+      "id": 0
+    },
+    {
+      "name": "keydown",
+      "start": 33163.20000001788,
+      "duration": 16,
+      "processing": 0.20000001788139343,
+      "id": 5864
+    },
+    {
+      "name": "keypress",
+      "start": 33163.20000001788,
+      "duration": 16,
+      "processing": 2.5999999940395355,
+      "id": 5864
+    },
+    {
+      "name": "beforeinput",
+      "start": 33164,
+      "duration": 16,
+      "processing": 0,
+      "id": 0
+    },
+    {
+      "name": "click",
+      "start": 33164,
+      "duration": 16,
+      "processing": 2.4000000059604645,
+      "id": 5864
+    },
+    {
+      "name": "keyup",
+      "start": 33166.90000000596,
+      "duration": 16,
+      "processing": 0,
+      "id": 5864
+    },
+    {
+      "name": "beforeinput",
+      "start": 33378.59999999404,
+      "duration": 16,
+      "processing": 0,
+      "id": 0
+    },
+    {
+      "name": "input",
+      "start": 33380.20000001788,
+      "duration": 16,
+      "processing": 0.09999999403953552,
+      "id": 0
+    },
+    {
+      "name": "keydown",
+      "start": 33402.80000001192,
+      "duration": 16,
+      "processing": 0.3999999761581421,
+      "id": 5871
+    },
+    {
+      "name": "keypress",
+      "start": 33402.80000001192,
+      "duration": 16,
+      "processing": 4.9000000059604645,
+      "id": 5871
+    },
+    {
+      "name": "beforeinput",
+      "start": 33403.59999999404,
+      "duration": 16,
+      "processing": 0,
+      "id": 0
+    },
+    {
+      "name": "click",
+      "start": 33403.80000001192,
+      "duration": 16,
+      "processing": 4.699999988079071,
+      "id": 5871
+    },
+    {
+      "name": "keyup",
+      "start": 33409,
+      "duration": 16,
+      "processing": 0.09999999403953552,
+      "id": 5871
+    },
+    {
+      "name": "beforeinput",
+      "start": 33612.09999999404,
+      "duration": 24,
+      "processing": 0,
+      "id": 0
+    },
+    {
+      "name": "input",
+      "start": 33613.80000001192,
+      "duration": 24,
+      "processing": 0,
+      "id": 0
+    },
+    {
+      "name": "keydown",
+      "start": 33624,
+      "duration": 80,
+      "processing": 0.20000001788139343,
+      "id": 5878
+    },
+    {
+      "name": "keypress",
+      "start": 33624,
+      "duration": 80,
+      "processing": 45.69999998807907,
+      "id": 5878
+    },
+    {
+      "name": "beforeinput",
+      "start": 33628.40000000596,
+      "duration": 72,
+      "processing": 0,
+      "id": 0
+    },
+    {
+      "name": "click",
+      "start": 33628.40000000596,
+      "duration": 72,
+      "processing": 45.400000005960464,
+      "id": 5878
+    },
+    {
+      "name": "keyup",
+      "start": 33674.5,
+      "duration": 32,
+      "processing": 0.20000001788139343,
+      "id": 5878
+    },
+    {
+      "name": "beforeinput",
+      "start": 33890.30000001192,
+      "duration": 16,
+      "processing": 0.09999999403953552,
+      "id": 0
+    },
+    {
+      "name": "keydown",
+      "start": 33909.5,
+      "duration": 16,
+      "processing": 0.4000000059604645,
+      "id": 5885
+    },
+    {
+      "name": "keypress",
+      "start": 33909.5,
+      "duration": 16,
+      "processing": 2.699999988079071,
+      "id": 5885
+    },
+    {
+      "name": "beforeinput",
+      "start": 33910.5,
+      "duration": 16,
+      "processing": 0,
+      "id": 0
+    },
+    {
+      "name": "click",
+      "start": 33910.5,
+      "duration": 16,
+      "processing": 2.5,
+      "id": 5885
+    },
+    {
+      "name": "keyup",
+      "start": 33913.5,
+      "duration": 16,
+      "processing": 0,
+      "id": 5885
+    },
+    {
+      "name": "beforeinput",
+      "start": 34123.20000001788,
+      "duration": 16,
+      "processing": 0,
+      "id": 0
+    },
+    {
+      "name": "input",
+      "start": 34124.90000000596,
+      "duration": 16,
+      "processing": 0,
+      "id": 0
+    },
+    {
+      "name": "keydown",
+      "start": 34140.90000000596,
+      "duration": 16,
+      "processing": 0.19999998807907104,
+      "id": 5892
+    },
+    {
+      "name": "keypress",
+      "start": 34140.90000000596,
+      "duration": 16,
+      "processing": 3.9000000059604645,
+      "id": 5892
+    },
+    {
+      "name": "beforeinput",
+      "start": 34141.70000001788,
+      "duration": 16,
+      "processing": 0,
+      "id": 0
+    },
+    {
+      "name": "click",
+      "start": 34141.70000001788,
+      "duration": 16,
+      "processing": 3.699999988079071,
+      "id": 5892
+    },
+    {
+      "name": "beforeinput",
+      "start": 34355.90000000596,
+      "duration": 16,
+      "processing": 0.09999999403953552,
+      "id": 0
+    },
+    {
+      "name": "keydown",
+      "start": 34373.59999999404,
+      "duration": 152,
+      "processing": 0.4000000059604645,
+      "id": 5899
+    },
+    {
+      "name": "keypress",
+      "start": 34373.59999999404,
+      "duration": 152,
+      "processing": 140.09999999403954,
+      "id": 5899
+    },
+    {
+      "name": "beforeinput",
+      "start": 34374.40000000596,
+      "duration": 152,
+      "processing": 0,
+      "id": 0
+    },
+    {
+      "name": "click",
+      "start": 34374.59999999404,
+      "duration": 152,
+      "processing": 139.7999999821186,
+      "id": 5899
+    },
+    {
+      "name": "keyup",
+      "start": 34515.30000001192,
+      "duration": 16,
+      "processing": 0,
+      "id": 5899
+    },
+    {
+      "name": "keydown",
+      "start": 34753.59999999404,
+      "duration": 32,
+      "processing": 0.30000001192092896,
+      "id": 5906
+    },
+    {
+      "name": "keypress",
+      "start": 34753.59999999404,
+      "duration": 32,
+      "processing": 3.699999988079071,
+      "id": 5906
+    },
+    {
+      "name": "beforeinput",
+      "start": 34754.40000000596,
+      "duration": 32,
+      "processing": 0,
+      "id": 0
+    },
+    {
+      "name": "click",
+      "start": 34754.40000000596,
+      "duration": 32,
+      "processing": 3.300000011920929,
+      "id": 5906
+    },
+    {
+      "name": "keyup",
+      "start": 34758.30000001192,
+      "duration": 24,
+      "processing": 0,
+      "id": 5906
+    },
+    {
+      "name": "pointerout",
+      "start": 34977.20000001788,
+      "duration": 32,
+      "processing": 0,
+      "id": 0
+    },
+    {
+      "name": "pointerover",
+      "start": 34977.20000001788,
+      "duration": 32,
+      "processing": 0.20000001788139343,
+      "id": 0
+    },
+    {
+      "name": "pointerenter",
+      "start": 34977.20000001788,
+      "duration": 32,
+      "processing": 0,
+      "id": 0
+    },
+    {
+      "name": "pointerenter",
+      "start": 34977.20000001788,
+      "duration": 32,
+      "processing": 0,
+      "id": 0
+    },
+    {
+      "name": "pointerenter",
+      "start": 34977.20000001788,
+      "duration": 32,
+      "processing": 0,
+      "id": 0
+    },
+    {
+      "name": "mouseout",
+      "start": 34977.20000001788,
+      "duration": 32,
+      "processing": 0,
+      "id": 0
+    },
+    {
+      "name": "mouseover",
+      "start": 34977.20000001788,
+      "duration": 32,
+      "processing": 0,
+      "id": 0
+    },
+    {
+      "name": "pointerdown",
+      "start": 34977.30000001192,
+      "duration": 32,
+      "processing": 2.199999988079071,
+      "id": 5913
+    },
+    {
+      "name": "mousedown",
+      "start": 34977.30000001192,
+      "duration": 32,
+      "processing": 0,
+      "id": 0
+    },
+    {
+      "name": "pointerup",
+      "start": 34977.40000000596,
+      "duration": 32,
+      "processing": 0.10000002384185791,
+      "id": 5913
+    },
+    {
+      "name": "mouseup",
+      "start": 34977.40000000596,
+      "duration": 32,
+      "processing": 0.19999998807907104,
+      "id": 0
+    },
+    {
+      "name": "click",
+      "start": 34977.40000000596,
+      "duration": 32,
+      "processing": 4.300000011920929,
+      "id": 5913
+    },
+    {
+      "name": "pointerout",
+      "start": 34993.59999999404,
+      "duration": 16,
+      "processing": 0,
+      "id": 0
+    },
+    {
+      "name": "pointerleave",
+      "start": 34993.59999999404,
+      "duration": 16,
+      "processing": 0,
+      "id": 0
+    },
+    {
+      "name": "pointerleave",
+      "start": 34993.59999999404,
+      "duration": 16,
+      "processing": 0,
+      "id": 0
+    },
+    {
+      "name": "pointerover",
+      "start": 34993.59999999404,
+      "duration": 16,
+      "processing": 0.20000001788139343,
+      "id": 0
+    },
+    {
+      "name": "pointerenter",
+      "start": 34993.59999999404,
+      "duration": 16,
+      "processing": 0,
+      "id": 0
+    },
+    {
+      "name": "pointerenter",
+      "start": 34993.59999999404,
+      "duration": 16,
+      "processing": 0,
+      "id": 0
+    },
+    {
+      "name": "pointerenter",
+      "start": 34993.59999999404,
+      "duration": 16,
+      "processing": 0,
+      "id": 0
+    },
+    {
+      "name": "mouseout",
+      "start": 34993.59999999404,
+      "duration": 16,
+      "processing": 0,
+      "id": 0
+    },
+    {
+      "name": "mouseover",
+      "start": 34993.59999999404,
+      "duration": 16,
+      "processing": 0,
+      "id": 0
+    },
+    {
+      "name": "pointerout",
+      "start": 35323.90000000596,
+      "duration": 32,
+      "processing": 0,
+      "id": 0
+    },
+    {
+      "name": "pointerleave",
+      "start": 35323.90000000596,
+      "duration": 32,
+      "processing": 0,
+      "id": 0
+    },
+    {
+      "name": "pointerleave",
+      "start": 35323.90000000596,
+      "duration": 32,
+      "processing": 0,
+      "id": 0
+    },
+    {
+      "name": "pointerleave",
+      "start": 35323.90000000596,
+      "duration": 32,
+      "processing": 0,
+      "id": 0
+    },
+    {
+      "name": "pointerover",
+      "start": 35323.90000000596,
+      "duration": 32,
+      "processing": 0,
+      "id": 0
+    },
+    {
+      "name": "pointerenter",
+      "start": 35323.90000000596,
+      "duration": 32,
+      "processing": 0,
+      "id": 0
+    },
+    {
+      "name": "pointerenter",
+      "start": 35323.90000000596,
+      "duration": 32,
+      "processing": 0,
+      "id": 0
+    },
+    {
+      "name": "mouseout",
+      "start": 35323.90000000596,
+      "duration": 32,
+      "processing": 0,
+      "id": 0
+    },
+    {
+      "name": "mouseover",
+      "start": 35323.90000000596,
+      "duration": 32,
+      "processing": 0,
+      "id": 0
+    },
+    {
+      "name": "pointerdown",
+      "start": 35324.09999999404,
+      "duration": 32,
+      "processing": 1.5,
+      "id": 5920
+    },
+    {
+      "name": "mousedown",
+      "start": 35324.09999999404,
+      "duration": 32,
+      "processing": 0.09999999403953552,
+      "id": 0
+    },
+    {
+      "name": "pointerup",
+      "start": 35324.09999999404,
+      "duration": 32,
+      "processing": 0.09999999403953552,
+      "id": 5920
+    },
+    {
+      "name": "mouseup",
+      "start": 35324.09999999404,
+      "duration": 32,
+      "processing": 0,
+      "id": 0
+    },
+    {
+      "name": "click",
+      "start": 35324.09999999404,
+      "duration": 32,
+      "processing": 3.9000000059604645,
+      "id": 5920
+    },
+    {
+      "name": "pointerout",
+      "start": 35338.30000001192,
+      "duration": 16,
+      "processing": 0.09999999403953552,
+      "id": 0
+    },
+    {
+      "name": "pointerleave",
+      "start": 35338.30000001192,
+      "duration": 16,
+      "processing": 0,
+      "id": 0
+    },
+    {
+      "name": "pointerleave",
+      "start": 35338.30000001192,
+      "duration": 16,
+      "processing": 0,
+      "id": 0
+    },
+    {
+      "name": "pointerover",
+      "start": 35338.30000001192,
+      "duration": 16,
+      "processing": 0.19999998807907104,
+      "id": 0
+    },
+    {
+      "name": "pointerenter",
+      "start": 35338.30000001192,
+      "duration": 16,
+      "processing": 0,
+      "id": 0
+    },
+    {
+      "name": "pointerenter",
+      "start": 35338.30000001192,
+      "duration": 16,
+      "processing": 0,
+      "id": 0
+    },
+    {
+      "name": "pointerenter",
+      "start": 35338.30000001192,
+      "duration": 16,
+      "processing": 0,
+      "id": 0
+    },
+    {
+      "name": "mouseout",
+      "start": 35338.30000001192,
+      "duration": 16,
+      "processing": 0,
+      "id": 0
+    },
+    {
+      "name": "mouseover",
+      "start": 35338.30000001192,
+      "duration": 16,
+      "processing": 0,
+      "id": 0
+    },
+    {
+      "name": "pointerout",
+      "start": 35563.09999999404,
+      "duration": 32,
+      "processing": 0.09999999403953552,
+      "id": 0
+    },
+    {
+      "name": "pointerleave",
+      "start": 35563.09999999404,
+      "duration": 32,
+      "processing": 0,
+      "id": 0
+    },
+    {
+      "name": "pointerleave",
+      "start": 35563.09999999404,
+      "duration": 32,
+      "processing": 0,
+      "id": 0
+    },
+    {
+      "name": "pointerleave",
+      "start": 35563.09999999404,
+      "duration": 32,
+      "processing": 0,
+      "id": 0
+    },
+    {
+      "name": "pointerover",
+      "start": 35563.09999999404,
+      "duration": 32,
+      "processing": 0,
+      "id": 0
+    },
+    {
+      "name": "pointerenter",
+      "start": 35563.09999999404,
+      "duration": 32,
+      "processing": 0,
+      "id": 0
+    },
+    {
+      "name": "pointerenter",
+      "start": 35563.09999999404,
+      "duration": 32,
+      "processing": 0,
+      "id": 0
+    },
+    {
+      "name": "mouseout",
+      "start": 35563.09999999404,
+      "duration": 32,
+      "processing": 0,
+      "id": 0
+    },
+    {
+      "name": "mouseover",
+      "start": 35563.09999999404,
+      "duration": 32,
+      "processing": 0,
+      "id": 0
+    },
+    {
+      "name": "pointerdown",
+      "start": 35563.20000001788,
+      "duration": 32,
+      "processing": 0.800000011920929,
+      "id": 5927
+    },
+    {
+      "name": "mousedown",
+      "start": 35563.20000001788,
+      "duration": 32,
+      "processing": 0,
+      "id": 0
+    },
+    {
+      "name": "pointerup",
+      "start": 35563.30000001192,
+      "duration": 32,
+      "processing": 0,
+      "id": 5927
+    },
+    {
+      "name": "mouseup",
+      "start": 35563.30000001192,
+      "duration": 32,
+      "processing": 0,
+      "id": 0
+    },
+    {
+      "name": "click",
+      "start": 35563.30000001192,
+      "duration": 32,
+      "processing": 5.399999976158142,
+      "id": 5927
+    },
+    {
+      "name": "pointerout",
+      "start": 35804,
+      "duration": 16,
+      "processing": 0.09999999403953552,
+      "id": 0
+    },
+    {
+      "name": "pointerleave",
+      "start": 35804,
+      "duration": 16,
+      "processing": 0,
+      "id": 0
+    },
+    {
+      "name": "pointerleave",
+      "start": 35804,
+      "duration": 16,
+      "processing": 0,
+      "id": 0
+    },
+    {
+      "name": "pointerleave",
+      "start": 35804,
+      "duration": 16,
+      "processing": 0,
+      "id": 0
+    },
+    {
+      "name": "pointerover",
+      "start": 35804,
+      "duration": 16,
+      "processing": 0.20000001788139343,
+      "id": 0
+    },
+    {
+      "name": "pointerenter",
+      "start": 35804,
+      "duration": 16,
+      "processing": 0,
+      "id": 0
+    },
+    {
+      "name": "pointerenter",
+      "start": 35804,
+      "duration": 16,
+      "processing": 0,
+      "id": 0
+    },
+    {
+      "name": "pointerenter",
+      "start": 35804,
+      "duration": 16,
+      "processing": 0,
+      "id": 0
+    },
+    {
+      "name": "mouseout",
+      "start": 35804,
+      "duration": 16,
+      "processing": 0,
+      "id": 0
+    },
+    {
+      "name": "mouseover",
+      "start": 35804,
+      "duration": 16,
+      "processing": 0,
+      "id": 0
+    },
+    {
+      "name": "pointerdown",
+      "start": 35804.09999999404,
+      "duration": 16,
+      "processing": 1.800000011920929,
+      "id": 5934
+    },
+    {
+      "name": "mousedown",
+      "start": 35804.09999999404,
+      "duration": 16,
+      "processing": 0,
+      "id": 0
+    },
+    {
+      "name": "pointerup",
+      "start": 35804.09999999404,
+      "duration": 16,
+      "processing": 0.09999999403953552,
+      "id": 5934
+    },
+    {
+      "name": "mouseup",
+      "start": 35804.09999999404,
+      "duration": 16,
+      "processing": 0,
+      "id": 0
+    },
+    {
+      "name": "click",
+      "start": 35804.09999999404,
+      "duration": 16,
+      "processing": 0.5999999940395355,
+      "id": 5934
+    },
+    {
+      "name": "pointerout",
+      "start": 36009.09999999404,
+      "duration": 16,
+      "processing": 0,
+      "id": 0
+    },
+    {
+      "name": "pointerleave",
+      "start": 36009.09999999404,
+      "duration": 16,
+      "processing": 0,
+      "id": 0
+    },
+    {
+      "name": "pointerleave",
+      "start": 36009.09999999404,
+      "duration": 16,
+      "processing": 0.19999998807907104,
+      "id": 0
+    },
+    {
+      "name": "pointerleave",
+      "start": 36009.09999999404,
+      "duration": 16,
+      "processing": 0,
+      "id": 0
+    },
+    {
+      "name": "pointerleave",
+      "start": 36009.09999999404,
+      "duration": 16,
+      "processing": 0,
+      "id": 0
+    },
+    {
+      "name": "pointerleave",
+      "start": 36009.09999999404,
+      "duration": 16,
+      "processing": 0,
+      "id": 0
+    },
+    {
+      "name": "pointerleave",
+      "start": 36009.09999999404,
+      "duration": 16,
+      "processing": 0,
+      "id": 0
+    },
+    {
+      "name": "pointerover",
+      "start": 36009.09999999404,
+      "duration": 16,
+      "processing": 0.19999998807907104,
+      "id": 0
+    },
+    {
+      "name": "mouseout",
+      "start": 36009.09999999404,
+      "duration": 16,
+      "processing": 0,
+      "id": 0
+    },
+    {
+      "name": "mouseover",
+      "start": 36009.09999999404,
+      "duration": 16,
+      "processing": 0,
+      "id": 0
+    },
+    {
+      "name": "pointerout",
+      "start": 36057.30000001192,
+      "duration": 32,
+      "processing": 0,
+      "id": 0
+    },
+    {
+      "name": "pointerover",
+      "start": 36057.30000001192,
+      "duration": 32,
+      "processing": 0.19999998807907104,
+      "id": 0
+    },
+    {
+      "name": "pointerenter",
+      "start": 36057.30000001192,
+      "duration": 32,
+      "processing": 0,
+      "id": 0
+    },
+    {
+      "name": "pointerenter",
+      "start": 36057.30000001192,
+      "duration": 32,
+      "processing": 0,
+      "id": 0
+    },
+    {
+      "name": "pointerenter",
+      "start": 36057.30000001192,
+      "duration": 32,
+      "processing": 0,
+      "id": 0
+    },
+    {
+      "name": "pointerenter",
+      "start": 36057.30000001192,
+      "duration": 32,
+      "processing": 0,
+      "id": 0
+    },
+    {
+      "name": "pointerenter",
+      "start": 36057.30000001192,
+      "duration": 32,
+      "processing": 0,
+      "id": 0
+    },
+    {
+      "name": "pointerenter",
+      "start": 36057.30000001192,
+      "duration": 32,
+      "processing": 1.0999999940395355,
+      "id": 0
+    },
+    {
+      "name": "pointerenter",
+      "start": 36057.30000001192,
+      "duration": 32,
+      "processing": 0,
+      "id": 0
+    },
+    {
+      "name": "pointerenter",
+      "start": 36057.30000001192,
+      "duration": 32,
+      "processing": 0,
+      "id": 0
+    },
+    {
+      "name": "mouseout",
+      "start": 36057.30000001192,
+      "duration": 32,
+      "processing": 0,
+      "id": 0
+    },
+    {
+      "name": "mouseover",
+      "start": 36057.30000001192,
+      "duration": 32,
+      "processing": 0,
+      "id": 0
+    },
+    {
+      "name": "pointerout",
+      "start": 36272.20000001788,
+      "duration": 16,
+      "processing": 0.09999999403953552,
+      "id": 0
+    },
+    {
+      "name": "pointerleave",
+      "start": 36272.20000001788,
+      "duration": 16,
+      "processing": 0,
+      "id": 0
+    },
+    {
+      "name": "pointerleave",
+      "start": 36272.20000001788,
+      "duration": 16,
+      "processing": 0,
+      "id": 0
+    },
+    {
+      "name": "pointerleave",
+      "start": 36272.20000001788,
+      "duration": 16,
+      "processing": 0,
+      "id": 0
+    },
+    {
+      "name": "pointerleave",
+      "start": 36272.20000001788,
+      "duration": 16,
+      "processing": 0,
+      "id": 0
+    },
+    {
+      "name": "pointerleave",
+      "start": 36272.20000001788,
+      "duration": 16,
+      "processing": 0,
+      "id": 0
+    },
+    {
+      "name": "pointerleave",
+      "start": 36272.20000001788,
+      "duration": 16,
+      "processing": 0,
+      "id": 0
+    },
+    {
+      "name": "pointerleave",
+      "start": 36272.20000001788,
+      "duration": 16,
+      "processing": 0,
+      "id": 0
+    },
+    {
+      "name": "pointerleave",
+      "start": 36272.20000001788,
+      "duration": 16,
+      "processing": 0,
+      "id": 0
+    },
+    {
+      "name": "pointerover",
+      "start": 36272.20000001788,
+      "duration": 16,
+      "processing": 0.09999999403953552,
+      "id": 0
+    },
+    {
+      "name": "mouseout",
+      "start": 36272.20000001788,
+      "duration": 16,
+      "processing": 0,
+      "id": 0
+    },
+    {
+      "name": "mouseover",
+      "start": 36272.20000001788,
+      "duration": 16,
+      "processing": 0,
+      "id": 0
+    },
+    {
+      "name": "pointerout",
+      "start": 36325.09999999404,
+      "duration": 32,
+      "processing": 0.09999999403953552,
+      "id": 0
+    },
+    {
+      "name": "pointerover",
+      "start": 36325.09999999404,
+      "duration": 32,
+      "processing": 0.20000001788139343,
+      "id": 0
+    },
+    {
+      "name": "pointerenter",
+      "start": 36325.09999999404,
+      "duration": 32,
+      "processing": 0,
+      "id": 0
+    },
+    {
+      "name": "pointerenter",
+      "start": 36325.09999999404,
+      "duration": 32,
+      "processing": 0,
+      "id": 0
+    },
+    {
+      "name": "pointerenter",
+      "start": 36325.09999999404,
+      "duration": 32,
+      "processing": 0,
+      "id": 0
+    },
+    {
+      "name": "pointerenter",
+      "start": 36325.09999999404,
+      "duration": 32,
+      "processing": 0,
+      "id": 0
+    },
+    {
+      "name": "pointerenter",
+      "start": 36325.09999999404,
+      "duration": 32,
+      "processing": 0,
+      "id": 0
+    },
+    {
+      "name": "pointerenter",
+      "start": 36325.09999999404,
+      "duration": 32,
+      "processing": 0.29999998211860657,
+      "id": 0
+    },
+    {
+      "name": "pointerenter",
+      "start": 36325.09999999404,
+      "duration": 32,
+      "processing": 0,
+      "id": 0
+    },
+    {
+      "name": "pointerenter",
+      "start": 36325.09999999404,
+      "duration": 32,
+      "processing": 0,
+      "id": 0
+    },
+    {
+      "name": "mouseout",
+      "start": 36325.09999999404,
+      "duration": 32,
+      "processing": 0,
+      "id": 0
+    },
+    {
+      "name": "mouseover",
+      "start": 36325.09999999404,
+      "duration": 32,
+      "processing": 0,
+      "id": 0
+    },
+    {
+      "name": "pointerout",
+      "start": 36538.40000000596,
+      "duration": 16,
+      "processing": 0.19999998807907104,
+      "id": 0
+    },
+    {
+      "name": "pointerleave",
+      "start": 36538.40000000596,
+      "duration": 16,
+      "processing": 0,
+      "id": 0
+    },
+    {
+      "name": "pointerleave",
+      "start": 36538.40000000596,
+      "duration": 16,
+      "processing": 0,
+      "id": 0
+    },
+    {
+      "name": "pointerleave",
+      "start": 36538.40000000596,
+      "duration": 16,
+      "processing": 0,
+      "id": 0
+    },
+    {
+      "name": "pointerleave",
+      "start": 36538.40000000596,
+      "duration": 16,
+      "processing": 0,
+      "id": 0
+    },
+    {
+      "name": "pointerleave",
+      "start": 36538.40000000596,
+      "duration": 16,
+      "processing": 0,
+      "id": 0
+    },
+    {
+      "name": "pointerleave",
+      "start": 36538.40000000596,
+      "duration": 16,
+      "processing": 0,
+      "id": 0
+    },
+    {
+      "name": "pointerleave",
+      "start": 36538.40000000596,
+      "duration": 16,
+      "processing": 0,
+      "id": 0
+    },
+    {
+      "name": "pointerleave",
+      "start": 36538.40000000596,
+      "duration": 16,
+      "processing": 0,
+      "id": 0
+    },
+    {
+      "name": "pointerover",
+      "start": 36538.40000000596,
+      "duration": 16,
+      "processing": 0.30000001192092896,
+      "id": 0
+    },
+    {
+      "name": "mouseout",
+      "start": 36538.40000000596,
+      "duration": 16,
+      "processing": 0,
+      "id": 0
+    },
+    {
+      "name": "mouseover",
+      "start": 36538.40000000596,
+      "duration": 16,
+      "processing": 0,
+      "id": 0
+    },
+    {
+      "name": "pointerout",
+      "start": 36592,
+      "duration": 32,
+      "processing": 0,
+      "id": 0
+    },
+    {
+      "name": "pointerover",
+      "start": 36592,
+      "duration": 32,
+      "processing": 0.30000001192092896,
+      "id": 0
+    },
+    {
+      "name": "pointerenter",
+      "start": 36592,
+      "duration": 32,
+      "processing": 0,
+      "id": 0
+    },
+    {
+      "name": "pointerenter",
+      "start": 36592,
+      "duration": 32,
+      "processing": 0,
+      "id": 0
+    },
+    {
+      "name": "pointerenter",
+      "start": 36592,
+      "duration": 32,
+      "processing": 0,
+      "id": 0
+    },
+    {
+      "name": "pointerenter",
+      "start": 36592,
+      "duration": 32,
+      "processing": 0,
+      "id": 0
+    },
+    {
+      "name": "pointerenter",
+      "start": 36592,
+      "duration": 32,
+      "processing": 0,
+      "id": 0
+    },
+    {
+      "name": "pointerenter",
+      "start": 36592,
+      "duration": 32,
+      "processing": 0.4000000059604645,
+      "id": 0
+    },
+    {
+      "name": "pointerenter",
+      "start": 36592,
+      "duration": 32,
+      "processing": 0,
+      "id": 0
+    },
+    {
+      "name": "pointerenter",
+      "start": 36592,
+      "duration": 32,
+      "processing": 0,
+      "id": 0
+    },
+    {
+      "name": "mouseout",
+      "start": 36592,
+      "duration": 32,
+      "processing": 0,
+      "id": 0
+    },
+    {
+      "name": "mouseover",
+      "start": 36592,
+      "duration": 32,
+      "processing": 0,
+      "id": 0
+    },
+    {
+      "name": "pointerout",
+      "start": 36799.90000000596,
+      "duration": 24,
+      "processing": 0.19999998807907104,
+      "id": 0
+    },
+    {
+      "name": "pointerleave",
+      "start": 36799.90000000596,
+      "duration": 24,
+      "processing": 0,
+      "id": 0
+    },
+    {
+      "name": "pointerleave",
+      "start": 36799.90000000596,
+      "duration": 24,
+      "processing": 0,
+      "id": 0
+    },
+    {
+      "name": "pointerleave",
+      "start": 36799.90000000596,
+      "duration": 24,
+      "processing": 0,
+      "id": 0
+    },
+    {
+      "name": "pointerleave",
+      "start": 36799.90000000596,
+      "duration": 24,
+      "processing": 0,
+      "id": 0
+    },
+    {
+      "name": "pointerleave",
+      "start": 36799.90000000596,
+      "duration": 24,
+      "processing": 0,
+      "id": 0
+    },
+    {
+      "name": "pointerleave",
+      "start": 36799.90000000596,
+      "duration": 24,
+      "processing": 0,
+      "id": 0
+    },
+    {
+      "name": "pointerleave",
+      "start": 36799.90000000596,
+      "duration": 24,
+      "processing": 0,
+      "id": 0
+    },
+    {
+      "name": "pointerleave",
+      "start": 36799.90000000596,
+      "duration": 24,
+      "processing": 0,
+      "id": 0
+    },
+    {
+      "name": "pointerover",
+      "start": 36799.90000000596,
+      "duration": 24,
+      "processing": 0.6000000238418579,
+      "id": 0
+    },
+    {
+      "name": "mouseout",
+      "start": 36799.90000000596,
+      "duration": 24,
+      "processing": 0,
+      "id": 0
+    },
+    {
+      "name": "mouseover",
+      "start": 36799.90000000596,
+      "duration": 24,
+      "processing": 0,
+      "id": 0
+    },
+    {
+      "name": "pointerout",
+      "start": 36857.80000001192,
+      "duration": 32,
+      "processing": 0.19999998807907104,
+      "id": 0
+    },
+    {
+      "name": "pointerover",
+      "start": 36857.80000001192,
+      "duration": 32,
+      "processing": 0.30000001192092896,
+      "id": 0
+    },
+    {
+      "name": "pointerenter",
+      "start": 36857.80000001192,
+      "duration": 32,
+      "processing": 0,
+      "id": 0
+    },
+    {
+      "name": "pointerenter",
+      "start": 36857.80000001192,
+      "duration": 32,
+      "processing": 0,
+      "id": 0
+    },
+    {
+      "name": "pointerenter",
+      "start": 36857.80000001192,
+      "duration": 32,
+      "processing": 0,
+      "id": 0
+    },
+    {
+      "name": "pointerenter",
+      "start": 36857.80000001192,
+      "duration": 32,
+      "processing": 0,
+      "id": 0
+    },
+    {
+      "name": "pointerenter",
+      "start": 36857.80000001192,
+      "duration": 32,
+      "processing": 0,
+      "id": 0
+    },
+    {
+      "name": "pointerenter",
+      "start": 36857.80000001192,
+      "duration": 32,
+      "processing": 0.4000000059604645,
+      "id": 0
+    },
+    {
+      "name": "pointerenter",
+      "start": 36857.80000001192,
+      "duration": 32,
+      "processing": 0,
+      "id": 0
+    },
+    {
+      "name": "pointerenter",
+      "start": 36857.80000001192,
+      "duration": 32,
+      "processing": 0,
+      "id": 0
+    },
+    {
+      "name": "mouseout",
+      "start": 36857.80000001192,
+      "duration": 32,
+      "processing": 0,
+      "id": 0
+    },
+    {
+      "name": "mouseover",
+      "start": 36857.80000001192,
+      "duration": 32,
+      "processing": 0,
+      "id": 0
+    },
+    {
+      "name": "pointerout",
+      "start": 37065.5,
+      "duration": 24,
+      "processing": 0.19999998807907104,
+      "id": 0
+    },
+    {
+      "name": "pointerleave",
+      "start": 37065.5,
+      "duration": 24,
+      "processing": 0,
+      "id": 0
+    },
+    {
+      "name": "pointerleave",
+      "start": 37065.5,
+      "duration": 24,
+      "processing": 0,
+      "id": 0
+    },
+    {
+      "name": "pointerleave",
+      "start": 37065.5,
+      "duration": 24,
+      "processing": 0,
+      "id": 0
+    },
+    {
+      "name": "pointerleave",
+      "start": 37065.5,
+      "duration": 24,
+      "processing": 0,
+      "id": 0
+    },
+    {
+      "name": "pointerleave",
+      "start": 37065.5,
+      "duration": 24,
+      "processing": 0,
+      "id": 0
+    },
+    {
+      "name": "pointerleave",
+      "start": 37065.5,
+      "duration": 24,
+      "processing": 0,
+      "id": 0
+    },
+    {
+      "name": "pointerleave",
+      "start": 37065.5,
+      "duration": 24,
+      "processing": 0,
+      "id": 0
+    },
+    {
+      "name": "pointerleave",
+      "start": 37065.5,
+      "duration": 24,
+      "processing": 0,
+      "id": 0
+    },
+    {
+      "name": "pointerover",
+      "start": 37065.5,
+      "duration": 24,
+      "processing": 0.20000001788139343,
+      "id": 0
+    },
+    {
+      "name": "mouseout",
+      "start": 37065.5,
+      "duration": 24,
+      "processing": 0,
+      "id": 0
+    },
+    {
+      "name": "mouseover",
+      "start": 37065.5,
+      "duration": 24,
+      "processing": 0,
+      "id": 0
+    },
+    {
+      "name": "pointerout",
+      "start": 37126.80000001192,
+      "duration": 32,
+      "processing": 0.09999999403953552,
+      "id": 0
+    },
+    {
+      "name": "pointerover",
+      "start": 37126.80000001192,
+      "duration": 32,
+      "processing": 0.30000001192092896,
+      "id": 0
+    },
+    {
+      "name": "pointerenter",
+      "start": 37126.80000001192,
+      "duration": 32,
+      "processing": 0,
+      "id": 0
+    },
+    {
+      "name": "pointerenter",
+      "start": 37126.80000001192,
+      "duration": 32,
+      "processing": 0,
+      "id": 0
+    },
+    {
+      "name": "pointerenter",
+      "start": 37126.80000001192,
+      "duration": 32,
+      "processing": 0,
+      "id": 0
+    },
+    {
+      "name": "pointerenter",
+      "start": 37126.80000001192,
+      "duration": 32,
+      "processing": 0,
+      "id": 0
+    },
+    {
+      "name": "pointerenter",
+      "start": 37126.80000001192,
+      "duration": 32,
+      "processing": 0,
+      "id": 0
+    },
+    {
+      "name": "pointerenter",
+      "start": 37126.80000001192,
+      "duration": 32,
+      "processing": 0.29999998211860657,
+      "id": 0
+    },
+    {
+      "name": "pointerenter",
+      "start": 37126.80000001192,
+      "duration": 32,
+      "processing": 0,
+      "id": 0
+    },
+    {
+      "name": "pointerenter",
+      "start": 37126.80000001192,
+      "duration": 32,
+      "processing": 0,
+      "id": 0
+    },
+    {
+      "name": "mouseout",
+      "start": 37126.80000001192,
+      "duration": 32,
+      "processing": 0,
+      "id": 0
+    },
+    {
+      "name": "mouseover",
+      "start": 37126.80000001192,
+      "duration": 32,
+      "processing": 0,
+      "id": 0
+    },
+    {
+      "name": "beforeinput",
+      "start": 37348.5,
+      "duration": 24,
+      "processing": 0,
+      "id": 0
+    },
+    {
+      "name": "input",
+      "start": 37349.5,
+      "duration": 24,
+      "processing": 0,
+      "id": 0
+    },
+    {
+      "name": "keydown",
+      "start": 37367.80000001192,
+      "duration": 32,
+      "processing": 0.4000000059604645,
+      "id": 5941
+    },
+    {
+      "name": "keypress",
+      "start": 37367.80000001192,
+      "duration": 32,
+      "processing": 2.5,
+      "id": 5941
+    },
+    {
+      "name": "beforeinput",
+      "start": 37368.90000000596,
+      "duration": 24,
+      "processing": 0,
+      "id": 0
+    },
+    {
+      "name": "click",
+      "start": 37369,
+      "duration": 24,
+      "processing": 2,
+      "id": 5941
+    },
+    {
+      "name": "keyup",
+      "start": 37371.70000001788,
+      "duration": 24,
+      "processing": 0,
+      "id": 5941
+    },
+    {
+      "name": "pointerover",
+      "start": 37374.5,
+      "duration": 24,
+      "processing": 0.20000001788139343,
+      "id": 0
+    },
+    {
+      "name": "pointerenter",
+      "start": 37374.5,
+      "duration": 24,
+      "processing": 0,
+      "id": 0
+    },
+    {
+      "name": "pointerenter",
+      "start": 37374.5,
+      "duration": 24,
+      "processing": 0,
+      "id": 0
+    },
+    {
+      "name": "pointerenter",
+      "start": 37374.5,
+      "duration": 24,
+      "processing": 0,
+      "id": 0
+    },
+    {
+      "name": "pointerenter",
+      "start": 37374.5,
+      "duration": 24,
+      "processing": 0,
+      "id": 0
+    },
+    {
+      "name": "mouseover",
+      "start": 37374.5,
+      "duration": 24,
+      "processing": 0,
+      "id": 0
+    }
+  ],
+  "long": [
+    {
+      "start": 1152.7000000178814,
+      "duration": 332
+    },
+    {
+      "start": 1867,
+      "duration": 90
+    },
+    {
+      "start": 2230,
+      "duration": 396
+    },
+    {
+      "start": 18086.70000001788,
+      "duration": 71
+    },
+    {
+      "start": 34373.90000000596,
+      "duration": 140
+    }
+  ],
+  "shifts": [
+    {
+      "at": 1488.4000000059605,
+      "value": 0.00012126521776406035,
+      "input": false,
+      "sources": [
+        {
+          "node": "opening-controls",
+          "html": "<span id=\"opening-controls\"><button id=\"skip-opening\" type=\"button\" aria-label=\"Skip opening and show profile\">[skip]</button><button id=\"sound-toggle\" type=\"button\" aria-pressed=\"false\" aria-label=\"Toggle sound\">[ SND: OFF ]</button></span>",
+          "before": {
+            "x": 1222.015625,
+            "y": 867,
+            "width": 77.984375,
+            "height": 32,
+            "top": 867,
+            "right": 1300,
+            "bottom": 899,
+            "left": 1222.015625
+          },
+          "after": {
+            "x": 1169.015625,
+            "y": 866,
+            "width": 130.984375,
+            "height": 32,
+            "top": 866,
+            "right": 1300,
+            "bottom": 898,
+            "left": 1169.015625
+          }
+        }
+      ]
+    },
+    {
+      "at": 1850,
+      "value": 0.0006957706404320988,
+      "input": false,
+      "sources": [
+        {
+          "html": "<small>/ Team Devil May Cry</small>",
+          "before": {
+            "x": 197,
+            "y": 488.171875,
+            "width": 1068,
+            "height": 15,
+            "top": 488.171875,
+            "right": 1265,
+            "bottom": 503.171875,
+            "left": 197
+          },
+          "after": {
+            "x": 197,
+            "y": 488.171875,
+            "width": 1068,
+            "height": 15,
+            "top": 488.171875,
+            "right": 1265,
+            "bottom": 503.171875,
+            "left": 197
+          }
+        },
+        {
+          "html": "<p class=\"login\">last login: <time id=\"last-login\" datetime=\"2026-10-26T14:08:17.593Z\">26 Oct 2026</time> from 192.0.2.26 <span>// guest session</span></p>",
+          "before": {
+            "x": 175,
+            "y": 151.59375,
+            "width": 1090,
+            "height": 14,
+            "top": 151.59375,
+            "right": 1265,
+            "bottom": 165.59375,
+            "left": 175
+          },
+          "after": {
+            "x": 175,
+            "y": 151.59375,
+            "width": 1090,
+            "height": 14,
+            "top": 151.59375,
+            "right": 1265,
+            "bottom": 165.59375,
+            "left": 175
+          }
+        },
+        {
+          "node": "opening-controls",
+          "html": "<span id=\"opening-controls\"><button id=\"skip-opening\" type=\"button\" aria-label=\"Skip opening and show profile\">[skip]</button><button id=\"sound-toggle\" type=\"button\" aria-pressed=\"false\" aria-label=\"Toggle sound\">[ SND: OFF ]</button></span>",
+          "before": {
+            "x": 1169.015625,
+            "y": 866,
+            "width": 130.984375,
+            "height": 32,
+            "top": 866,
+            "right": 1300,
+            "bottom": 898,
+            "left": 1169.015625
+          },
+          "after": {
+            "x": 1160,
+            "y": 866,
+            "width": 140,
+            "height": 32,
+            "top": 866,
+            "right": 1300,
+            "bottom": 898,
+            "left": 1160
+          }
+        },
+        {
+          "node": "clearance",
+          "html": "<span class=\"clearance\">CLASSIFIED <span>/ CLEARANCE: GRANTED</span></span>",
+          "before": {
+            "x": 1102.546875,
+            "y": 93.4375,
+            "width": 171.484375,
+            "height": 16.5,
+            "top": 93.4375,
+            "right": 1274.03125,
+            "bottom": 109.9375,
+            "left": 1102.546875
+          },
+          "after": {
+            "x": 1087,
+            "y": 93.4375,
+            "width": 186,
+            "height": 16.5,
+            "top": 93.4375,
+            "right": 1273,
+            "bottom": 109.9375,
+            "left": 1087
+          }
+        },
+        {
+          "node": "identity-code",
+          "html": "<p class=\"identity-code\" aria-hidden=\"true\">[ AN ]<br>VN / 2026</p>",
+          "before": {
+            "x": 1196.609375,
+            "y": 272.109375,
+            "width": 61,
+            "height": 45.59375,
+            "top": 272.109375,
+            "right": 1257.609375,
+            "bottom": 317.703125,
+            "left": 1196.609375
+          },
+          "after": {
+            "x": 1192.1875,
+            "y": 272.109375,
+            "width": 64.8125,
+            "height": 45.59375,
+            "top": 272.109375,
+            "right": 1257,
+            "bottom": 317.703125,
+            "left": 1192.1875
+          }
+        }
+      ]
+    },
+    {
+      "at": 2033.0999999940395,
+      "value": 0.009063220817660107,
+      "input": false,
+      "sources": [
+        {
+          "html": "<p id=\"boot-title\" data-copy=\"Link established.\">Link established.<span class=\"boot-cursor\" aria-hidden=\"true\">_</span></p>",
+          "before": {
+            "x": 72,
+            "y": 229.96875,
+            "width": 1210.1875,
+            "height": 164,
+            "top": 229.96875,
+            "right": 1282.1875,
+            "bottom": 393.96875,
+            "left": 72
+          },
+          "after": {
+            "x": 72,
+            "y": 239.96875,
+            "width": 1296,
+            "height": 164,
+            "top": 239.96875,
+            "right": 1368,
+            "bottom": 403.96875,
+            "left": 72
+          }
+        },
+        {
+          "html": "<span class=\"boot-cursor\" aria-hidden=\"true\">_</span>",
+          "before": {
+            "x": 144,
+            "y": 229.96875,
+            "width": 1210.1875,
+            "height": 164,
+            "top": 229.96875,
+            "right": 1354.1875,
+            "bottom": 393.96875,
+            "left": 144
+          },
+          "after": {
+            "x": 144,
+            "y": 239.96875,
+            "width": 1296,
+            "height": 164,
+            "top": 239.96875,
+            "right": 1440,
+            "bottom": 403.96875,
+            "left": 144
+          }
+        },
+        {
+          "html": "<h1 id=\"name\">Đặng Hoàng An</h1>",
+          "before": {
+            "x": 197,
+            "y": 228.125,
+            "width": 975.1875,
+            "height": 81,
+            "top": 228.125,
+            "right": 1172.1875,
+            "bottom": 309.125,
+            "left": 197
+          },
+          "after": {
+            "x": 196,
+            "y": 233.125,
+            "width": 976.1875,
+            "height": 81,
+            "top": 233.125,
+            "right": 1172.1875,
+            "bottom": 314.125,
+            "left": 196
+          }
+        }
+      ]
+    },
+    {
+      "at": 2721,
+      "value": 0.007894444444444445,
+      "input": true,
+      "sources": []
+    },
+    {
+      "at": 6939.300000011921,
+      "value": 0.09412107089321307,
+      "input": false,
+      "sources": [
+        {
+          "node": "boot",
+          "html": "<div id=\"boot\" style=\"\">\n      <p id=\"boot-title\" data-copy=\"Who are you?\">Who are you?</p>\n      <p id=\"boot-status\">Your Windows session was not in the guest table.</p>\n      <pre id=\"system-log\" aria-hidden=\"true\" style=\"transform: translateX(0px)",
+          "before": {
+            "x": 72,
+            "y": 267.96875,
+            "width": 1296,
+            "height": 350.0625,
+            "top": 267.96875,
+            "right": 1368,
+            "bottom": 618.03125,
+            "left": 72
+          },
+          "after": {
+            "x": 71,
+            "y": 72,
+            "width": 1297,
+            "height": 644.890625,
+            "top": 72,
+            "right": 1368,
+            "bottom": 716.890625,
+            "left": 71
+          }
+        }
+      ]
+    },
+    {
+      "at": 9350.59999999404,
+      "value": 0.007388755599494169,
+      "input": false,
+      "sources": [
+        {
+          "node": "system-log",
+          "html": "<pre id=\"system-log\" aria-hidden=\"true\" style=\"transform: translateX(-4.94694px); text-shadow: none;\">peer.agent = Chrome/155.0.0.0\npeer.kernel = Windows\npeer.zone = Asia/Saigon\npeer.clock = 21:08:25\nframebuffer = 1440 × 900\n[EFAULT] display.sync: H_",
+          "before": {
+            "x": 74.17920684814453,
+            "y": 364.8968505859375,
+            "width": 1296,
+            "height": 352,
+            "top": 364.8968505859375,
+            "right": 1370.1792068481445,
+            "bottom": 716.8968505859375,
+            "left": 74.17920684814453
+          },
+          "after": {
+            "x": 67.00733184814453,
+            "y": 390.7406005859375,
+            "width": 1296,
+            "height": 352,
+            "top": 390.7406005859375,
+            "right": 1363.0073318481445,
+            "bottom": 742.7406005859375,
+            "left": 67.00733184814453
+          }
+        },
+        {
+          "node": "boot-status",
+          "html": "<p id=\"boot-status\">Terminate this session.</p>",
+          "before": {
+            "x": 71.00114440917969,
+            "y": 296.8968505859375,
+            "width": 668.375,
+            "height": 36,
+            "top": 296.8968505859375,
+            "right": 739.3761444091797,
+            "bottom": 332.8968505859375,
+            "left": 71.00114440917969
+          },
+          "after": {
+            "x": 71.95426940917969,
+            "y": 322.7406005859375,
+            "width": 667.375,
+            "height": 36,
+            "top": 322.7406005859375,
+            "right": 739.3292694091797,
+            "bottom": 358.7406005859375,
+            "left": 71.95426940917969
+          }
+        }
+      ]
+    },
+    {
+      "at": 11442.700000017881,
+      "value": 0.02667005556627229,
+      "input": false,
+      "sources": [
+        {
+          "node": "system-log",
+          "html": "<pre id=\"system-log\" aria-hidden=\"true\" style=\"transform: translateX(-3.58288px); text-shadow: currentcolor 5px 0px, rgba(255, 119, 119, 0.314) 13px 0px;\">peer.agent = Chrome/155.0.0.0\npeer.kernel = Windows\npeer.zone = Asia/Saigon\npeer.clock = 21:08:",
+          "before": {
+            "x": 60.68797302246094,
+            "y": 440.15625,
+            "width": 1356.8309326171875,
+            "height": 352,
+            "top": 440.15625,
+            "right": 1417.5189056396484,
+            "bottom": 792.15625,
+            "left": 60.68797302246094
+          },
+          "after": {
+            "x": 60.68797302246094,
+            "y": 356.03125,
+            "width": 1356.8309326171875,
+            "height": 100,
+            "top": 356.03125,
+            "right": 1417.5189056396484,
+            "bottom": 456.03125,
+            "left": 60.68797302246094
+          }
+        }
+      ]
+    },
+    {
+      "at": 20678.5,
+      "value": 0.00003744855967078189,
+      "input": false,
+      "sources": [
+        {
+          "html": "<span>SESSION: guest</span>",
+          "before": {
+            "x": 647,
+            "y": 874.75,
+            "width": 84,
+            "height": 13,
+            "top": 874.75,
+            "right": 731,
+            "bottom": 887.75,
+            "left": 647
+          },
+          "after": {
+            "x": 675,
+            "y": 874.75,
+            "width": 84,
+            "height": 13,
+            "top": 874.75,
+            "right": 759,
+            "bottom": 887.75,
+            "left": 675
+          }
+        },
+        {
+          "html": "<span id=\"hud-network\">NET: ONLINE</span>",
+          "before": {
+            "x": 402.5,
+            "y": 874.75,
+            "width": 66,
+            "height": 13,
+            "top": 874.75,
+            "right": 468.5,
+            "bottom": 887.75,
+            "left": 402.5
+          },
+          "after": {
+            "x": 416.5,
+            "y": 874.75,
+            "width": 66,
+            "height": 13,
+            "top": 874.75,
+            "right": 482.5,
+            "bottom": 887.75,
+            "left": 416.5
+          }
+        }
+      ]
+    },
+    {
+      "at": 25117.90000000596,
+      "value": 0.0010225823045267488,
+      "input": false,
+      "sources": [
+        {
+          "node": "",
+          "html": "<::after></::after>",
+          "before": {
+            "x": 141,
+            "y": 658.640625,
+            "width": 1158,
+            "height": 4,
+            "top": 658.640625,
+            "right": 1299,
+            "bottom": 662.640625,
+            "left": 141
+          },
+          "after": {
+            "x": 141,
+            "y": 864.640625,
+            "width": 1158,
+            "height": 4,
+            "top": 864.640625,
+            "right": 1299,
+            "bottom": 868.640625,
+            "left": 141
+          }
+        }
+      ]
+    },
+    {
+      "at": 25160.80000001192,
+      "value": 0.0005082004458161865,
+      "input": false,
+      "sources": [
+        {
+          "node": "",
+          "html": "<::after></::after>",
+          "before": {
+            "x": 149,
+            "y": 864.640625,
+            "width": 1151,
+            "height": 4,
+            "top": 864.640625,
+            "right": 1300,
+            "bottom": 868.640625,
+            "left": 149
+          },
+          "after": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "top": 0,
+            "right": 0,
+            "bottom": 0,
+            "left": 0
+          }
+        }
+      ]
+    },
+    {
+      "at": 25213.40000000596,
+      "value": 0.0005099665637860083,
+      "input": false,
+      "sources": [
+        {
+          "node": "",
+          "html": "<::after></::after>",
+          "before": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "top": 0,
+            "right": 0,
+            "bottom": 0,
+            "left": 0
+          },
+          "after": {
+            "x": 145,
+            "y": 864.640625,
+            "width": 1155,
+            "height": 4,
+            "top": 864.640625,
+            "right": 1300,
+            "bottom": 868.640625,
+            "left": 145
+          }
+        }
+      ]
+    },
+    {
+      "at": 29807.40000000596,
+      "value": 0.020158039058481226,
+      "input": true,
+      "sources": [
+        {
+          "node": "prompt-form",
+          "html": "<form id=\"prompt-form\" autocomplete=\"off\"><label for=\"prompt\"><span class=\"prompt-user\">guest@thepeak</span>:~$</label><input id=\"prompt\" name=\"command\" type=\"text\" spellcheck=\"false\" autocapitalize=\"off\" aria-label=\"Terminal command\" placeholder=\"ty",
+          "before": {
+            "x": 175,
+            "y": 604.6875,
+            "width": 1090,
+            "height": 46.390625,
+            "top": 604.6875,
+            "right": 1265,
+            "bottom": 651.078125,
+            "left": 175
+          },
+          "after": {
+            "x": 175,
+            "y": 757.640625,
+            "width": 1090,
+            "height": 46.390625,
+            "top": 757.640625,
+            "right": 1265,
+            "bottom": 804.03125,
+            "left": 175
+          }
+        },
+        {
+          "node": "",
+          "html": "<footer><p>© 2026 Đặng Hoàng An</p><p class=\"attribution\">Non-commercial fan study. Cyberpunk: Edgerunners © CD PROJEKT RED / Studio Trigger. Some original frames are used in the middle section.</p></footer>",
+          "before": {
+            "x": 139,
+            "y": 777.71875,
+            "width": 1161,
+            "height": 58,
+            "top": 777.71875,
+            "right": 1300,
+            "bottom": 835.71875,
+            "left": 139
+          },
+          "after": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "top": 0,
+            "right": 0,
+            "bottom": 0,
+            "left": 0
+          }
+        },
+        {
+          "node": "command-chips",
+          "html": "<div class=\"command-chips\" aria-label=\"Quick commands\"><button type=\"button\" data-command=\"help\">help</button><button type=\"button\" data-command=\"projects\">projects</button><button type=\"button\" data-command=\"contact\">contact</button><button type=\"bu",
+          "before": {
+            "x": 175,
+            "y": 659.078125,
+            "width": 1090,
+            "height": 28,
+            "top": 659.078125,
+            "right": 1265,
+            "bottom": 687.078125,
+            "left": 175
+          },
+          "after": {
+            "x": 175,
+            "y": 812.03125,
+            "width": 1090,
+            "height": 28,
+            "top": 812.03125,
+            "right": 1265,
+            "bottom": 840.03125,
+            "left": 175
+          }
+        },
+        {
+          "node": "terminal-end",
+          "html": "<div class=\"terminal-end\"><span>END OF FILE</span><span>connection remains open <span aria-hidden=\"true\">_</span></span></div>",
+          "before": {
+            "x": 141,
+            "y": 739.21875,
+            "width": 1158,
+            "height": 37.5,
+            "top": 739.21875,
+            "right": 1299,
+            "bottom": 776.71875,
+            "left": 141
+          },
+          "after": {
+            "x": 141,
+            "y": 892.171875,
+            "width": 1158,
+            "height": 7.828125,
+            "top": 892.171875,
+            "right": 1299,
+            "bottom": 900,
+            "left": 141
+          }
+        },
+        {
+          "node": "shell-note",
+          "html": "<p class=\"shell-note\">Read the file. Explore the work. Leave a message.</p>",
+          "before": {
+            "x": 175,
+            "y": 701.078125,
+            "width": 1090,
+            "height": 18.140625,
+            "top": 701.078125,
+            "right": 1265,
+            "bottom": 719.21875,
+            "left": 175
+          },
+          "after": {
+            "x": 175,
+            "y": 854.03125,
+            "width": 1090,
+            "height": 18.140625,
+            "top": 854.03125,
+            "right": 1265,
+            "bottom": 872.171875,
+            "left": 175
+          }
+        }
+      ]
+    },
+    {
+      "at": 30038.90000000596,
+      "value": 0.010527066052597737,
+      "input": true,
+      "sources": [
+        {
+          "node": "prompt-form",
+          "html": "<form id=\"prompt-form\" autocomplete=\"off\"><label for=\"prompt\"><span class=\"prompt-user\">guest@thepeak</span>:~$</label><input id=\"prompt\" name=\"command\" type=\"text\" spellcheck=\"false\" autocapitalize=\"off\" aria-label=\"Terminal command\" placeholder=\"ty",
+          "before": {
+            "x": 175,
+            "y": 757.640625,
+            "width": 1090,
+            "height": 46.390625,
+            "top": 757.640625,
+            "right": 1265,
+            "bottom": 804.03125,
+            "left": 175
+          },
+          "after": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "top": 0,
+            "right": 0,
+            "bottom": 0,
+            "left": 0
+          }
+        },
+        {
+          "node": "command-chips",
+          "html": "<div class=\"command-chips\" aria-label=\"Quick commands\"><button type=\"button\" data-command=\"help\">help</button><button type=\"button\" data-command=\"projects\">projects</button><button type=\"button\" data-command=\"contact\">contact</button><button type=\"bu",
+          "before": {
+            "x": 175,
+            "y": 812.03125,
+            "width": 1090,
+            "height": 28,
+            "top": 812.03125,
+            "right": 1265,
+            "bottom": 840.03125,
+            "left": 175
+          },
+          "after": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "top": 0,
+            "right": 0,
+            "bottom": 0,
+            "left": 0
+          }
+        },
+        {
+          "node": "shell-note",
+          "html": "<p class=\"shell-note\">Read the file. Explore the work. Leave a message.</p>",
+          "before": {
+            "x": 175,
+            "y": 854.03125,
+            "width": 1090,
+            "height": 18.140625,
+            "top": 854.03125,
+            "right": 1265,
+            "bottom": 872.171875,
+            "left": 175
+          },
+          "after": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "top": 0,
+            "right": 0,
+            "bottom": 0,
+            "left": 0
+          }
+        },
+        {
+          "node": "terminal-end",
+          "html": "<div class=\"terminal-end\"><span>END OF FILE</span><span>connection remains open <span aria-hidden=\"true\">_</span></span></div>",
+          "before": {
+            "x": 141,
+            "y": 892.171875,
+            "width": 1158,
+            "height": 7.828125,
+            "top": 892.171875,
+            "right": 1299,
+            "bottom": 900,
+            "left": 141
+          },
+          "after": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "top": 0,
+            "right": 0,
+            "bottom": 0,
+            "left": 0
+          }
+        }
+      ]
+    },
+    {
+      "at": 30281.20000001788,
+      "value": 0.07477167200159143,
+      "input": true,
+      "sources": [
+        {
+          "node": "shell",
+          "html": "<section class=\"shell\" aria-label=\"Interactive terminal\">\n          <div id=\"command-history\" role=\"log\" aria-live=\"polite\" aria-relevant=\"additions\"><div class=\"history-entry\"><p class=\"echo\">guest@thepeak:~$ help</p><p>whoami · projects [--all] · o",
+          "before": {
+            "x": 175,
+            "y": 517.6875,
+            "width": 1090,
+            "height": 382.3125,
+            "top": 517.6875,
+            "right": 1265,
+            "bottom": 900,
+            "left": 175
+          },
+          "after": {
+            "x": 175,
+            "y": 696.875,
+            "width": 1090,
+            "height": 203.125,
+            "top": 696.875,
+            "right": 1265,
+            "bottom": 900,
+            "left": 175
+          }
+        },
+        {
+          "node": "about",
+          "html": "<section id=\"about\" aria-labelledby=\"about-title\"><h2 class=\"command\" id=\"about-title\"><span aria-hidden=\"true\">$ </span><span data-type=\"\">cat about.txt</span></h2><div class=\"output about-output\"><p>I’m An, exploring how machines see and how algori",
+          "before": {
+            "x": 175,
+            "y": 214.5625,
+            "width": 1090,
+            "height": 180.34375,
+            "top": 214.5625,
+            "right": 1265,
+            "bottom": 394.90625,
+            "left": 175
+          },
+          "after": {
+            "x": 175,
+            "y": 393.75,
+            "width": 1090,
+            "height": 180.34375,
+            "top": 393.75,
+            "right": 1265,
+            "bottom": 574.09375,
+            "left": 175
+          }
+        },
+        {
+          "node": "contact",
+          "html": "<section id=\"contact\" aria-labelledby=\"contact-title\"><h2 class=\"command\" id=\"contact-title\"><span aria-hidden=\"true\">$ </span><span data-type=\"\">contact</span></h2><div class=\"output contacts\"><a href=\"mailto:andanghoang0@gmail.com\">andanghoang0@gma",
+          "before": {
+            "x": 175,
+            "y": 424.90625,
+            "width": 1090,
+            "height": 60.78125,
+            "top": 424.90625,
+            "right": 1265,
+            "bottom": 485.6875,
+            "left": 175
+          },
+          "after": {
+            "x": 175,
+            "y": 604.09375,
+            "width": 1090,
+            "height": 60.78125,
+            "top": 604.09375,
+            "right": 1265,
+            "bottom": 664.875,
+            "left": 175
+          }
+        },
+        {
+          "node": "prompt-form",
+          "html": "<form id=\"prompt-form\" autocomplete=\"off\"><label for=\"prompt\"><span class=\"prompt-user\">guest@thepeak</span>:~$</label><input id=\"prompt\" name=\"command\" type=\"text\" spellcheck=\"false\" autocapitalize=\"off\" aria-label=\"Terminal command\" placeholder=\"ty",
+          "before": {
+            "x": 175,
+            "y": 866.984375,
+            "width": 1090,
+            "height": 33.015625,
+            "top": 866.984375,
+            "right": 1265,
+            "bottom": 900,
+            "left": 175
+          },
+          "after": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "top": 0,
+            "right": 0,
+            "bottom": 0,
+            "left": 0
+          }
+        }
+      ]
+    },
+    {
+      "at": 33451.40000000596,
+      "value": 0.0006850308641975309,
+      "input": true,
+      "sources": [
+        {
+          "node": "",
+          "html": "<::after></::after>",
+          "before": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "top": 0,
+            "right": 0,
+            "bottom": 0,
+            "left": 0
+          },
+          "after": {
+            "x": 141,
+            "y": 47.015625,
+            "width": 1158,
+            "height": 4,
+            "top": 47.015625,
+            "right": 1299,
+            "bottom": 51.015625,
+            "left": 141
+          }
+        }
+      ]
+    },
+    {
+      "at": 33491.40000000596,
+      "value": 0.0013617798353909466,
+      "input": true,
+      "sources": [
+        {
+          "node": "",
+          "html": "<::after></::after>",
+          "before": {
+            "x": 149,
+            "y": 47.109375,
+            "width": 1151,
+            "height": 4,
+            "top": 47.109375,
+            "right": 1300,
+            "bottom": 51.109375,
+            "left": 149
+          },
+          "after": {
+            "x": 149,
+            "y": 323.109375,
+            "width": 1151,
+            "height": 4,
+            "top": 323.109375,
+            "right": 1300,
+            "bottom": 327.109375,
+            "left": 149
+          }
+        }
+      ]
+    },
+    {
+      "at": 33546.80000001192,
+      "value": 0.0013665123456790124,
+      "input": true,
+      "sources": [
+        {
+          "node": "",
+          "html": "<::after></::after>",
+          "before": {
+            "x": 145,
+            "y": 323.015625,
+            "width": 1155,
+            "height": 4,
+            "top": 323.015625,
+            "right": 1300,
+            "bottom": 327.015625,
+            "left": 145
+          },
+          "after": {
+            "x": 145,
+            "y": 47.015625,
+            "width": 1155,
+            "height": 4,
+            "top": 47.015625,
+            "right": 1300,
+            "bottom": 51.015625,
+            "left": 145
+          }
+        }
+      ]
+    },
+    {
+      "at": 34148.70000001788,
+      "value": 0.0385542481138546,
+      "input": true,
+      "sources": [
+        {
+          "node": "",
+          "html": "<footer><p>© 2026 Đặng Hoàng An</p><p class=\"attribution\">Non-commercial fan study. Cyberpunk: Edgerunners © CD PROJEKT RED / Studio Trigger. Some original frames are used in the middle section.</p></footer>",
+          "before": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "top": 0,
+            "right": 0,
+            "bottom": 0,
+            "left": 0
+          },
+          "after": {
+            "x": 139,
+            "y": 777.90625,
+            "width": 1161,
+            "height": 58,
+            "top": 777.90625,
+            "right": 1300,
+            "bottom": 835.90625,
+            "left": 139
+          }
+        },
+        {
+          "node": "prompt-form",
+          "html": "<form id=\"prompt-form\" autocomplete=\"off\"><label for=\"prompt\"><span class=\"prompt-user\">guest@thepeak</span>:~$</label><input id=\"prompt\" name=\"command\" type=\"text\" spellcheck=\"false\" autocapitalize=\"off\" aria-label=\"Terminal command\" placeholder=\"ty",
+          "before": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "top": 0,
+            "right": 0,
+            "bottom": 0,
+            "left": 0
+          },
+          "after": {
+            "x": 175,
+            "y": 604.875,
+            "width": 1090,
+            "height": 46.390625,
+            "top": 604.875,
+            "right": 1265,
+            "bottom": 651.265625,
+            "left": 175
+          }
+        },
+        {
+          "node": "terminal-end",
+          "html": "<div class=\"terminal-end\"><span>END OF FILE</span><span>connection remains open <span aria-hidden=\"true\">_</span></span></div>",
+          "before": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "top": 0,
+            "right": 0,
+            "bottom": 0,
+            "left": 0
+          },
+          "after": {
+            "x": 141,
+            "y": 739.40625,
+            "width": 1158,
+            "height": 37.5,
+            "top": 739.40625,
+            "right": 1299,
+            "bottom": 776.90625,
+            "left": 141
+          }
+        },
+        {
+          "node": "command-chips",
+          "html": "<div class=\"command-chips\" aria-label=\"Quick commands\"><button type=\"button\" data-command=\"help\">help</button><button type=\"button\" data-command=\"projects\">projects</button><button type=\"button\" data-command=\"contact\">contact</button><button type=\"bu",
+          "before": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "top": 0,
+            "right": 0,
+            "bottom": 0,
+            "left": 0
+          },
+          "after": {
+            "x": 175,
+            "y": 659.265625,
+            "width": 1090,
+            "height": 28,
+            "top": 659.265625,
+            "right": 1265,
+            "bottom": 687.265625,
+            "left": 175
+          }
+        },
+        {
+          "node": "shell-note",
+          "html": "<p class=\"shell-note\">Read the file. Explore the work. Leave a message.</p>",
+          "before": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "top": 0,
+            "right": 0,
+            "bottom": 0,
+            "left": 0
+          },
+          "after": {
+            "x": 175,
+            "y": 701.265625,
+            "width": 1090,
+            "height": 18.140625,
+            "top": 701.265625,
+            "right": 1265,
+            "bottom": 719.40625,
+            "left": 175
+          }
+        }
+      ]
+    },
+    {
+      "at": 34518.70000001788,
+      "value": 0.000017026748971193414,
+      "input": true,
+      "sources": [
+        {
+          "node": "opening-controls",
+          "html": "<span id=\"opening-controls\" style=\"\"><button id=\"skip-opening\" type=\"button\" aria-label=\"Skip opening and show profile\" hidden=\"\">[skip]</button><button id=\"sound-toggle\" type=\"button\" aria-pressed=\"true\" aria-label=\"Toggle sound\">[ SND: ON ]</button",
+          "before": {
+            "x": 1216,
+            "y": 866,
+            "width": 84,
+            "height": 32,
+            "top": 866,
+            "right": 1300,
+            "bottom": 898,
+            "left": 1216
+          },
+          "after": {
+            "x": 1222,
+            "y": 866,
+            "width": 78,
+            "height": 32,
+            "top": 866,
+            "right": 1300,
+            "bottom": 898,
+            "left": 1222
+          }
+        },
+        {
+          "node": "",
+          "html": "<span>SESSION: guest</span>",
+          "before": {
+            "x": 675,
+            "y": 873.75,
+            "width": 84,
+            "height": 16.5,
+            "top": 873.75,
+            "right": 759,
+            "bottom": 890.25,
+            "left": 675
+          },
+          "after": {
+            "x": 678,
+            "y": 873.75,
+            "width": 84,
+            "height": 16.5,
+            "top": 873.75,
+            "right": 762,
+            "bottom": 890.25,
+            "left": 678
+          }
+        },
+        {
+          "node": "hud-uptime",
+          "html": "<span id=\"hud-uptime\">UP: 00:00:33</span>",
+          "before": {
+            "x": 951.5,
+            "y": 873.75,
+            "width": 72,
+            "height": 16.5,
+            "top": 873.75,
+            "right": 1023.5,
+            "bottom": 890.25,
+            "left": 951.5
+          },
+          "after": {
+            "x": 956,
+            "y": 873.75,
+            "width": 72,
+            "height": 16.5,
+            "top": 873.75,
+            "right": 1028,
+            "bottom": 890.25,
+            "left": 956
+          }
+        }
+      ]
+    },
+    {
+      "at": 34760.70000001788,
+      "value": 0.012603545715583206,
+      "input": true,
+      "sources": [
+        {
+          "node": "",
+          "html": "<footer><p>© 2026 Đặng Hoàng An</p><p class=\"attribution\">Non-commercial fan study. Cyberpunk: Edgerunners © CD PROJEKT RED / Studio Trigger. Some original frames are used in the middle section.</p></footer>",
+          "before": {
+            "x": 139,
+            "y": 773.6875,
+            "width": 1161,
+            "height": 58,
+            "top": 773.6875,
+            "right": 1300,
+            "bottom": 831.6875,
+            "left": 139
+          },
+          "after": {
+            "x": 139,
+            "y": 847.46875,
+            "width": 1161,
+            "height": 52.53125,
+            "top": 847.46875,
+            "right": 1300,
+            "bottom": 900,
+            "left": 139
+          }
+        },
+        {
+          "node": "prompt-form",
+          "html": "<form id=\"prompt-form\" autocomplete=\"off\"><label for=\"prompt\"><span class=\"prompt-user\">guest@thepeak</span>:~$</label><input id=\"prompt\" name=\"command\" type=\"text\" spellcheck=\"false\" autocapitalize=\"off\" aria-label=\"Terminal command\" placeholder=\"ty",
+          "before": {
+            "x": 175,
+            "y": 600.65625,
+            "width": 1090,
+            "height": 46.390625,
+            "top": 600.65625,
+            "right": 1265,
+            "bottom": 647.046875,
+            "left": 175
+          },
+          "after": {
+            "x": 175,
+            "y": 674.4375,
+            "width": 1090,
+            "height": 46.390625,
+            "top": 674.4375,
+            "right": 1265,
+            "bottom": 720.828125,
+            "left": 175
+          }
+        },
+        {
+          "node": "terminal-end",
+          "html": "<div class=\"terminal-end\"><span>END OF FILE</span><span>connection remains open <span aria-hidden=\"true\">_</span></span></div>",
+          "before": {
+            "x": 141,
+            "y": 735.1875,
+            "width": 1158,
+            "height": 37.5,
+            "top": 735.1875,
+            "right": 1299,
+            "bottom": 772.6875,
+            "left": 141
+          },
+          "after": {
+            "x": 141,
+            "y": 808.96875,
+            "width": 1158,
+            "height": 37.5,
+            "top": 808.96875,
+            "right": 1299,
+            "bottom": 846.46875,
+            "left": 141
+          }
+        },
+        {
+          "node": "command-chips",
+          "html": "<div class=\"command-chips\" aria-label=\"Quick commands\"><button type=\"button\" data-command=\"help\">help</button><button type=\"button\" data-command=\"projects\">projects</button><button type=\"button\" data-command=\"contact\">contact</button><button type=\"bu",
+          "before": {
+            "x": 175,
+            "y": 655.046875,
+            "width": 1090,
+            "height": 28,
+            "top": 655.046875,
+            "right": 1265,
+            "bottom": 683.046875,
+            "left": 175
+          },
+          "after": {
+            "x": 175,
+            "y": 728.828125,
+            "width": 1090,
+            "height": 28,
+            "top": 728.828125,
+            "right": 1265,
+            "bottom": 756.828125,
+            "left": 175
+          }
+        },
+        {
+          "node": "shell-note",
+          "html": "<p class=\"shell-note\">Read the file. Explore the work. Leave a message.</p>",
+          "before": {
+            "x": 175,
+            "y": 697.046875,
+            "width": 1090,
+            "height": 18.140625,
+            "top": 697.046875,
+            "right": 1265,
+            "bottom": 715.1875,
+            "left": 175
+          },
+          "after": {
+            "x": 175,
+            "y": 770.828125,
+            "width": 1090,
+            "height": 18.140625,
+            "top": 770.828125,
+            "right": 1265,
+            "bottom": 788.96875,
+            "left": 175
+          }
+        }
+      ]
+    },
+    {
+      "at": 34993,
+      "value": 0.016237418644909015,
+      "input": true,
+      "sources": [
+        {
+          "node": "prompt-form",
+          "html": "<form id=\"prompt-form\" autocomplete=\"off\"><label for=\"prompt\"><span class=\"prompt-user\">guest@thepeak</span>:~$</label><input id=\"prompt\" name=\"command\" type=\"text\" spellcheck=\"false\" autocapitalize=\"off\" aria-label=\"Terminal command\" placeholder=\"ty",
+          "before": {
+            "x": 175,
+            "y": 678.4375,
+            "width": 1090,
+            "height": 38.390625,
+            "top": 678.4375,
+            "right": 1265,
+            "bottom": 716.828125,
+            "left": 175
+          },
+          "after": {
+            "x": 175,
+            "y": 827.390625,
+            "width": 1090,
+            "height": 46.390625,
+            "top": 827.390625,
+            "right": 1265,
+            "bottom": 873.78125,
+            "left": 175
+          }
+        },
+        {
+          "node": "",
+          "html": "<footer><p>© 2026 Đặng Hoàng An</p><p class=\"attribution\">Non-commercial fan study. Cyberpunk: Edgerunners © CD PROJEKT RED / Studio Trigger. Some original frames are used in the middle section.</p></footer>",
+          "before": {
+            "x": 139,
+            "y": 847.46875,
+            "width": 1161,
+            "height": 52.53125,
+            "top": 847.46875,
+            "right": 1300,
+            "bottom": 900,
+            "left": 139
+          },
+          "after": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "top": 0,
+            "right": 0,
+            "bottom": 0,
+            "left": 0
+          }
+        },
+        {
+          "node": "command-chips",
+          "html": "<div class=\"command-chips\" aria-label=\"Quick commands\"><button type=\"button\" data-command=\"help\">help</button><button type=\"button\" data-command=\"projects\">projects</button><button type=\"button\" data-command=\"contact\">contact</button><button type=\"bu",
+          "before": {
+            "x": 175,
+            "y": 728.828125,
+            "width": 1090,
+            "height": 28,
+            "top": 728.828125,
+            "right": 1265,
+            "bottom": 756.828125,
+            "left": 175
+          },
+          "after": {
+            "x": 175,
+            "y": 881.78125,
+            "width": 1090,
+            "height": 18.21875,
+            "top": 881.78125,
+            "right": 1265,
+            "bottom": 900,
+            "left": 175
+          }
+        },
+        {
+          "node": "terminal-end",
+          "html": "<div class=\"terminal-end\"><span>END OF FILE</span><span>connection remains open <span aria-hidden=\"true\">_</span></span></div>",
+          "before": {
+            "x": 141,
+            "y": 808.96875,
+            "width": 1158,
+            "height": 37.5,
+            "top": 808.96875,
+            "right": 1299,
+            "bottom": 846.46875,
+            "left": 141
+          },
+          "after": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "top": 0,
+            "right": 0,
+            "bottom": 0,
+            "left": 0
+          }
+        },
+        {
+          "node": "shell-note",
+          "html": "<p class=\"shell-note\">Read the file. Explore the work. Leave a message.</p>",
+          "before": {
+            "x": 175,
+            "y": 770.828125,
+            "width": 1090,
+            "height": 18.140625,
+            "top": 770.828125,
+            "right": 1265,
+            "bottom": 788.96875,
+            "left": 175
+          },
+          "after": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "top": 0,
+            "right": 0,
+            "bottom": 0,
+            "left": 0
+          }
+        }
+      ]
+    },
+    {
+      "at": 35337.59999999404,
+      "value": 0.005850467952942816,
+      "input": true,
+      "sources": [
+        {
+          "node": "",
+          "html": "<footer><p>© 2026 Đặng Hoàng An</p><p class=\"attribution\">Non-commercial fan study. Cyberpunk: Edgerunners © CD PROJEKT RED / Studio Trigger. Some original frames are used in the middle section.</p></footer>",
+          "before": {
+            "x": 139,
+            "y": 778.421875,
+            "width": 1161,
+            "height": 58,
+            "top": 778.421875,
+            "right": 1300,
+            "bottom": 836.421875,
+            "left": 139
+          },
+          "after": {
+            "x": 139,
+            "y": 817.90625,
+            "width": 1161,
+            "height": 58,
+            "top": 817.90625,
+            "right": 1300,
+            "bottom": 875.90625,
+            "left": 139
+          }
+        },
+        {
+          "node": "prompt-form",
+          "html": "<form id=\"prompt-form\" autocomplete=\"off\"><label for=\"prompt\"><span class=\"prompt-user\">guest@thepeak</span>:~$</label><input id=\"prompt\" name=\"command\" type=\"text\" spellcheck=\"false\" autocapitalize=\"off\" aria-label=\"Terminal command\" placeholder=\"ty",
+          "before": {
+            "x": 175,
+            "y": 609.390625,
+            "width": 1090,
+            "height": 38.390625,
+            "top": 609.390625,
+            "right": 1265,
+            "bottom": 647.78125,
+            "left": 175
+          },
+          "after": {
+            "x": 175,
+            "y": 644.875,
+            "width": 1090,
+            "height": 46.390625,
+            "top": 644.875,
+            "right": 1265,
+            "bottom": 691.265625,
+            "left": 175
+          }
+        },
+        {
+          "node": "terminal-end",
+          "html": "<div class=\"terminal-end\"><span>END OF FILE</span><span>connection remains open <span aria-hidden=\"true\">_</span></span></div>",
+          "before": {
+            "x": 141,
+            "y": 739.921875,
+            "width": 1158,
+            "height": 37.5,
+            "top": 739.921875,
+            "right": 1299,
+            "bottom": 777.421875,
+            "left": 141
+          },
+          "after": {
+            "x": 141,
+            "y": 779.40625,
+            "width": 1158,
+            "height": 37.5,
+            "top": 779.40625,
+            "right": 1299,
+            "bottom": 816.90625,
+            "left": 141
+          }
+        },
+        {
+          "node": "command-chips",
+          "html": "<div class=\"command-chips\" aria-label=\"Quick commands\"><button type=\"button\" data-command=\"help\">help</button><button type=\"button\" data-command=\"projects\">projects</button><button type=\"button\" data-command=\"contact\">contact</button><button type=\"bu",
+          "before": {
+            "x": 175,
+            "y": 659.78125,
+            "width": 1090,
+            "height": 28,
+            "top": 659.78125,
+            "right": 1265,
+            "bottom": 687.78125,
+            "left": 175
+          },
+          "after": {
+            "x": 175,
+            "y": 699.265625,
+            "width": 1090,
+            "height": 28,
+            "top": 699.265625,
+            "right": 1265,
+            "bottom": 727.265625,
+            "left": 175
+          }
+        },
+        {
+          "node": "shell-note",
+          "html": "<p class=\"shell-note\">Read the file. Explore the work. Leave a message.</p>",
+          "before": {
+            "x": 175,
+            "y": 701.78125,
+            "width": 1090,
+            "height": 18.140625,
+            "top": 701.78125,
+            "right": 1265,
+            "bottom": 719.921875,
+            "left": 175
+          },
+          "after": {
+            "x": 175,
+            "y": 741.265625,
+            "width": 1090,
+            "height": 18.140625,
+            "top": 741.265625,
+            "right": 1265,
+            "bottom": 759.40625,
+            "left": 175
+          }
+        }
+      ]
+    },
+    {
+      "at": 35814,
+      "value": 0.00004474823039909122,
+      "input": true,
+      "sources": [
+        {
+          "node": "all-projects",
+          "html": "<button id=\"all-projects\" type=\"button\" aria-expanded=\"false\" aria-controls=\"archive\">--all <span>(+4)</span></button>",
+          "before": {
+            "x": 1164.1875,
+            "y": 436.953125,
+            "width": 101.203125,
+            "height": 27.796875,
+            "top": 436.953125,
+            "right": 1265.390625,
+            "bottom": 464.75,
+            "left": 1164.1875
+          },
+          "after": {
+            "x": 1192.984375,
+            "y": 435.953125,
+            "width": 72.203125,
+            "height": 27.796875,
+            "top": 435.953125,
+            "right": 1265.1875,
+            "bottom": 463.75,
+            "left": 1192.984375
+          }
+        }
+      ]
+    },
+    {
+      "at": 37375.70000001788,
+      "value": 0.0385542481138546,
+      "input": true,
+      "sources": [
+        {
+          "node": "",
+          "html": "<footer><p>© 2026 Đặng Hoàng An</p><p class=\"attribution\">Non-commercial fan study. Cyberpunk: Edgerunners © CD PROJEKT RED / Studio Trigger. Some original frames are used in the middle section.</p></footer>",
+          "before": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "top": 0,
+            "right": 0,
+            "bottom": 0,
+            "left": 0
+          },
+          "after": {
+            "x": 139,
+            "y": 777.71875,
+            "width": 1161,
+            "height": 58,
+            "top": 777.71875,
+            "right": 1300,
+            "bottom": 835.71875,
+            "left": 139
+          }
+        },
+        {
+          "node": "prompt-form",
+          "html": "<form id=\"prompt-form\" autocomplete=\"off\"><label for=\"prompt\"><span class=\"prompt-user\">guest@thepeak</span>:~$</label><input id=\"prompt\" name=\"command\" type=\"text\" spellcheck=\"false\" autocapitalize=\"off\" aria-label=\"Terminal command\" placeholder=\"ty",
+          "before": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "top": 0,
+            "right": 0,
+            "bottom": 0,
+            "left": 0
+          },
+          "after": {
+            "x": 175,
+            "y": 604.6875,
+            "width": 1090,
+            "height": 46.390625,
+            "top": 604.6875,
+            "right": 1265,
+            "bottom": 651.078125,
+            "left": 175
+          }
+        },
+        {
+          "node": "terminal-end",
+          "html": "<div class=\"terminal-end\"><span>END OF FILE</span><span>connection remains open <span aria-hidden=\"true\">_</span></span></div>",
+          "before": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "top": 0,
+            "right": 0,
+            "bottom": 0,
+            "left": 0
+          },
+          "after": {
+            "x": 141,
+            "y": 739.21875,
+            "width": 1158,
+            "height": 37.5,
+            "top": 739.21875,
+            "right": 1299,
+            "bottom": 776.71875,
+            "left": 141
+          }
+        },
+        {
+          "node": "command-chips",
+          "html": "<div class=\"command-chips\" aria-label=\"Quick commands\"><button type=\"button\" data-command=\"help\">help</button><button type=\"button\" data-command=\"projects\">projects</button><button type=\"button\" data-command=\"contact\">contact</button><button type=\"bu",
+          "before": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "top": 0,
+            "right": 0,
+            "bottom": 0,
+            "left": 0
+          },
+          "after": {
+            "x": 175,
+            "y": 659.078125,
+            "width": 1090,
+            "height": 28,
+            "top": 659.078125,
+            "right": 1265,
+            "bottom": 687.078125,
+            "left": 175
+          }
+        },
+        {
+          "node": "shell-note",
+          "html": "<p class=\"shell-note\">Read the file. Explore the work. Leave a message.</p>",
+          "before": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "top": 0,
+            "right": 0,
+            "bottom": 0,
+            "left": 0
+          },
+          "after": {
+            "x": 175,
+            "y": 701.078125,
+            "width": 1090,
+            "height": 18.140625,
+            "top": 701.078125,
+            "right": 1265,
+            "bottom": 719.21875,
+            "left": 175
+          }
+        }
+      ]
+    }
+  ],
+  "marks": [
+    {
+      "type": "pointerover",
+      "start": 2709.7000000178814,
+      "toNextPaint": 24.299999982118607
+    },
+    {
+      "type": "pointerover",
+      "start": 2721.5,
+      "toNextPaint": 12.599999994039536
+    },
+    {
+      "type": "click",
+      "start": 2722.5,
+      "toNextPaint": 11.800000011920929
+    },
+    {
+      "type": "pointerover",
+      "start": 6941.5999999940395,
+      "toNextPaint": 2
+    },
+    {
+      "type": "pointerover",
+      "start": 11445.5,
+      "toNextPaint": 2.7000000178813934
+    },
+    {
+      "type": "pointerover",
+      "start": 12023.40000000596,
+      "toNextPaint": 4.4000000059604645
+    },
+    {
+      "type": "pointerover",
+      "start": 12637,
+      "toNextPaint": 1.2000000178813934
+    },
+    {
+      "type": "pointerover",
+      "start": 13093.09999999404,
+      "toNextPaint": 1.800000011920929
+    },
+    {
+      "type": "pointerover",
+      "start": 18164.90000000596,
+      "toNextPaint": 5.199999988079071
+    },
+    {
+      "type": "pointerover",
+      "start": 20695.09999999404,
+      "toNextPaint": 1.9000000059604645
+    },
+    {
+      "type": "keydown",
+      "start": 29259.80000001192,
+      "toNextPaint": 12.099999994039536
+    },
+    {
+      "type": "keydown",
+      "start": 29318.20000001788,
+      "toNextPaint": 7.0999999940395355
+    },
+    {
+      "type": "keydown",
+      "start": 29380.20000001788,
+      "toNextPaint": 9.399999976158142
+    },
+    {
+      "type": "keydown",
+      "start": 29442,
+      "toNextPaint": 6.4000000059604645
+    },
+    {
+      "type": "keydown",
+      "start": 29712.70000001788,
+      "toNextPaint": 21.5
+    },
+    {
+      "type": "keydown",
+      "start": 29795,
+      "toNextPaint": 17.80000001192093
+    },
+    {
+      "type": "click",
+      "start": 29795.80000001192,
+      "toNextPaint": 17.099999994039536
+    },
+    {
+      "type": "keydown",
+      "start": 30030.5,
+      "toNextPaint": 12.400000005960464
+    },
+    {
+      "type": "click",
+      "start": 30031.70000001788,
+      "toNextPaint": 11.199999988079071
+    },
+    {
+      "type": "keydown",
+      "start": 30268.70000001788,
+      "toNextPaint": 19.5
+    },
+    {
+      "type": "click",
+      "start": 30269.30000001192,
+      "toNextPaint": 18.900000005960464
+    },
+    {
+      "type": "keydown",
+      "start": 30509,
+      "toNextPaint": 51
+    },
+    {
+      "type": "click",
+      "start": 30509.59999999404,
+      "toNextPaint": 50.5
+    },
+    {
+      "type": "keydown",
+      "start": 30781.5,
+      "toNextPaint": 45.30000001192093
+    },
+    {
+      "type": "click",
+      "start": 30782.09999999404,
+      "toNextPaint": 44.900000005960464
+    },
+    {
+      "type": "keydown",
+      "start": 31045.09999999404,
+      "toNextPaint": 47
+    },
+    {
+      "type": "click",
+      "start": 31045.90000000596,
+      "toNextPaint": 46.599999994039536
+    },
+    {
+      "type": "keydown",
+      "start": 31327.20000001788,
+      "toNextPaint": 44.79999998211861
+    },
+    {
+      "type": "click",
+      "start": 31327.59999999404,
+      "toNextPaint": 44.5
+    },
+    {
+      "type": "keydown",
+      "start": 31605.20000001788,
+      "toNextPaint": 41.599999994039536
+    },
+    {
+      "type": "click",
+      "start": 31605.59999999404,
+      "toNextPaint": 41.20000001788139
+    },
+    {
+      "type": "keydown",
+      "start": 31868.09999999404,
+      "toNextPaint": 52.5
+    },
+    {
+      "type": "click",
+      "start": 31868.90000000596,
+      "toNextPaint": 51.69999998807907
+    },
+    {
+      "type": "keydown",
+      "start": 32153.20000001788,
+      "toNextPaint": 38.39999997615814
+    },
+    {
+      "type": "click",
+      "start": 32153.70000001788,
+      "toNextPaint": 38.29999998211861
+    },
+    {
+      "type": "keydown",
+      "start": 32415.70000001788,
+      "toNextPaint": 41
+    },
+    {
+      "type": "click",
+      "start": 32416.09999999404,
+      "toNextPaint": 40.70000001788139
+    },
+    {
+      "type": "keydown",
+      "start": 32672.59999999404,
+      "toNextPaint": 37
+    },
+    {
+      "type": "click",
+      "start": 32673,
+      "toNextPaint": 36.80000001192093
+    },
+    {
+      "type": "keydown",
+      "start": 32936.40000000596,
+      "toNextPaint": 12.900000005960464
+    },
+    {
+      "type": "click",
+      "start": 32937,
+      "toNextPaint": 12.300000011920929
+    },
+    {
+      "type": "keydown",
+      "start": 33163.59999999404,
+      "toNextPaint": 10.800000011920929
+    },
+    {
+      "type": "click",
+      "start": 33164,
+      "toNextPaint": 10.400000005960464
+    },
+    {
+      "type": "keydown",
+      "start": 33403.20000001788,
+      "toNextPaint": 14.599999994039536
+    },
+    {
+      "type": "click",
+      "start": 33403.80000001192,
+      "toNextPaint": 14.299999982118607
+    },
+    {
+      "type": "keydown",
+      "start": 33628,
+      "toNextPaint": 55.900000005960464
+    },
+    {
+      "type": "click",
+      "start": 33628.40000000596,
+      "toNextPaint": 55.5
+    },
+    {
+      "type": "keydown",
+      "start": 33910,
+      "toNextPaint": 10.5
+    },
+    {
+      "type": "click",
+      "start": 33910.5,
+      "toNextPaint": 10.099999994039536
+    },
+    {
+      "type": "keydown",
+      "start": 34141.30000001192,
+      "toNextPaint": 11.099999994039536
+    },
+    {
+      "type": "click",
+      "start": 34141.70000001788,
+      "toNextPaint": 10.799999982118607
+    },
+    {
+      "type": "keydown",
+      "start": 34374.09999999404,
+      "toNextPaint": 151.60000002384186
+    },
+    {
+      "type": "click",
+      "start": 34374.70000001788,
+      "toNextPaint": 151.2999999821186
+    },
+    {
+      "type": "keydown",
+      "start": 34754,
+      "toNextPaint": 12
+    },
+    {
+      "type": "click",
+      "start": 34754.59999999404,
+      "toNextPaint": 11.600000023841858
+    },
+    {
+      "type": "pointerover",
+      "start": 34978.70000001788,
+      "toNextPaint": 22.799999982118607
+    },
+    {
+      "type": "click",
+      "start": 34987.40000000596,
+      "toNextPaint": 14.199999988079071
+    },
+    {
+      "type": "pointerover",
+      "start": 34994.30000001192,
+      "toNextPaint": 7.299999982118607
+    },
+    {
+      "type": "pointerover",
+      "start": 35324.80000001192,
+      "toNextPaint": 21.900000005960464
+    },
+    {
+      "type": "click",
+      "start": 35330.40000000596,
+      "toNextPaint": 16.30000001192093
+    },
+    {
+      "type": "pointerover",
+      "start": 35339,
+      "toNextPaint": 7.700000017881393
+    },
+    {
+      "type": "pointerover",
+      "start": 35564,
+      "toNextPaint": 14.900000005960464
+    },
+    {
+      "type": "click",
+      "start": 35568.30000001192,
+      "toNextPaint": 10.699999988079071
+    },
+    {
+      "type": "pointerover",
+      "start": 35805.30000001192,
+      "toNextPaint": 15.199999988079071
+    },
+    {
+      "type": "click",
+      "start": 35811.20000001788,
+      "toNextPaint": 9.5
+    },
+    {
+      "type": "pointerover",
+      "start": 36010.40000000596,
+      "toNextPaint": 4.4000000059604645
+    },
+    {
+      "type": "pointerover",
+      "start": 36065.5,
+      "toNextPaint": 10.700000017881393
+    },
+    {
+      "type": "pointerover",
+      "start": 36278.5,
+      "toNextPaint": 6
+    },
+    {
+      "type": "pointerover",
+      "start": 36333.70000001788,
+      "toNextPaint": 6.899999976158142
+    },
+    {
+      "type": "pointerover",
+      "start": 36546.30000001192,
+      "toNextPaint": 7.5999999940395355
+    },
+    {
+      "type": "pointerover",
+      "start": 36600.80000001192,
+      "toNextPaint": 7.5999999940395355
+    },
+    {
+      "type": "pointerover",
+      "start": 36811.70000001788,
+      "toNextPaint": 5.199999988079071
+    },
+    {
+      "type": "pointerover",
+      "start": 36865.90000000596,
+      "toNextPaint": 7.5
+    },
+    {
+      "type": "pointerover",
+      "start": 37079.80000001192,
+      "toNextPaint": 4.9000000059604645
+    },
+    {
+      "type": "pointerover",
+      "start": 37133.09999999404,
+      "toNextPaint": 7.800000011920929
+    },
+    {
+      "type": "pointerover",
+      "start": 37359.30000001192,
+      "toNextPaint": 5.799999982118607
+    },
+    {
+      "type": "keydown",
+      "start": 37368.30000001192,
+      "toNextPaint": 14.099999994039536
+    },
+    {
+      "type": "click",
+      "start": 37369.09999999404,
+      "toNextPaint": 13.300000011920929
+    },
+    {
+      "type": "pointerover",
+      "start": 37376.09999999404,
+      "toNextPaint": 6.300000011920929
+    }
+  ],
+  "fonts": 251.80000001192093,
+  "handover": 20663.40000000596,
+  "errors": []
+}

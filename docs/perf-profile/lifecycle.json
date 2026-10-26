@@ -1,0 +1,216 @@
+{
+  "checks": [
+    {
+      "name": "baseline: resize during opening has no fallback",
+      "pass": true
+    },
+    {
+      "name": "baseline: resize during opening has no overflow",
+      "pass": true
+    },
+    {
+      "name": "after: resize during opening has no fallback",
+      "pass": true
+    },
+    {
+      "name": "after: resize during opening has no overflow",
+      "pass": true
+    },
+    {
+      "name": "BFCache-ineligible navigation reloads and skip recovers",
+      "pass": true
+    },
+    {
+      "name": "persisted lifecycle resumes ambient",
+      "pass": true
+    },
+    {
+      "name": "no console errors",
+      "pass": true
+    }
+  ],
+  "runs": [
+    {
+      "label": "baseline",
+      "scroll": {
+        "taskMs": 337.8899999999998,
+        "layoutMs": 39.24899999999998,
+        "paintMs": 45.611,
+        "paints": 107
+      },
+      "handover": {
+        "at": 18907.69999998808,
+        "shifts": [
+          {
+            "at": 18918.59999999404,
+            "value": 0.000035762280181521946,
+            "input": false,
+            "sources": [
+              {
+                "html": "<span>SESSION: guest</span>",
+                "before": {
+                  "x": 97.46875,
+                  "y": 818.40625,
+                  "width": 68,
+                  "height": 10,
+                  "top": 818.40625,
+                  "right": 165.46875,
+                  "bottom": 828.40625,
+                  "left": 97.46875
+                },
+                "after": {
+                  "x": 109.734375,
+                  "y": 818.40625,
+                  "width": 68,
+                  "height": 10,
+                  "top": 818.40625,
+                  "right": 177.734375,
+                  "bottom": 828.40625,
+                  "left": 109.734375
+                }
+              }
+            ]
+          }
+        ]
+      },
+      "hidden": {
+        "hidden": false,
+        "paused": false,
+        "events": [
+          {
+            "type": "pageshow",
+            "persisted": false,
+            "hidden": false,
+            "at": 562.6999999880791
+          }
+        ]
+      },
+      "restored": {
+        "events": [
+          {
+            "type": "pageshow",
+            "persisted": false,
+            "hidden": false,
+            "at": 123.59999999403954
+          }
+        ],
+        "phase": "calm",
+        "inert": true
+      },
+      "rejected": [
+        {
+          "loaderId": "9563DC320B608EB84367919C6105CBB9",
+          "frameId": "CB3519DF398A27E2FF442BC43DB424CF",
+          "notRestoredExplanations": [
+            {
+              "type": "Circumstantial",
+              "reason": "MainResourceHasCacheControlNoStore"
+            },
+            {
+              "type": "Circumstantial",
+              "reason": "JsNetworkRequestReceivedCacheControlNoStoreResource"
+            },
+            {
+              "type": "Circumstantial",
+              "reason": "BrowsingInstanceNotSwapped"
+            }
+          ],
+          "notRestoredExplanationsTree": {
+            "url": "http://localhost:4192/",
+            "explanations": [
+              {
+                "type": "Circumstantial",
+                "reason": "MainResourceHasCacheControlNoStore"
+              },
+              {
+                "type": "Circumstantial",
+                "reason": "JsNetworkRequestReceivedCacheControlNoStoreResource"
+              },
+              {
+                "type": "Circumstantial",
+                "reason": "BrowsingInstanceNotSwapped"
+              }
+            ],
+            "children": []
+          }
+        }
+      ]
+    },
+    {
+      "label": "after",
+      "scroll": {
+        "taskMs": 349.68399999999986,
+        "layoutMs": 50.08899999999999,
+        "paintMs": 51.180000000000014,
+        "paints": 121
+      },
+      "handover": {
+        "at": 18873.5,
+        "shifts": []
+      },
+      "hidden": {
+        "hidden": false,
+        "paused": false,
+        "events": [
+          {
+            "type": "pageshow",
+            "persisted": false,
+            "hidden": false,
+            "at": 519.8999999761581
+          }
+        ]
+      },
+      "restored": {
+        "events": [
+          {
+            "type": "pageshow",
+            "persisted": false,
+            "hidden": false,
+            "at": 128.89999997615814
+          }
+        ],
+        "phase": "calm",
+        "inert": true
+      },
+      "rejected": [
+        {
+          "loaderId": "692D600E8B14FDA170719F9D091D11EA",
+          "frameId": "3C7B6696FDC0991C7DED723B7637C428",
+          "notRestoredExplanations": [
+            {
+              "type": "Circumstantial",
+              "reason": "MainResourceHasCacheControlNoStore"
+            },
+            {
+              "type": "Circumstantial",
+              "reason": "JsNetworkRequestReceivedCacheControlNoStoreResource"
+            },
+            {
+              "type": "Circumstantial",
+              "reason": "BrowsingInstanceNotSwapped"
+            }
+          ],
+          "notRestoredExplanationsTree": {
+            "url": "http://localhost:4191/",
+            "explanations": [
+              {
+                "type": "Circumstantial",
+                "reason": "MainResourceHasCacheControlNoStore"
+              },
+              {
+                "type": "Circumstantial",
+                "reason": "JsNetworkRequestReceivedCacheControlNoStoreResource"
+              },
+              {
+                "type": "Circumstantial",
+                "reason": "BrowsingInstanceNotSwapped"
+              }
+            ],
+            "children": []
+          }
+        }
+      ]
+    }
+  ],
+  "errors": []
+}

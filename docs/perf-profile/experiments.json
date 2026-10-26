@@ -1,0 +1,966 @@
+{
+  "note": "Trial with overlay will-change:transform; removed because scrolling paint increased and it introduced 1/255 compositing rounding. Early fast4g-1 also preceded removal of the scaled-input trial. Not final data.",
+  "runs": [
+    {
+      "label": "after",
+      "network": "fast4g",
+      "run": 1,
+      "idle": {
+        "seconds": 8,
+        "taskMs": 321.6739999999998,
+        "scriptMs": 25.66600000000019,
+        "layoutMs": 38.79600000000005
+      },
+      "errors": [],
+      "maxEventMs": 152
+    },
+    {
+      "label": "after",
+      "network": "fast4g",
+      "run": 2,
+      "idle": {
+        "seconds": 8,
+        "taskMs": 107.2469999999992,
+        "scriptMs": 14.823999999999948,
+        "layoutMs": 8.951000000000153
+      },
+      "errors": [],
+      "maxEventMs": 112
+    },
+    {
+      "label": "after",
+      "network": "fast4g",
+      "run": 3,
+      "idle": {
+        "seconds": 8,
+        "taskMs": 58.66199999999999,
+        "scriptMs": 6.553000000000031,
+        "layoutMs": 8.78599999999996
+      },
+      "errors": [],
+      "maxEventMs": 64
+    },
+    {
+      "label": "after",
+      "network": "slow4g",
+      "run": 1,
+      "idle": {
+        "seconds": 8,
+        "taskMs": 82.45900000000006,
+        "scriptMs": 9.186999999999944,
+        "layoutMs": 8.732000000000074
+      },
+      "errors": [],
+      "maxEventMs": 56
+    },
+    {
+      "label": "after",
+      "network": "slow4g",
+      "run": 2,
+      "idle": {
+        "seconds": 8,
+        "taskMs": 105.81900000000033,
+        "scriptMs": 11.476000000000042,
+        "layoutMs": 10.64200000000004
+      },
+      "errors": [],
+      "maxEventMs": 120
+    },
+    {
+      "label": "after",
+      "network": "slow4g",
+      "run": 3,
+      "idle": {
+        "seconds": 8,
+        "taskMs": 58.59400000000026,
+        "scriptMs": 6.6150000000000375,
+        "layoutMs": 5.201000000000011
+      },
+      "errors": [],
+      "maxEventMs": 72
+    }
+  ],
+  "lifecycle": {
+    "checks": [
+      {
+        "name": "baseline: resize during opening has no fallback",
+        "pass": true
+      },
+      {
+        "name": "baseline: resize during opening has no overflow",
+        "pass": true
+      },
+      {
+        "name": "after: resize during opening has no fallback",
+        "pass": true
+      },
+      {
+        "name": "after: resize during opening has no overflow",
+        "pass": true
+      },
+      {
+        "name": "BFCache-ineligible navigation reloads and skip recovers",
+        "pass": true
+      },
+      {
+        "name": "persisted lifecycle resumes ambient",
+        "pass": true
+      },
+      {
+        "name": "no console errors",
+        "pass": true
+      }
+    ],
+    "runs": [
+      {
+        "label": "baseline",
+        "scroll": {
+          "taskMs": 401.0030000000002,
+          "layoutMs": 48.20900000000006,
+          "paintMs": 48.65700000000001,
+          "paints": 102
+        },
+        "handover": {
+          "at": 19489.70000001788,
+          "shifts": [
+            {
+              "at": 19500.80000001192,
+              "value": 3.5762280181521946e-05,
+              "input": false,
+              "sources": [
+                {
+                  "html": "<span>SESSION: guest</span>",
+                  "before": {
+                    "x": 97.46875,
+                    "y": 818.40625,
+                    "width": 68,
+                    "height": 10,
+                    "top": 818.40625,
+                    "right": 165.46875,
+                    "bottom": 828.40625,
+                    "left": 97.46875
+                  },
+                  "after": {
+                    "x": 109.734375,
+                    "y": 818.40625,
+                    "width": 68,
+                    "height": 10,
+                    "top": 818.40625,
+                    "right": 177.734375,
+                    "bottom": 828.40625,
+                    "left": 109.734375
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        "hidden": {
+          "hidden": false,
+          "paused": false,
+          "events": [
+            {
+              "type": "pageshow",
+              "persisted": false,
+              "hidden": false,
+              "at": 1025.5999999940395
+            }
+          ]
+        },
+        "restored": {
+          "events": [
+            {
+              "type": "pageshow",
+              "persisted": false,
+              "hidden": false,
+              "at": 223.5
+            }
+          ],
+          "phase": "calm",
+          "inert": true
+        },
+        "rejected": [
+          {
+            "loaderId": "010119EB1A15E8D939CD40053D65D29A",
+            "frameId": "91F1F7DA5C0C53FD2756ACCC50D629BE",
+            "notRestoredExplanations": [
+              {
+                "type": "Circumstantial",
+                "reason": "MainResourceHasCacheControlNoStore"
+              },
+              {
+                "type": "Circumstantial",
+                "reason": "JsNetworkRequestReceivedCacheControlNoStoreResource"
+              },
+              {
+                "type": "Circumstantial",
+                "reason": "BrowsingInstanceNotSwapped"
+              }
+            ],
+            "notRestoredExplanationsTree": {
+              "url": "http://localhost:4192/",
+              "explanations": [
+                {
+                  "type": "Circumstantial",
+                  "reason": "MainResourceHasCacheControlNoStore"
+                },
+                {
+                  "type": "Circumstantial",
+                  "reason": "JsNetworkRequestReceivedCacheControlNoStoreResource"
+                },
+                {
+                  "type": "Circumstantial",
+                  "reason": "BrowsingInstanceNotSwapped"
+                }
+              ],
+              "children": []
+            }
+          }
+        ]
+      },
+      {
+        "label": "after",
+        "scroll": {
+          "taskMs": 417.69999999999993,
+          "layoutMs": 59.845000000000034,
+          "paintMs": 59.854,
+          "paints": 117
+        },
+        "handover": {
+          "at": 19189.69999998808,
+          "shifts": [
+            {
+              "at": 19205.29999998212,
+              "value": 3.5762280181521946e-05,
+              "input": false,
+              "sources": [
+                {
+                  "html": "<span>SESSION: guest</span>",
+                  "before": {
+                    "x": 97.46875,
+                    "y": 818.40625,
+                    "width": 68,
+                    "height": 10,
+                    "top": 818.40625,
+                    "right": 165.46875,
+                    "bottom": 828.40625,
+                    "left": 97.46875
+                  },
+                  "after": {
+                    "x": 109.734375,
+                    "y": 818.40625,
+                    "width": 68,
+                    "height": 10,
+                    "top": 818.40625,
+                    "right": 177.734375,
+                    "bottom": 828.40625,
+                    "left": 109.734375
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        "hidden": {
+          "hidden": false,
+          "paused": false,
+          "events": [
+            {
+              "type": "pageshow",
+              "persisted": false,
+              "hidden": false,
+              "at": 764.9000000059605
+            }
+          ]
+        },
+        "restored": {
+          "events": [
+            {
+              "type": "pageshow",
+              "persisted": false,
+              "hidden": false,
+              "at": 171
+            }
+          ],
+          "phase": "calm",
+          "inert": true
+        },
+        "rejected": [
+          {
+            "loaderId": "7CE561CADE2CE6FC91964FC0D16C2212",
+            "frameId": "C0490FCBACE1B5104C9A5EE647416C8E",
+            "notRestoredExplanations": [
+              {
+                "type": "Circumstantial",
+                "reason": "MainResourceHasCacheControlNoStore"
+              },
+              {
+                "type": "Circumstantial",
+                "reason": "JsNetworkRequestReceivedCacheControlNoStoreResource"
+              },
+              {
+                "type": "Circumstantial",
+                "reason": "BrowsingInstanceNotSwapped"
+              }
+            ],
+            "notRestoredExplanationsTree": {
+              "url": "http://localhost:4191/",
+              "explanations": [
+                {
+                  "type": "Circumstantial",
+                  "reason": "MainResourceHasCacheControlNoStore"
+                },
+                {
+                  "type": "Circumstantial",
+                  "reason": "JsNetworkRequestReceivedCacheControlNoStoreResource"
+                },
+                {
+                  "type": "Circumstantial",
+                  "reason": "BrowsingInstanceNotSwapped"
+                }
+              ],
+              "children": []
+            }
+          }
+        ]
+      }
+    ],
+    "errors": []
+  },
+  "beforeGlyphWarmup": [
+    {
+      "file": "after\\fast4g-1.json",
+      "idle": {
+        "seconds": 8,
+        "taskMs": 63.27899999999964,
+        "scriptMs": 8.020000000000138,
+        "layoutMs": 9.28999999999991
+      },
+      "peak": {
+        "name": "thepeak",
+        "start": 34925.90000000596,
+        "end": 35222.29999998212,
+        "events": [
+          {
+            "name": "keydown",
+            "start": 34939.90000000596,
+            "duration": 104,
+            "processing": 0.5999999940395355,
+            "id": 1922
+          },
+          {
+            "name": "keypress",
+            "start": 34939.90000000596,
+            "duration": 104,
+            "processing": 67.90000000596046,
+            "id": 1922
+          },
+          {
+            "name": "beforeinput",
+            "start": 34941.5,
+            "duration": 104,
+            "processing": 0,
+            "id": 0
+          },
+          {
+            "name": "click",
+            "start": 34941.79999998212,
+            "duration": 104,
+            "processing": 67.40000000596046,
+            "id": 1922
+          },
+          {
+            "name": "keyup",
+            "start": 35010.19999998808,
+            "duration": 40,
+            "processing": 0,
+            "id": 1922
+          }
+        ],
+        "paintProxies": [
+          {
+            "type": "keydown",
+            "start": 34940.90000000596,
+            "toNextPaint": 83.39999997615814
+          },
+          {
+            "type": "click",
+            "start": 34941.90000000596,
+            "toNextPaint": 82.69999998807907
+          }
+        ],
+        "long": [
+          {
+            "start": 34940.29999998212,
+            "duration": 69
+          }
+        ]
+      },
+      "maxEventMs": 104
+    },
+    {
+      "file": "after\\fast4g-2.json",
+      "idle": {
+        "seconds": 8,
+        "taskMs": 85.91999999999977,
+        "scriptMs": 10.862999999999845,
+        "layoutMs": 6.4909999999999135
+      },
+      "peak": {
+        "name": "thepeak",
+        "start": 32817.5,
+        "end": 33063.5,
+        "events": [
+          {
+            "name": "keydown",
+            "start": 32828.90000000596,
+            "duration": 56,
+            "processing": 0.29999998211860657,
+            "id": 1090
+          },
+          {
+            "name": "keypress",
+            "start": 32828.90000000596,
+            "duration": 56,
+            "processing": 32.900000005960464,
+            "id": 1090
+          },
+          {
+            "name": "beforeinput",
+            "start": 32829.70000001788,
+            "duration": 56,
+            "processing": 0,
+            "id": 0
+          },
+          {
+            "name": "click",
+            "start": 32829.70000001788,
+            "duration": 56,
+            "processing": 32.69999998807907,
+            "id": 1090
+          },
+          {
+            "name": "keyup",
+            "start": 32863.09999999404,
+            "duration": 24,
+            "processing": 0.20000001788139343,
+            "id": 1090
+          }
+        ],
+        "paintProxies": [
+          {
+            "type": "keydown",
+            "start": 32829.30000001192,
+            "toNextPaint": 41.19999998807907
+          },
+          {
+            "type": "click",
+            "start": 32829.70000001788,
+            "toNextPaint": 41
+          }
+        ],
+        "long": []
+      },
+      "maxEventMs": 56
+    },
+    {
+      "file": "after\\fast4g-3.json",
+      "idle": {
+        "seconds": 8,
+        "taskMs": 86.8960000000003,
+        "scriptMs": 11.236000000000024,
+        "layoutMs": 8.040000000000047
+      },
+      "peak": {
+        "name": "thepeak",
+        "start": 32626.20000001788,
+        "end": 32879.90000000596,
+        "events": [
+          {
+            "name": "keydown",
+            "start": 32640.20000001788,
+            "duration": 56,
+            "processing": 0.29999998211860657,
+            "id": 9626
+          },
+          {
+            "name": "keypress",
+            "start": 32640.20000001788,
+            "duration": 56,
+            "processing": 36.099999994039536,
+            "id": 9626
+          },
+          {
+            "name": "beforeinput",
+            "start": 32641.20000001788,
+            "duration": 56,
+            "processing": 0,
+            "id": 0
+          },
+          {
+            "name": "click",
+            "start": 32641.20000001788,
+            "duration": 56,
+            "processing": 35.89999997615814,
+            "id": 9626
+          },
+          {
+            "name": "keyup",
+            "start": 32677.5,
+            "duration": 16,
+            "processing": 0,
+            "id": 9626
+          }
+        ],
+        "paintProxies": [
+          {
+            "type": "keydown",
+            "start": 32640.80000001192,
+            "toNextPaint": 42.29999998211861
+          },
+          {
+            "type": "click",
+            "start": 32641.20000001788,
+            "toNextPaint": 42.099999994039536
+          }
+        ],
+        "long": []
+      },
+      "maxEventMs": 56
+    },
+    {
+      "file": "after\\slow4g-1.json",
+      "idle": {
+        "seconds": 8,
+        "taskMs": 80.0970000000003,
+        "scriptMs": 8.243,
+        "layoutMs": 8.19000000000003
+      },
+      "peak": {
+        "name": "thepeak",
+        "start": 34021.09999999404,
+        "end": 34279.29999998212,
+        "events": [
+          {
+            "name": "keydown",
+            "start": 34037.19999998808,
+            "duration": 64,
+            "processing": 2.0999999940395355,
+            "id": 2675
+          },
+          {
+            "name": "keypress",
+            "start": 34037.19999998808,
+            "duration": 64,
+            "processing": 42.900000005960464,
+            "id": 2675
+          },
+          {
+            "name": "beforeinput",
+            "start": 34039.69999998808,
+            "duration": 64,
+            "processing": 0,
+            "id": 0
+          },
+          {
+            "name": "click",
+            "start": 34039.69999998808,
+            "duration": 64,
+            "processing": 42.599999994039536,
+            "id": 2675
+          },
+          {
+            "name": "keyup",
+            "start": 34083.09999999404,
+            "duration": 24,
+            "processing": 0.20000001788139343,
+            "id": 2675
+          }
+        ],
+        "paintProxies": [
+          {
+            "type": "keydown",
+            "start": 34038.5,
+            "toNextPaint": 51.099999994039536
+          },
+          {
+            "type": "click",
+            "start": 34039.90000000596,
+            "toNextPaint": 49.69999998807907
+          }
+        ],
+        "long": []
+      },
+      "maxEventMs": 64
+    },
+    {
+      "file": "after\\slow4g-2.json",
+      "idle": {
+        "seconds": 8,
+        "taskMs": 75.58699999999962,
+        "scriptMs": 7.1150000000000935,
+        "layoutMs": 6.825999999999999
+      },
+      "peak": {
+        "name": "thepeak",
+        "start": 33996.5,
+        "end": 34242.90000000596,
+        "events": [
+          {
+            "name": "keydown",
+            "start": 34003.30000001192,
+            "duration": 64,
+            "processing": 0.29999998211860657,
+            "id": 5505
+          },
+          {
+            "name": "keypress",
+            "start": 34003.30000001192,
+            "duration": 64,
+            "processing": 41,
+            "id": 5505
+          },
+          {
+            "name": "beforeinput",
+            "start": 34006.90000000596,
+            "duration": 64,
+            "processing": 0,
+            "id": 0
+          },
+          {
+            "name": "click",
+            "start": 34007,
+            "duration": 64,
+            "processing": 40.900000005960464,
+            "id": 5505
+          },
+          {
+            "name": "keyup",
+            "start": 34048.40000000596,
+            "duration": 24,
+            "processing": 0,
+            "id": 5505
+          }
+        ],
+        "paintProxies": [
+          {
+            "type": "keydown",
+            "start": 34006.70000001788,
+            "toNextPaint": 48.900000005960464
+          },
+          {
+            "type": "click",
+            "start": 34007.20000001788,
+            "toNextPaint": 48.400000005960464
+          }
+        ],
+        "long": []
+      },
+      "maxEventMs": 64
+    },
+    {
+      "file": "after\\slow4g-3.json",
+      "idle": {
+        "seconds": 8,
+        "taskMs": 167.74099999999947,
+        "scriptMs": 18.88499999999993,
+        "layoutMs": 46.985999999999976
+      },
+      "peak": {
+        "name": "thepeak",
+        "start": 35029.30000001192,
+        "end": 35343.69999998808,
+        "events": [
+          {
+            "name": "keydown",
+            "start": 35050.09999999404,
+            "duration": 112,
+            "processing": 0.19999998807907104,
+            "id": 7260
+          },
+          {
+            "name": "keypress",
+            "start": 35050.09999999404,
+            "duration": 112,
+            "processing": 86.2000000178814,
+            "id": 7260
+          },
+          {
+            "name": "beforeinput",
+            "start": 35050.90000000596,
+            "duration": 112,
+            "processing": 0,
+            "id": 0
+          },
+          {
+            "name": "click",
+            "start": 35050.90000000596,
+            "duration": 112,
+            "processing": 85.80000001192093,
+            "id": 7260
+          },
+          {
+            "name": "keyup",
+            "start": 35137.90000000596,
+            "duration": 24,
+            "processing": 0.19999998807907104,
+            "id": 7260
+          }
+        ],
+        "paintProxies": [
+          {
+            "type": "keydown",
+            "start": 35050.5,
+            "toNextPaint": 100.19999998807907
+          },
+          {
+            "type": "click",
+            "start": 35051.09999999404,
+            "toNextPaint": 99.59999999403954
+          }
+        ],
+        "long": [
+          {
+            "start": 35050.30000001192,
+            "duration": 86
+          }
+        ]
+      },
+      "maxEventMs": 112
+    },
+    {
+      "file": "after\\mobile\\fast4g-1.json",
+      "idle": {
+        "seconds": 8,
+        "taskMs": 124.92899999999985,
+        "scriptMs": 11.896999999999935,
+        "layoutMs": 19.444999999999936
+      },
+      "peak": {
+        "name": "thepeak",
+        "start": 33313.19999998808,
+        "end": 34121,
+        "events": [
+          {
+            "name": "keydown",
+            "start": 33328.5,
+            "duration": 616,
+            "processing": 0.20000001788139343,
+            "id": 8064
+          },
+          {
+            "name": "keypress",
+            "start": 33328.5,
+            "duration": 616,
+            "processing": 585.7999999821186,
+            "id": 8064
+          },
+          {
+            "name": "beforeinput",
+            "start": 33329.19999998808,
+            "duration": 616,
+            "processing": 0,
+            "id": 0
+          },
+          {
+            "name": "click",
+            "start": 33329.19999998808,
+            "duration": 616,
+            "processing": 585.5999999940395,
+            "id": 8064
+          },
+          {
+            "name": "keyup",
+            "start": 33915.59999999404,
+            "duration": 24,
+            "processing": 0.09999999403953552,
+            "id": 8064
+          },
+          {
+            "name": "pointerout",
+            "start": 33917.09999999404,
+            "duration": 24,
+            "processing": 0.09999999403953552,
+            "id": 0
+          },
+          {
+            "name": "pointerleave",
+            "start": 33917.09999999404,
+            "duration": 24,
+            "processing": 0,
+            "id": 0
+          },
+          {
+            "name": "pointerover",
+            "start": 33917.09999999404,
+            "duration": 24,
+            "processing": 0.19999998807907104,
+            "id": 0
+          },
+          {
+            "name": "pointerenter",
+            "start": 33917.09999999404,
+            "duration": 24,
+            "processing": 0,
+            "id": 0
+          },
+          {
+            "name": "mouseout",
+            "start": 33917.09999999404,
+            "duration": 24,
+            "processing": 0,
+            "id": 0
+          },
+          {
+            "name": "mouseover",
+            "start": 33917.09999999404,
+            "duration": 24,
+            "processing": 0,
+            "id": 0
+          }
+        ],
+        "paintProxies": [
+          {
+            "type": "keydown",
+            "start": 33328.90000000596,
+            "toNextPaint": 597.6999999880791
+          },
+          {
+            "type": "click",
+            "start": 33329.40000000596,
+            "toNextPaint": 597.1999999880791
+          },
+          {
+            "type": "pointerover",
+            "start": 33920.59999999404,
+            "toNextPaint": 6.199999988079071
+          }
+        ],
+        "long": [
+          {
+            "start": 33328.79999998212,
+            "duration": 586
+          }
+        ]
+      },
+      "maxEventMs": 616
+    },
+    {
+      "file": "after\\mobile\\slow4g-1.json",
+      "idle": {
+        "seconds": 8,
+        "taskMs": 71.46400000000064,
+        "scriptMs": 5.852999999999997,
+        "layoutMs": 8.384000000000002
+      },
+      "peak": {
+        "name": "thepeak",
+        "start": 33723,
+        "end": 34005.30000001192,
+        "events": [
+          {
+            "name": "keydown",
+            "start": 33745.69999998808,
+            "duration": 88,
+            "processing": 0.3999999761581421,
+            "id": 8023
+          },
+          {
+            "name": "keypress",
+            "start": 33745.69999998808,
+            "duration": 88,
+            "processing": 57.5,
+            "id": 8023
+          },
+          {
+            "name": "beforeinput",
+            "start": 33746.19999998808,
+            "duration": 80,
+            "processing": 0,
+            "id": 0
+          },
+          {
+            "name": "click",
+            "start": 33746.19999998808,
+            "duration": 80,
+            "processing": 57.5,
+            "id": 8023
+          },
+          {
+            "name": "keyup",
+            "start": 33804.30000001192,
+            "duration": 24,
+            "processing": 0.09999999403953552,
+            "id": 8023
+          },
+          {
+            "name": "pointerout",
+            "start": 33807.40000000596,
+            "duration": 24,
+            "processing": 0.29999998211860657,
+            "id": 0
+          },
+          {
+            "name": "pointerleave",
+            "start": 33807.40000000596,
+            "duration": 24,
+            "processing": 0,
+            "id": 0
+          },
+          {
+            "name": "pointerover",
+            "start": 33807.40000000596,
+            "duration": 24,
+            "processing": 0.20000001788139343,
+            "id": 0
+          },
+          {
+            "name": "pointerenter",
+            "start": 33807.40000000596,
+            "duration": 24,
+            "processing": 0,
+            "id": 0
+          },
+          {
+            "name": "mouseout",
+            "start": 33807.40000000596,
+            "duration": 24,
+            "processing": 0,
+            "id": 0
+          },
+          {
+            "name": "mouseover",
+            "start": 33807.40000000596,
+            "duration": 24,
+            "processing": 0,
+            "id": 0
+          }
+        ],
+        "paintProxies": [
+          {
+            "type": "keydown",
+            "start": 33746,
+            "toNextPaint": 69.59999999403954
+          },
+          {
+            "type": "click",
+            "start": 33746.19999998808,
+            "toNextPaint": 69.60000002384186
+          },
+          {
+            "type": "pointerover",
+            "start": 33809.40000000596,
+            "toNextPaint": 6.4000000059604645
+          }
+        ],
+        "long": [
+          {
+            "start": 33745.80000001192,
+            "duration": 58
+          }
+        ]
+      },
+      "maxEventMs": 88
+    }
+  ]
+}

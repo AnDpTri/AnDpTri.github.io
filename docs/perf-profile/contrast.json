@@ -1,0 +1,32 @@
+[
+  {
+    "name": "body",
+    "foreground": "#eeeeea",
+    "background": "#101010",
+    "ratio": 16.36
+  },
+  {
+    "name": "muted",
+    "foreground": "#a5a5a1",
+    "background": "#101010",
+    "ratio": 7.7
+  },
+  {
+    "name": "command prefix",
+    "foreground": "#737373",
+    "background": "#101010",
+    "ratio": 4.01
+  },
+  {
+    "name": "placeholder",
+    "foreground": "#858585",
+    "background": "#101010",
+    "ratio": 5.16
+  },
+  {
+    "name": "HUD",
+    "foreground": "#b7b7b3",
+    "background": "#171717",
+    "ratio": 8.91
+  }
+]

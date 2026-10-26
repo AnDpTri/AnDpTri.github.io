@@ -1,0 +1,2346 @@
+{
+  "timings": {
+    "baseline": {
+      "desktop-fast4g": {
+        "runs": 3,
+        "medianMaxEventMs": 160,
+        "maxEventMs": 168,
+        "medianInteractionLongTasks": 1,
+        "medianInteractionLongTaskMs": 140,
+        "medianIdleTaskMs": 81.55800000000025,
+        "medianIdleScriptMs": 7.009999999999961,
+        "medianIdleMainThreadPercent": 1.019475000000003,
+        "medianHandoverCLS": 3.744855967078189e-05,
+        "medianWholeSequenceCLS": 0.14013833660863553,
+        "actions": {
+          "typing": {
+            "medianMaxEventMs": 24,
+            "maxEventMs": 24,
+            "maxPaintProxyMs": 21.19999998807907,
+            "longTasks": [
+              0,
+              0,
+              0
+            ]
+          },
+          "help": {
+            "medianMaxEventMs": 32,
+            "maxEventMs": 48,
+            "maxPaintProxyMs": 31.5,
+            "longTasks": [
+              0,
+              0,
+              0
+            ]
+          },
+          "projects": {
+            "medianMaxEventMs": 16,
+            "maxEventMs": 24,
+            "maxPaintProxyMs": 20.80000001192093,
+            "longTasks": [
+              0,
+              0,
+              0
+            ]
+          },
+          "projects --all": {
+            "medianMaxEventMs": 32,
+            "maxEventMs": 32,
+            "maxPaintProxyMs": 27.400000005960464,
+            "longTasks": [
+              0,
+              0,
+              0
+            ]
+          },
+          "open 1": {
+            "medianMaxEventMs": 72,
+            "maxEventMs": 80,
+            "maxPaintProxyMs": 62.900000005960464,
+            "longTasks": [
+              0,
+              0,
+              0
+            ]
+          },
+          "open 2": {
+            "medianMaxEventMs": 56,
+            "maxEventMs": 64,
+            "maxPaintProxyMs": 51.30000001192093,
+            "longTasks": [
+              0,
+              0,
+              0
+            ]
+          },
+          "open 3": {
+            "medianMaxEventMs": 72,
+            "maxEventMs": 72,
+            "maxPaintProxyMs": 57.80000001192093,
+            "longTasks": [
+              0,
+              0,
+              0
+            ]
+          },
+          "open 4": {
+            "medianMaxEventMs": 72,
+            "maxEventMs": 88,
+            "maxPaintProxyMs": 58.79999998211861,
+            "longTasks": [
+              0,
+              0,
+              0
+            ]
+          },
+          "open 5": {
+            "medianMaxEventMs": 64,
+            "maxEventMs": 80,
+            "maxPaintProxyMs": 50.29999998211861,
+            "longTasks": [
+              0,
+              0,
+              0
+            ]
+          },
+          "open 6": {
+            "medianMaxEventMs": 64,
+            "maxEventMs": 72,
+            "maxPaintProxyMs": 58,
+            "longTasks": [
+              0,
+              0,
+              0
+            ]
+          },
+          "open 7": {
+            "medianMaxEventMs": 40,
+            "maxEventMs": 56,
+            "maxPaintProxyMs": 42.10000002384186,
+            "longTasks": [
+              0,
+              0,
+              0
+            ]
+          },
+          "open 8": {
+            "medianMaxEventMs": 48,
+            "maxEventMs": 56,
+            "maxPaintProxyMs": 50.60000002384186,
+            "longTasks": [
+              0,
+              0,
+              0
+            ]
+          },
+          "open 9": {
+            "medianMaxEventMs": 40,
+            "maxEventMs": 56,
+            "maxPaintProxyMs": 47.10000002384186,
+            "longTasks": [
+              0,
+              0,
+              0
+            ]
+          },
+          "contact": {
+            "medianMaxEventMs": 32,
+            "maxEventMs": 56,
+            "maxPaintProxyMs": 19.299999982118607,
+            "longTasks": [
+              0,
+              0,
+              0
+            ]
+          },
+          "sudo": {
+            "medianMaxEventMs": 16,
+            "maxEventMs": 32,
+            "maxPaintProxyMs": 13.399999976158142,
+            "longTasks": [
+              0,
+              0,
+              0
+            ]
+          },
+          "hack": {
+            "medianMaxEventMs": 16,
+            "maxEventMs": 24,
+            "maxPaintProxyMs": 21,
+            "longTasks": [
+              0,
+              0,
+              0
+            ]
+          },
+          "thepeak": {
+            "medianMaxEventMs": 80,
+            "maxEventMs": 112,
+            "maxPaintProxyMs": 91.2999999821186,
+            "longTasks": [
+              1,
+              0,
+              0
+            ]
+          },
+          "unknown": {
+            "medianMaxEventMs": 24,
+            "maxEventMs": 32,
+            "maxPaintProxyMs": 18.19999998807907,
+            "longTasks": [
+              0,
+              0,
+              0
+            ]
+          },
+          "clear": {
+            "medianMaxEventMs": 24,
+            "maxEventMs": 32,
+            "maxPaintProxyMs": 15.799999982118607,
+            "longTasks": [
+              0,
+              0,
+              0
+            ]
+          },
+          "mute": {
+            "medianMaxEventMs": 104.0,
+            "maxEventMs": 168,
+            "maxPaintProxyMs": 156.09999999403954,
+            "longTasks": [
+              1,
+              0,
+              1,
+              0,
+              1,
+              0
+            ]
+          },
+          "chip help": {
+            "medianMaxEventMs": 32,
+            "maxEventMs": 40,
+            "maxPaintProxyMs": 36.19999998807907,
+            "longTasks": [
+              0,
+              0,
+              0
+            ]
+          },
+          "chip projects": {
+            "medianMaxEventMs": 32,
+            "maxEventMs": 40,
+            "maxPaintProxyMs": 26.5,
+            "longTasks": [
+              0,
+              0,
+              0
+            ]
+          },
+          "chip contact": {
+            "medianMaxEventMs": 32,
+            "maxEventMs": 48,
+            "maxPaintProxyMs": 27.599999994039536,
+            "longTasks": [
+              0,
+              0,
+              0
+            ]
+          },
+          "--all": {
+            "medianMaxEventMs": 24,
+            "maxEventMs": 40,
+            "maxPaintProxyMs": 31.099999994039536,
+            "longTasks": [
+              0,
+              0,
+              0
+            ]
+          },
+          "hover 1": {
+            "medianMaxEventMs": 0,
+            "maxEventMs": 0,
+            "maxPaintProxyMs": 12.5,
+            "longTasks": [
+              0,
+              0,
+              0
+            ]
+          },
+          "hover 2": {
+            "medianMaxEventMs": 0,
+            "maxEventMs": 0,
+            "maxPaintProxyMs": 10.700000017881393,
+            "longTasks": [
+              0,
+              0,
+              0
+            ]
+          },
+          "hover 3": {
+            "medianMaxEventMs": 0,
+            "maxEventMs": 0,
+            "maxPaintProxyMs": 10.699999988079071,
+            "longTasks": [
+              0,
+              0,
+              0
+            ]
+          },
+          "hover 4": {
+            "medianMaxEventMs": 0,
+            "maxEventMs": 0,
+            "maxPaintProxyMs": 11.799999982118607,
+            "longTasks": [
+              0,
+              0,
+              0
+            ]
+          },
+          "hover 5": {
+            "medianMaxEventMs": 0,
+            "maxEventMs": 0,
+            "maxPaintProxyMs": 9.400000005960464,
+            "longTasks": [
+              0,
+              0,
+              0
+            ]
+          },
+          "logout": {
+            "medianMaxEventMs": 32,
+            "maxEventMs": 32,
+            "maxPaintProxyMs": 17.5,
+            "longTasks": [
+              0,
+              0,
+              0
+            ]
+          }
+        }
+      },
+      "desktop-slow4g": {
+        "runs": 3,
+        "medianMaxEventMs": 160,
+        "maxEventMs": 176,
+        "medianInteractionLongTasks": 1,
+        "medianInteractionLongTaskMs": 141,
+        "medianIdleTaskMs": 82.02200000000026,
+        "medianIdleScriptMs": 7.462999999999997,
+        "medianIdleMainThreadPercent": 1.0252750000000033,
+        "medianHandoverCLS": 3.744855967078189e-05,
+        "medianWholeSequenceCLS": 0.13092680300698192,
+        "actions": {
+          "typing": {
+            "medianMaxEventMs": 32,
+            "maxEventMs": 32,
+            "maxPaintProxyMs": 23.400000005960464,
+            "longTasks": [
+              0,
+              0,
+              0
+            ]
+          },
+          "help": {
+            "medianMaxEventMs": 32,
+            "maxEventMs": 32,
+            "maxPaintProxyMs": 22.599999994039536,
+            "longTasks": [
+              0,
+              0,
+              0
+            ]
+          },
+          "projects": {
+            "medianMaxEventMs": 16,
+            "maxEventMs": 24,
+            "maxPaintProxyMs": 13.5,
+            "longTasks": [
+              0,
+              0,
+              0
+            ]
+          },
+          "projects --all": {
+            "medianMaxEventMs": 32,
+            "maxEventMs": 32,
+            "maxPaintProxyMs": 23.799999982118607,
+            "longTasks": [
+              0,
+              0,
+              0
+            ]
+          },
+          "open 1": {
+            "medianMaxEventMs": 56,
+            "maxEventMs": 80,
+            "maxPaintProxyMs": 54.099999994039536,
+            "longTasks": [
+              0,
+              0,
+              0
+            ]
+          },
+          "open 2": {
+            "medianMaxEventMs": 48,
+            "maxEventMs": 48,
+            "maxPaintProxyMs": 40,
+            "longTasks": [
+              0,
+              0,
+              0
+            ]
+          },
+          "open 3": {
+            "medianMaxEventMs": 56,
+            "maxEventMs": 56,
+            "maxPaintProxyMs": 45.099999994039536,
+            "longTasks": [
+              0,
+              0,
+              0
+            ]
+          },
+          "open 4": {
+            "medianMaxEventMs": 56,
+            "maxEventMs": 64,
+            "maxPaintProxyMs": 38.400000005960464,
+            "longTasks": [
+              0,
+              0,
+              0
+            ]
+          },
+          "open 5": {
+            "medianMaxEventMs": 56,
+            "maxEventMs": 72,
+            "maxPaintProxyMs": 41.099999994039536,
+            "longTasks": [
+              0,
+              0,
+              0
+            ]
+          },
+          "open 6": {
+            "medianMaxEventMs": 56,
+            "maxEventMs": 72,
+            "maxPaintProxyMs": 60.19999998807907,
+            "longTasks": [
+              0,
+              0,
+              0
+            ]
+          },
+          "open 7": {
+            "medianMaxEventMs": 48,
+            "maxEventMs": 56,
+            "maxPaintProxyMs": 44.29999998211861,
+            "longTasks": [
+              0,
+              0,
+              0
+            ]
+          },
+          "open 8": {
+            "medianMaxEventMs": 56,
+            "maxEventMs": 80,
+            "maxPaintProxyMs": 76.5,
+            "longTasks": [
+              0,
+              0,
+              0
+            ]
+          },
+          "open 9": {
+            "medianMaxEventMs": 56,
+            "maxEventMs": 56,
+            "maxPaintProxyMs": 52.400000005960464,
+            "longTasks": [
+              0,
+              0,
+              0
+            ]
+          },
+          "contact": {
+            "medianMaxEventMs": 32,
+            "maxEventMs": 40,
+            "maxPaintProxyMs": 14,
+            "longTasks": [
+              0,
+              0,
+              0
+            ]
+          },
+          "sudo": {
+            "medianMaxEventMs": 24,
+            "maxEventMs": 32,
+            "maxPaintProxyMs": 16.099999994039536,
+            "longTasks": [
+              0,
+              0,
+              0
+            ]
+          },
+          "hack": {
+            "medianMaxEventMs": 16,
+            "maxEventMs": 24,
+            "maxPaintProxyMs": 19.099999994039536,
+            "longTasks": [
+              0,
+              0,
+              0
+            ]
+          },
+          "thepeak": {
+            "medianMaxEventMs": 64,
+            "maxEventMs": 88,
+            "maxPaintProxyMs": 72,
+            "longTasks": [
+              0,
+              0,
+              1
+            ]
+          },
+          "unknown": {
+            "medianMaxEventMs": 16,
+            "maxEventMs": 24,
+            "maxPaintProxyMs": 12.200000017881393,
+            "longTasks": [
+              0,
+              0,
+              0
+            ]
+          },
+          "clear": {
+            "medianMaxEventMs": 16,
+            "maxEventMs": 24,
+            "maxPaintProxyMs": 10.5,
+            "longTasks": [
+              0,
+              0,
+              0
+            ]
+          },
+          "mute": {
+            "medianMaxEventMs": 96.0,
+            "maxEventMs": 176,
+            "maxPaintProxyMs": 170.39999997615814,
+            "longTasks": [
+              1,
+              0,
+              1,
+              0,
+              1,
+              0
+            ]
+          },
+          "chip help": {
+            "medianMaxEventMs": 32,
+            "maxEventMs": 32,
+            "maxPaintProxyMs": 20.80000001192093,
+            "longTasks": [
+              0,
+              0,
+              0
+            ]
+          },
+          "chip projects": {
+            "medianMaxEventMs": 32,
+            "maxEventMs": 40,
+            "maxPaintProxyMs": 29.5,
+            "longTasks": [
+              0,
+              0,
+              0
+            ]
+          },
+          "chip contact": {
+            "medianMaxEventMs": 32,
+            "maxEventMs": 32,
+            "maxPaintProxyMs": 19.899999976158142,
+            "longTasks": [
+              0,
+              0,
+              0
+            ]
+          },
+          "--all": {
+            "medianMaxEventMs": 32,
+            "maxEventMs": 32,
+            "maxPaintProxyMs": 23.30000001192093,
+            "longTasks": [
+              0,
+              0,
+              0
+            ]
+          },
+          "hover 1": {
+            "medianMaxEventMs": 0,
+            "maxEventMs": 0,
+            "maxPaintProxyMs": 10.899999976158142,
+            "longTasks": [
+              0,
+              0,
+              0
+            ]
+          },
+          "hover 2": {
+            "medianMaxEventMs": 0,
+            "maxEventMs": 0,
+            "maxPaintProxyMs": 10.199999988079071,
+            "longTasks": [
+              0,
+              0,
+              0
+            ]
+          },
+          "hover 3": {
+            "medianMaxEventMs": 0,
+            "maxEventMs": 0,
+            "maxPaintProxyMs": 9.200000017881393,
+            "longTasks": [
+              0,
+              0,
+              0
+            ]
+          },
+          "hover 4": {
+            "medianMaxEventMs": 0,
+            "maxEventMs": 0,
+            "maxPaintProxyMs": 8.5,
+            "longTasks": [
+              0,
+              0,
+              0
+            ]
+          },
+          "hover 5": {
+            "medianMaxEventMs": 0,
+            "maxEventMs": 0,
+            "maxPaintProxyMs": 10.399999976158142,
+            "longTasks": [
+              0,
+              0,
+              0
+            ]
+          },
+          "logout": {
+            "medianMaxEventMs": 32,
+            "maxEventMs": 48,
+            "maxPaintProxyMs": 26.69999998807907,
+            "longTasks": [
+              0,
+              0,
+              0
+            ]
+          }
+        }
+      },
+      "mobile-fast4g": {
+        "runs": 1,
+        "medianMaxEventMs": 264,
+        "maxEventMs": 264,
+        "medianInteractionLongTasks": 3,
+        "medianInteractionLongTaskMs": 364,
+        "medianIdleTaskMs": 60.55100000000024,
+        "medianIdleScriptMs": 3.8770000000001303,
+        "medianIdleMainThreadPercent": 0.756887500000003,
+        "medianHandoverCLS": 3.5762280181521946e-05,
+        "medianWholeSequenceCLS": 0.22732103127538703,
+        "actions": {
+          "typing": {
+            "medianMaxEventMs": 40,
+            "maxEventMs": 40,
+            "maxPaintProxyMs": 14.800000011920929,
+            "longTasks": [
+              0
+            ]
+          },
+          "help": {
+            "medianMaxEventMs": 24,
+            "maxEventMs": 24,
+            "maxPaintProxyMs": 18.400000005960464,
+            "longTasks": [
+              0
+            ]
+          },
+          "projects": {
+            "medianMaxEventMs": 16,
+            "maxEventMs": 16,
+            "maxPaintProxyMs": 11.900000005960464,
+            "longTasks": [
+              0
+            ]
+          },
+          "projects --all": {
+            "medianMaxEventMs": 40,
+            "maxEventMs": 40,
+            "maxPaintProxyMs": 21.400000005960464,
+            "longTasks": [
+              0
+            ]
+          },
+          "open 1": {
+            "medianMaxEventMs": 80,
+            "maxEventMs": 80,
+            "maxPaintProxyMs": 54,
+            "longTasks": [
+              0
+            ]
+          },
+          "open 2": {
+            "medianMaxEventMs": 64,
+            "maxEventMs": 64,
+            "maxPaintProxyMs": 54.5,
+            "longTasks": [
+              0
+            ]
+          },
+          "open 3": {
+            "medianMaxEventMs": 72,
+            "maxEventMs": 72,
+            "maxPaintProxyMs": 46.80000001192093,
+            "longTasks": [
+              0
+            ]
+          },
+          "open 4": {
+            "medianMaxEventMs": 40,
+            "maxEventMs": 40,
+            "maxPaintProxyMs": 42.39999997615814,
+            "longTasks": [
+              0
+            ]
+          },
+          "open 5": {
+            "medianMaxEventMs": 72,
+            "maxEventMs": 72,
+            "maxPaintProxyMs": 45.69999998807907,
+            "longTasks": [
+              0
+            ]
+          },
+          "open 6": {
+            "medianMaxEventMs": 56,
+            "maxEventMs": 56,
+            "maxPaintProxyMs": 42.69999998807907,
+            "longTasks": [
+              0
+            ]
+          },
+          "open 7": {
+            "medianMaxEventMs": 56,
+            "maxEventMs": 56,
+            "maxPaintProxyMs": 45.70000001788139,
+            "longTasks": [
+              0
+            ]
+          },
+          "open 8": {
+            "medianMaxEventMs": 88,
+            "maxEventMs": 88,
+            "maxPaintProxyMs": 43.20000001788139,
+            "longTasks": [
+              0
+            ]
+          },
+          "open 9": {
+            "medianMaxEventMs": 48,
+            "maxEventMs": 48,
+            "maxPaintProxyMs": 42.30000001192093,
+            "longTasks": [
+              0
+            ]
+          },
+          "contact": {
+            "medianMaxEventMs": 24,
+            "maxEventMs": 24,
+            "maxPaintProxyMs": 14.900000005960464,
+            "longTasks": [
+              0
+            ]
+          },
+          "sudo": {
+            "medianMaxEventMs": 16,
+            "maxEventMs": 16,
+            "maxPaintProxyMs": 12.599999994039536,
+            "longTasks": [
+              0
+            ]
+          },
+          "hack": {
+            "medianMaxEventMs": 16,
+            "maxEventMs": 16,
+            "maxPaintProxyMs": 12.300000011920929,
+            "longTasks": [
+              0
+            ]
+          },
+          "thepeak": {
+            "medianMaxEventMs": 72,
+            "maxEventMs": 72,
+            "maxPaintProxyMs": 60.099999994039536,
+            "longTasks": [
+              1
+            ]
+          },
+          "unknown": {
+            "medianMaxEventMs": 24,
+            "maxEventMs": 24,
+            "maxPaintProxyMs": 11,
+            "longTasks": [
+              0
+            ]
+          },
+          "clear": {
+            "medianMaxEventMs": 16,
+            "maxEventMs": 16,
+            "maxPaintProxyMs": 13.300000011920929,
+            "longTasks": [
+              0
+            ]
+          },
+          "mute": {
+            "medianMaxEventMs": 148.0,
+            "maxEventMs": 264,
+            "maxPaintProxyMs": 253.19999998807907,
+            "longTasks": [
+              2,
+              0
+            ]
+          },
+          "chip help": {
+            "medianMaxEventMs": 40,
+            "maxEventMs": 40,
+            "maxPaintProxyMs": 36.900000005960464,
+            "longTasks": [
+              0
+            ]
+          },
+          "chip projects": {
+            "medianMaxEventMs": 48,
+            "maxEventMs": 48,
+            "maxPaintProxyMs": 31.299999982118607,
+            "longTasks": [
+              0
+            ]
+          },
+          "chip contact": {
+            "medianMaxEventMs": 48,
+            "maxEventMs": 48,
+            "maxPaintProxyMs": 18.099999994039536,
+            "longTasks": [
+              0
+            ]
+          },
+          "--all": {
+            "medianMaxEventMs": 32,
+            "maxEventMs": 32,
+            "maxPaintProxyMs": 22.599999994039536,
+            "longTasks": [
+              0
+            ]
+          },
+          "hover 1": {
+            "medianMaxEventMs": 0,
+            "maxEventMs": 0,
+            "maxPaintProxyMs": 5.300000011920929,
+            "longTasks": [
+              0
+            ]
+          },
+          "hover 2": {
+            "medianMaxEventMs": 0,
+            "maxEventMs": 0,
+            "maxPaintProxyMs": 7.399999976158142,
+            "longTasks": [
+              0
+            ]
+          },
+          "hover 3": {
+            "medianMaxEventMs": 0,
+            "maxEventMs": 0,
+            "maxPaintProxyMs": 5.800000011920929,
+            "longTasks": [
+              0
+            ]
+          },
+          "hover 4": {
+            "medianMaxEventMs": 0,
+            "maxEventMs": 0,
+            "maxPaintProxyMs": 7.800000011920929,
+            "longTasks": [
+              0
+            ]
+          },
+          "hover 5": {
+            "medianMaxEventMs": 0,
+            "maxEventMs": 0,
+            "maxPaintProxyMs": 8.400000005960464,
+            "longTasks": [
+              0
+            ]
+          },
+          "logout": {
+            "medianMaxEventMs": 32,
+            "maxEventMs": 32,
+            "maxPaintProxyMs": 12.099999994039536,
+            "longTasks": [
+              0
+            ]
+          }
+        }
+      },
+      "mobile-slow4g": {
+        "runs": 1,
+        "medianMaxEventMs": 344,
+        "maxEventMs": 344,
+        "medianInteractionLongTasks": 2,
+        "medianInteractionLongTaskMs": 507,
+        "medianIdleTaskMs": 79.94099999999982,
+        "medianIdleScriptMs": 5.31500000000007,
+        "medianIdleMainThreadPercent": 0.9992624999999977,
+        "medianHandoverCLS": 3.5762280181521946e-05,
+        "medianWholeSequenceCLS": 0.22205016728726834,
+        "actions": {
+          "typing": {
+            "medianMaxEventMs": 32,
+            "maxEventMs": 32,
+            "maxPaintProxyMs": 27,
+            "longTasks": [
+              0
+            ]
+          },
+          "help": {
+            "medianMaxEventMs": 24,
+            "maxEventMs": 24,
+            "maxPaintProxyMs": 16.69999998807907,
+            "longTasks": [
+              0
+            ]
+          },
+          "projects": {
+            "medianMaxEventMs": 24,
+            "maxEventMs": 24,
+            "maxPaintProxyMs": 15.5,
+            "longTasks": [
+              0
+            ]
+          },
+          "projects --all": {
+            "medianMaxEventMs": 32,
+            "maxEventMs": 32,
+            "maxPaintProxyMs": 17.100000023841858,
+            "longTasks": [
+              0
+            ]
+          },
+          "open 1": {
+            "medianMaxEventMs": 56,
+            "maxEventMs": 56,
+            "maxPaintProxyMs": 42.60000002384186,
+            "longTasks": [
+              0
+            ]
+          },
+          "open 2": {
+            "medianMaxEventMs": 48,
+            "maxEventMs": 48,
+            "maxPaintProxyMs": 42.400000005960464,
+            "longTasks": [
+              0
+            ]
+          },
+          "open 3": {
+            "medianMaxEventMs": 56,
+            "maxEventMs": 56,
+            "maxPaintProxyMs": 39.79999998211861,
+            "longTasks": [
+              0
+            ]
+          },
+          "open 4": {
+            "medianMaxEventMs": 32,
+            "maxEventMs": 32,
+            "maxPaintProxyMs": 31.099999994039536,
+            "longTasks": [
+              0
+            ]
+          },
+          "open 5": {
+            "medianMaxEventMs": 56,
+            "maxEventMs": 56,
+            "maxPaintProxyMs": 35,
+            "longTasks": [
+              0
+            ]
+          },
+          "open 6": {
+            "medianMaxEventMs": 48,
+            "maxEventMs": 48,
+            "maxPaintProxyMs": 40.5,
+            "longTasks": [
+              0
+            ]
+          },
+          "open 7": {
+            "medianMaxEventMs": 40,
+            "maxEventMs": 40,
+            "maxPaintProxyMs": 37.30000001192093,
+            "longTasks": [
+              0
+            ]
+          },
+          "open 8": {
+            "medianMaxEventMs": 48,
+            "maxEventMs": 48,
+            "maxPaintProxyMs": 40.80000001192093,
+            "longTasks": [
+              0
+            ]
+          },
+          "open 9": {
+            "medianMaxEventMs": 48,
+            "maxEventMs": 48,
+            "maxPaintProxyMs": 40.400000005960464,
+            "longTasks": [
+              0
+            ]
+          },
+          "contact": {
+            "medianMaxEventMs": 24,
+            "maxEventMs": 24,
+            "maxPaintProxyMs": 14.900000005960464,
+            "longTasks": [
+              0
+            ]
+          },
+          "sudo": {
+            "medianMaxEventMs": 16,
+            "maxEventMs": 16,
+            "maxPaintProxyMs": 11.399999976158142,
+            "longTasks": [
+              0
+            ]
+          },
+          "hack": {
+            "medianMaxEventMs": 24,
+            "maxEventMs": 24,
+            "maxPaintProxyMs": 10.300000011920929,
+            "longTasks": [
+              0
+            ]
+          },
+          "thepeak": {
+            "medianMaxEventMs": 344,
+            "maxEventMs": 344,
+            "maxPaintProxyMs": 325.19999998807907,
+            "longTasks": [
+              1
+            ]
+          },
+          "unknown": {
+            "medianMaxEventMs": 24,
+            "maxEventMs": 24,
+            "maxPaintProxyMs": 12.5,
+            "longTasks": [
+              0
+            ]
+          },
+          "clear": {
+            "medianMaxEventMs": 24,
+            "maxEventMs": 24,
+            "maxPaintProxyMs": 9.5,
+            "longTasks": [
+              0
+            ]
+          },
+          "mute": {
+            "medianMaxEventMs": 116.0,
+            "maxEventMs": 208,
+            "maxPaintProxyMs": 199.5,
+            "longTasks": [
+              1,
+              0
+            ]
+          },
+          "chip help": {
+            "medianMaxEventMs": 32,
+            "maxEventMs": 32,
+            "maxPaintProxyMs": 21.600000023841858,
+            "longTasks": [
+              0
+            ]
+          },
+          "chip projects": {
+            "medianMaxEventMs": 32,
+            "maxEventMs": 32,
+            "maxPaintProxyMs": 19,
+            "longTasks": [
+              0
+            ]
+          },
+          "chip contact": {
+            "medianMaxEventMs": 32,
+            "maxEventMs": 32,
+            "maxPaintProxyMs": 17.099999994039536,
+            "longTasks": [
+              0
+            ]
+          },
+          "--all": {
+            "medianMaxEventMs": 32,
+            "maxEventMs": 32,
+            "maxPaintProxyMs": 16.400000005960464,
+            "longTasks": [
+              0
+            ]
+          },
+          "hover 1": {
+            "medianMaxEventMs": 0,
+            "maxEventMs": 0,
+            "maxPaintProxyMs": 5.5,
+            "longTasks": [
+              0
+            ]
+          },
+          "hover 2": {
+            "medianMaxEventMs": 0,
+            "maxEventMs": 0,
+            "maxPaintProxyMs": 6,
+            "longTasks": [
+              0
+            ]
+          },
+          "hover 3": {
+            "medianMaxEventMs": 0,
+            "maxEventMs": 0,
+            "maxPaintProxyMs": 6.9000000059604645,
+            "longTasks": [
+              0
+            ]
+          },
+          "hover 4": {
+            "medianMaxEventMs": 0,
+            "maxEventMs": 0,
+            "maxPaintProxyMs": 8.300000011920929,
+            "longTasks": [
+              0
+            ]
+          },
+          "hover 5": {
+            "medianMaxEventMs": 0,
+            "maxEventMs": 0,
+            "maxPaintProxyMs": 6.4000000059604645,
+            "longTasks": [
+              0
+            ]
+          },
+          "logout": {
+            "medianMaxEventMs": 24,
+            "maxEventMs": 24,
+            "maxPaintProxyMs": 11.799999982118607,
+            "longTasks": [
+              0
+            ]
+          }
+        }
+      }
+    },
+    "after": {
+      "desktop-fast4g": {
+        "runs": 3,
+        "medianMaxEventMs": 40,
+        "maxEventMs": 40,
+        "medianInteractionLongTasks": 1,
+        "medianInteractionLongTaskMs": 103,
+        "medianIdleTaskMs": 77.15700000000058,
+        "medianIdleScriptMs": 9.954000000000018,
+        "medianIdleMainThreadPercent": 0.9644625000000072,
+        "medianHandoverCLS": 0,
+        "medianWholeSequenceCLS": 0.14107900593238276,
+        "actions": {
+          "typing": {
+            "medianMaxEventMs": 24,
+            "maxEventMs": 24,
+            "maxPaintProxyMs": 16.099999994039536,
+            "longTasks": [
+              0,
+              0,
+              0
+            ]
+          },
+          "help": {
+            "medianMaxEventMs": 32,
+            "maxEventMs": 32,
+            "maxPaintProxyMs": 16.599999994039536,
+            "longTasks": [
+              0,
+              0,
+              0
+            ]
+          },
+          "projects": {
+            "medianMaxEventMs": 16,
+            "maxEventMs": 16,
+            "maxPaintProxyMs": 11.599999994039536,
+            "longTasks": [
+              0,
+              0,
+              0
+            ]
+          },
+          "projects --all": {
+            "medianMaxEventMs": 24,
+            "maxEventMs": 24,
+            "maxPaintProxyMs": 22.5,
+            "longTasks": [
+              0,
+              0,
+              0
+            ]
+          },
+          "open 1": {
+            "medianMaxEventMs": 16,
+            "maxEventMs": 32,
+            "maxPaintProxyMs": 15,
+            "longTasks": [
+              0,
+              0,
+              0
+            ]
+          },
+          "open 2": {
+            "medianMaxEventMs": 24,
+            "maxEventMs": 32,
+            "maxPaintProxyMs": 14.600000023841858,
+            "longTasks": [
+              0,
+              0,
+              0
+            ]
+          },
+          "open 3": {
+            "medianMaxEventMs": 32,
+            "maxEventMs": 32,
+            "maxPaintProxyMs": 13.5,
+            "longTasks": [
+              0,
+              0,
+              0
+            ]
+          },
+          "open 4": {
+            "medianMaxEventMs": 24,
+            "maxEventMs": 40,
+            "maxPaintProxyMs": 14.699999988079071,
+            "longTasks": [
+              0,
+              0,
+              0
+            ]
+          },
+          "open 5": {
+            "medianMaxEventMs": 24,
+            "maxEventMs": 40,
+            "maxPaintProxyMs": 15.300000011920929,
+            "longTasks": [
+              0,
+              0,
+              0
+            ]
+          },
+          "open 6": {
+            "medianMaxEventMs": 16,
+            "maxEventMs": 16,
+            "maxPaintProxyMs": 15.900000005960464,
+            "longTasks": [
+              0,
+              0,
+              0
+            ]
+          },
+          "open 7": {
+            "medianMaxEventMs": 24,
+            "maxEventMs": 24,
+            "maxPaintProxyMs": 19.600000023841858,
+            "longTasks": [
+              0,
+              0,
+              0
+            ]
+          },
+          "open 8": {
+            "medianMaxEventMs": 16,
+            "maxEventMs": 32,
+            "maxPaintProxyMs": 18.200000017881393,
+            "longTasks": [
+              0,
+              0,
+              0
+            ]
+          },
+          "open 9": {
+            "medianMaxEventMs": 24,
+            "maxEventMs": 24,
+            "maxPaintProxyMs": 18.099999994039536,
+            "longTasks": [
+              0,
+              0,
+              0
+            ]
+          },
+          "contact": {
+            "medianMaxEventMs": 32,
+            "maxEventMs": 32,
+            "maxPaintProxyMs": 16.30000001192093,
+            "longTasks": [
+              0,
+              0,
+              0
+            ]
+          },
+          "sudo": {
+            "medianMaxEventMs": 24,
+            "maxEventMs": 24,
+            "maxPaintProxyMs": 12,
+            "longTasks": [
+              0,
+              0,
+              0
+            ]
+          },
+          "hack": {
+            "medianMaxEventMs": 16,
+            "maxEventMs": 16,
+            "maxPaintProxyMs": 16.299999982118607,
+            "longTasks": [
+              0,
+              0,
+              0
+            ]
+          },
+          "thepeak": {
+            "medianMaxEventMs": 24,
+            "maxEventMs": 24,
+            "maxPaintProxyMs": 14.900000005960464,
+            "longTasks": [
+              0,
+              0,
+              0
+            ]
+          },
+          "unknown": {
+            "medianMaxEventMs": 16,
+            "maxEventMs": 24,
+            "maxPaintProxyMs": 10.400000005960464,
+            "longTasks": [
+              0,
+              0,
+              0
+            ]
+          },
+          "clear": {
+            "medianMaxEventMs": 16,
+            "maxEventMs": 16,
+            "maxPaintProxyMs": 11.200000017881393,
+            "longTasks": [
+              0,
+              0,
+              0
+            ]
+          },
+          "mute": {
+            "medianMaxEventMs": 24.0,
+            "maxEventMs": 32,
+            "maxPaintProxyMs": 21.30000001192093,
+            "longTasks": [
+              1,
+              0,
+              1,
+              0,
+              1,
+              0
+            ]
+          },
+          "chip help": {
+            "medianMaxEventMs": 32,
+            "maxEventMs": 32,
+            "maxPaintProxyMs": 25.19999998807907,
+            "longTasks": [
+              0,
+              0,
+              0
+            ]
+          },
+          "chip projects": {
+            "medianMaxEventMs": 32,
+            "maxEventMs": 32,
+            "maxPaintProxyMs": 24.400000005960464,
+            "longTasks": [
+              0,
+              0,
+              0
+            ]
+          },
+          "chip contact": {
+            "medianMaxEventMs": 24,
+            "maxEventMs": 32,
+            "maxPaintProxyMs": 17.099999994039536,
+            "longTasks": [
+              0,
+              0,
+              0
+            ]
+          },
+          "--all": {
+            "medianMaxEventMs": 32,
+            "maxEventMs": 32,
+            "maxPaintProxyMs": 17.700000017881393,
+            "longTasks": [
+              0,
+              0,
+              0
+            ]
+          },
+          "hover 1": {
+            "medianMaxEventMs": 0,
+            "maxEventMs": 0,
+            "maxPaintProxyMs": 7.299999982118607,
+            "longTasks": [
+              0,
+              0,
+              0
+            ]
+          },
+          "hover 2": {
+            "medianMaxEventMs": 0,
+            "maxEventMs": 0,
+            "maxPaintProxyMs": 7.9000000059604645,
+            "longTasks": [
+              0,
+              0,
+              0
+            ]
+          },
+          "hover 3": {
+            "medianMaxEventMs": 0,
+            "maxEventMs": 0,
+            "maxPaintProxyMs": 7.5,
+            "longTasks": [
+              0,
+              0,
+              0
+            ]
+          },
+          "hover 4": {
+            "medianMaxEventMs": 0,
+            "maxEventMs": 0,
+            "maxPaintProxyMs": 6.800000011920929,
+            "longTasks": [
+              0,
+              0,
+              0
+            ]
+          },
+          "hover 5": {
+            "medianMaxEventMs": 0,
+            "maxEventMs": 0,
+            "maxPaintProxyMs": 6.799999982118607,
+            "longTasks": [
+              0,
+              0,
+              0
+            ]
+          },
+          "logout": {
+            "medianMaxEventMs": 32,
+            "maxEventMs": 40,
+            "maxPaintProxyMs": 17.599999994039536,
+            "longTasks": [
+              0,
+              0,
+              0
+            ]
+          }
+        }
+      },
+      "desktop-slow4g": {
+        "runs": 3,
+        "medianMaxEventMs": 32,
+        "maxEventMs": 32,
+        "medianInteractionLongTasks": 1,
+        "medianInteractionLongTaskMs": 101,
+        "medianIdleTaskMs": 68.44200000000012,
+        "medianIdleScriptMs": 7.958999999999938,
+        "medianIdleMainThreadPercent": 0.8555250000000015,
+        "medianHandoverCLS": 0,
+        "medianWholeSequenceCLS": 0.1300198208697702,
+        "actions": {
+          "typing": {
+            "medianMaxEventMs": 24,
+            "maxEventMs": 32,
+            "maxPaintProxyMs": 16.5,
+            "longTasks": [
+              0,
+              0,
+              0
+            ]
+          },
+          "help": {
+            "medianMaxEventMs": 32,
+            "maxEventMs": 32,
+            "maxPaintProxyMs": 19.700000017881393,
+            "longTasks": [
+              0,
+              0,
+              0
+            ]
+          },
+          "projects": {
+            "medianMaxEventMs": 16,
+            "maxEventMs": 24,
+            "maxPaintProxyMs": 15.299999982118607,
+            "longTasks": [
+              0,
+              0,
+              0
+            ]
+          },
+          "projects --all": {
+            "medianMaxEventMs": 24,
+            "maxEventMs": 32,
+            "maxPaintProxyMs": 22.299999982118607,
+            "longTasks": [
+              0,
+              0,
+              0
+            ]
+          },
+          "open 1": {
+            "medianMaxEventMs": 16,
+            "maxEventMs": 24,
+            "maxPaintProxyMs": 21.599999994039536,
+            "longTasks": [
+              0,
+              0,
+              0
+            ]
+          },
+          "open 2": {
+            "medianMaxEventMs": 24,
+            "maxEventMs": 24,
+            "maxPaintProxyMs": 17.599999994039536,
+            "longTasks": [
+              0,
+              0,
+              0
+            ]
+          },
+          "open 3": {
+            "medianMaxEventMs": 24,
+            "maxEventMs": 32,
+            "maxPaintProxyMs": 16.19999998807907,
+            "longTasks": [
+              0,
+              0,
+              0
+            ]
+          },
+          "open 4": {
+            "medianMaxEventMs": 24,
+            "maxEventMs": 32,
+            "maxPaintProxyMs": 14.400000005960464,
+            "longTasks": [
+              0,
+              0,
+              0
+            ]
+          },
+          "open 5": {
+            "medianMaxEventMs": 24,
+            "maxEventMs": 32,
+            "maxPaintProxyMs": 14.5,
+            "longTasks": [
+              0,
+              0,
+              0
+            ]
+          },
+          "open 6": {
+            "medianMaxEventMs": 24,
+            "maxEventMs": 24,
+            "maxPaintProxyMs": 18.19999998807907,
+            "longTasks": [
+              0,
+              0,
+              0
+            ]
+          },
+          "open 7": {
+            "medianMaxEventMs": 16,
+            "maxEventMs": 24,
+            "maxPaintProxyMs": 13.5,
+            "longTasks": [
+              0,
+              0,
+              0
+            ]
+          },
+          "open 8": {
+            "medianMaxEventMs": 16,
+            "maxEventMs": 16,
+            "maxPaintProxyMs": 15.199999988079071,
+            "longTasks": [
+              0,
+              0,
+              0
+            ]
+          },
+          "open 9": {
+            "medianMaxEventMs": 24,
+            "maxEventMs": 24,
+            "maxPaintProxyMs": 11.800000011920929,
+            "longTasks": [
+              0,
+              0,
+              0
+            ]
+          },
+          "contact": {
+            "medianMaxEventMs": 24,
+            "maxEventMs": 24,
+            "maxPaintProxyMs": 19.80000001192093,
+            "longTasks": [
+              0,
+              0,
+              0
+            ]
+          },
+          "sudo": {
+            "medianMaxEventMs": 24,
+            "maxEventMs": 24,
+            "maxPaintProxyMs": 11.800000011920929,
+            "longTasks": [
+              0,
+              0,
+              0
+            ]
+          },
+          "hack": {
+            "medianMaxEventMs": 16,
+            "maxEventMs": 32,
+            "maxPaintProxyMs": 15.5,
+            "longTasks": [
+              0,
+              0,
+              0
+            ]
+          },
+          "thepeak": {
+            "medianMaxEventMs": 16,
+            "maxEventMs": 24,
+            "maxPaintProxyMs": 11.799999982118607,
+            "longTasks": [
+              0,
+              0,
+              0
+            ]
+          },
+          "unknown": {
+            "medianMaxEventMs": 16,
+            "maxEventMs": 24,
+            "maxPaintProxyMs": 11.599999994039536,
+            "longTasks": [
+              0,
+              0,
+              0
+            ]
+          },
+          "clear": {
+            "medianMaxEventMs": 24,
+            "maxEventMs": 24,
+            "maxPaintProxyMs": 10.299999982118607,
+            "longTasks": [
+              0,
+              0,
+              0
+            ]
+          },
+          "mute": {
+            "medianMaxEventMs": 16.0,
+            "maxEventMs": 24,
+            "maxPaintProxyMs": 14.399999976158142,
+            "longTasks": [
+              1,
+              0,
+              1,
+              0,
+              1,
+              0
+            ]
+          },
+          "chip help": {
+            "medianMaxEventMs": 32,
+            "maxEventMs": 32,
+            "maxPaintProxyMs": 21.5,
+            "longTasks": [
+              0,
+              0,
+              0
+            ]
+          },
+          "chip projects": {
+            "medianMaxEventMs": 32,
+            "maxEventMs": 32,
+            "maxPaintProxyMs": 21.69999998807907,
+            "longTasks": [
+              0,
+              0,
+              0
+            ]
+          },
+          "chip contact": {
+            "medianMaxEventMs": 24,
+            "maxEventMs": 32,
+            "maxPaintProxyMs": 22.900000005960464,
+            "longTasks": [
+              0,
+              0,
+              0
+            ]
+          },
+          "--all": {
+            "medianMaxEventMs": 24,
+            "maxEventMs": 32,
+            "maxPaintProxyMs": 22.900000005960464,
+            "longTasks": [
+              0,
+              0,
+              0
+            ]
+          },
+          "hover 1": {
+            "medianMaxEventMs": 0,
+            "maxEventMs": 0,
+            "maxPaintProxyMs": 8.900000005960464,
+            "longTasks": [
+              0,
+              0,
+              0
+            ]
+          },
+          "hover 2": {
+            "medianMaxEventMs": 0,
+            "maxEventMs": 0,
+            "maxPaintProxyMs": 8.199999988079071,
+            "longTasks": [
+              0,
+              0,
+              0
+            ]
+          },
+          "hover 3": {
+            "medianMaxEventMs": 0,
+            "maxEventMs": 0,
+            "maxPaintProxyMs": 8.799999982118607,
+            "longTasks": [
+              0,
+              0,
+              0
+            ]
+          },
+          "hover 4": {
+            "medianMaxEventMs": 0,
+            "maxEventMs": 0,
+            "maxPaintProxyMs": 6.5,
+            "longTasks": [
+              0,
+              0,
+              0
+            ]
+          },
+          "hover 5": {
+            "medianMaxEventMs": 0,
+            "maxEventMs": 0,
+            "maxPaintProxyMs": 7.5,
+            "longTasks": [
+              0,
+              0,
+              0
+            ]
+          },
+          "logout": {
+            "medianMaxEventMs": 32,
+            "maxEventMs": 32,
+            "maxPaintProxyMs": 15.5,
+            "longTasks": [
+              0,
+              0,
+              0
+            ]
+          }
+        }
+      },
+      "mobile-fast4g": {
+        "runs": 1,
+        "medianMaxEventMs": 48,
+        "maxEventMs": 48,
+        "medianInteractionLongTasks": 1,
+        "medianInteractionLongTaskMs": 138,
+        "medianIdleTaskMs": 77.55899999999994,
+        "medianIdleScriptMs": 7.033999999999985,
+        "medianIdleMainThreadPercent": 0.9694874999999993,
+        "medianHandoverCLS": 0,
+        "medianWholeSequenceCLS": 0.22701518404380186,
+        "actions": {
+          "typing": {
+            "medianMaxEventMs": 40,
+            "maxEventMs": 40,
+            "maxPaintProxyMs": 22,
+            "longTasks": [
+              0
+            ]
+          },
+          "help": {
+            "medianMaxEventMs": 24,
+            "maxEventMs": 24,
+            "maxPaintProxyMs": 21.400000005960464,
+            "longTasks": [
+              0
+            ]
+          },
+          "projects": {
+            "medianMaxEventMs": 16,
+            "maxEventMs": 16,
+            "maxPaintProxyMs": 12,
+            "longTasks": [
+              0
+            ]
+          },
+          "projects --all": {
+            "medianMaxEventMs": 48,
+            "maxEventMs": 48,
+            "maxPaintProxyMs": 27.69999998807907,
+            "longTasks": [
+              0
+            ]
+          },
+          "open 1": {
+            "medianMaxEventMs": 40,
+            "maxEventMs": 40,
+            "maxPaintProxyMs": 32.599999994039536,
+            "longTasks": [
+              0
+            ]
+          },
+          "open 2": {
+            "medianMaxEventMs": 16,
+            "maxEventMs": 16,
+            "maxPaintProxyMs": 15.599999994039536,
+            "longTasks": [
+              0
+            ]
+          },
+          "open 3": {
+            "medianMaxEventMs": 32,
+            "maxEventMs": 32,
+            "maxPaintProxyMs": 26.69999998807907,
+            "longTasks": [
+              0
+            ]
+          },
+          "open 4": {
+            "medianMaxEventMs": 40,
+            "maxEventMs": 40,
+            "maxPaintProxyMs": 32.599999994039536,
+            "longTasks": [
+              0
+            ]
+          },
+          "open 5": {
+            "medianMaxEventMs": 40,
+            "maxEventMs": 40,
+            "maxPaintProxyMs": 26.599999994039536,
+            "longTasks": [
+              0
+            ]
+          },
+          "open 6": {
+            "medianMaxEventMs": 32,
+            "maxEventMs": 32,
+            "maxPaintProxyMs": 33.5,
+            "longTasks": [
+              0
+            ]
+          },
+          "open 7": {
+            "medianMaxEventMs": 24,
+            "maxEventMs": 24,
+            "maxPaintProxyMs": 31.80000001192093,
+            "longTasks": [
+              0
+            ]
+          },
+          "open 8": {
+            "medianMaxEventMs": 40,
+            "maxEventMs": 40,
+            "maxPaintProxyMs": 32,
+            "longTasks": [
+              0
+            ]
+          },
+          "open 9": {
+            "medianMaxEventMs": 32,
+            "maxEventMs": 32,
+            "maxPaintProxyMs": 29,
+            "longTasks": [
+              0
+            ]
+          },
+          "contact": {
+            "medianMaxEventMs": 48,
+            "maxEventMs": 48,
+            "maxPaintProxyMs": 21.69999998807907,
+            "longTasks": [
+              0
+            ]
+          },
+          "sudo": {
+            "medianMaxEventMs": 16,
+            "maxEventMs": 16,
+            "maxPaintProxyMs": 13.299999982118607,
+            "longTasks": [
+              0
+            ]
+          },
+          "hack": {
+            "medianMaxEventMs": 16,
+            "maxEventMs": 16,
+            "maxPaintProxyMs": 13.299999982118607,
+            "longTasks": [
+              0
+            ]
+          },
+          "thepeak": {
+            "medianMaxEventMs": 32,
+            "maxEventMs": 32,
+            "maxPaintProxyMs": 15.300000011920929,
+            "longTasks": [
+              0
+            ]
+          },
+          "unknown": {
+            "medianMaxEventMs": 24,
+            "maxEventMs": 24,
+            "maxPaintProxyMs": 16,
+            "longTasks": [
+              0
+            ]
+          },
+          "clear": {
+            "medianMaxEventMs": 16,
+            "maxEventMs": 16,
+            "maxPaintProxyMs": 13.199999988079071,
+            "longTasks": [
+              0
+            ]
+          },
+          "mute": {
+            "medianMaxEventMs": 24.0,
+            "maxEventMs": 32,
+            "maxPaintProxyMs": 148.7000000178814,
+            "longTasks": [
+              1,
+              0
+            ]
+          },
+          "chip help": {
+            "medianMaxEventMs": 32,
+            "maxEventMs": 32,
+            "maxPaintProxyMs": 24.600000023841858,
+            "longTasks": [
+              0
+            ]
+          },
+          "chip projects": {
+            "medianMaxEventMs": 32,
+            "maxEventMs": 32,
+            "maxPaintProxyMs": 24.80000001192093,
+            "longTasks": [
+              0
+            ]
+          },
+          "chip contact": {
+            "medianMaxEventMs": 32,
+            "maxEventMs": 32,
+            "maxPaintProxyMs": 26.400000005960464,
+            "longTasks": [
+              0
+            ]
+          },
+          "--all": {
+            "medianMaxEventMs": 32,
+            "maxEventMs": 32,
+            "maxPaintProxyMs": 25,
+            "longTasks": [
+              0
+            ]
+          },
+          "hover 1": {
+            "medianMaxEventMs": 0,
+            "maxEventMs": 0,
+            "maxPaintProxyMs": 9.200000017881393,
+            "longTasks": [
+              0
+            ]
+          },
+          "hover 2": {
+            "medianMaxEventMs": 0,
+            "maxEventMs": 0,
+            "maxPaintProxyMs": 7.699999988079071,
+            "longTasks": [
+              0
+            ]
+          },
+          "hover 3": {
+            "medianMaxEventMs": 0,
+            "maxEventMs": 0,
+            "maxPaintProxyMs": 8.700000017881393,
+            "longTasks": [
+              0
+            ]
+          },
+          "hover 4": {
+            "medianMaxEventMs": 0,
+            "maxEventMs": 0,
+            "maxPaintProxyMs": 7.9000000059604645,
+            "longTasks": [
+              0
+            ]
+          },
+          "hover 5": {
+            "medianMaxEventMs": 0,
+            "maxEventMs": 0,
+            "maxPaintProxyMs": 9.099999994039536,
+            "longTasks": [
+              0
+            ]
+          },
+          "logout": {
+            "medianMaxEventMs": 24,
+            "maxEventMs": 24,
+            "maxPaintProxyMs": 13,
+            "longTasks": [
+              0
+            ]
+          }
+        }
+      },
+      "mobile-slow4g": {
+        "runs": 1,
+        "medianMaxEventMs": 40,
+        "maxEventMs": 40,
+        "medianInteractionLongTasks": 1,
+        "medianInteractionLongTaskMs": 83,
+        "medianIdleTaskMs": 93.57499999999952,
+        "medianIdleScriptMs": 9.013000000000048,
+        "medianIdleMainThreadPercent": 1.169687499999994,
+        "medianHandoverCLS": 0,
+        "medianWholeSequenceCLS": 0.224885762785471,
+        "actions": {
+          "typing": {
+            "medianMaxEventMs": 32,
+            "maxEventMs": 32,
+            "maxPaintProxyMs": 16.900000005960464,
+            "longTasks": [
+              0
+            ]
+          },
+          "help": {
+            "medianMaxEventMs": 32,
+            "maxEventMs": 32,
+            "maxPaintProxyMs": 16.200000017881393,
+            "longTasks": [
+              0
+            ]
+          },
+          "projects": {
+            "medianMaxEventMs": 24,
+            "maxEventMs": 24,
+            "maxPaintProxyMs": 13.200000017881393,
+            "longTasks": [
+              0
+            ]
+          },
+          "projects --all": {
+            "medianMaxEventMs": 40,
+            "maxEventMs": 40,
+            "maxPaintProxyMs": 22,
+            "longTasks": [
+              0
+            ]
+          },
+          "open 1": {
+            "medianMaxEventMs": 40,
+            "maxEventMs": 40,
+            "maxPaintProxyMs": 33,
+            "longTasks": [
+              0
+            ]
+          },
+          "open 2": {
+            "medianMaxEventMs": 16,
+            "maxEventMs": 16,
+            "maxPaintProxyMs": 14.200000017881393,
+            "longTasks": [
+              0
+            ]
+          },
+          "open 3": {
+            "medianMaxEventMs": 24,
+            "maxEventMs": 24,
+            "maxPaintProxyMs": 41,
+            "longTasks": [
+              0
+            ]
+          },
+          "open 4": {
+            "medianMaxEventMs": 24,
+            "maxEventMs": 24,
+            "maxPaintProxyMs": 27.400000005960464,
+            "longTasks": [
+              0
+            ]
+          },
+          "open 5": {
+            "medianMaxEventMs": 16,
+            "maxEventMs": 16,
+            "maxPaintProxyMs": 25.5,
+            "longTasks": [
+              0
+            ]
+          },
+          "open 6": {
+            "medianMaxEventMs": 24,
+            "maxEventMs": 24,
+            "maxPaintProxyMs": 26.900000005960464,
+            "longTasks": [
+              0
+            ]
+          },
+          "open 7": {
+            "medianMaxEventMs": 24,
+            "maxEventMs": 24,
+            "maxPaintProxyMs": 26.400000005960464,
+            "longTasks": [
+              0
+            ]
+          },
+          "open 8": {
+            "medianMaxEventMs": 16,
+            "maxEventMs": 16,
+            "maxPaintProxyMs": 28.30000001192093,
+            "longTasks": [
+              0
+            ]
+          },
+          "open 9": {
+            "medianMaxEventMs": 24,
+            "maxEventMs": 24,
+            "maxPaintProxyMs": 27.80000001192093,
+            "longTasks": [
+              0
+            ]
+          },
+          "contact": {
+            "medianMaxEventMs": 24,
+            "maxEventMs": 24,
+            "maxPaintProxyMs": 15.5,
+            "longTasks": [
+              0
+            ]
+          },
+          "sudo": {
+            "medianMaxEventMs": 16,
+            "maxEventMs": 16,
+            "maxPaintProxyMs": 12.600000023841858,
+            "longTasks": [
+              0
+            ]
+          },
+          "hack": {
+            "medianMaxEventMs": 16,
+            "maxEventMs": 16,
+            "maxPaintProxyMs": 13.099999994039536,
+            "longTasks": [
+              0
+            ]
+          },
+          "thepeak": {
+            "medianMaxEventMs": 24,
+            "maxEventMs": 24,
+            "maxPaintProxyMs": 14.5,
+            "longTasks": [
+              0
+            ]
+          },
+          "unknown": {
+            "medianMaxEventMs": 16,
+            "maxEventMs": 16,
+            "maxPaintProxyMs": 11.099999994039536,
+            "longTasks": [
+              0
+            ]
+          },
+          "clear": {
+            "medianMaxEventMs": 16,
+            "maxEventMs": 16,
+            "maxPaintProxyMs": 10.5,
+            "longTasks": [
+              0
+            ]
+          },
+          "mute": {
+            "medianMaxEventMs": 28.0,
+            "maxEventMs": 32,
+            "maxPaintProxyMs": 88.40000000596046,
+            "longTasks": [
+              1,
+              0
+            ]
+          },
+          "chip help": {
+            "medianMaxEventMs": 32,
+            "maxEventMs": 32,
+            "maxPaintProxyMs": 24.100000023841858,
+            "longTasks": [
+              0
+            ]
+          },
+          "chip projects": {
+            "medianMaxEventMs": 24,
+            "maxEventMs": 24,
+            "maxPaintProxyMs": 17,
+            "longTasks": [
+              0
+            ]
+          },
+          "chip contact": {
+            "medianMaxEventMs": 16,
+            "maxEventMs": 16,
+            "maxPaintProxyMs": 15.899999976158142,
+            "longTasks": [
+              0
+            ]
+          },
+          "--all": {
+            "medianMaxEventMs": 32,
+            "maxEventMs": 32,
+            "maxPaintProxyMs": 18.099999994039536,
+            "longTasks": [
+              0
+            ]
+          },
+          "hover 1": {
+            "medianMaxEventMs": 0,
+            "maxEventMs": 0,
+            "maxPaintProxyMs": 6.899999976158142,
+            "longTasks": [
+              0
+            ]
+          },
+          "hover 2": {
+            "medianMaxEventMs": 0,
+            "maxEventMs": 0,
+            "maxPaintProxyMs": 7.300000011920929,
+            "longTasks": [
+              0
+            ]
+          },
+          "hover 3": {
+            "medianMaxEventMs": 0,
+            "maxEventMs": 0,
+            "maxPaintProxyMs": 6.0999999940395355,
+            "longTasks": [
+              0
+            ]
+          },
+          "hover 4": {
+            "medianMaxEventMs": 0,
+            "maxEventMs": 0,
+            "maxPaintProxyMs": 7.399999976158142,
+            "longTasks": [
+              0
+            ]
+          },
+          "hover 5": {
+            "medianMaxEventMs": 0,
+            "maxEventMs": 0,
+            "maxPaintProxyMs": 7.899999976158142,
+            "longTasks": [
+              0
+            ]
+          },
+          "logout": {
+            "medianMaxEventMs": 16,
+            "maxEventMs": 16,
+            "maxPaintProxyMs": 13.599999994039536,
+            "longTasks": [
+              0
+            ]
+          }
+        }
+      }
+    }
+  },
+  "frames": [
+    {
+      "name": "1440-archive.png",
+      "differentPixels": 0,
+      "maxChannelDifference": 0,
+      "bounds": null
+    },
+    {
+      "name": "1440-boot.png",
+      "differentPixels": 0,
+      "maxChannelDifference": 0,
+      "bounds": null
+    },
+    {
+      "name": "1440-profile.png",
+      "differentPixels": 0,
+      "maxChannelDifference": 0,
+      "bounds": null
+    },
+    {
+      "name": "1440-shell.png",
+      "differentPixels": 0,
+      "maxChannelDifference": 0,
+      "bounds": null
+    },
+    {
+      "name": "390-archive.png",
+      "differentPixels": 0,
+      "maxChannelDifference": 0,
+      "bounds": null
+    },
+    {
+      "name": "390-boot.png",
+      "differentPixels": 0,
+      "maxChannelDifference": 0,
+      "bounds": null
+    },
+    {
+      "name": "390-profile.png",
+      "differentPixels": 0,
+      "maxChannelDifference": 0,
+      "bounds": null
+    },
+    {
+      "name": "390-shell.png",
+      "differentPixels": 0,
+      "maxChannelDifference": 0,
+      "bounds": null
+    }
+  ]
+}

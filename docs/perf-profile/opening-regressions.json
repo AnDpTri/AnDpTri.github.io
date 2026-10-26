@@ -1,0 +1,364 @@
+{
+  "passed": 45,
+  "results": [
+    {
+      "test": "skip",
+      "width": 1440,
+      "phase": "prompt",
+      "keyboard": false,
+      "controlsTornAway": false,
+      "pass": true
+    },
+    {
+      "test": "skip",
+      "width": 1440,
+      "phase": "prompt",
+      "keyboard": true,
+      "controlsTornAway": false,
+      "pass": true
+    },
+    {
+      "test": "skip",
+      "width": 1440,
+      "phase": "calm",
+      "keyboard": false,
+      "controlsTornAway": false,
+      "pass": true
+    },
+    {
+      "test": "skip",
+      "width": 1440,
+      "phase": "calm",
+      "keyboard": true,
+      "controlsTornAway": false,
+      "pass": true
+    },
+    {
+      "test": "skip",
+      "width": 1440,
+      "phase": "unease",
+      "keyboard": false,
+      "controlsTornAway": false,
+      "pass": true
+    },
+    {
+      "test": "skip",
+      "width": 1440,
+      "phase": "unease",
+      "keyboard": true,
+      "controlsTornAway": false,
+      "pass": true
+    },
+    {
+      "test": "skip",
+      "width": 1440,
+      "phase": "alarm",
+      "keyboard": false,
+      "controlsTornAway": false,
+      "pass": true
+    },
+    {
+      "test": "skip",
+      "width": 1440,
+      "phase": "alarm",
+      "keyboard": true,
+      "controlsTornAway": false,
+      "pass": true
+    },
+    {
+      "test": "skip",
+      "width": 1440,
+      "phase": "panic",
+      "keyboard": false,
+      "controlsTornAway": false,
+      "pass": true
+    },
+    {
+      "test": "skip",
+      "width": 1440,
+      "phase": "panic",
+      "keyboard": true,
+      "controlsTornAway": false,
+      "pass": true
+    },
+    {
+      "test": "skip",
+      "width": 1440,
+      "phase": "collapse",
+      "keyboard": false,
+      "controlsTornAway": false,
+      "pass": true
+    },
+    {
+      "test": "skip",
+      "width": 1440,
+      "phase": "collapse",
+      "keyboard": true,
+      "controlsTornAway": false,
+      "pass": true
+    },
+    {
+      "test": "skip",
+      "width": 1440,
+      "phase": "blackout",
+      "keyboard": false,
+      "controlsTornAway": false,
+      "pass": true
+    },
+    {
+      "test": "skip",
+      "width": 1440,
+      "phase": "blackout",
+      "keyboard": true,
+      "controlsTornAway": false,
+      "pass": true
+    },
+    {
+      "test": "skip",
+      "width": 1440,
+      "phase": "no-signal",
+      "keyboard": false,
+      "controlsTornAway": false,
+      "pass": true
+    },
+    {
+      "test": "skip",
+      "width": 1440,
+      "phase": "no-signal",
+      "keyboard": true,
+      "controlsTornAway": false,
+      "pass": true
+    },
+    {
+      "test": "skip",
+      "width": 1440,
+      "phase": "reacquire",
+      "keyboard": false,
+      "controlsTornAway": true,
+      "pass": true
+    },
+    {
+      "test": "skip",
+      "width": 1440,
+      "phase": "reacquire",
+      "keyboard": true,
+      "controlsTornAway": true,
+      "pass": true
+    },
+    {
+      "test": "skip",
+      "width": 1440,
+      "phase": "settle",
+      "keyboard": false,
+      "controlsTornAway": true,
+      "pass": true
+    },
+    {
+      "test": "skip",
+      "width": 1440,
+      "phase": "settle",
+      "keyboard": true,
+      "controlsTornAway": true,
+      "pass": true
+    },
+    {
+      "test": "skip",
+      "width": 390,
+      "phase": "prompt",
+      "keyboard": false,
+      "controlsTornAway": false,
+      "pass": true
+    },
+    {
+      "test": "skip",
+      "width": 390,
+      "phase": "prompt",
+      "keyboard": true,
+      "controlsTornAway": false,
+      "pass": true
+    },
+    {
+      "test": "skip",
+      "width": 390,
+      "phase": "calm",
+      "keyboard": false,
+      "controlsTornAway": false,
+      "pass": true
+    },
+    {
+      "test": "skip",
+      "width": 390,
+      "phase": "calm",
+      "keyboard": true,
+      "controlsTornAway": false,
+      "pass": true
+    },
+    {
+      "test": "skip",
+      "width": 390,
+      "phase": "unease",
+      "keyboard": false,
+      "controlsTornAway": false,
+      "pass": true
+    },
+    {
+      "test": "skip",
+      "width": 390,
+      "phase": "unease",
+      "keyboard": true,
+      "controlsTornAway": false,
+      "pass": true
+    },
+    {
+      "test": "skip",
+      "width": 390,
+      "phase": "alarm",
+      "keyboard": false,
+      "controlsTornAway": false,
+      "pass": true
+    },
+    {
+      "test": "skip",
+      "width": 390,
+      "phase": "alarm",
+      "keyboard": true,
+      "controlsTornAway": false,
+      "pass": true
+    },
+    {
+      "test": "skip",
+      "width": 390,
+      "phase": "panic",
+      "keyboard": false,
+      "controlsTornAway": false,
+      "pass": true
+    },
+    {
+      "test": "skip",
+      "width": 390,
+      "phase": "panic",
+      "keyboard": true,
+      "controlsTornAway": false,
+      "pass": true
+    },
+    {
+      "test": "skip",
+      "width": 390,
+      "phase": "collapse",
+      "keyboard": false,
+      "controlsTornAway": false,
+      "pass": true
+    },
+    {
+      "test": "skip",
+      "width": 390,
+      "phase": "collapse",
+      "keyboard": true,
+      "controlsTornAway": false,
+      "pass": true
+    },
+    {
+      "test": "skip",
+      "width": 390,
+      "phase": "blackout",
+      "keyboard": false,
+      "controlsTornAway": false,
+      "pass": true
+    },
+    {
+      "test": "skip",
+      "width": 390,
+      "phase": "blackout",
+      "keyboard": true,
+      "controlsTornAway": false,
+      "pass": true
+    },
+    {
+      "test": "skip",
+      "width": 390,
+      "phase": "no-signal",
+      "keyboard": false,
+      "controlsTornAway": false,
+      "pass": true
+    },
+    {
+      "test": "skip",
+      "width": 390,
+      "phase": "no-signal",
+      "keyboard": true,
+      "controlsTornAway": false,
+      "pass": true
+    },
+    {
+      "test": "skip",
+      "width": 390,
+      "phase": "reacquire",
+      "keyboard": false,
+      "controlsTornAway": true,
+      "pass": true
+    },
+    {
+      "test": "skip",
+      "width": 390,
+      "phase": "reacquire",
+      "keyboard": true,
+      "controlsTornAway": true,
+      "pass": true
+    },
+    {
+      "test": "skip",
+      "width": 390,
+      "phase": "settle",
+      "keyboard": false,
+      "controlsTornAway": true,
+      "pass": true
+    },
+    {
+      "test": "skip",
+      "width": 390,
+      "phase": "settle",
+      "keyboard": true,
+      "controlsTornAway": true,
+      "pass": true
+    },
+    {
+      "test": "natural completion, idle RAF, audio mute/visibility, commands, logout replay",
+      "width": 390,
+      "reduced": false,
+      "pass": true
+    },
+    {
+      "test": "natural completion, idle RAF, audio mute/visibility, commands, logout replay",
+      "width": 390,
+      "reduced": true,
+      "pass": true
+    },
+    {
+      "test": "Vietnamese browser raster",
+      "name": "font-0.woff2",
+      "differentChannels": 0,
+      "pass": true
+    },
+    {
+      "test": "Vietnamese browser raster",
+      "name": "font-3.woff2",
+      "differentChannels": 0,
+      "pass": true
+    },
+    {
+      "test": "offline audio PCM",
+      "samples": 1008000,
+      "beforeAfter": {
+        "differentSamples": 214450,
+        "maxDifference": 0.0000020218435565766413,
+        "rmsDifference": 3.044267231032458e-8
+      },
+      "baselineRepeat": {
+        "differentSamples": 191236,
+        "maxDifference": 0.0000020218435565766413,
+        "rmsDifference": 3.495283423670103e-8
+      },
+      "pass": true
+    }
+  ]
+}

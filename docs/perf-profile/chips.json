@@ -1,0 +1,382 @@
+[
+  {
+    "label": "baseline",
+    "mobile": false,
+    "actions": [
+      {
+        "name": "help",
+        "events": [
+          {
+            "name": "pointerdown",
+            "start": 5189.4000000059605,
+            "duration": 40,
+            "id": 5182
+          },
+          {
+            "name": "pointerup",
+            "start": 5189.5,
+            "duration": 40,
+            "id": 5182
+          },
+          {
+            "name": "click",
+            "start": 5189.5,
+            "duration": 40,
+            "id": 5182
+          }
+        ],
+        "long": [],
+        "maxEventMs": 40
+      },
+      {
+        "name": "projects",
+        "events": [
+          {
+            "name": "pointerdown",
+            "start": 5610.9000000059605,
+            "duration": 32,
+            "id": 5189
+          },
+          {
+            "name": "pointerup",
+            "start": 5611,
+            "duration": 32,
+            "id": 5189
+          },
+          {
+            "name": "click",
+            "start": 5611,
+            "duration": 32,
+            "id": 5189
+          }
+        ],
+        "long": [],
+        "maxEventMs": 32
+      },
+      {
+        "name": "contact",
+        "events": [
+          {
+            "name": "pointerdown",
+            "start": 5997.0999999940395,
+            "duration": 48,
+            "id": 5196
+          },
+          {
+            "name": "pointerup",
+            "start": 5997.0999999940395,
+            "duration": 48,
+            "id": 5196
+          },
+          {
+            "name": "click",
+            "start": 5997.0999999940395,
+            "duration": 48,
+            "id": 5196
+          }
+        ],
+        "long": [],
+        "maxEventMs": 48
+      },
+      {
+        "name": "logout",
+        "events": [
+          {
+            "name": "pointerdown",
+            "start": 6382.0999999940395,
+            "duration": 24,
+            "id": 5203
+          },
+          {
+            "name": "pointerup",
+            "start": 6382.200000017881,
+            "duration": 24,
+            "id": 5203
+          },
+          {
+            "name": "click",
+            "start": 6382.200000017881,
+            "duration": 24,
+            "id": 5203
+          }
+        ],
+        "long": [],
+        "maxEventMs": 24
+      }
+    ],
+    "errors": []
+  },
+  {
+    "label": "baseline",
+    "mobile": true,
+    "actions": [
+      {
+        "name": "help",
+        "events": [
+          {
+            "name": "click",
+            "start": 4684.699999988079,
+            "duration": 48,
+            "id": 3867
+          }
+        ],
+        "long": [],
+        "maxEventMs": 48
+      },
+      {
+        "name": "projects",
+        "events": [
+          {
+            "name": "click",
+            "start": 5084.5999999940395,
+            "duration": 32,
+            "id": 3874
+          }
+        ],
+        "long": [],
+        "maxEventMs": 32
+      },
+      {
+        "name": "contact",
+        "events": [
+          {
+            "name": "click",
+            "start": 5484.4000000059605,
+            "duration": 64,
+            "id": 3881
+          }
+        ],
+        "long": [],
+        "maxEventMs": 64
+      },
+      {
+        "name": "logout",
+        "events": [
+          {
+            "name": "click",
+            "start": 5898.0999999940395,
+            "duration": 48,
+            "id": 3888
+          }
+        ],
+        "long": [],
+        "maxEventMs": 48
+      }
+    ],
+    "errors": []
+  },
+  {
+    "label": "after",
+    "mobile": false,
+    "actions": [
+      {
+        "name": "help",
+        "events": [
+          {
+            "name": "pointerdown",
+            "start": 5362.299999982119,
+            "duration": 32,
+            "id": 699
+          },
+          {
+            "name": "pointerup",
+            "start": 5362.4000000059605,
+            "duration": 32,
+            "id": 699
+          },
+          {
+            "name": "click",
+            "start": 5362.4000000059605,
+            "duration": 32,
+            "id": 699
+          }
+        ],
+        "long": [],
+        "maxEventMs": 32
+      },
+      {
+        "name": "projects",
+        "events": [
+          {
+            "name": "pointerdown",
+            "start": 5763.199999988079,
+            "duration": 32,
+            "id": 706
+          },
+          {
+            "name": "pointerup",
+            "start": 5763.299999982119,
+            "duration": 32,
+            "id": 706
+          },
+          {
+            "name": "click",
+            "start": 5763.299999982119,
+            "duration": 32,
+            "id": 706
+          }
+        ],
+        "long": [],
+        "maxEventMs": 32
+      },
+      {
+        "name": "contact",
+        "events": [
+          {
+            "name": "pointerdown",
+            "start": 6136.0999999940395,
+            "duration": 16,
+            "id": 713
+          },
+          {
+            "name": "pointerup",
+            "start": 6136.0999999940395,
+            "duration": 16,
+            "id": 713
+          },
+          {
+            "name": "click",
+            "start": 6136.0999999940395,
+            "duration": 16,
+            "id": 713
+          }
+        ],
+        "long": [],
+        "maxEventMs": 16
+      },
+      {
+        "name": "logout",
+        "events": [
+          {
+            "name": "pointerdown",
+            "start": 6508.799999982119,
+            "duration": 24,
+            "id": 720
+          },
+          {
+            "name": "pointerup",
+            "start": 6508.9000000059605,
+            "duration": 24,
+            "id": 720
+          },
+          {
+            "name": "click",
+            "start": 6508.9000000059605,
+            "duration": 24,
+            "id": 720
+          }
+        ],
+        "long": [],
+        "maxEventMs": 24
+      }
+    ],
+    "errors": []
+  },
+  {
+    "label": "after",
+    "mobile": true,
+    "actions": [
+      {
+        "name": "help",
+        "events": [
+          {
+            "name": "pointerdown",
+            "start": 4679.9000000059605,
+            "duration": 56,
+            "id": 7042
+          },
+          {
+            "name": "pointerup",
+            "start": 4679.9000000059605,
+            "duration": 56,
+            "id": 7042
+          },
+          {
+            "name": "click",
+            "start": 4679.9000000059605,
+            "duration": 56,
+            "id": 7042
+          }
+        ],
+        "long": [],
+        "maxEventMs": 56
+      },
+      {
+        "name": "projects",
+        "events": [
+          {
+            "name": "pointerdown",
+            "start": 5102.9000000059605,
+            "duration": 32,
+            "id": 7049
+          },
+          {
+            "name": "pointerup",
+            "start": 5102.9000000059605,
+            "duration": 32,
+            "id": 7049
+          },
+          {
+            "name": "click",
+            "start": 5102.9000000059605,
+            "duration": 32,
+            "id": 7049
+          }
+        ],
+        "long": [],
+        "maxEventMs": 32
+      },
+      {
+        "name": "contact",
+        "events": [
+          {
+            "name": "pointerdown",
+            "start": 5518.200000017881,
+            "duration": 48,
+            "id": 7056
+          },
+          {
+            "name": "pointerup",
+            "start": 5518.300000011921,
+            "duration": 48,
+            "id": 7056
+          },
+          {
+            "name": "click",
+            "start": 5518.300000011921,
+            "duration": 48,
+            "id": 7056
+          }
+        ],
+        "long": [],
+        "maxEventMs": 48
+      },
+      {
+        "name": "logout",
+        "events": [
+          {
+            "name": "pointerdown",
+            "start": 5889.300000011921,
+            "duration": 32,
+            "id": 7063
+          },
+          {
+            "name": "pointerup",
+            "start": 5889.300000011921,
+            "duration": 32,
+            "id": 7063
+          },
+          {
+            "name": "click",
+            "start": 5889.300000011921,
+            "duration": 32,
+            "id": 7063
+          }
+        ],
+        "long": [],
+        "maxEventMs": 32
+      }
+    ],
+    "errors": []
+  }
+]
