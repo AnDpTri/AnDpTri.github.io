@@ -1,0 +1,1145 @@
+[
+  {
+    "variant": "experiment-early-fonts",
+    "runs": [
+      {
+        "file": "fast4g-1.json",
+        "requests": 13,
+        "bytes": 156316,
+        "paint": [
+          {
+            "name": "first-paint",
+            "ms": 1100
+          },
+          {
+            "name": "first-contentful-paint",
+            "ms": 1100
+          }
+        ],
+        "interactive": 1130.9000000059605,
+        "profileReady": 1824.5,
+        "cpu": {
+          "renderText": {
+            "calls": 640,
+            "ms": 150.60000017285347
+          },
+          "prepare": {
+            "calls": 1,
+            "ms": 708.6999999880791
+          },
+          "build": {
+            "calls": 1,
+            "ms": 9.599999994039536
+          },
+          "schedule": {
+            "calls": 744,
+            "ms": 84.00000008940697
+          },
+          "renderSignal": {
+            "calls": 373,
+            "ms": 115.50000017881393
+          }
+        },
+        "longTasks": 9,
+        "fallback": null,
+        "errors": [],
+        "failed": []
+      },
+      {
+        "file": "fast4g-2.json",
+        "requests": 13,
+        "bytes": 156316,
+        "paint": [
+          {
+            "name": "first-paint",
+            "ms": 1016
+          },
+          {
+            "name": "first-contentful-paint",
+            "ms": 1016
+          }
+        ],
+        "interactive": 1190,
+        "profileReady": 1844.800000011921,
+        "cpu": {
+          "renderText": {
+            "calls": 642,
+            "ms": 146.3000001013279
+          },
+          "prepare": {
+            "calls": 1,
+            "ms": 670.6999999880791
+          },
+          "build": {
+            "calls": 1,
+            "ms": 12.599999994039536
+          },
+          "schedule": {
+            "calls": 747,
+            "ms": 78.89999976754189
+          },
+          "renderSignal": {
+            "calls": 373,
+            "ms": 108.00000056624413
+          }
+        },
+        "longTasks": 5,
+        "fallback": null,
+        "errors": [],
+        "failed": []
+      },
+      {
+        "file": "fast4g-3.json",
+        "requests": 13,
+        "bytes": 156316,
+        "paint": [
+          {
+            "name": "first-paint",
+            "ms": 972
+          },
+          {
+            "name": "first-contentful-paint",
+            "ms": 972
+          }
+        ],
+        "interactive": 1135.2000000178814,
+        "profileReady": 1785.800000011921,
+        "cpu": {
+          "renderText": {
+            "calls": 623,
+            "ms": 136.99999997019768
+          },
+          "prepare": {
+            "calls": 1,
+            "ms": 661.3000000119209
+          },
+          "build": {
+            "calls": 1,
+            "ms": 8.900000005960464
+          },
+          "schedule": {
+            "calls": 732,
+            "ms": 105.20000031590462
+          },
+          "renderSignal": {
+            "calls": 373,
+            "ms": 122.39999994635582
+          }
+        },
+        "longTasks": 10,
+        "fallback": null,
+        "errors": [],
+        "failed": []
+      }
+    ]
+  },
+  {
+    "variant": "experiment-font-preload",
+    "runs": [
+      {
+        "file": "fast4g-1.json",
+        "requests": 13,
+        "bytes": 81988,
+        "paint": [
+          {
+            "name": "first-paint",
+            "ms": 1088
+          },
+          {
+            "name": "first-contentful-paint",
+            "ms": 1088
+          }
+        ],
+        "interactive": 1251.6000000238419,
+        "profileReady": 1297.5,
+        "cpu": {
+          "renderText": {
+            "calls": 653,
+            "ms": 143.40000000596046
+          },
+          "prepare": {
+            "calls": 1,
+            "ms": 57
+          },
+          "build": {
+            "calls": 1,
+            "ms": 14.299999982118607
+          },
+          "schedule": {
+            "calls": 750,
+            "ms": 76.90000057220459
+          },
+          "renderSignal": {
+            "calls": 559,
+            "ms": 108.60000041127205
+          }
+        },
+        "longTasks": 3,
+        "fallback": "Failed to fetch",
+        "errors": [],
+        "failed": null
+      },
+      {
+        "file": "fast4g-2.json",
+        "requests": 13,
+        "bytes": 156468,
+        "paint": [
+          {
+            "name": "first-paint",
+            "ms": 1120
+          },
+          {
+            "name": "first-contentful-paint",
+            "ms": 1120
+          }
+        ],
+        "interactive": 1304.699999988079,
+        "profileReady": 2095,
+        "cpu": {
+          "renderText": {
+            "calls": 645,
+            "ms": 142.5999999642372
+          },
+          "prepare": {
+            "calls": 1,
+            "ms": 800
+          },
+          "build": {
+            "calls": 1,
+            "ms": 11.599999994039536
+          },
+          "schedule": {
+            "calls": 746,
+            "ms": 86.00000017881393
+          },
+          "renderSignal": {
+            "calls": 374,
+            "ms": 100.99999991059303
+          }
+        },
+        "longTasks": 8,
+        "fallback": null,
+        "errors": [],
+        "failed": null
+      },
+      {
+        "file": "fast4g-3.json",
+        "requests": 13,
+        "bytes": 156468,
+        "paint": [
+          {
+            "name": "first-paint",
+            "ms": 1124
+          },
+          {
+            "name": "first-contentful-paint",
+            "ms": 1124
+          }
+        ],
+        "interactive": 1324.699999988079,
+        "profileReady": 2016.699999988079,
+        "cpu": {
+          "renderText": {
+            "calls": 641,
+            "ms": 134.40000027418137
+          },
+          "prepare": {
+            "calls": 1,
+            "ms": 703.5
+          },
+          "build": {
+            "calls": 1,
+            "ms": 10.299999982118607
+          },
+          "schedule": {
+            "calls": 744,
+            "ms": 80.60000002384186
+          },
+          "renderSignal": {
+            "calls": 373,
+            "ms": 105.40000021457672
+          }
+        },
+        "longTasks": 5,
+        "fallback": null,
+        "errors": [],
+        "failed": null
+      },
+      {
+        "file": "local-1.json",
+        "requests": 13,
+        "bytes": 156468,
+        "paint": [
+          {
+            "name": "first-paint",
+            "ms": 224
+          },
+          {
+            "name": "first-contentful-paint",
+            "ms": 224
+          }
+        ],
+        "interactive": 139.59999999403954,
+        "profileReady": 275.80000001192093,
+        "cpu": {
+          "renderText": {
+            "calls": 655,
+            "ms": 27.300000190734863
+          },
+          "prepare": {
+            "calls": 1,
+            "ms": 138
+          },
+          "build": {
+            "calls": 1,
+            "ms": 2.399999976158142
+          },
+          "schedule": {
+            "calls": 753,
+            "ms": 16.799999833106995
+          },
+          "renderSignal": {
+            "calls": 372,
+            "ms": 17.500000149011612
+          }
+        },
+        "longTasks": 3,
+        "fallback": null,
+        "errors": [],
+        "failed": null
+      },
+      {
+        "file": "local-2.json",
+        "requests": 13,
+        "bytes": 156468,
+        "paint": [
+          {
+            "name": "first-paint",
+            "ms": 128
+          },
+          {
+            "name": "first-contentful-paint",
+            "ms": 128
+          }
+        ],
+        "interactive": 136.5,
+        "profileReady": 279.2999999821186,
+        "cpu": {
+          "renderText": {
+            "calls": 656,
+            "ms": 30.000000089406967
+          },
+          "prepare": {
+            "calls": 1,
+            "ms": 144.7999999821186
+          },
+          "build": {
+            "calls": 1,
+            "ms": 2.5
+          },
+          "schedule": {
+            "calls": 754,
+            "ms": 16.80000016093254
+          },
+          "renderSignal": {
+            "calls": 373,
+            "ms": 15.300000101327896
+          }
+        },
+        "longTasks": 2,
+        "fallback": null,
+        "errors": [],
+        "failed": null
+      },
+      {
+        "file": "local-3.json",
+        "requests": 13,
+        "bytes": 156468,
+        "paint": [
+          {
+            "name": "first-paint",
+            "ms": 136
+          },
+          {
+            "name": "first-contentful-paint",
+            "ms": 136
+          }
+        ],
+        "interactive": 145.5,
+        "profileReady": 288.10000002384186,
+        "cpu": {
+          "renderText": {
+            "calls": 656,
+            "ms": 29.80000028014183
+          },
+          "prepare": {
+            "calls": 1,
+            "ms": 144.80000001192093
+          },
+          "build": {
+            "calls": 1,
+            "ms": 2.5
+          },
+          "schedule": {
+            "calls": 753,
+            "ms": 18.000000029802322
+          },
+          "renderSignal": {
+            "calls": 373,
+            "ms": 18.499999791383743
+          }
+        },
+        "longTasks": 2,
+        "fallback": null,
+        "errors": [],
+        "failed": null
+      }
+    ]
+  },
+  {
+    "variant": "experiment-full-chain",
+    "runs": [
+      {
+        "file": "fast4g-1.json",
+        "requests": 13,
+        "bytes": 156393,
+        "paint": [
+          {
+            "name": "first-paint",
+            "ms": 1232
+          },
+          {
+            "name": "first-contentful-paint",
+            "ms": 1232
+          }
+        ],
+        "interactive": 1683.9000000059605,
+        "profileReady": 2656.5,
+        "cpu": {
+          "renderText": {
+            "calls": 640,
+            "ms": 193.0999999344349
+          },
+          "prepare": {
+            "calls": 1,
+            "ms": 1004
+          },
+          "build": {
+            "calls": 1,
+            "ms": 17.5
+          },
+          "schedule": {
+            "calls": 744,
+            "ms": 122.80000028014183
+          },
+          "renderSignal": {
+            "calls": 372,
+            "ms": 127.79999995231628
+          }
+        },
+        "longTasks": 12,
+        "fallback": null,
+        "errors": [],
+        "failed": []
+      },
+      {
+        "file": "fast4g-2.json",
+        "requests": 13,
+        "bytes": 156393,
+        "paint": [
+          {
+            "name": "first-paint",
+            "ms": 1344
+          },
+          {
+            "name": "first-contentful-paint",
+            "ms": 1344
+          }
+        ],
+        "interactive": 1823.5,
+        "profileReady": 2835.2000000178814,
+        "cpu": {
+          "renderText": {
+            "calls": 640,
+            "ms": 192.2000000178814
+          },
+          "prepare": {
+            "calls": 1,
+            "ms": 1030.4000000059605
+          },
+          "build": {
+            "calls": 1,
+            "ms": 16.5
+          },
+          "schedule": {
+            "calls": 741,
+            "ms": 128.20000025629997
+          },
+          "renderSignal": {
+            "calls": 373,
+            "ms": 123.10000011324883
+          }
+        },
+        "longTasks": 11,
+        "fallback": null,
+        "errors": [],
+        "failed": []
+      },
+      {
+        "file": "fast4g-3.json",
+        "requests": 13,
+        "bytes": 156393,
+        "paint": [
+          {
+            "name": "first-paint",
+            "ms": 1204
+          },
+          {
+            "name": "first-contentful-paint",
+            "ms": 1204
+          }
+        ],
+        "interactive": 1588.300000011921,
+        "profileReady": 2599.600000023842,
+        "cpu": {
+          "renderText": {
+            "calls": 641,
+            "ms": 205.69999983906746
+          },
+          "prepare": {
+            "calls": 1,
+            "ms": 1030.9000000059605
+          },
+          "build": {
+            "calls": 1,
+            "ms": 19.099999994039536
+          },
+          "schedule": {
+            "calls": 740,
+            "ms": 119.30000007152557
+          },
+          "renderSignal": {
+            "calls": 372,
+            "ms": 135.19999995827675
+          }
+        },
+        "longTasks": 11,
+        "fallback": null,
+        "errors": [],
+        "failed": []
+      },
+      {
+        "file": "local-1.json",
+        "requests": 13,
+        "bytes": 156393,
+        "paint": [
+          {
+            "name": "first-paint",
+            "ms": 484
+          },
+          {
+            "name": "first-contentful-paint",
+            "ms": 484
+          }
+        ],
+        "interactive": 258.69999998807907,
+        "profileReady": 798.1999999880791,
+        "cpu": {
+          "renderText": {
+            "calls": 656,
+            "ms": 46.69999980926514
+          },
+          "prepare": {
+            "calls": 1,
+            "ms": 543.5
+          },
+          "build": {
+            "calls": 1,
+            "ms": 4.200000017881393
+          },
+          "schedule": {
+            "calls": 754,
+            "ms": 30.69999983906746
+          },
+          "renderSignal": {
+            "calls": 373,
+            "ms": 20.70000010728836
+          }
+        },
+        "longTasks": 4,
+        "fallback": null,
+        "errors": [],
+        "failed": []
+      },
+      {
+        "file": "local-2.json",
+        "requests": 13,
+        "bytes": 156393,
+        "paint": [
+          {
+            "name": "first-paint",
+            "ms": 236
+          },
+          {
+            "name": "first-contentful-paint",
+            "ms": 236
+          }
+        ],
+        "interactive": 254.89999997615814,
+        "profileReady": 528.5999999940395,
+        "cpu": {
+          "renderText": {
+            "calls": 654,
+            "ms": 44.19999983906746
+          },
+          "prepare": {
+            "calls": 1,
+            "ms": 277.90000000596046
+          },
+          "build": {
+            "calls": 1,
+            "ms": 4.9000000059604645
+          },
+          "schedule": {
+            "calls": 754,
+            "ms": 26.19999960064888
+          },
+          "renderSignal": {
+            "calls": 372,
+            "ms": 19.80000001192093
+          }
+        },
+        "longTasks": 4,
+        "fallback": null,
+        "errors": [],
+        "failed": []
+      },
+      {
+        "file": "local-3.json",
+        "requests": 13,
+        "bytes": 156393,
+        "paint": [
+          {
+            "name": "first-paint",
+            "ms": 172
+          },
+          {
+            "name": "first-contentful-paint",
+            "ms": 172
+          }
+        ],
+        "interactive": 191.5,
+        "profileReady": 383.5,
+        "cpu": {
+          "renderText": {
+            "calls": 655,
+            "ms": 46.79999974370003
+          },
+          "prepare": {
+            "calls": 1,
+            "ms": 194.5
+          },
+          "build": {
+            "calls": 1,
+            "ms": 3.5999999940395355
+          },
+          "schedule": {
+            "calls": 754,
+            "ms": 26.799999862909317
+          },
+          "renderSignal": {
+            "calls": 373,
+            "ms": 18.000000059604645
+          }
+        },
+        "longTasks": 2,
+        "fallback": null,
+        "errors": [],
+        "failed": []
+      },
+      {
+        "file": "slow4g-1.json",
+        "requests": 13,
+        "bytes": 156393,
+        "paint": [
+          {
+            "name": "first-paint",
+            "ms": 2424
+          },
+          {
+            "name": "first-contentful-paint",
+            "ms": 2424
+          }
+        ],
+        "interactive": 2699.2000000178814,
+        "profileReady": 4274.9000000059605,
+        "cpu": {
+          "renderText": {
+            "calls": 584,
+            "ms": 199.19999998807907
+          },
+          "build": {
+            "calls": 1,
+            "ms": 17.099999994039536
+          },
+          "schedule": {
+            "calls": 708,
+            "ms": 109.80000025033951
+          },
+          "prepare": {
+            "calls": 1,
+            "ms": 1596
+          },
+          "renderSignal": {
+            "calls": 374,
+            "ms": 121.09999972581863
+          }
+        },
+        "longTasks": 12,
+        "fallback": null,
+        "errors": [],
+        "failed": []
+      },
+      {
+        "file": "slow4g-2.json",
+        "requests": 13,
+        "bytes": 156393,
+        "paint": [
+          {
+            "name": "first-paint",
+            "ms": 2252
+          },
+          {
+            "name": "first-contentful-paint",
+            "ms": 2252
+          }
+        ],
+        "interactive": 2517.5999999940395,
+        "profileReady": 4254.799999982119,
+        "cpu": {
+          "renderText": {
+            "calls": 588,
+            "ms": 210.49999997019768
+          },
+          "build": {
+            "calls": 1,
+            "ms": 24.099999994039536
+          },
+          "schedule": {
+            "calls": 713,
+            "ms": 127.9000004529953
+          },
+          "prepare": {
+            "calls": 1,
+            "ms": 1758.5
+          },
+          "renderSignal": {
+            "calls": 374,
+            "ms": 119.60000038146973
+          }
+        },
+        "longTasks": 12,
+        "fallback": null,
+        "errors": [],
+        "failed": []
+      },
+      {
+        "file": "slow4g-3.json",
+        "requests": 13,
+        "bytes": 156393,
+        "paint": [
+          {
+            "name": "first-paint",
+            "ms": 2300
+          },
+          {
+            "name": "first-contentful-paint",
+            "ms": 2300
+          }
+        ],
+        "interactive": 2586.7999999821186,
+        "profileReady": 4356,
+        "cpu": {
+          "renderText": {
+            "calls": 575,
+            "ms": 248.40000000596046
+          },
+          "build": {
+            "calls": 1,
+            "ms": 19.900000005960464
+          },
+          "schedule": {
+            "calls": 699,
+            "ms": 147.0000001490116
+          },
+          "prepare": {
+            "calls": 1,
+            "ms": 1795.2999999821186
+          },
+          "renderSignal": {
+            "calls": 366,
+            "ms": 177.59999990463257
+          }
+        },
+        "longTasks": 15,
+        "fallback": null,
+        "errors": [],
+        "failed": []
+      }
+    ]
+  },
+  {
+    "variant": "experiment-low-priority",
+    "runs": [
+      {
+        "file": "fast4g-1.json",
+        "requests": 13,
+        "bytes": 156376,
+        "paint": [
+          {
+            "name": "first-paint",
+            "ms": 1300
+          },
+          {
+            "name": "first-contentful-paint",
+            "ms": 1300
+          }
+        ],
+        "interactive": 1396.7000000178814,
+        "profileReady": 2473.4000000059605,
+        "cpu": {
+          "renderText": {
+            "calls": 639,
+            "ms": 217.39999988675117
+          },
+          "prepare": {
+            "calls": 1,
+            "ms": 1096.300000011921
+          },
+          "build": {
+            "calls": 1,
+            "ms": 15.099999994039536
+          },
+          "schedule": {
+            "calls": 735,
+            "ms": 127.80000039935112
+          },
+          "renderSignal": {
+            "calls": 373,
+            "ms": 138.99999991059303
+          }
+        },
+        "longTasks": 12,
+        "fallback": null,
+        "errors": [],
+        "failed": []
+      },
+      {
+        "file": "fast4g-2.json",
+        "requests": 13,
+        "bytes": 156376,
+        "paint": [
+          {
+            "name": "first-paint",
+            "ms": 1588
+          },
+          {
+            "name": "first-contentful-paint",
+            "ms": 1588
+          }
+        ],
+        "interactive": 2306.199999988079,
+        "profileReady": 4182.9000000059605,
+        "cpu": {
+          "renderText": {
+            "calls": 639,
+            "ms": 218.70000013709068
+          },
+          "prepare": {
+            "calls": 1,
+            "ms": 1923.5
+          },
+          "build": {
+            "calls": 1,
+            "ms": 31.900000005960464
+          },
+          "schedule": {
+            "calls": 740,
+            "ms": 130.299999833107
+          },
+          "renderSignal": {
+            "calls": 374,
+            "ms": 123.29999959468842
+          }
+        },
+        "longTasks": 13,
+        "fallback": null,
+        "errors": [],
+        "failed": []
+      },
+      {
+        "file": "fast4g-3.json",
+        "requests": 13,
+        "bytes": 156376,
+        "paint": [
+          {
+            "name": "first-paint",
+            "ms": 1220
+          },
+          {
+            "name": "first-contentful-paint",
+            "ms": 1220
+          }
+        ],
+        "interactive": 1602.199999988079,
+        "profileReady": 2602.5,
+        "cpu": {
+          "renderText": {
+            "calls": 640,
+            "ms": 185.19999977946281
+          },
+          "prepare": {
+            "calls": 1,
+            "ms": 1020.8000000119209
+          },
+          "build": {
+            "calls": 1,
+            "ms": 18.80000001192093
+          },
+          "schedule": {
+            "calls": 737,
+            "ms": 118.90000015497208
+          },
+          "renderSignal": {
+            "calls": 373,
+            "ms": 115.69999998807907
+          }
+        },
+        "longTasks": 10,
+        "fallback": null,
+        "errors": [],
+        "failed": []
+      }
+    ]
+  },
+  {
+    "variant": "experiment-shared",
+    "runs": [
+      {
+        "file": "fast4g-1.json",
+        "requests": 13,
+        "bytes": 155755,
+        "paint": [
+          {
+            "name": "first-paint",
+            "ms": 1192
+          },
+          {
+            "name": "first-contentful-paint",
+            "ms": 1192
+          }
+        ],
+        "interactive": 1408.3999999761581,
+        "profileReady": 2245.199999988079,
+        "cpu": {
+          "renderText": {
+            "calls": 646,
+            "ms": 987.6999999880791
+          },
+          "prepare": {
+            "calls": 1,
+            "ms": 849.4000000059605
+          },
+          "build": {
+            "calls": 1,
+            "ms": 13.100000023841858
+          },
+          "schedule": {
+            "calls": 748,
+            "ms": 84.30000001192093
+          },
+          "renderSignal": {
+            "calls": 373,
+            "ms": 507.7999998033047
+          }
+        },
+        "longTasks": 7,
+        "fallback": null,
+        "errors": [],
+        "failed": null
+      },
+      {
+        "file": "fast4g-2.json",
+        "requests": 13,
+        "bytes": 155755,
+        "paint": [
+          {
+            "name": "first-paint",
+            "ms": 1148
+          },
+          {
+            "name": "first-contentful-paint",
+            "ms": 1148
+          }
+        ],
+        "interactive": 1346.0999999940395,
+        "profileReady": 2212.0999999940395,
+        "cpu": {
+          "renderText": {
+            "calls": 647,
+            "ms": 928.5000004470348
+          },
+          "prepare": {
+            "calls": 1,
+            "ms": 881
+          },
+          "build": {
+            "calls": 1,
+            "ms": 18
+          },
+          "schedule": {
+            "calls": 747,
+            "ms": 80.49999970197678
+          },
+          "renderSignal": {
+            "calls": 373,
+            "ms": 480.19999998807907
+          }
+        },
+        "longTasks": 7,
+        "fallback": null,
+        "errors": [],
+        "failed": null
+      },
+      {
+        "file": "local-1.json",
+        "requests": 13,
+        "bytes": 155755,
+        "paint": [
+          {
+            "name": "first-paint",
+            "ms": 268
+          },
+          {
+            "name": "first-contentful-paint",
+            "ms": 268
+          }
+        ],
+        "interactive": 133.80000001192093,
+        "profileReady": 318.40000000596046,
+        "cpu": {
+          "renderText": {
+            "calls": 654,
+            "ms": 198.70000061392784
+          },
+          "prepare": {
+            "calls": 1,
+            "ms": 188.59999999403954
+          },
+          "build": {
+            "calls": 1,
+            "ms": 3.0999999940395355
+          },
+          "schedule": {
+            "calls": 752,
+            "ms": 18.69999998807907
+          },
+          "renderSignal": {
+            "calls": 372,
+            "ms": 96.79999986290932
+          }
+        },
+        "longTasks": 3,
+        "fallback": null,
+        "errors": [],
+        "failed": null
+      },
+      {
+        "file": "local-2.json",
+        "requests": 13,
+        "bytes": 155755,
+        "paint": [
+          {
+            "name": "first-paint",
+            "ms": 140
+          },
+          {
+            "name": "first-contentful-paint",
+            "ms": 140
+          }
+        ],
+        "interactive": 151.90000000596046,
+        "profileReady": 310.10000002384186,
+        "cpu": {
+          "renderText": {
+            "calls": 656,
+            "ms": 212.60000079870224
+          },
+          "prepare": {
+            "calls": 1,
+            "ms": 160.60000002384186
+          },
+          "build": {
+            "calls": 1,
+            "ms": 2.5
+          },
+          "schedule": {
+            "calls": 754,
+            "ms": 21.599999845027924
+          },
+          "renderSignal": {
+            "calls": 373,
+            "ms": 113.29999989271164
+          }
+        },
+        "longTasks": 2,
+        "fallback": null,
+        "errors": [],
+        "failed": null
+      },
+      {
+        "file": "local-3.json",
+        "requests": 13,
+        "bytes": 155755,
+        "paint": [
+          {
+            "name": "first-paint",
+            "ms": 180
+          },
+          {
+            "name": "first-contentful-paint",
+            "ms": 180
+          }
+        ],
+        "interactive": 211.2000000178814,
+        "profileReady": 401.09999999403954,
+        "cpu": {
+          "renderText": {
+            "calls": 655,
+            "ms": 215.60000044107437
+          },
+          "prepare": {
+            "calls": 1,
+            "ms": 194.5
+          },
+          "build": {
+            "calls": 1,
+            "ms": 3.800000011920929
+          },
+          "schedule": {
+            "calls": 754,
+            "ms": 19.19999986886978
+          },
+          "renderSignal": {
+            "calls": 373,
+            "ms": 86.8000001013279
+          }
+        },
+        "longTasks": 4,
+        "fallback": null,
+        "errors": [],
+        "failed": null
+      }
+    ]
+  }
+]

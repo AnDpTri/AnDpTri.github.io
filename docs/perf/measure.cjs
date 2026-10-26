@@ -5,6 +5,7 @@ const fs=require('node:fs');
 const path=require('node:path');
 const label=process.argv[2]||'baseline';
 const out=path.join(__dirname,label);fs.mkdirSync(out,{recursive:true});
+let browser;
 const profiles={local:{latency:0,downloadThroughput:-1,uploadThroughput:-1},fast4g:{latency:150,downloadThroughput:200000,uploadThroughput:93750},slow4g:{latency:150,downloadThroughput:50000,uploadThroughput:50000}};
 async function instrument(page,cdp){
  await page.addInitScript(()=>{
@@ -29,15 +30,15 @@ async function instrument(page,cdp){
  });
 }
 (async()=>{
- const browser=await chromium.launch({executablePath:'C:/Program Files/Google/Chrome/Application/chrome.exe',headless:true,args:['--enable-webgl','--ignore-gpu-blocklist','--enable-unsafe-swiftshader']});
+ browser=await chromium.launch({executablePath:'C:/Program Files/Google/Chrome/Application/chrome.exe',headless:true,args:['--enable-webgl','--ignore-gpu-blocklist','--enable-unsafe-swiftshader']});
  for(const [profile,network] of Object.entries(profiles).filter(([name])=>!process.env.PERF_PROFILE||process.env.PERF_PROFILE===name))for(let run=1;run<=3;run++){
   const context=await browser.newContext({viewport:{width:1440,height:900},serviceWorkers:'block'});const page=await context.newPage();const errors=[];page.on('pageerror',e=>errors.push(e.message));page.on('console',m=>{if(m.type()==='error')errors.push(m.text());});
   const cdp=await context.newCDPSession(page);await cdp.send('Network.enable');await cdp.send('Network.setCacheDisabled',{cacheDisabled:true});await cdp.send('Network.emulateNetworkConditions',{offline:false,...network,connectionType:'cellular4g'});await cdp.send('Emulation.setCPUThrottlingRate',{rate:profile==='local'?1:4});await cdp.send('Performance.enable');
-  const requests=[];cdp.on('Network.responseReceived',e=>{if(e.response.url.startsWith('http:'))requests.push({url:e.response.url,bytes:0,status:e.response.status,fromDiskCache:e.response.fromDiskCache,id:e.requestId});});cdp.on('Network.loadingFinished',e=>{const r=requests.find(r=>r.id===e.requestId);if(r)r.bytes=e.encodedDataLength;});
+  const requests=[],failed=[];cdp.on('Network.loadingFailed',e=>failed.push({id:e.requestId,error:e.errorText,canceled:e.canceled}));cdp.on('Network.responseReceived',e=>{if(e.response.url.startsWith('http:'))requests.push({url:e.response.url,bytes:0,status:e.response.status,fromDiskCache:e.response.fromDiskCache,id:e.requestId});});cdp.on('Network.loadingFinished',e=>{const r=requests.find(r=>r.id===e.requestId);if(r)r.bytes=e.encodedDataLength;});
   await instrument(page,cdp);await page.goto(`http://localhost:${process.env.PERF_PORT||4181}/`,{waitUntil:'domcontentloaded'});await page.waitForSelector('#jack-in',{state:'visible'});await page.locator('#jack-in').click();await page.waitForFunction(()=>window.__openingDebug?.phase==='complete',{},{timeout:90000});await page.waitForTimeout(1000);
   const result=await page.evaluate(()=>({...perf,paint:performance.getEntriesByType('paint').map(e=>({name:e.name,ms:e.startTime})),resources:performance.getEntriesByType('resource').filter(e=>!e.name.startsWith('data:')).map(e=>({url:e.name,bytes:e.transferSize,start:e.startTime,end:e.responseEnd})),fallback:window.__openingDebug.fallback,audioState:window.__audioDebug.state}));
-  result.metrics=(await cdp.send('Performance.getMetrics')).metrics;result.requests=requests;result.errors=errors;result.profile=profile;result.run=run;
-  fs.writeFileSync(path.join(out,`${profile}-${run}.json`),JSON.stringify(result,null,2));console.log(JSON.stringify({label,profile,run,requests:requests.length,bytes:requests.reduce((s,r)=>s+r.bytes,0),paint:result.paint,interactive:result.interactive,ready:result.profileReady,long:result.long.length,gpu:result.gpuInit,cpu:result.cpu,errors,fallback:result.fallback}));await context.close();
+  result.metrics=(await cdp.send('Performance.getMetrics')).metrics;result.requests=requests;result.failed=failed;result.errors=errors;result.profile=profile;result.run=run;
+  fs.writeFileSync(path.join(out,`${profile}-${run}.json`),JSON.stringify(result,null,2));console.log(JSON.stringify({label,profile,run,requests:requests.length,bytes:requests.reduce((s,r)=>s+r.bytes,0),paint:result.paint,interactive:result.interactive,ready:result.profileReady,long:result.long.length,gpu:result.gpuInit,cpu:result.cpu,errors,failed,fallback:result.fallback}));await context.close();
+  if(result.fallback||errors.length||failed.length)throw Error('Invalid performance run: fallback, console error or failed network request');
  }
- await browser.close();
-})().catch(e=>{console.error(e);process.exitCode=1;});
+})().catch(e=>{console.error(e);process.exitCode=1;}).finally(async()=>{await browser?.close();});

@@ -1,0 +1,32 @@
+{
+  "passed": 3,
+  "results": [
+    {
+      "test": "Vietnamese browser raster",
+      "name": "font-0.woff2",
+      "differentChannels": 0,
+      "pass": true
+    },
+    {
+      "test": "Vietnamese browser raster",
+      "name": "font-3.woff2",
+      "differentChannels": 0,
+      "pass": true
+    },
+    {
+      "test": "offline audio PCM",
+      "samples": 1008000,
+      "beforeAfter": {
+        "differentSamples": 200446,
+        "maxDifference": 5.191554350858496e-7,
+        "rmsDifference": 6.667165490764174e-9
+      },
+      "baselineRepeat": {
+        "differentSamples": 206043,
+        "maxDifference": 0.000002748798578977585,
+        "rmsDifference": 4.6380610054999356e-8
+      },
+      "pass": true
+    }
+  ]
+}

@@ -1,0 +1,38 @@
+[
+  {
+    "label": "baseline",
+    "retained": {
+      "picture": true,
+      "lastPicture": true,
+      "collapseCanvas": true,
+      "signal": true,
+      "capture": true,
+      "capturePanic": true,
+      "skipSource": false
+    },
+    "heap": {
+      "usedSize": 2268776,
+      "totalSize": 3260416,
+      "embedderHeapUsedSize": 1586536,
+      "backingStorageSize": 582045
+    }
+  },
+  {
+    "label": "after",
+    "retained": {
+      "picture": false,
+      "lastPicture": false,
+      "collapseCanvas": false,
+      "signal": false,
+      "capture": false,
+      "capturePanic": false,
+      "skipSource": false
+    },
+    "heap": {
+      "usedSize": 2400944,
+      "totalSize": 3522560,
+      "embedderHeapUsedSize": 1794912,
+      "backingStorageSize": 244152
+    }
+  }
+]

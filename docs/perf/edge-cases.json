@@ -1,0 +1,19 @@
+[
+  {
+    "test": "skip-before-fonts",
+    "pass": true
+  },
+  {
+    "test": "resize-during-bounce",
+    "pass": true,
+    "renderer": "ANGLE (Intel, Intel(R) UHD Graphics (0x00009A68) Direct3D11 vs_5_0 ps_5_0, D3D11)"
+  },
+  {
+    "test": "webgl-fallback",
+    "pass": true
+  },
+  {
+    "test": "no-javascript",
+    "pass": true
+  }
+]
