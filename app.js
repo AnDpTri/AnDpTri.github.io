@@ -1,5 +1,5 @@
 import {AudioScore} from './audio.js';
-import {Opening} from './opening.js';
+import {Opening} from './opening.js?v=1793018283';
 const $ = selector => document.querySelector(selector);
 const reduced = matchMedia('(prefers-reduced-motion: reduce)');
 const opening = $('#opening'), page = $('#page');

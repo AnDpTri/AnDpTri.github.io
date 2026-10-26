@@ -29,6 +29,8 @@ async function photographProfile(css,fonts,opening=false){
    for(const {name,value} of copy.attributes)image.setAttribute(name,value);
    image.src=surface.toDataURL();copy.replaceWith(image);
   });root.append(clone);
+  // The skip/sound controls live outside #opening: photograph them too so the tear carries them away.
+  root.append($('#hud').cloneNode(true));
  }
  else{root.append($('#page').cloneNode(true),$('#hud').cloneNode(true));root.querySelector('#skip-opening').hidden=true;}
  const xml=new XMLSerializer().serializeToString(root);
@@ -155,7 +157,7 @@ export class Opening{
   this.signalCapturing=false;this.signalCaptured=false;this.signalFrozenAt=null;this.lastSignalAt=null;
   this.capture=null;this.capturePanic=null;this.skipRequested=false;this.skipStarted=false;this.skipCaptured=false;this.skipSource=null;
   this.skipReady=new Promise(resolve=>{this.resolveSkip=resolve;});
-  const skipButton=$('#skip-opening');skipButton.hidden=false;skipButton.disabled=false;
+  const skipButton=$('#skip-opening');skipButton.hidden=false;skipButton.disabled=false;skipButton.style.visibility='';
   const skip=()=>{
    if(this.skipRequested||this.phase==='complete')return;
    this.skipRequested=true;skipButton.disabled=true;this.resolveSkip();
@@ -181,6 +183,7 @@ export class Opening{
      const draw=()=>{
       try{
        const t=this.elapsed=(this.activeClock()-started)/1000;
+       if(this.reacquiredAt!==null)skipButton.style.visibility='hidden';
        if(this.skipRequested){
         if(!this.prepared){this.frame=requestAnimationFrame(draw);return;}
         if(!this.skipStarted){
