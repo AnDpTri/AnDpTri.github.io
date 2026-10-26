@@ -1,0 +1,18 @@
+﻿[
+  {
+    "font": "font-0.woff2",
+    "originalBytes": 125984,
+    "bytes": 36812,
+    "glyphs": 495,
+    "vietnameseCodepoints": 102,
+    "identical": true
+  },
+  {
+    "font": "font-3.woff2",
+    "originalBytes": 128812,
+    "bytes": 37240,
+    "glyphs": 995,
+    "vietnameseCodepoints": 102,
+    "identical": true
+  }
+]

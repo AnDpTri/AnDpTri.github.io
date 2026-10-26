@@ -1,0 +1,52 @@
+﻿[
+  {
+    "frame": "1440-boot.png",
+    "differentPixels": 0,
+    "bounds": null
+  },
+  {
+    "frame": "1440-mid-tear.png",
+    "differentPixels": 0,
+    "bounds": null
+  },
+  {
+    "frame": "1440-no-signal.png",
+    "differentPixels": 0,
+    "bounds": null
+  },
+  {
+    "frame": "1440-panic.png",
+    "differentPixels": 0,
+    "bounds": null
+  },
+  {
+    "frame": "1440-profile.png",
+    "differentPixels": 0,
+    "bounds": null
+  },
+  {
+    "frame": "390-boot.png",
+    "differentPixels": 0,
+    "bounds": null
+  },
+  {
+    "frame": "390-mid-tear.png",
+    "differentPixels": 0,
+    "bounds": null
+  },
+  {
+    "frame": "390-no-signal.png",
+    "differentPixels": 0,
+    "bounds": null
+  },
+  {
+    "frame": "390-panic.png",
+    "differentPixels": 0,
+    "bounds": null
+  },
+  {
+    "frame": "390-profile.png",
+    "differentPixels": 0,
+    "bounds": null
+  }
+]
