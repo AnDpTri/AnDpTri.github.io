@@ -1,5 +1,5 @@
 import {AudioScore} from './audio.js?v=1793058626';
-import {Opening} from './opening.js?v=1793058626';
+import {Opening} from './opening.js?v=1793061193';
 import {fontAssets} from './assets/fonts/load.js';
 const $ = selector => document.querySelector(selector);
 const reduced = matchMedia('(prefers-reduced-motion: reduce)');
@@ -29,15 +29,15 @@ let finished=true, runId=0, replayPending=false;
 const connection=new Opening({score,cue,updateSound,mainReady,activeClock,reduced});
 window.__openingDebug={get phase(){return connection.phase;},get elapsed(){return connection.elapsed;},get loaded(){return connection.loaded;},get fallback(){return connection.fallback;},get webgl(){return !!connection.signal;}};
 const SEEN_KEY='thepeak.seen';
-const hasSeen=()=>{try{return localStorage.getItem(SEEN_KEY)==='1';}catch{return false;}};
-async function runOpening({returning=false}={}){
+// A visit is counted on load. The first visit holds on the first screen (a click is the same as skip);
+// from the second visit on the full opening plays. If storage is unavailable visits cannot be counted,
+// so the full opening always plays.
+function countVisit(){try{const first=localStorage.getItem(SEEN_KEY)!=='1';localStorage.setItem(SEEN_KEY,'1');return first;}catch{return false;}}
+async function runOpening({holdForSkip=false}={}){
   if(!finished)return;
   finished=false;runId++;
   syncAmbient();
-  try{await connection.run({returning});}catch(error){connection.fallback=error.message;}finally{
-    if(connection.phase==='complete'){
-      try{localStorage.setItem(SEEN_KEY,'1');}catch{/* private storage: behave as a first visit every time */}
-    }
+  try{await connection.run({holdForSkip});}catch(error){connection.fallback=error.message;}finally{
     opening.hidden=true;page.inert=false;document.body.classList.remove('intro-active');document.querySelector('#opening-controls').style.visibility='';
     finished=true;if(connection.phase!=='complete'){score.phase('complete');cue('complete');}updateSound();
     replayPending=false;syncAmbient();
@@ -180,5 +180,5 @@ if(/iPad|iPhone|iPod/.test(navigator.userAgent)||(navigator.platform==='MacIntel
   prompt.addEventListener('blur',()=>{viewport.content=original;});
 }
 updateClock();updateNetwork();addEventListener('online',updateNetwork);addEventListener('offline',updateNetwork);
-void runOpening({returning:hasSeen()});
+void runOpening({holdForSkip:countVisit()});
 $('#replay')?.addEventListener('click',()=>execute('logout'));

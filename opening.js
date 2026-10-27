@@ -87,7 +87,7 @@ export class Opening{
   return new Promise(resolve=>{
    const finish=event=>{
     if(event?.type==='keydown'&&(event.repeat||event.isComposing||['Tab','Shift','Control','Alt','Meta'].includes(event.key)))return;
-    if(this.returning&&event&&event.type!=='skip'){
+    if(this.holdForSkip&&event&&event.type!=='skip'){
      if(event.type==='keydown'&&!['Enter',' ','Escape'].includes(event.key))return;
      event.preventDefault();event.stopImmediatePropagation();this.skipNow?.();return;
     }
@@ -98,8 +98,8 @@ export class Opening{
     this.cue(event?'jack-in':'silent-timeout');resolve();
    };
    // Capture return clicks so SND/skip also perform the same single skip gesture.
-   const pointerEvent=this.returning?'click':'pointerdown';
-   const timer=this.returning?null:setTimeout(()=>finish(),6000);
+   const pointerEvent=this.holdForSkip?'click':'pointerdown';
+   const timer=this.holdForSkip?null:setTimeout(()=>finish(),6000);
    this.disconnect=()=>{clearTimeout(timer);removeEventListener(pointerEvent,finish,true);removeEventListener('keydown',finish,true);};
    addEventListener(pointerEvent,finish,true);addEventListener('keydown',finish,true);
    this.finishConnect=()=>finish({type:'skip'});
@@ -167,8 +167,9 @@ export class Opening{
    if(width>0){ctx.drawImage(this.lastPicture,(w-width)/2,(h-height)/2,width,height);ctx.fillStyle='#eee';ctx.fillRect((w-width)/2,h/2,Math.max(2,width),p<.76?2:3);}
   }
  }
- async run({returning=false}={}){
-  this.returning=returning;
+ // holdForSkip: the first screen waits and any click/key is the same as pressing skip (used on a visitor's first visit).
+ async run({holdForSkip=false}={}){
+  this.holdForSkip=holdForSkip;
   const opening=$('#opening'),boot=$('#boot'),card=$('#signal-card');
   this.dom={boot,card,text:card.querySelector('p'),title:$('#boot-title'),status:$('#boot-status'),log:$('#system-log')};
   this.signalBounds=null;
