@@ -1,5 +1,5 @@
 import {AudioScore} from './audio.js?v=1793058626';
-import {Opening} from './opening.js?v=1793061513';
+import {Opening} from './opening.js?v=1793072547';
 import {fontAssets} from './assets/fonts/load.js';
 const $ = selector => document.querySelector(selector);
 const reduced = matchMedia('(prefers-reduced-motion: reduce)');
@@ -29,10 +29,10 @@ let finished=true, runId=0, replayPending=false;
 const connection=new Opening({score,cue,updateSound,mainReady,activeClock,reduced});
 window.__openingDebug={get phase(){return connection.phase;},get elapsed(){return connection.elapsed;},get loaded(){return connection.loaded;},get fallback(){return connection.fallback;},get webgl(){return !!connection.signal;}};
 const SEEN_KEY='thepeak.seen';
-// A visit is counted on load. The first visit holds on the first screen (a click is the same as skip);
-// from the second visit on the full opening plays. If storage is unavailable visits cannot be counted,
-// so the full opening always plays.
-function countVisit(){try{const first=localStorage.getItem(SEEN_KEY)!=='1';localStorage.setItem(SEEN_KEY,'1');return first;}catch{return false;}}
+// A visit is counted on load. The first visit plays the full opening; on return visits the first screen
+// holds and a click is the same as skip. If storage is unavailable visits cannot be counted, so the
+// full opening always plays.
+function countVisit(){try{const returning=localStorage.getItem(SEEN_KEY)==='1';localStorage.setItem(SEEN_KEY,'1');return returning;}catch{return false;}}
 async function runOpening({holdForSkip=false}={}){
   if(!finished)return;
   finished=false;runId++;
