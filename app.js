@@ -1,5 +1,5 @@
 import {AudioScore} from './audio.js?v=1793058626';
-import {Opening} from './opening.js?v=1793061193';
+import {Opening} from './opening.js?v=1793061513';
 import {fontAssets} from './assets/fonts/load.js';
 const $ = selector => document.querySelector(selector);
 const reduced = matchMedia('(prefers-reduced-motion: reduce)');
@@ -49,7 +49,7 @@ async function runOpening({holdForSkip=false}={}){
 const commandHistory=$('#command-history'),prompt=$('#prompt');
 const projectLinks=[...document.querySelectorAll('.project-row, .archive-row')];
 const typedHistory=[];let historyIndex=0;
-function showArchive(show){$('#archive').hidden=!show;$('#all-projects').setAttribute('aria-expanded',String(show));$('#all-projects').innerHTML=show?'--featured <span>(5)</span>':'--all <span>(+4)</span>';}
+function showArchive(show){$('#archive').hidden=!show;$('#all-projects').setAttribute('aria-expanded',String(show));$('#all-projects').innerHTML=show?'--featured <span>(5)</span>':'--all <span>(+2)</span>';}
 $('#all-projects').addEventListener('click',()=>showArchive($('#archive').hidden));
 function navigateTo(id){$(id).scrollIntoView({behavior:reduced.matches?'instant':'smooth',block:'start'});}
 function execute(raw){
@@ -65,7 +65,7 @@ function execute(raw){
   const echo=document.createElement('p');echo.className='echo';echo.textContent=`guest@thepeak:~$ ${input}`;entry.append(echo);
   const output=document.createElement('p');entry.append(output);
   switch(command){
-    case 'help':output.textContent='whoami · projects [--all] · open <1–9> · contact\nclear · intro · logout / lock · thepeak\nsound on/off / mute\n↑ / ↓ command history. All commands run locally.';break;
+    case 'help':output.textContent='whoami · projects [--all] · open <1–7> · contact\nclear · intro · logout / lock · thepeak\nsound on/off / mute\n↑ / ↓ command history. All commands run locally.';break;
     case 'sound':
       if(!['on','off'].includes(args[0]) || args.length!==1){output.textContent='usage: sound on/off';break;}
       void setSound(args[0]==='on');output.textContent=`sound ${args[0]}`;break;
@@ -73,11 +73,11 @@ function execute(raw){
     case 'whoami':output.textContent='Đặng Hoàng An / aka AnDpTri\nIntern · Student / Vietnam\nAlgorithm · Artificial Intelligence · Computer Vision';break;
     case 'projects':
       if(args.includes('--all'))showArchive(true);
-      output.textContent=projectLinks.slice(0,args.includes('--all')?9:5).map((link,i)=>`${i+1}. ${link.querySelector('strong')?.textContent || link.firstElementChild.textContent.slice(5)}`).join('\n');
+      output.textContent=projectLinks.slice(0,args.includes('--all')?7:5).map((link,i)=>`${i+1}. ${link.querySelector('strong')?.textContent || link.firstElementChild.textContent.slice(5)}`).join('\n');
       break;
     case 'open':{
       const n=Number(args[0]);
-      if(args.length!==1 || !Number.isInteger(n) || n<1 || n>projectLinks.length){output.textContent='usage: open <1–9>';break;}
+      if(args.length!==1 || !Number.isInteger(n) || n<1 || n>projectLinks.length){output.textContent='usage: open <1–7>';break;}
       const link=projectLinks[n-1];
       const a=document.createElement('a');a.href=link.href;a.textContent=`Open ${link.querySelector('strong')?.textContent || link.firstElementChild.textContent.slice(5)}`;
       output.append(a);
