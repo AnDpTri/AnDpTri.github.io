@@ -1,0 +1,146 @@
+{
+  "browser": "155.0.8059.85",
+  "passed": 11,
+  "results": [
+    {
+      "name": "fresh visit runs fully; second load waits then tears directly",
+      "pass": true,
+      "first": {
+        "flag": "1",
+        "phases": [
+          {
+            "name": "calm",
+            "localTime": 0,
+            "targetTime": 0,
+            "wall": 89.09999999403954,
+            "title": "Link established._"
+          },
+          {
+            "name": "unease",
+            "localTime": 2.3125999999940396,
+            "targetTime": 2.3,
+            "wall": 2819,
+            "title": "Link established._"
+          },
+          {
+            "name": "alarm",
+            "localTime": 4.20759999999404,
+            "targetTime": 4.2,
+            "wall": 4713.699999988079,
+            "title": "Link established."
+          },
+          {
+            "name": "panic",
+            "localTime": 6.605900000005961,
+            "targetTime": 6.6,
+            "wall": 7112,
+            "title": "Who are you?"
+          },
+          {
+            "name": "collapse",
+            "localTime": 8.712699999988079,
+            "targetTime": 8.7,
+            "wall": 9218.90000000596,
+            "title": "STOP!"
+          },
+          {
+            "name": "blackout",
+            "localTime": 9.91280000001192,
+            "targetTime": 9.9,
+            "wall": 10418.90000000596,
+            "title": "STOP!"
+          },
+          {
+            "name": "no-signal",
+            "localTime": 10.35380000001192,
+            "targetTime": 10.35,
+            "wall": 10859.800000011921,
+            "title": "STOP!"
+          },
+          {
+            "name": "reacquire",
+            "localTime": 15.32890000000596,
+            "targetTime": 15.3,
+            "wall": 15835.09999999404,
+            "title": "STOP!"
+          },
+          {
+            "name": "tear-burst",
+            "localTime": 15.65969999998808,
+            "targetTime": 15.64890000000596,
+            "wall": 16165.800000011921,
+            "title": "STOP!"
+          },
+          {
+            "name": "settle",
+            "localTime": 17.339699999988078,
+            "targetTime": 17.3,
+            "wall": 17845.80000001192,
+            "title": "STOP!"
+          },
+          {
+            "name": "complete",
+            "localTime": 17.83309999999404,
+            "targetTime": 17.8,
+            "wall": 18339.19999998808,
+            "title": "STOP!"
+          }
+        ]
+      },
+      "returned": {
+        "phases": [
+          "calm",
+          "jack-in",
+          "reacquire",
+          "tear-burst",
+          "settle",
+          "complete"
+        ],
+        "audio": "running"
+      },
+      "waitMs": 6500
+    },
+    {
+      "name": "return gesture Enter",
+      "pass": true
+    },
+    {
+      "name": "return gesture Space",
+      "pass": true
+    },
+    {
+      "name": "return gesture Escape",
+      "pass": true
+    },
+    {
+      "name": "return gesture sound",
+      "pass": true
+    },
+    {
+      "name": "return gesture skip",
+      "pass": true
+    },
+    {
+      "name": "return gesture tap",
+      "pass": true
+    },
+    {
+      "name": "profile pixel preservation and replay 1440",
+      "pass": true,
+      "differentPixels": 0
+    },
+    {
+      "name": "profile pixel preservation and replay 390",
+      "pass": true,
+      "differentPixels": 0
+    },
+    {
+      "name": "full replay command logout",
+      "pass": true
+    },
+    {
+      "name": "full replay command intro",
+      "pass": true
+    }
+  ]
+}

@@ -102,13 +102,18 @@ async function runSkip(width,phase,time,keyboard){
  await page.route('**/baseline-audio.js',route=>route.fulfill({contentType:'text/javascript',body:execFileSync('git',['show','4ee1528:audio.js'],{cwd:root})}));
  const audio=await page.evaluate(async()=>{
   const classes=await Promise.all([import('/baseline-audio.js'),import('/audio.js')]);const buffers=[];
+  const {CONNECTION_BEATS,CONNECTION_TIME,CONNECTION_TEAR}=await import('/opening.js');
+  const duration=CONNECTION_TIME.complete+3.2;
   for(const {AudioScore} of [...classes,classes[0]]){
    let seed=1234;const random=()=>{seed=(Math.imul(1664525,seed)+1013904223)>>>0;return seed/4294967296;};
-   const context=new OfflineAudioContext(1,48000*21,48000),score=new AudioScore(context,random);
-   const beats=[[0,'calm'],[2.3,'unease'],[4.2,'alarm'],[6.6,'panic'],[8.7,'collapse'],[9.9,'blackout'],[10.35,'no-signal'],[15.3,'reacquire'],[17.3,'settle'],[17.8,'complete'],[21,'end']];
+   const context=new OfflineAudioContext(1,Math.ceil(48000*duration),48000),score=new AudioScore(context,random);
+   // Give both synthesis versions the same offline timestamp-aware gain scheduler.
+   // Live sound is unchanged; this comparison checks the original graph at new beats.
+   score.phase=classes[1].AudioScore.prototype.phase;score.updateGain=classes[1].AudioScore.prototype.updateGain;
+   const beats=[...CONNECTION_BEATS.map(({at,phase})=>[at,phase]),[duration,'end']];
    for(let i=0;i<beats.length-1;i++){
-    const [at,phase]=beats[i];score.phase(phase,at);score.effect(phase,at);if(phase==='reacquire')score.effect('tear-burst',at+.32);
-    for(let t=at+.012;t<beats[i+1][0];t+=60/132/4){score.intensity=Math.min(1,(t-4.2)/4.5);score.note(t);}
+    const [at,phase]=beats[i];score.phase(phase,at);score.effect(phase,at);if(phase==='reacquire')score.effect('tear-burst',at+CONNECTION_TEAR.duration*CONNECTION_TEAR.burst);
+    for(let t=at+.012;t<beats[i+1][0];t+=60/132/4){score.intensity=Math.min(1,(t-CONNECTION_TIME.alarm)/(CONNECTION_TIME.collapse-CONNECTION_TIME.alarm));score.note(t);}
    }
    buffers.push((await context.startRendering()).getChannelData(0));
   }

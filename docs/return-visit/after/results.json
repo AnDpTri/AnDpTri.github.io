@@ -1,0 +1,168 @@
+{
+  "browser": "155.0.8059.85",
+  "passed": 13,
+  "results": [
+    {
+      "name": "fresh visit runs fully; second load waits then tears directly",
+      "pass": true,
+      "first": {
+        "flag": "1",
+        "phases": [
+          {
+            "name": "calm",
+            "localTime": 0,
+            "targetTime": 0,
+            "wall": 94.60000002384186,
+            "title": "Link established._"
+          },
+          {
+            "name": "unease",
+            "localTime": 1.6108999999761582,
+            "targetTime": 1.6,
+            "wall": 2098.2000000178814,
+            "title": "Link established._"
+          },
+          {
+            "name": "alarm",
+            "localTime": 3.0110999999940393,
+            "targetTime": 3,
+            "wall": 3498.300000011921,
+            "title": "Link established."
+          },
+          {
+            "name": "panic",
+            "localTime": 4.611199999988079,
+            "targetTime": 4.6,
+            "wall": 5098.5,
+            "title": "Who are you?"
+          },
+          {
+            "name": "collapse",
+            "localTime": 6.411,
+            "targetTime": 6.4,
+            "wall": 6898.200000017881,
+            "title": "STOP!"
+          },
+          {
+            "name": "blackout",
+            "localTime": 7.5045,
+            "targetTime": 7.5,
+            "wall": 7991.700000017881,
+            "title": "STOP!"
+          },
+          {
+            "name": "no-signal",
+            "localTime": 7.904899999976158,
+            "targetTime": 7.9,
+            "wall": 8392.100000023842,
+            "title": "STOP!"
+          },
+          {
+            "name": "reacquire",
+            "localTime": 11.034099999994039,
+            "targetTime": 11,
+            "wall": 11521.200000017881,
+            "title": "STOP!"
+          },
+          {
+            "name": "tear-burst",
+            "localTime": 11.278099999994039,
+            "targetTime": 11.27409999999404,
+            "wall": 11765.300000011921,
+            "title": "STOP!"
+          },
+          {
+            "name": "settle",
+            "localTime": 12.544899999976158,
+            "targetTime": 12.5,
+            "wall": 13032.300000011921,
+            "title": "STOP!"
+          },
+          {
+            "name": "complete",
+            "localTime": 13.038299999982119,
+            "targetTime": 13,
+            "wall": 13525.600000023842,
+            "title": "STOP!"
+          }
+        ]
+      },
+      "returned": {
+        "phases": [
+          "calm",
+          "jack-in",
+          "reacquire",
+          "tear-burst",
+          "settle",
+          "complete"
+        ],
+        "audio": "running"
+      },
+      "waitMs": 6500
+    },
+    {
+      "name": "return gesture Enter",
+      "pass": true
+    },
+    {
+      "name": "return gesture Space",
+      "pass": true
+    },
+    {
+      "name": "return gesture Escape",
+      "pass": true
+    },
+    {
+      "name": "return gesture sound",
+      "pass": true
+    },
+    {
+      "name": "return gesture skip",
+      "pass": true
+    },
+    {
+      "name": "return gesture tap",
+      "pass": true
+    },
+    {
+      "name": "profile pixel preservation and replay 1440",
+      "pass": true,
+      "differentPixels": 0,
+      "buttonPixels": 204,
+      "replayRect": {
+        "x": 690,
+        "y": 1560.71875,
+        "width": 60,
+        "height": 44
+      }
+    },
+    {
+      "name": "profile pixel preservation and replay 390",
+      "pass": true,
+      "differentPixels": 0,
+      "buttonPixels": 176,
+      "replayRect": {
+        "x": 171,
+        "y": 1743.546875,
+        "width": 48,
+        "height": 44
+      }
+    },
+    {
+      "name": "pointer replay on desktop",
+      "pass": true
+    },
+    {
+      "name": "full replay command logout",
+      "pass": true
+    },
+    {
+      "name": "full replay command intro",
+      "pass": true
+    },
+    {
+      "name": "storage denied stays a first visit after reload",
+      "pass": true
+    }
+  ]
+}

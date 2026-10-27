@@ -1,0 +1,10 @@
+{
+  "browser": "155.0.8059.85",
+  "passed": 1,
+  "results": [
+    {
+      "name": "storage denied stays a first visit after reload",
+      "pass": true
+    }
+  ]
+}

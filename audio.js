@@ -30,9 +30,8 @@ export class AudioScore {
       this.updateGain();return this.context.state==='running';
     } catch {return false;} // Unsupported audio must never block the portfolio.
   }
-  updateGain() {
+  updateGain(t=this.context?.currentTime??0) {
     if(!this.context)return;
-    const t=this.context.currentTime;
     for(const [node,value] of [[this.master,this.enabled?MIX.master:0],[this.music,modes[this.mode]??MIX.bed]]){
       node.gain.cancelScheduledValues(t);node.gain.setTargetAtTime(value,t,.018);
     }
@@ -48,7 +47,7 @@ export class AudioScore {
   }
   phase(mode,t=this.context?.currentTime??0) {
     this.mode=mode;this.step=0;this.next=t+.012;
-    if(this.context){this.cancelNotes(t);this.updateGain();}
+    if(this.context){this.cancelNotes(t);this.updateGain(t);}
   }
   // Every source has a finite lifetime; disconnected on end, including muted runs.
   voice(sources,output,t,duration,level,bus=this.music) {

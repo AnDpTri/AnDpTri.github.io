@@ -1,5 +1,5 @@
-import {AudioScore} from './audio.js';
-import {Opening} from './opening.js?v=1793018626';
+import {AudioScore} from './audio.js?v=1793058626';
+import {Opening} from './opening.js?v=1793058626';
 import {fontAssets} from './assets/fonts/load.js';
 const $ = selector => document.querySelector(selector);
 const reduced = matchMedia('(prefers-reduced-motion: reduce)');
@@ -35,7 +35,9 @@ async function runOpening({returning=false}={}){
   finished=false;runId++;
   syncAmbient();
   try{await connection.run({returning});}catch(error){connection.fallback=error.message;}finally{
-    try{localStorage.setItem(SEEN_KEY,'1');}catch{/* private storage: behave as a first visit every time */}
+    if(connection.phase==='complete'){
+      try{localStorage.setItem(SEEN_KEY,'1');}catch{/* private storage: behave as a first visit every time */}
+    }
     opening.hidden=true;page.inert=false;document.body.classList.remove('intro-active');document.querySelector('#opening-controls').style.visibility='';
     finished=true;if(connection.phase!=='complete'){score.phase('complete');cue('complete');}updateSound();
     replayPending=false;syncAmbient();

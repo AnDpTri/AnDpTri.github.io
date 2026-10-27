@@ -1,0 +1,170 @@
+[
+  {
+    "run": "real timeline fast-desktop",
+    "totalMs": 13153.90000000596,
+    "beats": [
+      {
+        "name": "unease",
+        "actual": 1.6053000000119209,
+        "target": 1.6
+      },
+      {
+        "name": "alarm",
+        "actual": 3.0052000000178816,
+        "target": 3
+      },
+      {
+        "name": "panic",
+        "actual": 4.605300000011921,
+        "target": 4.6
+      },
+      {
+        "name": "collapse",
+        "actual": 6.4055,
+        "target": 6.4
+      },
+      {
+        "name": "blackout",
+        "actual": 7.512600000023842,
+        "target": 7.5
+      },
+      {
+        "name": "no-signal",
+        "actual": 7.9125,
+        "target": 7.9
+      },
+      {
+        "name": "reacquire",
+        "actual": 11.02540000000596,
+        "target": 11
+      },
+      {
+        "name": "tear-burst",
+        "actual": 11.27230000001192,
+        "target": 11.265400000005961
+      },
+      {
+        "name": "settle",
+        "actual": 12.525600000023841,
+        "target": 12.5
+      },
+      {
+        "name": "complete",
+        "actual": 13.032100000023842,
+        "target": 13
+      }
+    ]
+  },
+  {
+    "run": "real timeline fast-mobile",
+    "totalMs": 13053.199999988079,
+    "beats": [
+      {
+        "name": "unease",
+        "actual": 1.6079000000059605,
+        "target": 1.6
+      },
+      {
+        "name": "alarm",
+        "actual": 3.0084000000059605,
+        "target": 3
+      },
+      {
+        "name": "panic",
+        "actual": 4.6079000000059605,
+        "target": 4.6
+      },
+      {
+        "name": "collapse",
+        "actual": 6.40790000000596,
+        "target": 6.4
+      },
+      {
+        "name": "blackout",
+        "actual": 7.501300000011921,
+        "target": 7.5
+      },
+      {
+        "name": "no-signal",
+        "actual": 7.901700000017882,
+        "target": 7.9
+      },
+      {
+        "name": "reacquire",
+        "actual": 11.0215,
+        "target": 11
+      },
+      {
+        "name": "tear-burst",
+        "actual": 11.2615,
+        "target": 11.2615
+      },
+      {
+        "name": "settle",
+        "actual": 12.52820000001788,
+        "target": 12.5
+      },
+      {
+        "name": "complete",
+        "actual": 13.0215,
+        "target": 13
+      }
+    ]
+  },
+  {
+    "run": "real timeline slow4g",
+    "totalMs": 13146.800000011921,
+    "beats": [
+      {
+        "name": "unease",
+        "actual": 1.6003999999761582,
+        "target": 1.6
+      },
+      {
+        "name": "alarm",
+        "actual": 3.0005999999940394,
+        "target": 3
+      },
+      {
+        "name": "panic",
+        "actual": 4.6005999999940395,
+        "target": 4.6
+      },
+      {
+        "name": "collapse",
+        "actual": 6.400799999982119,
+        "target": 6.4
+      },
+      {
+        "name": "blackout",
+        "actual": 7.507299999982118,
+        "target": 7.5
+      },
+      {
+        "name": "no-signal",
+        "actual": 7.907199999988079,
+        "target": 7.9
+      },
+      {
+        "name": "reacquire",
+        "actual": 11.075399999976158,
+        "target": 11
+      },
+      {
+        "name": "tear-burst",
+        "actual": 11.3205,
+        "target": 11.315399999976158
+      },
+      {
+        "name": "settle",
+        "actual": 12.587599999994039,
+        "target": 12.5
+      },
+      {
+        "name": "complete",
+        "actual": 13.0815,
+        "target": 13
+      }
+    ]
+  }
+]

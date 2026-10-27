@@ -1,0 +1,1381 @@
+{
+  "browser": "155.0.8059.85",
+  "passed": 3,
+  "results": [
+    {
+      "name": "real timeline fast-desktop",
+      "pass": true,
+      "network": null,
+      "cpu": 1,
+      "totalMs": 13153.90000000596,
+      "events": [
+        {
+          "name": "jack-in",
+          "at": 304.59999999403954,
+          "title": "Link established._",
+          "controls": "visible"
+        },
+        {
+          "name": "unease",
+          "localTime": 1.6053000000119209,
+          "targetTime": 1.6,
+          "at": 1922,
+          "title": "Link established_",
+          "controls": "visible"
+        },
+        {
+          "name": "alarm",
+          "localTime": 3.0052000000178816,
+          "targetTime": 3,
+          "at": 3322,
+          "title": "Who are you?",
+          "controls": "visible"
+        },
+        {
+          "name": "error-burst",
+          "localTime": 3.0052000000178816,
+          "at": 3322,
+          "title": "Who are you?",
+          "controls": "visible"
+        },
+        {
+          "name": "error-burst",
+          "localTime": 3.3387000000178815,
+          "at": 3655.5999999940395,
+          "title": "Who are you?",
+          "controls": "visible"
+        },
+        {
+          "name": "error-burst",
+          "localTime": 3.671800000011921,
+          "at": 3988.5999999940395,
+          "title": "Who are you?",
+          "controls": "visible"
+        },
+        {
+          "name": "error-burst",
+          "localTime": 4.005300000011921,
+          "at": 4321.9000000059605,
+          "title": "Who are you?",
+          "controls": "visible"
+        },
+        {
+          "name": "error-burst",
+          "localTime": 4.338700000017881,
+          "at": 4655.299999982119,
+          "title": "Who are you?",
+          "controls": "visible"
+        },
+        {
+          "name": "panic",
+          "localTime": 4.605300000011921,
+          "targetTime": 4.6,
+          "at": 4922,
+          "title": "STOP!",
+          "controls": "visible"
+        },
+        {
+          "name": "error-burst",
+          "localTime": 4.605300000011921,
+          "at": 4922.0999999940395,
+          "title": "STOP!",
+          "controls": "visible"
+        },
+        {
+          "name": "error-burst",
+          "localTime": 4.725300000011921,
+          "at": 5041.9000000059605,
+          "title": "STOP!",
+          "controls": "visible"
+        },
+        {
+          "name": "error-burst",
+          "localTime": 4.8587000000178815,
+          "at": 5175.4000000059605,
+          "title": "STOP!",
+          "controls": "visible"
+        },
+        {
+          "name": "error-burst",
+          "localTime": 5.0055,
+          "at": 5322.4000000059605,
+          "title": "STOP!",
+          "controls": "visible"
+        },
+        {
+          "name": "error-burst",
+          "localTime": 5.152,
+          "at": 5468.5999999940395,
+          "title": "STOP!",
+          "controls": "visible"
+        },
+        {
+          "name": "error-burst",
+          "localTime": 5.299200000017882,
+          "at": 5615.699999988079,
+          "title": "STOP!",
+          "controls": "visible"
+        },
+        {
+          "name": "error-burst",
+          "localTime": 5.432,
+          "at": 5749,
+          "title": "STOP!",
+          "controls": "visible"
+        },
+        {
+          "name": "error-burst",
+          "localTime": 5.578700000017881,
+          "at": 5895.199999988079,
+          "title": "STOP!",
+          "controls": "visible"
+        },
+        {
+          "name": "error-burst",
+          "localTime": 5.725200000017882,
+          "at": 6042,
+          "title": "STOP!",
+          "controls": "visible"
+        },
+        {
+          "name": "error-burst",
+          "localTime": 5.8587000000178815,
+          "at": 6175.199999988079,
+          "title": "STOP!",
+          "controls": "visible"
+        },
+        {
+          "name": "error-burst",
+          "localTime": 6.005200000017881,
+          "at": 6322.0999999940395,
+          "title": "STOP!",
+          "controls": "visible"
+        },
+        {
+          "name": "error-burst",
+          "localTime": 6.15190000000596,
+          "at": 6469,
+          "title": "STOP!",
+          "controls": "visible"
+        },
+        {
+          "name": "error-burst",
+          "localTime": 6.286200000017882,
+          "at": 6602,
+          "title": "STOP!",
+          "controls": "visible"
+        },
+        {
+          "name": "collapse",
+          "localTime": 6.4055,
+          "targetTime": 6.4,
+          "at": 6722.5999999940395,
+          "title": "STOP!",
+          "controls": "visible"
+        },
+        {
+          "name": "blackout",
+          "localTime": 7.512600000023842,
+          "targetTime": 7.5,
+          "at": 7829.4000000059605,
+          "title": "STOP!",
+          "controls": "visible"
+        },
+        {
+          "name": "no-signal",
+          "localTime": 7.9125,
+          "targetTime": 7.9,
+          "at": 8229.799999982119,
+          "title": "STOP!",
+          "controls": "visible"
+        },
+        {
+          "name": "reacquire",
+          "localTime": 11.02540000000596,
+          "targetTime": 11,
+          "at": 11335.5,
+          "title": "STOP!",
+          "controls": "visible"
+        },
+        {
+          "name": "tear-burst",
+          "localTime": 11.27230000001192,
+          "targetTime": 11.265400000005961,
+          "at": 11588.90000000596,
+          "title": "STOP!",
+          "controls": "hidden"
+        },
+        {
+          "name": "settle",
+          "localTime": 12.525600000023841,
+          "targetTime": 12.5,
+          "at": 12842.199999988079,
+          "title": "STOP!",
+          "controls": "hidden"
+        },
+        {
+          "name": "complete",
+          "localTime": 13.032100000023842,
+          "targetTime": 13,
+          "at": 13349.09999999404,
+          "title": "STOP!",
+          "controls": "visible"
+        }
+      ],
+      "flag": "1",
+      "audio": "running",
+      "cues": [
+        {
+          "name": "calm",
+          "localTime": 0,
+          "targetTime": 0,
+          "wall": 105.5,
+          "title": "Link established._"
+        },
+        {
+          "name": "jack-in",
+          "wall": 303.09999999403954,
+          "title": "Link established._"
+        },
+        {
+          "name": "unease",
+          "localTime": 1.6053000000119209,
+          "targetTime": 1.6,
+          "wall": 1908.7999999821186,
+          "title": "Link established._"
+        },
+        {
+          "name": "alarm",
+          "localTime": 3.0052000000178816,
+          "targetTime": 3,
+          "wall": 3308.699999988079,
+          "title": "Link established."
+        },
+        {
+          "name": "error-burst",
+          "localTime": 3.0052000000178816,
+          "wall": 3308.9000000059605,
+          "title": "Who are you?"
+        },
+        {
+          "name": "error-burst",
+          "localTime": 3.3387000000178815,
+          "wall": 3642.0999999940395,
+          "title": "Who are you?"
+        },
+        {
+          "name": "error-burst",
+          "localTime": 3.671800000011921,
+          "wall": 3975.199999988079,
+          "title": "Who are you?"
+        },
+        {
+          "name": "error-burst",
+          "localTime": 4.005300000011921,
+          "wall": 4308.699999988079,
+          "title": "Who are you?"
+        },
+        {
+          "name": "error-burst",
+          "localTime": 4.338700000017881,
+          "wall": 4642.299999982119,
+          "title": "Who are you?"
+        },
+        {
+          "name": "panic",
+          "localTime": 4.605300000011921,
+          "targetTime": 4.6,
+          "wall": 4908.699999988079,
+          "title": "Who are you?"
+        },
+        {
+          "name": "error-burst",
+          "localTime": 4.605300000011921,
+          "wall": 4908.9000000059605,
+          "title": "STOP!"
+        },
+        {
+          "name": "error-burst",
+          "localTime": 4.725300000011921,
+          "wall": 5028.9000000059605,
+          "title": "STOP!"
+        },
+        {
+          "name": "error-burst",
+          "localTime": 4.8587000000178815,
+          "wall": 5162.0999999940395,
+          "title": "STOP!"
+        },
+        {
+          "name": "error-burst",
+          "localTime": 5.0055,
+          "wall": 5309,
+          "title": "STOP!"
+        },
+        {
+          "name": "error-burst",
+          "localTime": 5.152,
+          "wall": 5455.299999982119,
+          "title": "STOP!"
+        },
+        {
+          "name": "error-burst",
+          "localTime": 5.299200000017882,
+          "wall": 5602.699999988079,
+          "title": "STOP!"
+        },
+        {
+          "name": "error-burst",
+          "localTime": 5.432,
+          "wall": 5735.4000000059605,
+          "title": "STOP!"
+        },
+        {
+          "name": "error-burst",
+          "localTime": 5.578700000017881,
+          "wall": 5882.299999982119,
+          "title": "STOP!"
+        },
+        {
+          "name": "error-burst",
+          "localTime": 5.725200000017882,
+          "wall": 6028.5999999940395,
+          "title": "STOP!"
+        },
+        {
+          "name": "error-burst",
+          "localTime": 5.8587000000178815,
+          "wall": 6162.0999999940395,
+          "title": "STOP!"
+        },
+        {
+          "name": "error-burst",
+          "localTime": 6.005200000017881,
+          "wall": 6308.5,
+          "title": "STOP!"
+        },
+        {
+          "name": "error-burst",
+          "localTime": 6.15190000000596,
+          "wall": 6455.299999982119,
+          "title": "STOP!"
+        },
+        {
+          "name": "error-burst",
+          "localTime": 6.286200000017882,
+          "wall": 6589.5,
+          "title": "STOP!"
+        },
+        {
+          "name": "collapse",
+          "localTime": 6.4055,
+          "targetTime": 6.4,
+          "wall": 6709.199999988079,
+          "title": "STOP!"
+        },
+        {
+          "name": "blackout",
+          "localTime": 7.512600000023842,
+          "targetTime": 7.5,
+          "wall": 7816.199999988079,
+          "title": "STOP!"
+        },
+        {
+          "name": "no-signal",
+          "localTime": 7.9125,
+          "targetTime": 7.9,
+          "wall": 8215.90000000596,
+          "title": "STOP!"
+        },
+        {
+          "name": "reacquire",
+          "localTime": 11.02540000000596,
+          "targetTime": 11,
+          "wall": 11328.699999988079,
+          "title": "STOP!"
+        },
+        {
+          "name": "tear-burst",
+          "localTime": 11.27230000001192,
+          "targetTime": 11.265400000005961,
+          "wall": 11575.799999982119,
+          "title": "STOP!"
+        },
+        {
+          "name": "settle",
+          "localTime": 12.525600000023841,
+          "targetTime": 12.5,
+          "wall": 12829.199999988079,
+          "title": "STOP!"
+        },
+        {
+          "name": "complete",
+          "localTime": 13.032100000023842,
+          "targetTime": 13,
+          "wall": 13335.5,
+          "title": "STOP!"
+        }
+      ],
+      "preview": {
+        "events": [
+          {
+            "at": 0,
+            "name": "calm"
+          },
+          {
+            "at": 1.6053000000119209,
+            "name": "unease"
+          },
+          {
+            "at": 3.0052000000178816,
+            "name": "alarm"
+          },
+          {
+            "at": 3.0052000000178816,
+            "name": "error-burst"
+          },
+          {
+            "at": 3.3387000000178815,
+            "name": "error-burst"
+          },
+          {
+            "at": 3.671800000011921,
+            "name": "error-burst"
+          },
+          {
+            "at": 4.005300000011921,
+            "name": "error-burst"
+          },
+          {
+            "at": 4.338700000017881,
+            "name": "error-burst"
+          },
+          {
+            "at": 4.605300000011921,
+            "name": "panic"
+          },
+          {
+            "at": 4.605300000011921,
+            "name": "error-burst"
+          },
+          {
+            "at": 4.725300000011921,
+            "name": "error-burst"
+          },
+          {
+            "at": 4.8587000000178815,
+            "name": "error-burst"
+          },
+          {
+            "at": 5.0055,
+            "name": "error-burst"
+          },
+          {
+            "at": 5.152,
+            "name": "error-burst"
+          },
+          {
+            "at": 5.299200000017882,
+            "name": "error-burst"
+          },
+          {
+            "at": 5.432,
+            "name": "error-burst"
+          },
+          {
+            "at": 5.578700000017881,
+            "name": "error-burst"
+          },
+          {
+            "at": 5.725200000017882,
+            "name": "error-burst"
+          },
+          {
+            "at": 5.8587000000178815,
+            "name": "error-burst"
+          },
+          {
+            "at": 6.005200000017881,
+            "name": "error-burst"
+          },
+          {
+            "at": 6.15190000000596,
+            "name": "error-burst"
+          },
+          {
+            "at": 6.286200000017882,
+            "name": "error-burst"
+          },
+          {
+            "at": 6.4055,
+            "name": "collapse"
+          },
+          {
+            "at": 7.512600000023842,
+            "name": "blackout"
+          },
+          {
+            "at": 7.9125,
+            "name": "no-signal"
+          },
+          {
+            "at": 11.02540000000596,
+            "name": "reacquire"
+          },
+          {
+            "at": 11.27230000001192,
+            "name": "tear-burst"
+          },
+          {
+            "at": 12.525600000023841,
+            "name": "settle"
+          },
+          {
+            "at": 13.032100000023842,
+            "name": "complete"
+          }
+        ],
+        "duration": 15.032104166666667,
+        "peak": 0.2565748393535614,
+        "rms": 0.022822427010664587
+      }
+    },
+    {
+      "name": "real timeline fast-mobile",
+      "pass": true,
+      "network": null,
+      "cpu": 1,
+      "totalMs": 13053.199999988079,
+      "events": [
+        {
+          "name": "jack-in",
+          "at": 274.09999999403954,
+          "title": "Link established._",
+          "controls": "visible"
+        },
+        {
+          "name": "unease",
+          "localTime": 1.6079000000059605,
+          "targetTime": 1.6,
+          "at": 1894.199999988079,
+          "title": "Link established_",
+          "controls": "visible"
+        },
+        {
+          "name": "alarm",
+          "localTime": 3.0084000000059605,
+          "targetTime": 3,
+          "at": 3298.7999999821186,
+          "title": "Who are you?",
+          "controls": "visible"
+        },
+        {
+          "name": "error-burst",
+          "localTime": 3.0084000000059605,
+          "at": 3298.7999999821186,
+          "title": "Who are you?",
+          "controls": "visible"
+        },
+        {
+          "name": "error-burst",
+          "localTime": 3.342,
+          "at": 3627.5999999940395,
+          "title": "Who are you?",
+          "controls": "visible"
+        },
+        {
+          "name": "error-burst",
+          "localTime": 3.6745,
+          "at": 3960.899999976158,
+          "title": "Who are you?",
+          "controls": "visible"
+        },
+        {
+          "name": "error-burst",
+          "localTime": 4.007900000005961,
+          "at": 4294.299999982119,
+          "title": "Who are you?",
+          "controls": "visible"
+        },
+        {
+          "name": "error-burst",
+          "localTime": 4.341300000011921,
+          "at": 4627.799999982119,
+          "title": "Who are you?",
+          "controls": "visible"
+        },
+        {
+          "name": "panic",
+          "localTime": 4.6079000000059605,
+          "targetTime": 4.6,
+          "at": 4894.299999982119,
+          "title": "STOP!",
+          "controls": "visible"
+        },
+        {
+          "name": "error-burst",
+          "localTime": 4.6079000000059605,
+          "at": 4894.399999976158,
+          "title": "STOP!",
+          "controls": "visible"
+        },
+        {
+          "name": "error-burst",
+          "localTime": 4.714600000023842,
+          "at": 5000.799999982119,
+          "title": "STOP!",
+          "controls": "visible"
+        },
+        {
+          "name": "error-burst",
+          "localTime": 4.861300000011921,
+          "at": 5147.5,
+          "title": "STOP!",
+          "controls": "visible"
+        },
+        {
+          "name": "error-burst",
+          "localTime": 5.008,
+          "at": 5294.5,
+          "title": "STOP!",
+          "controls": "visible"
+        },
+        {
+          "name": "error-burst",
+          "localTime": 5.154700000017882,
+          "at": 5441,
+          "title": "STOP!",
+          "controls": "visible"
+        },
+        {
+          "name": "error-burst",
+          "localTime": 5.28790000000596,
+          "at": 5574.199999988079,
+          "title": "STOP!",
+          "controls": "visible"
+        },
+        {
+          "name": "error-burst",
+          "localTime": 5.435,
+          "at": 5720.899999976158,
+          "title": "STOP!",
+          "controls": "visible"
+        },
+        {
+          "name": "error-burst",
+          "localTime": 5.581300000011921,
+          "at": 5867.5999999940395,
+          "title": "STOP!",
+          "controls": "visible"
+        },
+        {
+          "name": "error-burst",
+          "localTime": 5.714600000023842,
+          "at": 6000.899999976158,
+          "title": "STOP!",
+          "controls": "visible"
+        },
+        {
+          "name": "error-burst",
+          "localTime": 5.8615,
+          "at": 6147.5999999940395,
+          "title": "STOP!",
+          "controls": "visible"
+        },
+        {
+          "name": "error-burst",
+          "localTime": 6.008,
+          "at": 6294.399999976158,
+          "title": "STOP!",
+          "controls": "visible"
+        },
+        {
+          "name": "error-burst",
+          "localTime": 6.154700000017882,
+          "at": 6441,
+          "title": "STOP!",
+          "controls": "visible"
+        },
+        {
+          "name": "error-burst",
+          "localTime": 6.288,
+          "at": 6574.199999988079,
+          "title": "STOP!",
+          "controls": "visible"
+        },
+        {
+          "name": "collapse",
+          "localTime": 6.40790000000596,
+          "targetTime": 6.4,
+          "at": 6694.299999982119,
+          "title": "STOP!",
+          "controls": "visible"
+        },
+        {
+          "name": "blackout",
+          "localTime": 7.501300000011921,
+          "targetTime": 7.5,
+          "at": 7787.5999999940395,
+          "title": "STOP!",
+          "controls": "visible"
+        },
+        {
+          "name": "no-signal",
+          "localTime": 7.901700000017882,
+          "targetTime": 7.9,
+          "at": 8188.199999988079,
+          "title": "STOP!",
+          "controls": "visible"
+        },
+        {
+          "name": "reacquire",
+          "localTime": 11.0215,
+          "targetTime": 11,
+          "at": 11307.799999982119,
+          "title": "STOP!",
+          "controls": "visible"
+        },
+        {
+          "name": "tear-burst",
+          "localTime": 11.2615,
+          "targetTime": 11.2615,
+          "at": 11547.699999988079,
+          "title": "STOP!",
+          "controls": "hidden"
+        },
+        {
+          "name": "settle",
+          "localTime": 12.52820000001788,
+          "targetTime": 12.5,
+          "at": 12814.399999976158,
+          "title": "STOP!",
+          "controls": "hidden"
+        }
+      ],
+      "flag": "1",
+      "audio": "running",
+      "cues": [
+        {
+          "name": "calm",
+          "localTime": 0,
+          "targetTime": 0,
+          "wall": 118.7999999821186,
+          "title": "Link established._"
+        },
+        {
+          "name": "jack-in",
+          "wall": 272.69999998807907,
+          "title": "Link established._"
+        },
+        {
+          "name": "unease",
+          "localTime": 1.6079000000059605,
+          "targetTime": 1.6,
+          "wall": 1881,
+          "title": "Link established._"
+        },
+        {
+          "name": "alarm",
+          "localTime": 3.0084000000059605,
+          "targetTime": 3,
+          "wall": 3281.5,
+          "title": "Link established."
+        },
+        {
+          "name": "error-burst",
+          "localTime": 3.0084000000059605,
+          "wall": 3282.2999999821186,
+          "title": "Who are you?"
+        },
+        {
+          "name": "error-burst",
+          "localTime": 3.342,
+          "wall": 3614.899999976158,
+          "title": "Who are you?"
+        },
+        {
+          "name": "error-burst",
+          "localTime": 3.6745,
+          "wall": 3947.5,
+          "title": "Who are you?"
+        },
+        {
+          "name": "error-burst",
+          "localTime": 4.007900000005961,
+          "wall": 4280.899999976158,
+          "title": "Who are you?"
+        },
+        {
+          "name": "error-burst",
+          "localTime": 4.341300000011921,
+          "wall": 4614.399999976158,
+          "title": "Who are you?"
+        },
+        {
+          "name": "panic",
+          "localTime": 4.6079000000059605,
+          "targetTime": 4.6,
+          "wall": 4881.0999999940395,
+          "title": "Who are you?"
+        },
+        {
+          "name": "error-burst",
+          "localTime": 4.6079000000059605,
+          "wall": 4881.399999976158,
+          "title": "STOP!"
+        },
+        {
+          "name": "error-burst",
+          "localTime": 4.714600000023842,
+          "wall": 4987.5999999940395,
+          "title": "STOP!"
+        },
+        {
+          "name": "error-burst",
+          "localTime": 4.861300000011921,
+          "wall": 5134.299999982119,
+          "title": "STOP!"
+        },
+        {
+          "name": "error-burst",
+          "localTime": 5.008,
+          "wall": 5281,
+          "title": "STOP!"
+        },
+        {
+          "name": "error-burst",
+          "localTime": 5.154700000017882,
+          "wall": 5427.5999999940395,
+          "title": "STOP!"
+        },
+        {
+          "name": "error-burst",
+          "localTime": 5.28790000000596,
+          "wall": 5561,
+          "title": "STOP!"
+        },
+        {
+          "name": "error-burst",
+          "localTime": 5.435,
+          "wall": 5708.0999999940395,
+          "title": "STOP!"
+        },
+        {
+          "name": "error-burst",
+          "localTime": 5.581300000011921,
+          "wall": 5854.299999982119,
+          "title": "STOP!"
+        },
+        {
+          "name": "error-burst",
+          "localTime": 5.714600000023842,
+          "wall": 5987.699999988079,
+          "title": "STOP!"
+        },
+        {
+          "name": "error-burst",
+          "localTime": 5.8615,
+          "wall": 6134.5,
+          "title": "STOP!"
+        },
+        {
+          "name": "error-burst",
+          "localTime": 6.008,
+          "wall": 6281,
+          "title": "STOP!"
+        },
+        {
+          "name": "error-burst",
+          "localTime": 6.154700000017882,
+          "wall": 6427.699999988079,
+          "title": "STOP!"
+        },
+        {
+          "name": "error-burst",
+          "localTime": 6.288,
+          "wall": 6561,
+          "title": "STOP!"
+        },
+        {
+          "name": "collapse",
+          "localTime": 6.40790000000596,
+          "targetTime": 6.4,
+          "wall": 6681,
+          "title": "STOP!"
+        },
+        {
+          "name": "blackout",
+          "localTime": 7.501300000011921,
+          "targetTime": 7.5,
+          "wall": 7774.399999976158,
+          "title": "STOP!"
+        },
+        {
+          "name": "no-signal",
+          "localTime": 7.901700000017882,
+          "targetTime": 7.9,
+          "wall": 8174.899999976158,
+          "title": "STOP!"
+        },
+        {
+          "name": "reacquire",
+          "localTime": 11.0215,
+          "targetTime": 11,
+          "wall": 11294.59999999404,
+          "title": "STOP!"
+        },
+        {
+          "name": "tear-burst",
+          "localTime": 11.2615,
+          "targetTime": 11.2615,
+          "wall": 11534.399999976158,
+          "title": "STOP!"
+        },
+        {
+          "name": "settle",
+          "localTime": 12.52820000001788,
+          "targetTime": 12.5,
+          "wall": 12801.199999988079,
+          "title": "STOP!"
+        },
+        {
+          "name": "complete",
+          "localTime": 13.0215,
+          "targetTime": 13,
+          "wall": 13294.399999976158,
+          "title": "STOP!"
+        }
+      ]
+    },
+    {
+      "name": "real timeline slow4g",
+      "pass": true,
+      "network": {
+        "latency": 400,
+        "downloadThroughput": 64000,
+        "uploadThroughput": 32768
+      },
+      "cpu": 4,
+      "totalMs": 13146.800000011921,
+      "events": [
+        {
+          "name": "jack-in",
+          "at": 3341.7000000178814,
+          "title": "Link established._",
+          "controls": "visible"
+        },
+        {
+          "name": "unease",
+          "localTime": 1.6003999999761582,
+          "targetTime": 1.6,
+          "at": 4949.5,
+          "title": "Link established_",
+          "controls": "visible"
+        },
+        {
+          "name": "alarm",
+          "localTime": 3.0005999999940394,
+          "targetTime": 3,
+          "at": 6370.800000011921,
+          "title": "Who are you?",
+          "controls": "visible"
+        },
+        {
+          "name": "error-burst",
+          "localTime": 3.0005999999940394,
+          "at": 6370.9000000059605,
+          "title": "Who are you?",
+          "controls": "visible"
+        },
+        {
+          "name": "error-burst",
+          "localTime": 3.333699999988079,
+          "at": 6682.300000011921,
+          "title": "Who are you?",
+          "controls": "visible"
+        },
+        {
+          "name": "error-burst",
+          "localTime": 3.668199999988079,
+          "at": 7015.800000011921,
+          "title": "Who are you?",
+          "controls": "visible"
+        },
+        {
+          "name": "error-burst",
+          "localTime": 4.000399999976159,
+          "at": 7348.9000000059605,
+          "title": "Who are you?",
+          "controls": "visible"
+        },
+        {
+          "name": "error-burst",
+          "localTime": 4.335,
+          "at": 7683,
+          "title": "Who are you?",
+          "controls": "visible"
+        },
+        {
+          "name": "panic",
+          "localTime": 4.6005999999940395,
+          "targetTime": 4.6,
+          "at": 7960.700000017881,
+          "title": "STOP!",
+          "controls": "visible"
+        },
+        {
+          "name": "error-burst",
+          "localTime": 4.6005999999940395,
+          "at": 7961,
+          "title": "STOP!",
+          "controls": "visible"
+        },
+        {
+          "name": "error-burst",
+          "localTime": 4.72059999999404,
+          "at": 8069.300000011921,
+          "title": "STOP!",
+          "controls": "visible"
+        },
+        {
+          "name": "error-burst",
+          "localTime": 4.86759999999404,
+          "at": 8216,
+          "title": "STOP!",
+          "controls": "visible"
+        },
+        {
+          "name": "error-burst",
+          "localTime": 5.0005,
+          "at": 8349.40000000596,
+          "title": "STOP!",
+          "controls": "visible"
+        },
+        {
+          "name": "error-burst",
+          "localTime": 5.147399999976158,
+          "at": 8495.800000011921,
+          "title": "STOP!",
+          "controls": "visible"
+        },
+        {
+          "name": "error-burst",
+          "localTime": 5.2938999999761585,
+          "at": 8642.40000000596,
+          "title": "STOP!",
+          "controls": "visible"
+        },
+        {
+          "name": "error-burst",
+          "localTime": 5.441299999982118,
+          "at": 8789.300000011921,
+          "title": "STOP!",
+          "controls": "visible"
+        },
+        {
+          "name": "error-burst",
+          "localTime": 5.574,
+          "at": 8922.300000011921,
+          "title": "STOP!",
+          "controls": "visible"
+        },
+        {
+          "name": "error-burst",
+          "localTime": 5.720799999982119,
+          "at": 9069,
+          "title": "STOP!",
+          "controls": "visible"
+        },
+        {
+          "name": "error-burst",
+          "localTime": 5.8672999999821185,
+          "at": 9215.800000011921,
+          "title": "STOP!",
+          "controls": "visible"
+        },
+        {
+          "name": "error-burst",
+          "localTime": 6.00059999999404,
+          "at": 9350.200000017881,
+          "title": "STOP!",
+          "controls": "visible"
+        },
+        {
+          "name": "error-burst",
+          "localTime": 6.147199999988079,
+          "at": 9496,
+          "title": "STOP!",
+          "controls": "visible"
+        },
+        {
+          "name": "error-burst",
+          "localTime": 6.324399999976158,
+          "at": 9681.09999999404,
+          "title": "STOP!",
+          "controls": "visible"
+        },
+        {
+          "name": "collapse",
+          "localTime": 6.400799999982119,
+          "targetTime": 6.4,
+          "at": 9749.300000011921,
+          "title": "STOP!",
+          "controls": "visible"
+        },
+        {
+          "name": "blackout",
+          "localTime": 7.507299999982118,
+          "targetTime": 7.5,
+          "at": 10856.90000000596,
+          "title": "STOP!",
+          "controls": "visible"
+        },
+        {
+          "name": "no-signal",
+          "localTime": 7.907199999988079,
+          "targetTime": 7.9,
+          "at": 11258.59999999404,
+          "title": "STOP!",
+          "controls": "visible"
+        },
+        {
+          "name": "reacquire",
+          "localTime": 11.075399999976158,
+          "targetTime": 11,
+          "at": 14417.700000017881,
+          "title": "STOP!",
+          "controls": "visible"
+        },
+        {
+          "name": "tear-burst",
+          "localTime": 11.3205,
+          "targetTime": 11.315399999976158,
+          "at": 14670.200000017881,
+          "title": "STOP!",
+          "controls": "hidden"
+        },
+        {
+          "name": "settle",
+          "localTime": 12.587599999994039,
+          "targetTime": 12.5,
+          "at": 15936.59999999404,
+          "title": "STOP!",
+          "controls": "hidden"
+        },
+        {
+          "name": "complete",
+          "localTime": 13.0815,
+          "targetTime": 13,
+          "at": 16473.70000001788,
+          "title": "STOP!",
+          "controls": "visible"
+        },
+        {
+          "name": "hover",
+          "at": 16473.70000001788,
+          "title": "STOP!",
+          "controls": "visible"
+        }
+      ],
+      "flag": "1",
+      "audio": "running",
+      "cues": [
+        {
+          "name": "calm",
+          "localTime": 0,
+          "targetTime": 0,
+          "wall": 3235.5999999940395,
+          "title": "Link established._"
+        },
+        {
+          "name": "jack-in",
+          "wall": 3334,
+          "title": "Link established._"
+        },
+        {
+          "name": "unease",
+          "localTime": 1.6003999999761582,
+          "targetTime": 1.6,
+          "wall": 4936.700000017881,
+          "title": "Link established._"
+        },
+        {
+          "name": "alarm",
+          "localTime": 3.0005999999940394,
+          "targetTime": 3,
+          "wall": 6336.4000000059605,
+          "title": "Link established."
+        },
+        {
+          "name": "error-burst",
+          "localTime": 3.0005999999940394,
+          "wall": 6338,
+          "title": "Who are you?"
+        },
+        {
+          "name": "error-burst",
+          "localTime": 3.333699999988079,
+          "wall": 6669.0999999940395,
+          "title": "Who are you?"
+        },
+        {
+          "name": "error-burst",
+          "localTime": 3.668199999988079,
+          "wall": 7003.800000011921,
+          "title": "Who are you?"
+        },
+        {
+          "name": "error-burst",
+          "localTime": 4.000399999976159,
+          "wall": 7336,
+          "title": "Who are you?"
+        },
+        {
+          "name": "error-burst",
+          "localTime": 4.335,
+          "wall": 7670.700000017881,
+          "title": "Who are you?"
+        },
+        {
+          "name": "panic",
+          "localTime": 4.6005999999940395,
+          "targetTime": 4.6,
+          "wall": 7936.5999999940395,
+          "title": "Who are you?"
+        },
+        {
+          "name": "error-burst",
+          "localTime": 4.6005999999940395,
+          "wall": 7937.5999999940395,
+          "title": "STOP!"
+        },
+        {
+          "name": "error-burst",
+          "localTime": 4.72059999999404,
+          "wall": 8056.300000011921,
+          "title": "STOP!"
+        },
+        {
+          "name": "error-burst",
+          "localTime": 4.86759999999404,
+          "wall": 8203.200000017881,
+          "title": "STOP!"
+        },
+        {
+          "name": "error-burst",
+          "localTime": 5.0005,
+          "wall": 8336.40000000596,
+          "title": "STOP!"
+        },
+        {
+          "name": "error-burst",
+          "localTime": 5.147399999976158,
+          "wall": 8482.90000000596,
+          "title": "STOP!"
+        },
+        {
+          "name": "error-burst",
+          "localTime": 5.2938999999761585,
+          "wall": 8629.800000011921,
+          "title": "STOP!"
+        },
+        {
+          "name": "error-burst",
+          "localTime": 5.441299999982118,
+          "wall": 8777.09999999404,
+          "title": "STOP!"
+        },
+        {
+          "name": "error-burst",
+          "localTime": 5.574,
+          "wall": 8909.700000017881,
+          "title": "STOP!"
+        },
+        {
+          "name": "error-burst",
+          "localTime": 5.720799999982119,
+          "wall": 9056.40000000596,
+          "title": "STOP!"
+        },
+        {
+          "name": "error-burst",
+          "localTime": 5.8672999999821185,
+          "wall": 9203.200000017881,
+          "title": "STOP!"
+        },
+        {
+          "name": "error-burst",
+          "localTime": 6.00059999999404,
+          "wall": 9336.09999999404,
+          "title": "STOP!"
+        },
+        {
+          "name": "error-burst",
+          "localTime": 6.147199999988079,
+          "wall": 9482.800000011921,
+          "title": "STOP!"
+        },
+        {
+          "name": "error-burst",
+          "localTime": 6.324399999976158,
+          "wall": 9660,
+          "title": "STOP!"
+        },
+        {
+          "name": "collapse",
+          "localTime": 6.400799999982119,
+          "targetTime": 6.4,
+          "wall": 9737,
+          "title": "STOP!"
+        },
+        {
+          "name": "blackout",
+          "localTime": 7.507299999982118,
+          "targetTime": 7.5,
+          "wall": 10843.40000000596,
+          "title": "STOP!"
+        },
+        {
+          "name": "no-signal",
+          "localTime": 7.907199999988079,
+          "targetTime": 7.9,
+          "wall": 11242.800000011921,
+          "title": "STOP!"
+        },
+        {
+          "name": "reacquire",
+          "localTime": 11.075399999976158,
+          "targetTime": 11,
+          "wall": 14411.200000017881,
+          "title": "STOP!"
+        },
+        {
+          "name": "tear-burst",
+          "localTime": 11.3205,
+          "targetTime": 11.315399999976158,
+          "wall": 14656.5,
+          "title": "STOP!"
+        },
+        {
+          "name": "settle",
+          "localTime": 12.587599999994039,
+          "targetTime": 12.5,
+          "wall": 15923.40000000596,
+          "title": "STOP!"
+        },
+        {
+          "name": "complete",
+          "localTime": 13.0815,
+          "targetTime": 13,
+          "wall": 16417.30000001192,
+          "title": "STOP!"
+        },
+        {
+          "name": "hover",
+          "wall": 16467.40000000596,
+          "title": "STOP!"
+        }
+      ]
+    }
+  ]
+}
