@@ -26,7 +26,7 @@ async function photographProfile(css,fonts,opening=false){
  const root=document.createElement('div');root.setAttribute('xmlns','http://www.w3.org/1999/xhtml');
  root.className=opening?'snapshot intro-active':'snapshot';
  root.style.cssText=`width:${width}px;height:${height}px;overflow:hidden;background:#0a0a0a;color:#eeeeea;font:16px/1.65 'IBM Plex Mono',monospace;--bg:#0a0a0a;--panel:#101010;--ink:#eeeeea;--muted:#a5a5a1;--line:#363636`;
- const style=document.createElement('style');style.textContent=css.replace(/body::?(before|after)/g,'.snapshot::$1')+fonts+' #page{width:100%}';root.append(style);
+ const style=document.createElement('style');style.textContent=css.replace(/(?:body|#warp)::?(before|after)/g,'.snapshot::$1')+fonts+' #page{width:100%}';root.append(style);
  if(opening){
   const live=$('#opening'),clone=live.cloneNode(true),surfaces=[...live.querySelectorAll('canvas')];
   clone.querySelectorAll('canvas').forEach((copy,i)=>{
@@ -39,7 +39,9 @@ async function photographProfile(css,fonts,opening=false){
   // The skip/sound controls live outside #opening: photograph them too so the tear carries them away.
   root.append($('#hud').cloneNode(true));
  }
- else{root.append($('#page').cloneNode(true),$('#hud').cloneNode(true));root.querySelector('#skip-opening').hidden=true;}
+ // Lay the page out in the scroller's content width (the gutter takes the rest), like the live page.
+ // The live status bar sits flat outside the curved glass and stays visible over the tear, so it is not photographed.
+ else{const frame=document.createElement('div');frame.style.width=($('#scroller')?.clientWidth??width)+'px';frame.append($('#page').cloneNode(true));root.append(frame);}
  const xml=new XMLSerializer().serializeToString(root);
  const svg=`<svg xmlns="http://www.w3.org/2000/svg" width="${width}" height="${height}"><foreignObject width="100%" height="100%">${xml}</foreignObject></svg>`;
  const image=await imageFrom('data:image/svg+xml;charset=utf-8,'+encodeURIComponent(svg));
@@ -92,7 +94,7 @@ export class Opening{
      event.preventDefault();event.stopImmediatePropagation();this.skipNow?.();return;
     }
     // The sound toggle has its own gesture, never starts the timeline accidentally.
-    if(event?.target?.closest?.('#sound-toggle,#skip-opening'))return;
+    if(event?.target?.closest?.('#sound-toggle,#skip-opening,#skip-toggle'))return;
     this.disconnect();$('#jack-in').hidden=true;this.finishConnect=null;
     if(event&&this.score.enabled)void this.score.unlock().then(this.updateSound);
     this.cue(event?'jack-in':'silent-timeout');resolve();
@@ -167,7 +169,7 @@ export class Opening{
    if(width>0){ctx.drawImage(this.lastPicture,(w-width)/2,(h-height)/2,width,height);ctx.fillStyle='#eee';ctx.fillRect((w-width)/2,h/2,Math.max(2,width),p<.76?2:3);}
   }
  }
- // holdForSkip: the first screen waits and any click/key is the same as pressing skip (used on a visitor's first visit).
+ // holdForSkip: the first screen waits and any click/key is the same as pressing skip.
  async run({holdForSkip=false}={}){
   this.holdForSkip=holdForSkip;
   const opening=$('#opening'),boot=$('#boot'),card=$('#signal-card');
@@ -193,7 +195,7 @@ export class Opening{
    this.finishConnect?.();
   };
   this.skipNow=skip;skipButton.addEventListener('click',skip);
-  opening.hidden=false;$('#page').inert=true;document.body.classList.add('intro-active');scrollTo({top:0,behavior:'instant'});
+  opening.hidden=false;$('#page').inert=true;document.body.classList.add('intro-active');document.querySelector('#scroller').scrollTo({top:0,behavior:'instant'});
   boot.hidden=false;boot.style.cssText='';$('#system-log').style.cssText='';card.hidden=true;canvas.style.visibility='hidden';
   this.setPhase('calm');this.renderText(0);
   const preparation=this.prepare().catch(async error=>{this.fallback=error.message;await this.mainReady;}).then(()=>{this.prepared=true;});
@@ -230,7 +232,7 @@ export class Opening{
          // Freeze and photograph the actual last NO SIGNAL frame before tearing it.
          if(!this.signalCapturing){
           this.signalCapturing=true;this.signalFrozenAt=this.lastSignalAt??t;
-          void this.capturePanic().then(picture=>{this.signal?.setSource(picture);}).catch(error=>{this.fallback=error.message;this.signal?.destroy();this.signal=null;}).finally(()=>{this.signalCaptured=true;});
+          void Promise.all([this.capturePanic(),this.capture()]).then(([source,picture])=>{this.signal?.setSource(source);this.picture=picture;this.signal?.setPicture(picture);}).catch(error=>{this.fallback=error.message;this.signal?.destroy();this.signal=null;}).finally(()=>{this.signalCaptured=true;});
          }
          if(this.signalCaptured)this.reacquiredAt=t;
         }else this.reacquiredAt=t;
@@ -254,7 +256,7 @@ export class Opening{
        if(this.phase==='reacquire'||this.phase==='settle'){
         const p=Math.min(1,(t-this.reacquiredAt)/tearDuration);
         if(p>=CONNECTION_TEAR.burst&&!this.burst){this.burst=true;this.cue('tear-burst',{localTime:t,targetTime:this.reacquiredAt+tearDuration*CONNECTION_TEAR.burst});}
-        if(this.signal&&!this.reduced.matches){canvas.style.visibility='visible';this.signal.render(p);}
+        if(this.signal&&!this.reduced.matches){document.body.classList.add('tearing');canvas.style.visibility='visible';this.signal.render(p);}
         // Static fallback reveals the same finished DOM without fabricated loading.
        }
        if(this.phase==='complete'){resolve();return;}
@@ -267,6 +269,7 @@ export class Opening{
    this.disconnect?.();this.disconnect=null;this.finishConnect=null;this.skipNow=null;
    cancelAnimationFrame(this.frame);removeEventListener('pointermove',pointer);removeEventListener('pointerdown',pointer);removeEventListener('keydown',key);
    skipButton.removeEventListener('click',skip);skipButton.hidden=true;skipButton.disabled=false;
+   document.body.classList.remove('tearing');
    this.collapseCanvas?.remove();this.signal?.destroy();canvas.style.visibility='hidden';this.prepared=false;this.reacquiredAt=null;
    // Release the two full-viewport captures, their embedded data, and GPU wrapper.
    this.signal=null;this.picture=null;this.lastPicture=null;this.collapseCanvas=null;

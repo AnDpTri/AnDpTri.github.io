@@ -1,0 +1,21 @@
+/* Old-TV glass. The page lives inside #warp, whose SVG filter bulges it like a convex tube. */
+#warp{position:fixed;inset:0;overflow:hidden;filter:url(#crt-warp);background:var(--bg)}
+/* The opening repaints every frame; bending it each frame halves its fps, so it plays flat. */
+.intro-active #warp{filter:none}
+/* The gutter is kept while the opening hides the scrollbar, so the page photographed for the tear has the same layout. */
+#scroller{position:absolute;inset:0;overflow-x:hidden;overflow-y:auto;overscroll-behavior:none;scrollbar-gutter:stable}
+#warp #opening{position:absolute}
+/* The status bar sits on the glass edge, outside the warp, so the bend never crops it. */
+#hud{z-index:55}
+#warp:before,#warp:after{position:absolute}
+#crt{position:fixed;inset:0;z-index:60;pointer-events:none}
+#crt .crt-bezel{position:absolute;inset:0;border-radius:2.2vmin;box-shadow:0 0 0 80px #000,inset 0 0 6vmin 0 rgba(0,0,0,.55)}
+
+/* SKIP: ON/OFF in the HUD replaces the opening's own [skip] button. */
+#skip-opening{display:none!important}
+#skip-toggle{font:inherit;white-space:nowrap;min-height:32px;padding:0 6px}
+.intro-active #skip-toggle{pointer-events:auto;background:#000}
+@media(max-width:540px){#skip-toggle{padding:0;min-height:44px}}
+/* During the tear the glass bends again, so the photographed page is curved exactly like the live one. */
+.intro-active.tearing #warp{filter:url(#crt-warp)}
+.intro-active.tearing #hud{visibility:visible}
