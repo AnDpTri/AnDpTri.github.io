@@ -30,15 +30,13 @@ const connection=new Opening({score,cue,updateSound,mainReady,activeClock,reduce
 window.__openingDebug={get phase(){return connection.phase;},get elapsed(){return connection.elapsed;},get loaded(){return connection.loaded;},get fallback(){return connection.fallback;},get webgl(){return !!connection.signal;}};
 const SEEN_KEY='thepeak.seen';
 // SKIP: on holds the opening on its first screen, where one click or key skips into the profile; off plays
-// the whole story. Without a saved choice it follows the visit: off on the first visit (a stranger gets the
-// full "Who are you?"), on from the second. Pressing it on mid-opening skips at once, like the old [skip]
-// button; the choice is remembered. Replay / logout always play the full opening. If storage is unavailable
-// visits cannot be counted, so every visit counts as the first.
+// the whole story. It is on unless the visitor has turned it off. Pressing it on mid-opening skips at once,
+// like the old [skip] button; the choice is remembered. Replay / logout always play the full opening.
 const SKIP_KEY='thepeak.skip';
 function countVisit(){try{const returning=localStorage.getItem(SEEN_KEY)==='1';localStorage.setItem(SEEN_KEY,'1');return returning;}catch{return false;}}
 function savedSkip(){try{const v=localStorage.getItem(SKIP_KEY);return v==='on'?true:v==='off'?false:null;}catch{return null;}}
-const returningVisit=countVisit();
-let skipOpening=savedSkip()??returningVisit;
+countVisit();
+let skipOpening=savedSkip()??true;
 const skipButton=$('#skip-toggle');
 function updateSkip(){skipButton.textContent=`[ SKIP: ${skipOpening?'ON':'OFF'} ]`;skipButton.setAttribute('aria-pressed',String(skipOpening));}
 skipButton.addEventListener('click',()=>{skipOpening=!skipOpening;try{localStorage.setItem(SKIP_KEY,skipOpening?'on':'off');}catch{/* private storage */}updateSkip();if(!finished){connection.holdForSkip=skipOpening;if(skipOpening)connection.skipNow?.();}});
