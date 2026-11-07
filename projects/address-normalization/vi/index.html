@@ -17,7 +17,7 @@
   </div></header>
   <main id="main">
     <header class="hero">
-      <p class="tag">Đồ án môn Xử lý ngôn ngữ tự nhiên · 10–11/2026</p>
+      <p class="tag">Dự án NLP · 10–11/2026</p>
       <h1>Chuẩn hóa địa chỉ tiếng Việt theo đơn vị hành chính mới sau sáp nhập 2025</h1>
       <p class="meta">Python, PyTorch, LightGBM, python-crfsuite</p>
     </header>
@@ -32,7 +32,7 @@
     <section class="sec"><h2>Cách hoạt động</h2>
       <ul><li><b>Phần 1, tiền xử lý:</b> Char-CNN (mạng tích chập đọc theo từng ký tự) + CRF gán cho mỗi ký tự một trong bảy vai trò; trie sinh ứng viên hành chính (khớp đúng, không dấu, viết tắt chữ đầu, sai chính tả); beam search (tìm kiếm chỉ giữ vài phương án tốt nhất ở mỗi bước) ghép các đường đi hợp lệ trên cây hành chính cũ và mới; LightGBM ranker (LambdaRank) chọn giữa các giả thuyết; tra tên cũ của huyện, xã và từ điển đường.</li><li><b>Phần 2, chuyển đổi:</b> địa chỉ cũ đã sạch được đổi sang đơn vị mới chỉ bằng tra bảng đối chiếu; xã bị chia theo nguyên tắc trên.</li><li>Mô hình đang dùng nhỏ (CNN 1,4 MB cùng bộ xếp hạng) và chạy offline. Bản demo web dùng đúng cấu hình dùng để đo.</li></ul>
     </section>
-    <figure class="fig"><a href="/projects/img/address-architecture.png"><img src="/projects/img/address-architecture.png" alt="Sơ đồ hai phần: tiền xử lý và chuyển đổi" loading="lazy"></a><figcaption>Kiến trúc hệ thống, lấy từ báo cáo môn học. Phần 1 làm sạch địa chỉ theo đơn vị cũ; phần 2 chuyển sang đơn vị mới. Ví dụ: “xom 5 xa my hung huyen my loc nam dinh” thành Xóm 5, Phường Mỹ Lộc, Tỉnh Ninh Bình.</figcaption></figure>
+    <figure class="fig"><a href="/projects/img/address-architecture.png"><img src="/projects/img/address-architecture.png" alt="Sơ đồ hai phần: tiền xử lý và chuyển đổi" loading="lazy"></a><figcaption>Kiến trúc hệ thống, lấy từ báo cáo dự án. Phần 1 làm sạch địa chỉ theo đơn vị cũ; phần 2 chuyển sang đơn vị mới. Ví dụ: “xom 5 xa my hung huyen my loc nam dinh” thành Xóm 5, Phường Mỹ Lộc, Tỉnh Ninh Bình.</figcaption></figure>
     <figure class="fig"><a href="/projects/img/address-demo.jpg"><img src="/projects/img/address-demo.jpg" alt="Giao diện demo chuẩn hóa địa chỉ" loading="lazy"></a><figcaption>Bản demo web: nhập một địa chỉ, nhận lại sáu trường có cấu trúc.</figcaption></figure>
     <section class="sec"><h2>Kết quả</h2>
       <div class="tbl"><table><thead><tr><th>Tập</th><th>Đúng cả 6 trường</th><th>Khẳng định sai mã xã</th></tr></thead><tbody>

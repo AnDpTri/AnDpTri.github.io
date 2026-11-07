@@ -17,7 +17,7 @@
   </div></header>
   <main id="main">
     <header class="hero">
-      <p class="tag">NLP course project · Oct–Nov 2026</p>
+      <p class="tag">NLP project · Oct–Nov 2026</p>
       <h1>Vietnamese Address Normalization to the New Administrative Units after the 2025 Merger</h1>
       <p class="meta">Python, PyTorch, LightGBM, python-crfsuite</p>
     </header>
@@ -32,7 +32,7 @@
     <section class="sec"><h2>How it works</h2>
       <ul><li><b>Part 1, preprocessing:</b> a Char-CNN + CRF tags each character with one of seven roles; a trie proposes administrative candidates (exact, unaccented, initials, misspelled); a beam search assembles valid paths on the old and new administrative trees; a LightGBM ranker (LambdaRank) chooses between hypotheses; old district and commune names and a street dictionary are looked up.</li><li><b>Part 2, conversion:</b> a clean old address is converted to the new units by a lookup table only; split communes follow the rule above.</li><li>The deployed model is small (a 1.4 MB CNN plus the ranker) and runs offline. A small web demo wraps the same configuration used for measurement.</li></ul>
     </section>
-    <figure class="fig"><a href="/projects/img/address-architecture.png"><img src="/projects/img/address-architecture.png" alt="Two-part pipeline diagram: preprocessing and conversion" loading="lazy"></a><figcaption>System architecture, from the course report. Part 1 cleans the address against the old units; part 2 converts it to the new ones. Example: “xom 5 xa my hung huyen my loc nam dinh” becomes Xóm 5, Phường Mỹ Lộc, Tỉnh Ninh Bình.</figcaption></figure>
+    <figure class="fig"><a href="/projects/img/address-architecture.png"><img src="/projects/img/address-architecture.png" alt="Two-part pipeline diagram: preprocessing and conversion" loading="lazy"></a><figcaption>System architecture, from the project report. Part 1 cleans the address against the old units; part 2 converts it to the new ones. Example: “xom 5 xa my hung huyen my loc nam dinh” becomes Xóm 5, Phường Mỹ Lộc, Tỉnh Ninh Bình.</figcaption></figure>
     <figure class="fig"><a href="/projects/img/address-demo.jpg"><img src="/projects/img/address-demo.jpg" alt="Web demo of the address normalizer" loading="lazy"></a><figcaption>The web demo: one address in, six structured fields out.</figcaption></figure>
     <section class="sec"><h2>Results</h2>
       <div class="tbl"><table><thead><tr><th>Set</th><th>All 6 fields correct</th><th>Confident but wrong commune</th></tr></thead><tbody>
