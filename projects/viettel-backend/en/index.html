@@ -21,22 +21,21 @@
       <h1>Backend Training Program — Viettel Software</h1>
       <p class="meta">Intern · Individual capstone · TypeScript, Express, Prisma, PostgreSQL, React</p>
     </header>
-    <section class="sec"><h2>Key results</h2><ul class="figs"><li><b>158</b><span>unit and API tests (all passing)</span></li><li><b>97%</b><span>statement coverage (branches 88%, functions 97%, lines 99%)</span></li><li><b>119</b><span>end-to-end API flows</span></li><li><b>25</b><span>UI journeys (desktop and mobile)</span></li></ul></section>
     <section class="sec mine"><h2>My part</h2><ul><li>Individual capstone: designed and built the backend, the web app, the AI agent and the tests on my own.</li></ul></section>
     <figure class="fig"><a href="/projects/img/viettel-dashboard.jpg"><img src="/projects/img/viettel-dashboard.jpg" alt="Personal finance dashboard: balances, spending chart, budgets" loading="lazy"></a><figcaption>Dashboard with demo data.</figcaption></figure>
+    <section class="sec"><h2>Main features</h2>
+      <ul><li>Accounts: registration, login and logout, refresh tokens, password reset, multi-device sessions, OAuth.</li><li>Money: wallets with balances derived from the ledger, a category tree, income, expense and transfer transactions, CSV export and receipt upload with permissions.</li><li>Planning: budgets, savings goals, recurring transactions, bill reminders, automation rules, family collaboration, reports.</li><li>Quality: unified response envelope, central error handling, OpenAPI documentation, migrations with indexes and check constraints.</li></ul>
+    </section>
     <section class="sec"><h2>The AI agent</h2>
       <p>The assistant is an agent in one chat window. DeepSeek or OpenAI decides whether to answer directly or call a tool (native tool calling); there is no local fallback model, and without a provider key the rest of the app still works. The backend, not the prompt, enforces access rights, ownership checks, confirmation and undo.</p>
       <ul><li>Read tools (search and summarize transactions, upcoming bills, history, export) run immediately; tools that change data only create a pending action with a preview.</li><li>The user confirms within 30 minutes; the backend rechecks ownership, runs the change in a transaction and stores undo data. Confirm, cancel and undo are audited without storing secrets.</li><li>A turn uses at most 4 model-tool rounds and 10 tool calls; tool errors go back to the model so it can fix its arguments or ask the user; actions are rate limited.</li><li>Conversations are stored with summaries, and long-term memory only holds facts the user confirmed. If the account language is Vietnamese but the model answers in another language, the backend asks for a rewrite instead of showing it.</li></ul>
     </section>
-    <section class="sec"><h2>Main features</h2>
-      <ul><li>Accounts: registration, login and logout, refresh tokens, password reset, multi-device sessions, OAuth.</li><li>Money: wallets with balances derived from the ledger, a category tree, income, expense and transfer transactions, CSV export and receipt upload with permissions.</li><li>Planning: budgets, savings goals, recurring transactions, bill reminders, automation rules, family collaboration, reports.</li><li>Quality: unified response envelope, central error handling, OpenAPI documentation, migrations with indexes and check constraints.</li></ul>
-    </section>
     <section class="sec"><h2>Stack</h2>
       <ul><li>TypeScript 5.9, Express 4, Prisma 6, Zod 3, PostgreSQL 17; React front end.</li><li>Docker Compose starts three services: the database, a mail inbox for development (Mailpit) and the API with the web app; it waits for the database, runs migrations and creates a test account.</li><li>Vitest and Supertest for unit and API tests (with an 80% coverage gate), Playwright for UI journeys.</li></ul>
     </section>
-    <section class="sec"><h2>Testing</h2>
+    <details class="sec more"><summary><h2>Testing</h2></summary>
       <p>158 Vitest tests cover the whole backend source except the process start-up file, and fail the build if statements, branches, functions or lines drop below 80%. Current figures: statements 97%, branches 88%, functions 97%, lines 99%. On top of that: 119 end-to-end API flows against the running stack, 25 UI journeys on desktop and mobile, a test group for the agent against a real database without calling the AI, and agent scenarios with a real provider that are skipped when no key is set.</p>
-    </section>
+    </details>
     <section class="sec"><h2>Repository and evidence</h2><ul class="linklist"><li><a href="https://github.com/AnDpTri/Viettel-Software" target="_blank" rel="noopener">Repository</a> <span aria-hidden="true">&#8599;</span></li></ul></section>
     <p class="allp"><a href="/projects/en/">All project pages</a></p>
   </main>
