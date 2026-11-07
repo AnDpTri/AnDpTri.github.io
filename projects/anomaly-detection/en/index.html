@@ -19,7 +19,7 @@
     <header class="hero">
       <p class="tag">Deep Learning course project · Oct–Nov 2026</p>
       <h1>Unsupervised Anomaly Detection and Localization on Industrial Products</h1>
-      <p class="meta">Deep Learning course project</p>
+      <p class="meta">Group project · Python, PyTorch, Anomalib, scikit-learn, Gradio</p>
     </header>
     <section class="sec"><h2>Key results</h2><ul class="figs"><li><b>0.937</b><span>PatchCore mean image-AUROC over 9 categories</span></li><li><b>0.969</b><span>PatchCore mean pixel-AUROC</span></li><li><b>75%</b><span>of defective images caught at a 6% false-alarm rate (PatchCore, threshold set on good images)</span></li><li><b>9</b><span>categories from MVTec AD, MVTec AD 2 and VisA</span></li></ul></section>
     <section class="sec mine"><h2>My part</h2><ul><li>Wrote the Autoencoder in PyTorch, the demo application and the repository guide.</li><li>Took part in the shared evaluation protocol and the PatchCore runs. All three methods were implemented by the group.</li></ul></section>
@@ -37,12 +37,13 @@
 </tbody></table></div>
       <ul><li>PatchCore: pixel-AUROC 0.969 and AUPRO 0.848. It is the only method that stays usable at a fixed threshold: 75% of defective images caught with 6% false alarms.</li><li>PaDiM is clearly worse on screw, the only category with free rotation, as expected from tying statistics to position. The Autoencoder is the weakest on MVTec AD but beats PaDiM on the VisA circuit boards (0.925), where a defect changes the colour of a whole region.</li></ul>
     </section>
-    <section class="sec"><h2>Five follow-up experiments</h2>
+    <figure class="fig"><a href="/projects/img/anomaly-transistor.jpg"><img src="/projects/img/anomaly-transistor.jpg" alt="Transistor image, defect mask and three anomaly heatmaps" loading="lazy"></a><figcaption>A transistor with a misplaced part: the image, the true defect mask and the anomaly map of each method. At their thresholds PaDiM and PatchCore flag the image as defective; the Autoencoder misses it.</figcaption></figure>
+    <details class="sec more"><summary><h2>Five follow-up experiments</h2></summary>
       <ul><li><b>Contaminated training set (5–20% defective images):</b> all three methods stay fairly robust; PaDiM is the most robust, PatchCore declines steadily.</li><li><b>Few-shot:</b> PatchCore reaches 0.966 AUROC on transistor with only 4 training images. For screw, below about 8 images every method scores under 0.5; the cause is rotation and brightness in the data, not the number of images. Aligning screw orientation helps PaDiM (0.722 to 0.835) and hurts PatchCore (0.955 to 0.915).</li><li><b>Model of product A used on product B:</b> not usable. Off the diagonal, AUROC is 0.3–0.7 and every good image of the new product is flagged (false-positive rate 1.00).</li><li><b>Lighting and noise shifts:</b> failure modes differ. The Autoencoder fails on brightness changes, PaDiM on noise and position shifts (it collapses on the vial category under over- and under-exposure), PatchCore on blur and very dark images. In many cases AUROC barely changes while the false-alarm rate at the fixed threshold goes to 100%.</li><li><b>By defect type:</b> a per-type breakdown with anomaly-map evidence for each failure; see the report.</li></ul>
-    </section>
-    <section class="sec"><h2>Limits and how to read this</h2>
+    </details>
+    <details class="sec more"><summary><h2>Limits and how to read this</h2></summary>
       <ul><li>Everything is evaluated on stored images, not on a production line. Thresholds are set on good images only.</li><li>The Autoencoder results vary more between seeds than the drops measured in some follow-up experiments, so those comparisons are weaker for it.</li><li>Earlier versions of this project used all 15 MVTec AD categories; the current report replaces them with the 9-category study above, and the two sets of numbers should not be mixed.</li></ul>
-    </section>
+    </details>
     <section class="sec"><h2>Repository and evidence</h2><ul class="linklist"><li><a href="https://github.com/AnDpTri/mvtec-anomaly-detection" target="_blank" rel="noopener">Repository</a> <span aria-hidden="true">&#8599;</span></li></ul></section>
     <p class="allp"><a href="/projects/en/">All project pages</a></p>
   </main>

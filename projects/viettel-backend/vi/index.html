@@ -19,10 +19,11 @@
     <header class="hero">
       <p class="tag">Chương trình đào tạo · 07–10/2026</p>
       <h1>Chương trình đào tạo backend — Viettel Software</h1>
-      <p class="meta">Chương trình đào tạo backend, hệ thực tập sinh · Đồ án cá nhân</p>
+      <p class="meta">Thực tập sinh · Đồ án cá nhân · TypeScript, Express, Prisma, PostgreSQL, React</p>
     </header>
     <section class="sec"><h2>Kết quả chính</h2><ul class="figs"><li><b>158</b><span>test đơn vị và API (đều đạt)</span></li><li><b>97%</b><span>độ phủ câu lệnh (nhánh 88%, hàm 97%, dòng 99%)</span></li><li><b>119</b><span>luồng API end-to-end</span></li><li><b>25</b><span>hành trình giao diện (máy tính và điện thoại)</span></li></ul></section>
     <section class="sec mine"><h2>Phần tôi làm</h2><ul><li>Đồ án cá nhân: tự thiết kế và xây backend, web app, AI agent và bộ test.</li></ul></section>
+    <figure class="fig"><a href="/projects/img/viettel-dashboard.jpg"><img src="/projects/img/viettel-dashboard.jpg" alt="Trang tổng quan tài chính: số dư, biểu đồ chi tiêu, ngân sách" loading="lazy"></a><figcaption>Trang tổng quan với dữ liệu demo.</figcaption></figure>
     <section class="sec"><h2>AI agent</h2>
       <p>Trợ lý là một agent trong một khung chat. DeepSeek hoặc OpenAI tự quyết định trả lời trực tiếp hay gọi công cụ (native tool calling); không có mô hình dự phòng chạy local, và thiếu khóa nhà cung cấp thì phần còn lại của ứng dụng vẫn chạy. Backend, không phải prompt, cưỡng chế quyền truy cập, kiểm tra sở hữu, xác nhận và hoàn tác.</p>
       <ul><li>Công cụ đọc (tìm và tổng hợp giao dịch, hóa đơn sắp đến hạn, lịch sử, xuất dữ liệu) chạy ngay; công cụ thay đổi dữ liệu chỉ tạo một hành động chờ kèm bản xem trước.</li><li>Người dùng xác nhận trong 30 phút; backend kiểm tra lại sở hữu, thực thi trong transaction và lưu dữ liệu hoàn tác. Xác nhận, hủy và hoàn tác đều được ghi nhật ký mà không lưu bí mật.</li><li>Mỗi lượt dùng tối đa 4 vòng mô hình – công cụ và 10 lời gọi công cụ; lỗi của công cụ được trả lại cho mô hình để tự sửa đối số hoặc hỏi thêm; thao tác bị giới hạn tốc độ.</li><li>Hội thoại được lưu kèm tóm tắt, bộ nhớ dài hạn chỉ giữ điều người dùng đã xác nhận. Nếu tài khoản dùng tiếng Việt mà mô hình trả lời bằng ngôn ngữ khác, backend yêu cầu viết lại thay vì hiển thị.</li></ul>
@@ -34,7 +35,7 @@
       <ul><li>TypeScript 5.9, Express 4, Prisma 6, Zod 3, PostgreSQL 17; front end React.</li><li>Docker Compose dựng ba dịch vụ: cơ sở dữ liệu, hộp thư thử khi phát triển (Mailpit) và API kèm web app; nó chờ database sẵn sàng, chạy migration và tạo tài khoản thử.</li><li>Vitest và Supertest cho test đơn vị và API (có cổng độ phủ 80%), Playwright cho các hành trình giao diện.</li></ul>
     </section>
     <section class="sec"><h2>Kiểm thử</h2>
-      <p>158 test Vitest bao phủ toàn bộ mã backend trừ file khởi động tiến trình, và làm hỏng build nếu câu lệnh, nhánh, hàm hoặc dòng xuống dưới 80%. Số hiện tại: câu lệnh 97%, nhánh 88%, hàm 97%, dòng 99%. Ngoài ra có 119 luồng API end-to-end trên hệ thống đang chạy, 25 hành trình giao diện trên máy tính và điện thoại, một nhóm test cho agent trên database thật mà không gọi AI, và các kịch bản agent với nhà cung cấp thật (tự bỏ qua khi chưa có khóa).</p>
+      <p>158 test Vitest bao phủ toàn bộ mã backend trừ file khởi động tiến trình, và làm hỏng build nếu câu lệnh, nhánh, hàm hoặc dòng xuống dưới 80%. Số hiện tại: câu lệnh 97%, nhánh 88%, hàm 97%, dòng 99%. Ngoài ra có 119 luồng API end-to-end (gọi API thật qua cả hệ thống tới cơ sở dữ liệu) trên hệ thống đang chạy, 25 hành trình giao diện trên máy tính và điện thoại, một nhóm test cho agent trên database thật mà không gọi AI, và các kịch bản agent với nhà cung cấp thật (tự bỏ qua khi chưa có khóa).</p>
     </section>
     <section class="sec"><h2>Mã nguồn và minh chứng</h2><ul class="linklist"><li><a href="https://github.com/AnDpTri/Viettel-Software" target="_blank" rel="noopener">Repo</a> <span aria-hidden="true">&#8599;</span></li></ul></section>
     <p class="allp"><a href="/projects/vi/">Tất cả trang dự án</a></p>

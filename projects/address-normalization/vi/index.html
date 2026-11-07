@@ -19,7 +19,7 @@
     <header class="hero">
       <p class="tag">Đồ án môn Xử lý ngôn ngữ tự nhiên · 10–11/2026</p>
       <h1>Chuẩn hóa địa chỉ tiếng Việt theo đơn vị hành chính mới sau sáp nhập 2025</h1>
-      <p class="meta">Đồ án môn Xử lý ngôn ngữ tự nhiên · Python · PyTorch · LightGBM · python-crfsuite</p>
+      <p class="meta">Python, PyTorch, LightGBM, python-crfsuite</p>
     </header>
     <section class="sec"><h2>Kết quả chính</h2><ul class="figs"><li><b>86,8%</b><span>đúng đủ 6 trường trên tập dev 400 địa chỉ OSM thật</span></li><li><b>69,8%</b><span>trên tập test riêng, nhãn chưa duyệt tay</span></li><li><b>~75 ms</b><span>mỗi địa chỉ, một luồng CPU laptop</span></li><li><b>34</b><span>tỉnh, không còn cấp huyện</span></li></ul></section>
     <section class="sec mine"><h2>Phần tôi làm</h2><ul><li>Tự xây toàn bộ hệ thống và bản demo web; mọi commit trong repo đều là của tôi.</li><li>Chạy các so sánh trong mục “Những hướng đã thử và bỏ” và ghi lại cách đánh giá cho từng con số được báo cáo.</li></ul></section>
@@ -30,26 +30,28 @@
       <ul><li>Thiếu thông tin thì để trống, không đoán bừa.</li><li>Có thông tin nhưng mơ hồ (ví dụ tên trùng nhiều nơi) thì trả kết quả tốt nhất và gắn cờ cảnh báo.</li><li>Cấp huyện chỉ dùng để xác định đúng xã và tỉnh, không xuất ra đầu ra.</li><li>Xã cũ bị chia thành nhiều xã mới được phân giải theo tên đường nếu bảng đối chiếu có bằng chứng; không thì để trống, gắn cờ và liệt kê các ứng viên.</li></ul>
     </section>
     <section class="sec"><h2>Cách hoạt động</h2>
-      <ul><li><b>Phần 1, tiền xử lý:</b> Char-CNN + CRF gán cho mỗi ký tự một trong bảy vai trò; trie sinh ứng viên hành chính (khớp đúng, không dấu, viết tắt chữ đầu, sai chính tả); beam search ghép các đường đi hợp lệ trên cây hành chính cũ và mới; LightGBM ranker (LambdaRank) chọn giữa các giả thuyết; tra tên cũ của huyện, xã và từ điển đường.</li><li><b>Phần 2, chuyển đổi:</b> địa chỉ cũ đã sạch được đổi sang đơn vị mới chỉ bằng tra bảng đối chiếu; xã bị chia theo nguyên tắc trên.</li><li>Mô hình đang dùng nhỏ (CNN 1,4 MB cùng bộ xếp hạng) và chạy offline. Bản demo web dùng đúng cấu hình dùng để đo.</li></ul>
+      <ul><li><b>Phần 1, tiền xử lý:</b> Char-CNN (mạng tích chập đọc theo từng ký tự) + CRF gán cho mỗi ký tự một trong bảy vai trò; trie sinh ứng viên hành chính (khớp đúng, không dấu, viết tắt chữ đầu, sai chính tả); beam search (tìm kiếm chỉ giữ vài phương án tốt nhất ở mỗi bước) ghép các đường đi hợp lệ trên cây hành chính cũ và mới; LightGBM ranker (LambdaRank) chọn giữa các giả thuyết; tra tên cũ của huyện, xã và từ điển đường.</li><li><b>Phần 2, chuyển đổi:</b> địa chỉ cũ đã sạch được đổi sang đơn vị mới chỉ bằng tra bảng đối chiếu; xã bị chia theo nguyên tắc trên.</li><li>Mô hình đang dùng nhỏ (CNN 1,4 MB cùng bộ xếp hạng) và chạy offline. Bản demo web dùng đúng cấu hình dùng để đo.</li></ul>
     </section>
+    <figure class="fig"><a href="/projects/img/address-architecture.png"><img src="/projects/img/address-architecture.png" alt="Sơ đồ hai phần: tiền xử lý và chuyển đổi" loading="lazy"></a><figcaption>Kiến trúc hệ thống, lấy từ báo cáo môn học. Phần 1 làm sạch địa chỉ theo đơn vị cũ; phần 2 chuyển sang đơn vị mới. Ví dụ: “xom 5 xa my hung huyen my loc nam dinh” thành Xóm 5, Phường Mỹ Lộc, Tỉnh Ninh Bình.</figcaption></figure>
+    <figure class="fig"><a href="/projects/img/address-demo.jpg"><img src="/projects/img/address-demo.jpg" alt="Giao diện demo chuẩn hóa địa chỉ" loading="lazy"></a><figcaption>Bản demo web: nhập một địa chỉ, nhận lại sáu trường có cấu trúc.</figcaption></figure>
     <section class="sec"><h2>Kết quả</h2>
       <div class="tbl"><table><thead><tr><th>Tập</th><th>Đúng cả 6 trường</th><th>Khẳng định sai mã xã</th></tr></thead><tbody>
-<tr><td>dev_osm_that: 400 địa chỉ OSM thật (số chính)</td><td>86,8% (95% CI 83,1–89,7)</td><td>12 (3,0%)</td></tr>
+<tr><td>dev_osm_that: 400 địa chỉ OSM (OpenStreetMap) thật (số chính)</td><td>86,8% (95% CI 83,1–89,7)</td><td>12 (3,0%)</td></tr>
 <tr><td>dev_sinh: 1.200 địa chỉ sinh từ danh mục</td><td>97,2%</td><td>0</td></tr>
 <tr><td>Bộ khó (1.500)</td><td>86,9%</td><td>14 (0,9%)</td></tr>
 <tr><td>test400 (nhãn do AI gán, chưa duyệt tay)</td><td>69,8%</td><td>37 (9,2%)</td></tr>
 </tbody></table></div>
       <p>Tốc độ đo trên một luồng CPU laptop với 300 câu dev, mô hình đã nạp sẵn: trung bình 74,9 ms, trung vị 72,8 ms, phân vị 95 là 138,9 ms.</p>
     </section>
-    <section class="sec"><h2>Cách đọc các con số</h2>
-      <ul><li>86,8% là số trên tập dev. Tập dev đã được dùng để chọn cấu hình nên không phải phép đo độc lập.</li><li>Bộ sinh và bộ khó do cùng một trợ lý AI viết như dữ liệu huấn luyện (khác seed và tên đường), nên mức tăng trên đó có thể bị thổi phồng.</li><li>test400 có nhãn do AI gán chưa ai duyệt và đã bị mở nhiều lần, nên không còn là tập giữ kín. Bước tiếp theo là một tập giữ kín được duyệt tay.</li></ul>
-    </section>
-    <section class="sec"><h2>Những hướng đã thử và bỏ</h2>
+    <details class="sec more"><summary><h2>Cách đọc các con số</h2></summary>
+      <ul><li>86,8% là số trên tập dev (tập dùng để chọn cấu hình). Tập dev đã được dùng để chọn cấu hình nên không phải phép đo độc lập.</li><li>Bộ sinh và bộ khó do cùng một trợ lý AI viết như dữ liệu huấn luyện (khác seed và tên đường), nên mức tăng trên đó có thể bị thổi phồng.</li><li>test400 có nhãn do AI gán chưa ai duyệt và đã bị mở nhiều lần, nên không còn là tập giữ kín. Bước tiếp theo là một tập giữ kín được duyệt tay.</li></ul>
+    </details>
+    <details class="sec more"><summary><h2>Những hướng đã thử và bỏ</h2></summary>
       <ul><li>ViDeBERTa-xsmall: kém CNN 1–2 điểm ở mọi phép đo và chậm gần gấp đôi trên CPU (117 ms so với 54 ms mỗi câu) nên bị bỏ. PhoBERT dừng ở khâu chuẩn bị.</li><li>Huấn luyện thêm 15.000 địa chỉ OSM gán nhãn từ thẻ làm kết quả test tệ đi (248 xuống 227 đúng), vì OSM gộp số nhà vào tên đường.</li><li>Thêm 10.000 địa chỉ nhiễu tổng hợp đưa bộ khó từ 57,2% lên 82,7% trong khi dev giữ nguyên; hướng này được giữ.</li><li>Bảng tra giải xã bị chia theo tên đường (197 dòng, 66 xã) giữ đúng 280/280 điểm kiểm tra.</li></ul>
-    </section>
-    <section class="sec"><h2>Lỗi đã biết</h2>
+    </details>
+    <details class="sec more"><summary><h2>Lỗi đã biết</h2></summary>
       <ul><li>Ranh giới thôn xóm khi không có dấu phẩy (“xóm 5 xã mỹ hưng huyện…”); bản sửa đang dở ở nhánh riêng.</li><li>Viết tắt bỏ nguyên âm (“hnoi”) chưa tra được, đang để trống.</li><li>Điểm yếu trên bộ phủ rộng: nhóm xã mới (khoảng 86% đúng), tên cũ, và địa chỉ chỉ ghi tên xã.</li></ul>
-    </section>
+    </details>
     <section class="sec"><h2>Mã nguồn và minh chứng</h2><ul class="linklist"><li><a href="https://github.com/AnDpTri/vietnamese-address-normalization" target="_blank" rel="noopener">Repo</a> <span aria-hidden="true">&#8599;</span></li></ul></section>
     <p class="allp"><a href="/projects/vi/">Tất cả trang dự án</a></p>
   </main>
