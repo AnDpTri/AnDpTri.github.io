@@ -2,29 +2,28 @@
 <html lang="vi">
 <head>
   <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#ffffff">
+  <meta name="theme-color" content="#00366D">
   <meta name="description" content="Hệ thống đọc ảnh bản đồ khuôn viên và câu lệnh tiếng Việt có nhiễu, rồi dự đoán bước đi đầu tiên của robot giao hàng. Làm cho vòng loại Phenikaa AI Hackathon 2026 và tiếp tục ở vòng chung kết.">
   <title>Phenikaa Campus Courier 2026 — AI giao hàng đa phương thức — Đặng Hoàng An</title>
-  <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
   <link rel="alternate" hreflang="en" href="/projects/phenikaa-courier/en/">
   <link rel="alternate" hreflang="vi" href="/projects/phenikaa-courier/vi/">
   <link rel="stylesheet" href="/projects/project.css">
 </head>
 <body>
   <a class="skip" href="#main">Bỏ qua điều hướng</a>
-  <header class="bar">
-    <a class="back" href="/projects/vi/">← Dự án</a>
+  <header class="top"><div class="top-in">
+    <p class="who"><b>Đặng Hoàng An</b><span>Chi tiết dự án</span></p>
     <nav class="langs" aria-label="Ngôn ngữ"><a href="/projects/phenikaa-courier/en/" lang="en" hreflang="en">EN</a><a href="/projects/phenikaa-courier/vi/" lang="vi" hreflang="vi" aria-current="true">VI</a></nav>
-  </header>
+  </div></header>
   <main id="main">
     <header class="hero">
-      <p class="eyebrow">Hackathon · 10/2026</p>
+      <p class="tag">Hackathon · 10/2026</p>
       <h1>Phenikaa Campus Courier 2026 — AI giao hàng đa phương thức</h1>
-      <p class="lead">Hệ thống đọc ảnh bản đồ khuôn viên và câu lệnh tiếng Việt có nhiễu, rồi dự đoán bước đi đầu tiên của robot giao hàng. Làm cho vòng loại Phenikaa AI Hackathon 2026 và tiếp tục ở vòng chung kết.</p>
-      <p class="meta">Đội Devil May Cry (đội trưởng) · Vòng loại: tự làm trong khoảng 48 giờ, có AI hỗ trợ viết mã · Chung kết: hạng 5 trong 11 đội</p>
+      <p class="meta">Đội Devil May Cry (đội trưởng) · Chung kết: hạng 5 trong 11 đội</p>
     </header>
-    <section class="sec"><h2>Tóm tắt nhanh</h2><ul class="figs"><li><b>71,17%</b><span>macro accuracy cao nhất trên bảng vòng loại (khoảng 30% cảnh)</span></li><li><b>5 / 11</b><span>chung kết, điểm tổng hợp (0,6733)</span></li><li><b>0,816</b><span>điểm của đội ở Bài 1 chung kết, hạng 5</span></li><li><b>48 h</b><span>thời gian làm vòng loại</span></li></ul></section>
-    <section class="sec"><h2>Bài toán</h2>
+    <section class="sec"><h2>Kết quả chính</h2><ul class="figs"><li><b>71,17%</b><span>macro accuracy cao nhất trên bảng vòng loại (khoảng 30% cảnh)</span></li><li><b>5 / 11</b><span>chung kết, điểm tổng hợp (0,6733)</span></li><li><b>0,816</b><span>điểm của đội ở Bài 1 chung kết, hạng 5</span></li><li><b>48 h</b><span>thời gian làm vòng loại</span></li></ul></section>
+    <section class="sec mine"><h2>Phần tôi làm</h2><ul><li>Đội trưởng đội Devil May Cry.</li><li>Vòng loại: một tôi xây toàn bộ hệ thống trong khoảng 48 giờ, bắt đầu từ thư mục trống: đọc bản đồ, phân tích câu lệnh tiếng Việt và bộ giải đa robot.</li><li>AI coding agent hỗ trợ việc cài đặt và thí nghiệm; tôi phụ trách kiến trúc, chọn thí nghiệm, tích hợp và nộp bài.</li><li>Chung kết, Bài 1 (Robot bí ẩn): viết bộ lập lộ trình cho họ chiến thuật của robot.</li></ul></section>
+    <section class="sec"><h2>Bài toán cụ thể</h2>
       <p>Mỗi cảnh gồm ảnh bản đồ khuôn viên (lưới đường, địa điểm, giao thông, cầu thang, đường một chiều, đường cấm, thời tiết, vị trí và hướng của robot), một câu lệnh giao hàng bằng tiếng Việt và mã robot từ 0 đến 9. Bản đồ có thể bị xoay, làm mờ, nén JPEG hoặc vẽ theo kiểu khác, chú giải đổi theo từng ảnh. Câu lệnh có thể thiếu dấu, gõ sai, tự sửa, phủ định và có thể có điểm dừng trung gian. Mỗi robot theo một chiến thuật cố định nhưng ẩn.</p>
       <p>Đầu ra là bước đi đầu tiên của robot (lên, xuống, trái, phải). Tập test có 1.200 cảnh, mỗi cảnh mỗi robot một quan sát, tức 12.000 dự đoán. Thước đo là macro accuracy trên mười robot.</p>
     </section>
@@ -32,7 +31,6 @@
       <ul><li><b>Thị giác máy tính.</b> Một detector nhỏ kiểu CenterNet tìm giao lộ, ô chú giải và biểu tượng thời tiết; một bước hình học ước lượng góc xoay và khớp lưới; hai bộ phân loại ảnh cắt đọc cạnh (đường, cầu thang, một chiều) và nút (loại địa điểm, hướng robot). Ý nghĩa của đường được đọc từ chú giải của chính ảnh đó. Dựng lại đúng toàn cảnh trên 300 cảnh validation: 85,67% (257/300).</li><li><b>NLP tiếng Việt.</b> Bộ phân tích theo luật (từ điển, xử lý gõ sai, tín hiệu phủ định và tự sửa, biểu thức không gian, điểm dừng trung gian) kết hợp bộ phân tích neural đa tác vụ nhỏ (BiGRU hai lớp). Bộ luật là điểm xuất phát; kết quả neural chỉ điền chỗ trống hoặc ghi đè khi vượt ngưỡng tin cậy. Bước gắn với bản đồ giải các cụm như “ địa điểm phía bắc nhất” dựa trên các địa điểm mà bước thị giác tìm được.</li><li><b>Bộ giải đa robot.</b> Đồ thị đường có hướng hợp lệ (đường đóng bị chặn, đường một chiều được tôn trọng, chỉ một robot được đi cầu thang), công cụ tìm đường ngắn nhất dưới 48 giả thuyết chi phí, và một bộ phân loại gradient boosting cho mỗi robot để xếp hạng các bước đi đầu hợp lệ (219 đặc trưng mỗi ứng viên). Bước sửa đồ thị nới ràng buộc khi nhiệm vụ đã phân tích không thể hoàn thành trên đồ thị suy ra.</li></ul>
     </section>
     <section class="sec"><h2>Tiến trình vòng loại</h2>
-      <p>Bài nộp đầu tiên không phải độ chính xác xuất phát của một mô hình có sẵn: dự án bắt đầu từ thư mục trống. Bước nhảy từ 65,28% lên 70,39% làm đổi 1.148 trong 12.000 hành động đầu ra; đây là so sánh hai cấu hình, chứ không chứng minh từng sửa đổi đều đúng.</p>
       <div class="tbl"><table><thead><tr><th>Bước</th><th>Macro accuracy trên bảng</th></tr></thead><tbody>
 <tr><td>Bài nộp đầu tiên chạy trọn vẹn</td><td>52,39%</td></tr>
 <tr><td>Bộ xếp hạng bước đi ứng viên</td><td>55,67%</td></tr>
@@ -41,20 +39,21 @@
 <tr><td>Neural ghi đè điểm dừng: tắt và bật</td><td>65,28% → 70,39%</td></tr>
 <tr><td>Tổ hợp cuối + bộ giải năm seed</td><td>71,17%</td></tr>
 </tbody></table></div>
+      <p>Bài nộp đầu tiên không phải độ chính xác xuất phát của một mô hình có sẵn: dự án bắt đầu từ thư mục trống. Bước nhảy từ 65,28% lên 70,39% làm đổi 1.148 trong 12.000 hành động đầu ra; đây là so sánh hai cấu hình, chứ không chứng minh từng sửa đổi đều đúng.</p>
     </section>
     <section class="sec"><h2>Chung kết, Bài 1 (Robot bí ẩn)</h2>
-      <p>Ở chung kết mỗi tập là một robot mới với chiến thuật cố định nhưng chưa biết, lấy từ một họ công khai gồm 3.840 chiến thuật. Đội được xem năm chuyến mẫu (bản đồ có vẽ lộ trình của robot cùng yêu cầu tiếng Việt) và phải dự đoán cả lộ trình trong sáu câu hỏi trên các bản đồ khác. Mình viết bộ lập lộ trình cho họ chiến thuật này: khi biết đúng chiến thuật, nó khớp 100% lộ trình ở 1.500 tập train và 300 tập validation.</p>
+      <p>Ở chung kết mỗi tập là một robot mới với chiến thuật cố định nhưng chưa biết, lấy từ một họ công khai gồm 3.840 chiến thuật. Đội được xem năm chuyến mẫu (bản đồ có vẽ lộ trình của robot cùng yêu cầu tiếng Việt) và phải dự đoán cả lộ trình trong sáu câu hỏi trên các bản đồ khác. Tôi viết bộ lập lộ trình cho họ chiến thuật này: khi biết đúng chiến thuật, nó khớp 100% lộ trình ở 1.500 tập train và 300 tập validation.</p>
       <p>Cần đọc con số này cho đúng: đó là trần của bộ lập lộ trình khi đã biết chiến thuật. Bước đọc lộ trình vẽ trên ảnh mẫu chưa hoàn thành, nên kết quả đầu cuối là điểm trên bảng xếp hạng: 0,8159 ở Bài 1 (hạng 5) và 0,6733 tổng hợp (hạng 5 trong 11).</p>
     </section>
     <section class="sec"><h2>Cách đọc kết quả</h2>
-      <ul><li>Điểm hiển thị trong vòng loại chỉ dùng khoảng 30% số cảnh được chấm; xếp hạng cuối dùng phần còn lại. Cuối vòng loại điểm trong cuộc thi xếp thứ 13 trên 25, và đội vào chung kết.</li><li>Điểm validation offline không phản ánh hoàn toàn bảng xếp hạng: một thay đổi ở bước thị giác làm validation tốt hơn nhưng điểm trên bảng lại thấp hơn.</li><li>AI coding agent hỗ trợ việc cài đặt và thí nghiệm; mình phụ trách kiến trúc, chọn thí nghiệm, tích hợp và nộp bài. Đây là pipeline thử nghiệm cho hackathon, không phải hệ thống robot đã được kiểm định để dùng thật.</li><li>Repo công khai chỉ ghi lại vòng loại; code vòng chung kết nằm trong một repo riêng ở chế độ private.</li></ul>
+      <ul><li>Điểm hiển thị trong vòng loại chỉ dùng khoảng 30% số cảnh được chấm; xếp hạng cuối dùng phần còn lại. Cuối vòng loại điểm trong cuộc thi xếp thứ 13 trên 25, và đội vào chung kết.</li><li>Điểm validation offline không phản ánh hoàn toàn bảng xếp hạng: một thay đổi ở bước thị giác làm validation tốt hơn nhưng điểm trên bảng lại thấp hơn.</li><li>Repo công khai chỉ ghi lại vòng loại; code vòng chung kết nằm trong một repo riêng ở chế độ private.</li></ul>
     </section>
-    <section class="sec"><h2>Liên kết</h2><ul class="linklist"><li><a href="https://github.com/AnDpTri/phenikaa-ai-hackathon-2026" target="_blank" rel="noopener">Repo vòng loại</a> <span aria-hidden="true">&#8599;</span></li><li><a href="https://aihackathon.phenikaa-uni.edu.vn/leaderboard/FINAL" target="_blank" rel="noopener">Bảng xếp hạng chung kết (chính thức)</a> <span aria-hidden="true">&#8599;</span></li><li><a href="/minh-chung/">Trang minh chứng</a></li></ul></section>
-    <p class="allp"><a href="/projects/vi/">Tất cả dự án &rarr;</a></p>
+    <section class="sec"><h2>Mã nguồn và minh chứng</h2><ul class="linklist"><li><a href="https://github.com/AnDpTri/phenikaa-ai-hackathon-2026" target="_blank" rel="noopener">Repo vòng loại</a> <span aria-hidden="true">&#8599;</span></li><li><a href="https://aihackathon.phenikaa-uni.edu.vn/leaderboard/FINAL" target="_blank" rel="noopener">Bảng xếp hạng chung kết (chính thức)</a> <span aria-hidden="true">&#8599;</span></li><li><a href="/minh-chung/">Trang minh chứng</a></li></ul></section>
+    <p class="allp"><a href="/projects/vi/">Tất cả trang dự án</a></p>
   </main>
   <footer class="foot">
-    <p>Số liệu lấy từ báo cáo và repo của từng dự án. Thấy chỗ nào chưa khớp, nhắn <a href="mailto:andanghoang0@gmail.com">andanghoang0@gmail.com</a>.</p>
-    <p><a href="https://github.com/AnDpTri">github.com/AnDpTri</a> · <a href="/">andptri.github.io</a></p>
+    <p>Số liệu lấy từ báo cáo và repo của từng dự án.</p>
+    <p><a href="mailto:andanghoang0@gmail.com">andanghoang0@gmail.com</a> · <a href="https://www.linkedin.com/in/hoang-an-78527b354/">LinkedIn</a> · <a href="https://github.com/AnDpTri">GitHub</a></p>
   </footer>
 </body>
 </html>

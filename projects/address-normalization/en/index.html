@@ -2,29 +2,28 @@
 <html lang="en">
 <head>
   <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#ffffff">
+  <meta name="theme-color" content="#00366D">
   <meta name="description" content="An offline, CPU-only system (no LLM, no external API) that turns free-form Vietnamese addresses into structured addresses under the administrative units in effect since 1 July 2025: 34 provinces, no district level.">
   <title>Vietnamese Address Normalization to the New Administrative Units after the 2025 Merger — Đặng Hoàng An</title>
-  <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
   <link rel="alternate" hreflang="en" href="/projects/address-normalization/en/">
   <link rel="alternate" hreflang="vi" href="/projects/address-normalization/vi/">
   <link rel="stylesheet" href="/projects/project.css">
 </head>
 <body>
   <a class="skip" href="#main">Skip to content</a>
-  <header class="bar">
-    <a class="back" href="/projects/en/">← Projects</a>
+  <header class="top"><div class="top-in">
+    <p class="who"><b>Dang Hoang An</b><span>Project details</span></p>
     <nav class="langs" aria-label="Language"><a href="/projects/address-normalization/en/" lang="en" hreflang="en" aria-current="true">EN</a><a href="/projects/address-normalization/vi/" lang="vi" hreflang="vi">VI</a></nav>
-  </header>
+  </div></header>
   <main id="main">
     <header class="hero">
-      <p class="eyebrow">NLP course project · Oct–Nov 2026</p>
+      <p class="tag">NLP course project · Oct–Nov 2026</p>
       <h1>Vietnamese Address Normalization to the New Administrative Units after the 2025 Merger</h1>
-      <p class="lead">An offline, CPU-only system (no LLM, no external API) that turns free-form Vietnamese addresses into structured addresses under the administrative units in effect since 1 July 2025: 34 provinces, no district level.</p>
       <p class="meta">Natural Language Processing course project · Python · PyTorch · LightGBM · python-crfsuite</p>
     </header>
-    <section class="sec"><h2>At a glance</h2><ul class="figs"><li><b>86.8%</b><span>full-address accuracy (6 fields) on a 400-address real OSM development set</span></li><li><b>69.8%</b><span>on a separate test set whose labels are not yet hand-verified</span></li><li><b>~75 ms</b><span>per address, one thread of a laptop CPU</span></li><li><b>34</b><span>provinces, no district level</span></li></ul></section>
-    <section class="sec"><h2>The problem</h2>
+    <section class="sec"><h2>Key results</h2><ul class="figs"><li><b>86.8%</b><span>full-address accuracy (6 fields) on a 400-address real OSM development set</span></li><li><b>69.8%</b><span>on a separate test set whose labels are not yet hand-verified</span></li><li><b>~75 ms</b><span>per address, one thread of a laptop CPU</span></li><li><b>34</b><span>provinces, no district level</span></li></ul></section>
+    <section class="sec mine"><h2>My part</h2><ul><li>Built the whole system and the web demo; every commit in the repository is mine.</li><li>Ran the comparisons listed under “What I tried and dropped” and kept the evaluation notes for every reported number.</li></ul></section>
+    <section class="sec"><h2>The task in detail</h2>
       <p>People type addresses without diacritics, with abbreviations (HN, TP.HCM, ng., kp), typos, shuffled order, missing commas, or in the old administrative boundaries. The system returns the house number, alley, hamlet, street, commune or ward and province in official form, plus a full normalized string and a list of warning flags.</p>
     </section>
     <section class="sec"><h2>Rules the system follows</h2>
@@ -34,13 +33,13 @@
       <ul><li><b>Part 1, preprocessing:</b> a Char-CNN + CRF tags each character with one of seven roles; a trie proposes administrative candidates (exact, unaccented, initials, misspelled); a beam search assembles valid paths on the old and new administrative trees; a LightGBM ranker (LambdaRank) chooses between hypotheses; old district and commune names and a street dictionary are looked up.</li><li><b>Part 2, conversion:</b> a clean old address is converted to the new units by a lookup table only; split communes follow the rule above.</li><li>The deployed model is small (a 1.4 MB CNN plus the ranker) and runs offline. A small web demo wraps the same configuration used for measurement.</li></ul>
     </section>
     <section class="sec"><h2>Results</h2>
-      <p>Speed was measured on one thread of a laptop CPU over 300 development sentences with the model already loaded: 74.9 ms on average, 72.8 ms median, 138.9 ms at the 95th percentile.</p>
       <div class="tbl"><table><thead><tr><th>Set</th><th>All 6 fields correct</th><th>Confident but wrong commune</th></tr></thead><tbody>
 <tr><td>dev_osm_that: 400 real OSM addresses (main number)</td><td>86.8% (95% CI 83.1–89.7)</td><td>12 (3.0%)</td></tr>
 <tr><td>dev_sinh: 1,200 addresses generated from the catalogue</td><td>97.2%</td><td>0</td></tr>
 <tr><td>Hard set (1,500)</td><td>86.9%</td><td>14 (0.9%)</td></tr>
 <tr><td>test400 (labels assigned by AI, not hand-verified)</td><td>69.8%</td><td>37 (9.2%)</td></tr>
 </tbody></table></div>
+      <p>Speed was measured on one thread of a laptop CPU over 300 development sentences with the model already loaded: 74.9 ms on average, 72.8 ms median, 138.9 ms at the 95th percentile.</p>
     </section>
     <section class="sec"><h2>How to read the numbers</h2>
       <ul><li>86.8% is a development-set number. The development set was used to choose the configuration, so it is not an independent measurement.</li><li>The generated and hard sets were written by the same AI helper as the training data (different seeds and street names), so gains on them can be inflated.</li><li>test400 has AI-assigned labels that nobody has checked and it was opened many times, so it is no longer a held-out set. A hand-verified held-out set is the next step.</li></ul>
@@ -51,12 +50,12 @@
     <section class="sec"><h2>Known issues</h2>
       <ul><li>Hamlet boundaries when there is no comma (“xóm 5 xã mỹ hưng huyện…”); a fix is in progress on a separate branch.</li><li>Abbreviations that drop vowels (“hnoi”) cannot be looked up and are left empty.</li><li>Weak spots on the wide-coverage set: newly formed communes (about 86% correct), old names, and addresses with only a commune name.</li></ul>
     </section>
-    <section class="sec"><h2>Links</h2><ul class="linklist"><li><a href="https://github.com/AnDpTri/vietnamese-address-normalization" target="_blank" rel="noopener">Repository</a> <span aria-hidden="true">&#8599;</span></li></ul></section>
-    <p class="allp"><a href="/projects/en/">All projects &rarr;</a></p>
+    <section class="sec"><h2>Repository and evidence</h2><ul class="linklist"><li><a href="https://github.com/AnDpTri/vietnamese-address-normalization" target="_blank" rel="noopener">Repository</a> <span aria-hidden="true">&#8599;</span></li></ul></section>
+    <p class="allp"><a href="/projects/en/">All project pages</a></p>
   </main>
   <footer class="foot">
-    <p>Numbers come from the project reports and repositories. If something does not match, write to <a href="mailto:andanghoang0@gmail.com">andanghoang0@gmail.com</a>.</p>
-    <p><a href="https://github.com/AnDpTri">github.com/AnDpTri</a> · <a href="/">andptri.github.io</a></p>
+    <p>Figures come from the project reports and repositories.</p>
+    <p><a href="mailto:andanghoang0@gmail.com">andanghoang0@gmail.com</a> · <a href="https://www.linkedin.com/in/hoang-an-78527b354/">LinkedIn</a> · <a href="https://github.com/AnDpTri">GitHub</a></p>
   </footer>
 </body>
 </html>

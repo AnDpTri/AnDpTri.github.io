@@ -2,35 +2,34 @@
 <html lang="en">
 <head>
   <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#ffffff">
+  <meta name="theme-color" content="#00366D">
   <meta name="description" content="Three unsupervised methods (Autoencoder, PaDiM, PatchCore), implemented from scratch and compared under one protocol on 9 product categories from three public datasets, then stress-tested with five follow-up experiments.">
   <title>Unsupervised Anomaly Detection and Localization on Industrial Products — Đặng Hoàng An</title>
-  <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
   <link rel="alternate" hreflang="en" href="/projects/anomaly-detection/en/">
   <link rel="alternate" hreflang="vi" href="/projects/anomaly-detection/vi/">
   <link rel="stylesheet" href="/projects/project.css">
 </head>
 <body>
   <a class="skip" href="#main">Skip to content</a>
-  <header class="bar">
-    <a class="back" href="/projects/en/">← Projects</a>
+  <header class="top"><div class="top-in">
+    <p class="who"><b>Dang Hoang An</b><span>Project details</span></p>
     <nav class="langs" aria-label="Language"><a href="/projects/anomaly-detection/en/" lang="en" hreflang="en" aria-current="true">EN</a><a href="/projects/anomaly-detection/vi/" lang="vi" hreflang="vi">VI</a></nav>
-  </header>
+  </div></header>
   <main id="main">
     <header class="hero">
-      <p class="eyebrow">Deep Learning course project · Oct–Nov 2026</p>
+      <p class="tag">Deep Learning course project · Oct–Nov 2026</p>
       <h1>Unsupervised Anomaly Detection and Localization on Industrial Products</h1>
-      <p class="lead">Three unsupervised methods (Autoencoder, PaDiM, PatchCore), implemented from scratch and compared under one protocol on 9 product categories from three public datasets, then stress-tested with five follow-up experiments.</p>
-      <p class="meta">Deep Learning course project · My part: Autoencoder (PyTorch), demo application, repository guide; shared protocol and PatchCore runs</p>
+      <p class="meta">Deep Learning course project</p>
     </header>
-    <section class="sec"><h2>At a glance</h2><ul class="figs"><li><b>0.937</b><span>PatchCore mean image-AUROC over 9 categories</span></li><li><b>0.969</b><span>PatchCore mean pixel-AUROC</span></li><li><b>75%</b><span>of defective images caught at a 6% false-alarm rate (PatchCore, threshold set on good images)</span></li><li><b>9</b><span>categories from MVTec AD, MVTec AD 2 and VisA</span></li></ul></section>
-    <section class="sec"><h2>The problem</h2>
+    <section class="sec"><h2>Key results</h2><ul class="figs"><li><b>0.937</b><span>PatchCore mean image-AUROC over 9 categories</span></li><li><b>0.969</b><span>PatchCore mean pixel-AUROC</span></li><li><b>75%</b><span>of defective images caught at a 6% false-alarm rate (PatchCore, threshold set on good images)</span></li><li><b>9</b><span>categories from MVTec AD, MVTec AD 2 and VisA</span></li></ul></section>
+    <section class="sec mine"><h2>My part</h2><ul><li>Wrote the Autoencoder in PyTorch, the demo application and the repository guide.</li><li>Took part in the shared evaluation protocol and the PatchCore runs. All three methods were implemented by the group.</li></ul></section>
+    <section class="sec"><h2>The task in detail</h2>
       <p>Defective product images are rare, varied and expensive to label, while good images are plentiful. The model learns only from good images and must flag anything that deviates: detect defective images (image-AUROC) and localize the defect pixels (pixel-AUROC and AUPRO).</p>
     </section>
     <section class="sec"><h2>Methods and data</h2>
       <ul><li><b>Autoencoder</b> learns to reconstruct images from scratch and uses the reconstruction error as the anomaly signal.</li><li><b>PaDiM</b> models normal patch features with a Gaussian per position; <b>PatchCore</b> keeps a memory bank of normal patch features. Both use a pretrained Wide-ResNet-50-2, so the difference between them comes from the mechanism, not the backbone.</li><li>All three were implemented by the group. Data: grid, screw and transistor (MVTec AD); vial and sheet_metal (MVTec AD 2, with test images under several lighting conditions); pcb1 to pcb4 (VisA).</li></ul>
     </section>
-    <section class="sec"><h2>Main results</h2>
+    <section class="sec"><h2>Results by method</h2>
       <div class="tbl"><table><thead><tr><th>Method</th><th>Mean image-AUROC (9 categories)</th></tr></thead><tbody>
 <tr><td>Autoencoder</td><td>0.820</td></tr>
 <tr><td>PaDiM</td><td>0.828</td></tr>
@@ -44,12 +43,12 @@
     <section class="sec"><h2>Limits and how to read this</h2>
       <ul><li>Everything is evaluated on stored images, not on a production line. Thresholds are set on good images only.</li><li>The Autoencoder results vary more between seeds than the drops measured in some follow-up experiments, so those comparisons are weaker for it.</li><li>Earlier versions of this project used all 15 MVTec AD categories; the current report replaces them with the 9-category study above, and the two sets of numbers should not be mixed.</li></ul>
     </section>
-    <section class="sec"><h2>Links</h2><ul class="linklist"><li><a href="https://github.com/AnDpTri/mvtec-anomaly-detection" target="_blank" rel="noopener">Repository</a> <span aria-hidden="true">&#8599;</span></li></ul></section>
-    <p class="allp"><a href="/projects/en/">All projects &rarr;</a></p>
+    <section class="sec"><h2>Repository and evidence</h2><ul class="linklist"><li><a href="https://github.com/AnDpTri/mvtec-anomaly-detection" target="_blank" rel="noopener">Repository</a> <span aria-hidden="true">&#8599;</span></li></ul></section>
+    <p class="allp"><a href="/projects/en/">All project pages</a></p>
   </main>
   <footer class="foot">
-    <p>Numbers come from the project reports and repositories. If something does not match, write to <a href="mailto:andanghoang0@gmail.com">andanghoang0@gmail.com</a>.</p>
-    <p><a href="https://github.com/AnDpTri">github.com/AnDpTri</a> · <a href="/">andptri.github.io</a></p>
+    <p>Figures come from the project reports and repositories.</p>
+    <p><a href="mailto:andanghoang0@gmail.com">andanghoang0@gmail.com</a> · <a href="https://www.linkedin.com/in/hoang-an-78527b354/">LinkedIn</a> · <a href="https://github.com/AnDpTri">GitHub</a></p>
   </footer>
 </body>
 </html>

@@ -2,35 +2,34 @@
 <html lang="vi">
 <head>
   <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#ffffff">
+  <meta name="theme-color" content="#00366D">
   <meta name="description" content="Ba phương pháp không giám sát (Autoencoder, PaDiM, PatchCore) được tự cài đặt và so sánh theo cùng một giao thức trên 9 loại sản phẩm từ ba bộ dữ liệu công khai, rồi thử sức bằng năm thí nghiệm bổ sung.">
   <title>Phát hiện và định vị bất thường trên sản phẩm công nghiệp bằng học không giám sát — Đặng Hoàng An</title>
-  <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
   <link rel="alternate" hreflang="en" href="/projects/anomaly-detection/en/">
   <link rel="alternate" hreflang="vi" href="/projects/anomaly-detection/vi/">
   <link rel="stylesheet" href="/projects/project.css">
 </head>
 <body>
   <a class="skip" href="#main">Bỏ qua điều hướng</a>
-  <header class="bar">
-    <a class="back" href="/projects/vi/">← Dự án</a>
+  <header class="top"><div class="top-in">
+    <p class="who"><b>Đặng Hoàng An</b><span>Chi tiết dự án</span></p>
     <nav class="langs" aria-label="Ngôn ngữ"><a href="/projects/anomaly-detection/en/" lang="en" hreflang="en">EN</a><a href="/projects/anomaly-detection/vi/" lang="vi" hreflang="vi" aria-current="true">VI</a></nav>
-  </header>
+  </div></header>
   <main id="main">
     <header class="hero">
-      <p class="eyebrow">Đồ án môn Học sâu · 10–11/2026</p>
+      <p class="tag">Đồ án môn Học sâu · 10–11/2026</p>
       <h1>Phát hiện và định vị bất thường trên sản phẩm công nghiệp bằng học không giám sát</h1>
-      <p class="lead">Ba phương pháp không giám sát (Autoencoder, PaDiM, PatchCore) được tự cài đặt và so sánh theo cùng một giao thức trên 9 loại sản phẩm từ ba bộ dữ liệu công khai, rồi thử sức bằng năm thí nghiệm bổ sung.</p>
-      <p class="meta">Đồ án môn Học sâu · Phần của mình: Autoencoder (PyTorch), ứng dụng minh họa, tài liệu kho mã nguồn; giao thức chung và các lần chạy PatchCore</p>
+      <p class="meta">Đồ án môn Học sâu</p>
     </header>
-    <section class="sec"><h2>Tóm tắt nhanh</h2><ul class="figs"><li><b>0,937</b><span>image-AUROC trung bình của PatchCore trên 9 loại</span></li><li><b>0,969</b><span>pixel-AUROC trung bình của PatchCore</span></li><li><b>75%</b><span>ảnh lỗi bắt được khi báo nhầm 6% (PatchCore, ngưỡng đặt trên ảnh tốt)</span></li><li><b>9</b><span>loại sản phẩm từ MVTec AD, MVTec AD 2 và VisA</span></li></ul></section>
-    <section class="sec"><h2>Bài toán</h2>
+    <section class="sec"><h2>Kết quả chính</h2><ul class="figs"><li><b>0,937</b><span>image-AUROC trung bình của PatchCore trên 9 loại</span></li><li><b>0,969</b><span>pixel-AUROC trung bình của PatchCore</span></li><li><b>75%</b><span>ảnh lỗi bắt được khi báo nhầm 6% (PatchCore, ngưỡng đặt trên ảnh tốt)</span></li><li><b>9</b><span>loại sản phẩm từ MVTec AD, MVTec AD 2 và VisA</span></li></ul></section>
+    <section class="sec mine"><h2>Phần tôi làm</h2><ul><li>Viết Autoencoder bằng PyTorch, ứng dụng minh họa và tài liệu hướng dẫn repo.</li><li>Tham gia xây giao thức đánh giá chung và chạy PatchCore. Cả ba phương pháp do nhóm cài đặt.</li></ul></section>
+    <section class="sec"><h2>Bài toán cụ thể</h2>
       <p>Ảnh sản phẩm lỗi hiếm, đa dạng và tốn công gán nhãn, trong khi ảnh tốt thì nhiều. Mô hình chỉ học từ ảnh tốt và phải báo mọi thứ lệch khỏi đó: phát hiện ảnh lỗi (image-AUROC) và khoanh vùng lỗi theo pixel (pixel-AUROC và AUPRO).</p>
     </section>
     <section class="sec"><h2>Phương pháp và dữ liệu</h2>
       <ul><li><b>Autoencoder</b> học tái tạo ảnh từ đầu và dùng sai số tái tạo làm tín hiệu bất thường.</li><li><b>PaDiM</b> mô hình hóa đặc trưng patch bình thường bằng một phân phối Gauss theo từng vị trí; <b>PatchCore</b> giữ một kho bộ nhớ các đặc trưng patch bình thường. Cả hai dùng Wide-ResNet-50-2 đã huấn luyện trước, nên khác biệt giữa chúng đến từ cơ chế chứ không phải backbone.</li><li>Cả ba đều do nhóm tự cài đặt. Dữ liệu: grid, screw, transistor (MVTec AD); vial, sheet_metal (MVTec AD 2, ảnh test chụp nhiều điều kiện ánh sáng); pcb1 đến pcb4 (VisA).</li></ul>
     </section>
-    <section class="sec"><h2>Kết quả chính</h2>
+    <section class="sec"><h2>Kết quả theo phương pháp</h2>
       <div class="tbl"><table><thead><tr><th>Phương pháp</th><th>image-AUROC trung bình (9 loại)</th></tr></thead><tbody>
 <tr><td>Autoencoder</td><td>0,820</td></tr>
 <tr><td>PaDiM</td><td>0,828</td></tr>
@@ -44,12 +43,12 @@
     <section class="sec"><h2>Giới hạn và cách đọc</h2>
       <ul><li>Mọi thứ được đánh giá trên ảnh có sẵn, chưa triển khai trên dây chuyền. Ngưỡng chỉ đặt trên ảnh tốt.</li><li>Kết quả Autoencoder dao động theo seed nhiều hơn mức giảm đo được ở một số thí nghiệm bổ sung, nên các so sánh đó yếu hơn với nó.</li><li>Các bản trước của dự án dùng cả 15 loại của MVTec AD; báo cáo hiện tại thay bằng nghiên cứu 9 loại ở trên, và hai bộ số không nên trộn với nhau.</li></ul>
     </section>
-    <section class="sec"><h2>Liên kết</h2><ul class="linklist"><li><a href="https://github.com/AnDpTri/mvtec-anomaly-detection" target="_blank" rel="noopener">Repo</a> <span aria-hidden="true">&#8599;</span></li></ul></section>
-    <p class="allp"><a href="/projects/vi/">Tất cả dự án &rarr;</a></p>
+    <section class="sec"><h2>Mã nguồn và minh chứng</h2><ul class="linklist"><li><a href="https://github.com/AnDpTri/mvtec-anomaly-detection" target="_blank" rel="noopener">Repo</a> <span aria-hidden="true">&#8599;</span></li></ul></section>
+    <p class="allp"><a href="/projects/vi/">Tất cả trang dự án</a></p>
   </main>
   <footer class="foot">
-    <p>Số liệu lấy từ báo cáo và repo của từng dự án. Thấy chỗ nào chưa khớp, nhắn <a href="mailto:andanghoang0@gmail.com">andanghoang0@gmail.com</a>.</p>
-    <p><a href="https://github.com/AnDpTri">github.com/AnDpTri</a> · <a href="/">andptri.github.io</a></p>
+    <p>Số liệu lấy từ báo cáo và repo của từng dự án.</p>
+    <p><a href="mailto:andanghoang0@gmail.com">andanghoang0@gmail.com</a> · <a href="https://www.linkedin.com/in/hoang-an-78527b354/">LinkedIn</a> · <a href="https://github.com/AnDpTri">GitHub</a></p>
   </footer>
 </body>
 </html>

@@ -2,50 +2,46 @@
 <html lang="en">
 <head>
   <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#ffffff">
+  <meta name="theme-color" content="#00366D">
   <meta name="description" content="Capstone of the program: a personal finance management system with an integrated AI agent. A TypeScript backend and web app, tested at several levels and started with a single Docker Compose command.">
   <title>Backend Training Program — Viettel Software — Đặng Hoàng An</title>
-  <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
   <link rel="alternate" hreflang="en" href="/projects/viettel-backend/en/">
   <link rel="alternate" hreflang="vi" href="/projects/viettel-backend/vi/">
   <link rel="stylesheet" href="/projects/project.css">
 </head>
 <body>
   <a class="skip" href="#main">Skip to content</a>
-  <header class="bar">
-    <a class="back" href="/projects/en/">← Projects</a>
+  <header class="top"><div class="top-in">
+    <p class="who"><b>Dang Hoang An</b><span>Project details</span></p>
     <nav class="langs" aria-label="Language"><a href="/projects/viettel-backend/en/" lang="en" hreflang="en" aria-current="true">EN</a><a href="/projects/viettel-backend/vi/" lang="vi" hreflang="vi">VI</a></nav>
-  </header>
+  </div></header>
   <main id="main">
     <header class="hero">
-      <p class="eyebrow">Training program · Jul–Oct 2026</p>
+      <p class="tag">Training program · Jul–Oct 2026</p>
       <h1>Backend Training Program — Viettel Software</h1>
-      <p class="lead">Capstone of the program: a personal finance management system with an integrated AI agent. A TypeScript backend and web app, tested at several levels and started with a single Docker Compose command.</p>
       <p class="meta">Backend training program, intern track · Individual capstone</p>
     </header>
-    <section class="sec"><h2>At a glance</h2><ul class="figs"><li><b>158</b><span>unit and API tests (all passing)</span></li><li><b>97%</b><span>statement coverage (branches 88%, functions 97%, lines 99%)</span></li><li><b>119</b><span>end-to-end API flows</span></li><li><b>25</b><span>UI journeys (desktop and mobile)</span></li></ul></section>
-    <section class="sec"><h2>What it is</h2>
-      <p>A web application for keeping personal income and expenses: several wallets, budgets and savings goals, reports, bill reminders, family collaboration, and an assistant that works in Vietnamese. It is a progressive web app, so it installs on a phone.</p>
-    </section>
-    <section class="sec"><h2>Stack</h2>
-      <ul><li>TypeScript 5.9, Express 4, Prisma 6, Zod 3, PostgreSQL 17; React front end.</li><li>Docker Compose starts three services: the database, a mail inbox for development (Mailpit) and the API with the web app; it waits for the database, runs migrations and creates a test account.</li><li>Vitest and Supertest for unit and API tests (with an 80% coverage gate), Playwright for UI journeys.</li></ul>
-    </section>
-    <section class="sec"><h2>Main features</h2>
-      <ul><li>Accounts: registration, login and logout, refresh tokens, password reset, multi-device sessions, OAuth.</li><li>Money: wallets with balances derived from the ledger, a category tree, income, expense and transfer transactions, CSV export and receipt upload with permissions.</li><li>Planning: budgets, savings goals, recurring transactions, bill reminders, automation rules, family collaboration, reports.</li><li>Quality: unified response envelope, central error handling, OpenAPI documentation, migrations with indexes and check constraints.</li></ul>
-    </section>
+    <section class="sec"><h2>Key results</h2><ul class="figs"><li><b>158</b><span>unit and API tests (all passing)</span></li><li><b>97%</b><span>statement coverage (branches 88%, functions 97%, lines 99%)</span></li><li><b>119</b><span>end-to-end API flows</span></li><li><b>25</b><span>UI journeys (desktop and mobile)</span></li></ul></section>
+    <section class="sec mine"><h2>My part</h2><ul><li>Individual capstone: designed and built the backend, the web app, the AI agent and the tests on my own.</li></ul></section>
     <section class="sec"><h2>The AI agent</h2>
       <p>The assistant is an agent in one chat window. DeepSeek or OpenAI decides whether to answer directly or call a tool (native tool calling); there is no local fallback model, and without a provider key the rest of the app still works. The backend, not the prompt, enforces access rights, ownership checks, confirmation and undo.</p>
       <ul><li>Read tools (search and summarize transactions, upcoming bills, history, export) run immediately; tools that change data only create a pending action with a preview.</li><li>The user confirms within 30 minutes; the backend rechecks ownership, runs the change in a transaction and stores undo data. Confirm, cancel and undo are audited without storing secrets.</li><li>A turn uses at most 4 model-tool rounds and 10 tool calls; tool errors go back to the model so it can fix its arguments or ask the user; actions are rate limited.</li><li>Conversations are stored with summaries, and long-term memory only holds facts the user confirmed. If the account language is Vietnamese but the model answers in another language, the backend asks for a rewrite instead of showing it.</li></ul>
     </section>
+    <section class="sec"><h2>Main features</h2>
+      <ul><li>Accounts: registration, login and logout, refresh tokens, password reset, multi-device sessions, OAuth.</li><li>Money: wallets with balances derived from the ledger, a category tree, income, expense and transfer transactions, CSV export and receipt upload with permissions.</li><li>Planning: budgets, savings goals, recurring transactions, bill reminders, automation rules, family collaboration, reports.</li><li>Quality: unified response envelope, central error handling, OpenAPI documentation, migrations with indexes and check constraints.</li></ul>
+    </section>
+    <section class="sec"><h2>Stack</h2>
+      <ul><li>TypeScript 5.9, Express 4, Prisma 6, Zod 3, PostgreSQL 17; React front end.</li><li>Docker Compose starts three services: the database, a mail inbox for development (Mailpit) and the API with the web app; it waits for the database, runs migrations and creates a test account.</li><li>Vitest and Supertest for unit and API tests (with an 80% coverage gate), Playwright for UI journeys.</li></ul>
+    </section>
     <section class="sec"><h2>Testing</h2>
       <p>158 Vitest tests cover the whole backend source except the process start-up file, and fail the build if statements, branches, functions or lines drop below 80%. Current figures: statements 97%, branches 88%, functions 97%, lines 99%. On top of that: 119 end-to-end API flows against the running stack, 25 UI journeys on desktop and mobile, a test group for the agent against a real database without calling the AI, and agent scenarios with a real provider that are skipped when no key is set.</p>
     </section>
-    <section class="sec"><h2>Links</h2><ul class="linklist"><li><a href="https://github.com/AnDpTri/Viettel-Software" target="_blank" rel="noopener">Repository</a> <span aria-hidden="true">&#8599;</span></li></ul></section>
-    <p class="allp"><a href="/projects/en/">All projects &rarr;</a></p>
+    <section class="sec"><h2>Repository and evidence</h2><ul class="linklist"><li><a href="https://github.com/AnDpTri/Viettel-Software" target="_blank" rel="noopener">Repository</a> <span aria-hidden="true">&#8599;</span></li></ul></section>
+    <p class="allp"><a href="/projects/en/">All project pages</a></p>
   </main>
   <footer class="foot">
-    <p>Numbers come from the project reports and repositories. If something does not match, write to <a href="mailto:andanghoang0@gmail.com">andanghoang0@gmail.com</a>.</p>
-    <p><a href="https://github.com/AnDpTri">github.com/AnDpTri</a> · <a href="/">andptri.github.io</a></p>
+    <p>Figures come from the project reports and repositories.</p>
+    <p><a href="mailto:andanghoang0@gmail.com">andanghoang0@gmail.com</a> · <a href="https://www.linkedin.com/in/hoang-an-78527b354/">LinkedIn</a> · <a href="https://github.com/AnDpTri">GitHub</a></p>
   </footer>
 </body>
 </html>

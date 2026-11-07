@@ -2,29 +2,28 @@
 <html lang="en">
 <head>
   <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#ffffff">
+  <meta name="theme-color" content="#00366D">
   <meta name="description" content="A system that reads a campus map image and a noisy Vietnamese instruction, then predicts the first move of a delivery robot. Built for the Phenikaa AI Hackathon 2026 qualifier, then continued into the final round.">
   <title>Phenikaa Campus Courier 2026 — Multimodal Delivery AI — Đặng Hoàng An</title>
-  <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
   <link rel="alternate" hreflang="en" href="/projects/phenikaa-courier/en/">
   <link rel="alternate" hreflang="vi" href="/projects/phenikaa-courier/vi/">
   <link rel="stylesheet" href="/projects/project.css">
 </head>
 <body>
   <a class="skip" href="#main">Skip to content</a>
-  <header class="bar">
-    <a class="back" href="/projects/en/">← Projects</a>
+  <header class="top"><div class="top-in">
+    <p class="who"><b>Dang Hoang An</b><span>Project details</span></p>
     <nav class="langs" aria-label="Language"><a href="/projects/phenikaa-courier/en/" lang="en" hreflang="en" aria-current="true">EN</a><a href="/projects/phenikaa-courier/vi/" lang="vi" hreflang="vi">VI</a></nav>
-  </header>
+  </div></header>
   <main id="main">
     <header class="hero">
-      <p class="eyebrow">Hackathon · Oct 2026</p>
+      <p class="tag">Hackathon · Oct 2026</p>
       <h1>Phenikaa Campus Courier 2026 — Multimodal Delivery AI</h1>
-      <p class="lead">A system that reads a campus map image and a noisy Vietnamese instruction, then predicts the first move of a delivery robot. Built for the Phenikaa AI Hackathon 2026 qualifier, then continued into the final round.</p>
-      <p class="meta">Team Devil May Cry (team leader) · Qualifier: built alone in about 48 hours, with AI coding assistance · Final: 5th of 11 teams</p>
+      <p class="meta">Team Devil May Cry (team leader) · Final: 5th of 11 teams</p>
     </header>
-    <section class="sec"><h2>At a glance</h2><ul class="figs"><li><b>71.17%</b><span>peak macro accuracy on the qualifier leaderboard (about 30% of scenes)</span></li><li><b>5 / 11</b><span>final round, overall (score 0.6733)</span></li><li><b>0.816</b><span>team score on final Task 1, ranked 5th</span></li><li><b>48 h</b><span>qualifier build time</span></li></ul></section>
-    <section class="sec"><h2>The problem</h2>
+    <section class="sec"><h2>Key results</h2><ul class="figs"><li><b>71.17%</b><span>peak macro accuracy on the qualifier leaderboard (about 30% of scenes)</span></li><li><b>5 / 11</b><span>final round, overall (score 0.6733)</span></li><li><b>0.816</b><span>team score on final Task 1, ranked 5th</span></li><li><b>48 h</b><span>qualifier build time</span></li></ul></section>
+    <section class="sec mine"><h2>My part</h2><ul><li>Team leader of Devil May Cry.</li><li>Qualifier: built the whole system alone in about 48 hours, starting from an empty folder: map reading, Vietnamese instruction parsing and the multi-robot solver.</li><li>AI coding agents helped with implementation and experiments; I owned the architecture, experiment choices, integration and submissions.</li><li>Final, Task 1 (Mystery Robot): wrote the route planner for the robot strategy family.</li></ul></section>
+    <section class="sec"><h2>The task in detail</h2>
       <p>Each scene has a raster campus map (road grid, landmarks, traffic, stairs, one-way streets, closures, weather, and the robot position and heading), a Vietnamese delivery instruction, and a robot ID from 0 to 9. Maps can be rotated, blurred, JPEG-compressed or drawn in other styles, and the legend can change per image. Instructions can miss diacritics, contain typos, corrections, negations and an optional intermediate stop. Each robot follows a fixed but hidden strategy.</p>
       <p>The output is the robot's first move (up, down, left or right). The test set has 1,200 scenes, one observation per robot, so 12,000 predictions. The metric is macro accuracy across the ten robots.</p>
     </section>
@@ -32,7 +31,6 @@
       <ul><li><b>Computer vision.</b> A small CenterNet-style detector finds road intersections, legend swatches and the weather icon; a geometric step estimates the map rotation and fits a grid; two crop classifiers read edges (road, stairs, one-way) and nodes (landmark type, robot heading). Road meanings are read from each image's own legend. Scene-exact reconstruction on the 300 validation scenes: 85.67% (257/300).</li><li><b>Vietnamese NLP.</b> A rule-based parser (lexicons, typo handling, negation and correction cues, spatial expressions, intermediate stop) combined with a small multi-task neural parser (two-layer BiGRU). The rule parser is the starting point; the neural reading fills gaps or overrides only above a confidence threshold. Map-aware grounding resolves phrases such as the northernmost landmark against the landmarks found by the vision stage.</li><li><b>Multi-robot solver.</b> A legal directed road graph (closed roads blocked, one-way enforced, only one robot may use stairs), a shortest-path engine under 48 route-cost hypotheses, and one gradient-boosting classifier per robot that ranks the legal first moves (219 features per candidate). A graph-repair step relaxes constraints when the parsed mission cannot be completed on the inferred graph.</li></ul>
     </section>
     <section class="sec"><h2>Qualifier progress</h2>
-      <p>The first end-to-end submission was not the starting accuracy of an existing model: the project started from an empty folder. The jump from 65.28% to 70.39% changed 1,148 of 12,000 output actions; it is a configuration comparison, not proof that each individual correction was right.</p>
       <div class="tbl"><table><thead><tr><th>Step</th><th>Leaderboard macro accuracy</th></tr></thead><tbody>
 <tr><td>First end-to-end submission</td><td>52.39%</td></tr>
 <tr><td>Candidate-action ranker</td><td>55.67%</td></tr>
@@ -41,20 +39,21 @@
 <tr><td>Neural overrides for the intermediate stop: off vs on</td><td>65.28% → 70.39%</td></tr>
 <tr><td>Final ensemble + five-seed solver</td><td>71.17%</td></tr>
 </tbody></table></div>
+      <p>The first end-to-end submission was not the starting accuracy of an existing model: the project started from an empty folder. The jump from 65.28% to 70.39% changed 1,148 of 12,000 output actions; it is a configuration comparison, not proof that each individual correction was right.</p>
     </section>
     <section class="sec"><h2>Final round, Task 1 (Mystery Robot)</h2>
       <p>In the final each episode is a new robot with an unknown fixed strategy drawn from a public family of 3,840 strategies. The team sees five sample trips (a map with the robot's route drawn on it, plus a Vietnamese request) and must predict the full route in six questions on other maps. I built a planner for that strategy family: given the true strategy it reproduces 100% of the routes on the training (1,500) and validation (300) episodes.</p>
       <p>Read this number carefully: it is the planner's ceiling when the strategy is known. The step that reads the drawn route from the sample images was not finished, so the end-to-end result is the leaderboard score: 0.8159 on Task 1 (5th), and 0.6733 overall (5th of 11).</p>
     </section>
     <section class="sec"><h2>How to read the results</h2>
-      <ul><li>Scores shown during the qualifier use about 30% of the scored scenes; the final ranking uses the rest. The in-contest ranking at the end was 13th of 25, and the team advanced to the final.</li><li>Offline validation was not a perfect proxy for the leaderboard: a vision routing change improved validation but lowered the leaderboard score.</li><li>AI coding agents helped with implementation and experiments; I owned the architecture, experiment choices, integration and submissions. It is an experimental hackathon pipeline, not a production-certified robotics system.</li><li>The public repository documents the qualifier only; the final-round code is in a separate private repository.</li></ul>
+      <ul><li>Scores shown during the qualifier use about 30% of the scored scenes; the final ranking uses the rest. The in-contest ranking at the end was 13th of 25, and the team advanced to the final.</li><li>Offline validation was not a perfect proxy for the leaderboard: a vision routing change improved validation but lowered the leaderboard score.</li><li>The public repository documents the qualifier only; the final-round code is in a separate private repository.</li></ul>
     </section>
-    <section class="sec"><h2>Links</h2><ul class="linklist"><li><a href="https://github.com/AnDpTri/phenikaa-ai-hackathon-2026" target="_blank" rel="noopener">Qualifier repository</a> <span aria-hidden="true">&#8599;</span></li><li><a href="https://aihackathon.phenikaa-uni.edu.vn/leaderboard/FINAL" target="_blank" rel="noopener">Final leaderboard (official)</a> <span aria-hidden="true">&#8599;</span></li><li><a href="/minh-chung/">Evidence page</a></li></ul></section>
-    <p class="allp"><a href="/projects/en/">All projects &rarr;</a></p>
+    <section class="sec"><h2>Repository and evidence</h2><ul class="linklist"><li><a href="https://github.com/AnDpTri/phenikaa-ai-hackathon-2026" target="_blank" rel="noopener">Qualifier repository</a> <span aria-hidden="true">&#8599;</span></li><li><a href="https://aihackathon.phenikaa-uni.edu.vn/leaderboard/FINAL" target="_blank" rel="noopener">Final leaderboard (official)</a> <span aria-hidden="true">&#8599;</span></li><li><a href="/minh-chung/">Evidence page</a></li></ul></section>
+    <p class="allp"><a href="/projects/en/">All project pages</a></p>
   </main>
   <footer class="foot">
-    <p>Numbers come from the project reports and repositories. If something does not match, write to <a href="mailto:andanghoang0@gmail.com">andanghoang0@gmail.com</a>.</p>
-    <p><a href="https://github.com/AnDpTri">github.com/AnDpTri</a> · <a href="/">andptri.github.io</a></p>
+    <p>Figures come from the project reports and repositories.</p>
+    <p><a href="mailto:andanghoang0@gmail.com">andanghoang0@gmail.com</a> · <a href="https://www.linkedin.com/in/hoang-an-78527b354/">LinkedIn</a> · <a href="https://github.com/AnDpTri">GitHub</a></p>
   </footer>
 </body>
 </html>
