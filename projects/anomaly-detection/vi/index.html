@@ -2,13 +2,12 @@
 <html lang="vi">
 <head>
   <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#0a0a0a">
+  <meta name="theme-color" content="#ffffff">
   <meta name="description" content="Ba phương pháp không giám sát (Autoencoder, PaDiM, PatchCore) được tự cài đặt và so sánh theo cùng một giao thức trên 9 loại sản phẩm từ ba bộ dữ liệu công khai, rồi thử sức bằng năm thí nghiệm bổ sung.">
   <title>Phát hiện và định vị bất thường trên sản phẩm công nghiệp bằng học không giám sát — Đặng Hoàng An</title>
   <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
   <link rel="alternate" hreflang="en" href="/projects/anomaly-detection/en/">
   <link rel="alternate" hreflang="vi" href="/projects/anomaly-detection/vi/">
-  <link rel="stylesheet" href="/assets/fonts/fonts.css">
   <link rel="stylesheet" href="/projects/project.css">
 </head>
 <body>
@@ -24,7 +23,7 @@
       <p class="lead">Ba phương pháp không giám sát (Autoencoder, PaDiM, PatchCore) được tự cài đặt và so sánh theo cùng một giao thức trên 9 loại sản phẩm từ ba bộ dữ liệu công khai, rồi thử sức bằng năm thí nghiệm bổ sung.</p>
       <p class="meta">Đồ án môn Học sâu · Phần của mình: Autoencoder (PyTorch), ứng dụng minh họa, tài liệu kho mã nguồn; giao thức chung và các lần chạy PatchCore</p>
     </header>
-    <section class="stats" aria-label="Tóm tắt nhanh"><div class="stat"><b>0,937</b><span>image-AUROC trung bình của PatchCore trên 9 loại</span></div><div class="stat"><b>0,969</b><span>pixel-AUROC trung bình của PatchCore</span></div><div class="stat"><b>75%</b><span>ảnh lỗi bắt được khi báo nhầm 6% (PatchCore, ngưỡng đặt trên ảnh tốt)</span></div><div class="stat"><b>9</b><span>loại sản phẩm từ MVTec AD, MVTec AD 2 và VisA</span></div></section>
+    <section class="sec"><h2>Tóm tắt nhanh</h2><ul class="figs"><li><b>0,937</b><span>image-AUROC trung bình của PatchCore trên 9 loại</span></li><li><b>0,969</b><span>pixel-AUROC trung bình của PatchCore</span></li><li><b>75%</b><span>ảnh lỗi bắt được khi báo nhầm 6% (PatchCore, ngưỡng đặt trên ảnh tốt)</span></li><li><b>9</b><span>loại sản phẩm từ MVTec AD, MVTec AD 2 và VisA</span></li></ul></section>
     <section class="sec"><h2>Bài toán</h2>
       <p>Ảnh sản phẩm lỗi hiếm, đa dạng và tốn công gán nhãn, trong khi ảnh tốt thì nhiều. Mô hình chỉ học từ ảnh tốt và phải báo mọi thứ lệch khỏi đó: phát hiện ảnh lỗi (image-AUROC) và khoanh vùng lỗi theo pixel (pixel-AUROC và AUPRO).</p>
     </section>
@@ -45,7 +44,7 @@
     <section class="sec"><h2>Giới hạn và cách đọc</h2>
       <ul><li>Mọi thứ được đánh giá trên ảnh có sẵn, chưa triển khai trên dây chuyền. Ngưỡng chỉ đặt trên ảnh tốt.</li><li>Kết quả Autoencoder dao động theo seed nhiều hơn mức giảm đo được ở một số thí nghiệm bổ sung, nên các so sánh đó yếu hơn với nó.</li><li>Các bản trước của dự án dùng cả 15 loại của MVTec AD; báo cáo hiện tại thay bằng nghiên cứu 9 loại ở trên, và hai bộ số không nên trộn với nhau.</li></ul>
     </section>
-    <section class="sec"><h2>Liên kết</h2><p class="actions"><a class="btn" href="https://github.com/AnDpTri/mvtec-anomaly-detection" target="_blank" rel="noopener">Repo <span aria-hidden="true">&#8599;</span></a></p></section>
+    <section class="sec"><h2>Liên kết</h2><ul class="linklist"><li><a href="https://github.com/AnDpTri/mvtec-anomaly-detection" target="_blank" rel="noopener">Repo</a> <span aria-hidden="true">&#8599;</span></li></ul></section>
     <p class="allp"><a href="/projects/vi/">Tất cả dự án &rarr;</a></p>
   </main>
   <footer class="foot">

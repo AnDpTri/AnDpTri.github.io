@@ -2,13 +2,12 @@
 <html lang="en">
 <head>
   <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#0a0a0a">
+  <meta name="theme-color" content="#ffffff">
   <meta name="description" content="A system that reads a campus map image and a noisy Vietnamese instruction, then predicts the first move of a delivery robot. Built for the Phenikaa AI Hackathon 2026 qualifier, then continued into the final round.">
   <title>Phenikaa Campus Courier 2026 — Multimodal Delivery AI — Đặng Hoàng An</title>
   <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
   <link rel="alternate" hreflang="en" href="/projects/phenikaa-courier/en/">
   <link rel="alternate" hreflang="vi" href="/projects/phenikaa-courier/vi/">
-  <link rel="stylesheet" href="/assets/fonts/fonts.css">
   <link rel="stylesheet" href="/projects/project.css">
 </head>
 <body>
@@ -24,7 +23,7 @@
       <p class="lead">A system that reads a campus map image and a noisy Vietnamese instruction, then predicts the first move of a delivery robot. Built for the Phenikaa AI Hackathon 2026 qualifier, then continued into the final round.</p>
       <p class="meta">Team Devil May Cry (team leader) · Qualifier: built alone in about 48 hours, with AI coding assistance · Final: 5th of 11 teams</p>
     </header>
-    <section class="stats" aria-label="At a glance"><div class="stat"><b>71.17%</b><span>peak macro accuracy on the qualifier leaderboard (about 30% of scenes)</span></div><div class="stat"><b>5 / 11</b><span>final round, overall (score 0.6733)</span></div><div class="stat"><b>0.816</b><span>team score on final Task 1, ranked 5th</span></div><div class="stat"><b>48 h</b><span>qualifier build time</span></div></section>
+    <section class="sec"><h2>At a glance</h2><ul class="figs"><li><b>71.17%</b><span>peak macro accuracy on the qualifier leaderboard (about 30% of scenes)</span></li><li><b>5 / 11</b><span>final round, overall (score 0.6733)</span></li><li><b>0.816</b><span>team score on final Task 1, ranked 5th</span></li><li><b>48 h</b><span>qualifier build time</span></li></ul></section>
     <section class="sec"><h2>The problem</h2>
       <p>Each scene has a raster campus map (road grid, landmarks, traffic, stairs, one-way streets, closures, weather, and the robot position and heading), a Vietnamese delivery instruction, and a robot ID from 0 to 9. Maps can be rotated, blurred, JPEG-compressed or drawn in other styles, and the legend can change per image. Instructions can miss diacritics, contain typos, corrections, negations and an optional intermediate stop. Each robot follows a fixed but hidden strategy.</p>
       <p>The output is the robot's first move (up, down, left or right). The test set has 1,200 scenes, one observation per robot, so 12,000 predictions. The metric is macro accuracy across the ten robots.</p>
@@ -50,7 +49,7 @@
     <section class="sec"><h2>How to read the results</h2>
       <ul><li>Scores shown during the qualifier use about 30% of the scored scenes; the final ranking uses the rest. The in-contest ranking at the end was 13th of 25, and the team advanced to the final.</li><li>Offline validation was not a perfect proxy for the leaderboard: a vision routing change improved validation but lowered the leaderboard score.</li><li>AI coding agents helped with implementation and experiments; I owned the architecture, experiment choices, integration and submissions. It is an experimental hackathon pipeline, not a production-certified robotics system.</li><li>The public repository documents the qualifier only; the final-round code is in a separate private repository.</li></ul>
     </section>
-    <section class="sec"><h2>Links</h2><p class="actions"><a class="btn" href="https://github.com/AnDpTri/phenikaa-ai-hackathon-2026" target="_blank" rel="noopener">Qualifier repository <span aria-hidden="true">&#8599;</span></a><a class="btn" href="https://aihackathon.phenikaa-uni.edu.vn/leaderboard/FINAL" target="_blank" rel="noopener">Final leaderboard (official) <span aria-hidden="true">&#8599;</span></a><a class="btn" href="/minh-chung/">Evidence page</a></p></section>
+    <section class="sec"><h2>Links</h2><ul class="linklist"><li><a href="https://github.com/AnDpTri/phenikaa-ai-hackathon-2026" target="_blank" rel="noopener">Qualifier repository</a> <span aria-hidden="true">&#8599;</span></li><li><a href="https://aihackathon.phenikaa-uni.edu.vn/leaderboard/FINAL" target="_blank" rel="noopener">Final leaderboard (official)</a> <span aria-hidden="true">&#8599;</span></li><li><a href="/minh-chung/">Evidence page</a></li></ul></section>
     <p class="allp"><a href="/projects/en/">All projects &rarr;</a></p>
   </main>
   <footer class="foot">

@@ -2,13 +2,12 @@
 <html lang="en">
 <head>
   <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#0a0a0a">
+  <meta name="theme-color" content="#ffffff">
   <meta name="description" content="Three unsupervised methods (Autoencoder, PaDiM, PatchCore), implemented from scratch and compared under one protocol on 9 product categories from three public datasets, then stress-tested with five follow-up experiments.">
   <title>Unsupervised Anomaly Detection and Localization on Industrial Products — Đặng Hoàng An</title>
   <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
   <link rel="alternate" hreflang="en" href="/projects/anomaly-detection/en/">
   <link rel="alternate" hreflang="vi" href="/projects/anomaly-detection/vi/">
-  <link rel="stylesheet" href="/assets/fonts/fonts.css">
   <link rel="stylesheet" href="/projects/project.css">
 </head>
 <body>
@@ -24,7 +23,7 @@
       <p class="lead">Three unsupervised methods (Autoencoder, PaDiM, PatchCore), implemented from scratch and compared under one protocol on 9 product categories from three public datasets, then stress-tested with five follow-up experiments.</p>
       <p class="meta">Deep Learning course project · My part: Autoencoder (PyTorch), demo application, repository guide; shared protocol and PatchCore runs</p>
     </header>
-    <section class="stats" aria-label="At a glance"><div class="stat"><b>0.937</b><span>PatchCore mean image-AUROC over 9 categories</span></div><div class="stat"><b>0.969</b><span>PatchCore mean pixel-AUROC</span></div><div class="stat"><b>75%</b><span>of defective images caught at a 6% false-alarm rate (PatchCore, threshold set on good images)</span></div><div class="stat"><b>9</b><span>categories from MVTec AD, MVTec AD 2 and VisA</span></div></section>
+    <section class="sec"><h2>At a glance</h2><ul class="figs"><li><b>0.937</b><span>PatchCore mean image-AUROC over 9 categories</span></li><li><b>0.969</b><span>PatchCore mean pixel-AUROC</span></li><li><b>75%</b><span>of defective images caught at a 6% false-alarm rate (PatchCore, threshold set on good images)</span></li><li><b>9</b><span>categories from MVTec AD, MVTec AD 2 and VisA</span></li></ul></section>
     <section class="sec"><h2>The problem</h2>
       <p>Defective product images are rare, varied and expensive to label, while good images are plentiful. The model learns only from good images and must flag anything that deviates: detect defective images (image-AUROC) and localize the defect pixels (pixel-AUROC and AUPRO).</p>
     </section>
@@ -45,7 +44,7 @@
     <section class="sec"><h2>Limits and how to read this</h2>
       <ul><li>Everything is evaluated on stored images, not on a production line. Thresholds are set on good images only.</li><li>The Autoencoder results vary more between seeds than the drops measured in some follow-up experiments, so those comparisons are weaker for it.</li><li>Earlier versions of this project used all 15 MVTec AD categories; the current report replaces them with the 9-category study above, and the two sets of numbers should not be mixed.</li></ul>
     </section>
-    <section class="sec"><h2>Links</h2><p class="actions"><a class="btn" href="https://github.com/AnDpTri/mvtec-anomaly-detection" target="_blank" rel="noopener">Repository <span aria-hidden="true">&#8599;</span></a></p></section>
+    <section class="sec"><h2>Links</h2><ul class="linklist"><li><a href="https://github.com/AnDpTri/mvtec-anomaly-detection" target="_blank" rel="noopener">Repository</a> <span aria-hidden="true">&#8599;</span></li></ul></section>
     <p class="allp"><a href="/projects/en/">All projects &rarr;</a></p>
   </main>
   <footer class="foot">
