@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0a0a0a">
+  <meta name="description" content="Hệ thống chạy offline trên CPU (không dùng LLM hay API ngoài) chuyển địa chỉ tiếng Việt gõ tự do thành địa chỉ có cấu trúc theo đơn vị hành chính có hiệu lực từ 1/7/2025: 34 tỉnh, bỏ cấp huyện.">
+  <title>Chuẩn hóa địa chỉ tiếng Việt theo đơn vị hành chính mới sau sáp nhập 2025 — Đặng Hoàng An</title>
+  <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+  <link rel="alternate" hreflang="en" href="/projects/address-normalization/en/">
+  <link rel="alternate" hreflang="vi" href="/projects/address-normalization/vi/">
+  <link rel="stylesheet" href="/assets/fonts/fonts.css">
+  <link rel="stylesheet" href="/projects/project.css">
+</head>
+<body>
+  <a class="skip" href="#main">Bỏ qua điều hướng</a>
+  <header class="bar">
+    <a class="back" href="/projects/vi/">← Dự án</a>
+    <nav class="langs" aria-label="Ngôn ngữ"><a href="/projects/address-normalization/en/" lang="en" hreflang="en">EN</a><a href="/projects/address-normalization/vi/" lang="vi" hreflang="vi" aria-current="true">VI</a></nav>
+  </header>
+  <main id="main">
+    <header class="hero">
+      <p class="eyebrow">Đồ án môn Xử lý ngôn ngữ tự nhiên · 10–11/2026</p>
+      <h1>Chuẩn hóa địa chỉ tiếng Việt theo đơn vị hành chính mới sau sáp nhập 2025</h1>
+      <p class="lead">Hệ thống chạy offline trên CPU (không dùng LLM hay API ngoài) chuyển địa chỉ tiếng Việt gõ tự do thành địa chỉ có cấu trúc theo đơn vị hành chính có hiệu lực từ 1/7/2025: 34 tỉnh, bỏ cấp huyện.</p>
+      <p class="meta">Đồ án môn Xử lý ngôn ngữ tự nhiên · Python · PyTorch · LightGBM · python-crfsuite</p>
+    </header>
+    <section class="stats" aria-label="Tóm tắt nhanh"><div class="stat"><b>86,8%</b><span>đúng đủ 6 trường trên tập dev 400 địa chỉ OSM thật</span></div><div class="stat"><b>69,8%</b><span>trên tập test riêng, nhãn chưa duyệt tay</span></div><div class="stat"><b>~75 ms</b><span>mỗi địa chỉ, một luồng CPU laptop</span></div><div class="stat"><b>34</b><span>tỉnh, không còn cấp huyện</span></div></section>
+    <section class="sec"><h2>Bài toán</h2>
+      <p>Người dùng gõ địa chỉ không dấu, viết tắt (HN, TP.HCM, ng., kp), sai chính tả, lộn thứ tự, thiếu dấu phẩy, hoặc theo địa giới cũ. Hệ thống trả về số nhà, ngõ ngách hẻm, thôn xóm, đường, xã phường và tỉnh ở dạng chính thức, kèm địa chỉ chuẩn đầy đủ và danh sách cờ cảnh báo.</p>
+    </section>
+    <section class="sec"><h2>Nguyên tắc của hệ thống</h2>
+      <ul><li>Thiếu thông tin thì để trống, không đoán bừa.</li><li>Có thông tin nhưng mơ hồ (ví dụ tên trùng nhiều nơi) thì trả kết quả tốt nhất và gắn cờ cảnh báo.</li><li>Cấp huyện chỉ dùng để xác định đúng xã và tỉnh, không xuất ra đầu ra.</li><li>Xã cũ bị chia thành nhiều xã mới được phân giải theo tên đường nếu bảng đối chiếu có bằng chứng; không thì để trống, gắn cờ và liệt kê các ứng viên.</li></ul>
+    </section>
+    <section class="sec"><h2>Cách hoạt động</h2>
+      <ul><li><b>Phần 1, tiền xử lý:</b> Char-CNN + CRF gán cho mỗi ký tự một trong bảy vai trò; trie sinh ứng viên hành chính (khớp đúng, không dấu, viết tắt chữ đầu, sai chính tả); beam search ghép các đường đi hợp lệ trên cây hành chính cũ và mới; LightGBM ranker (LambdaRank) chọn giữa các giả thuyết; tra tên cũ của huyện, xã và từ điển đường.</li><li><b>Phần 2, chuyển đổi:</b> địa chỉ cũ đã sạch được đổi sang đơn vị mới chỉ bằng tra bảng đối chiếu; xã bị chia theo nguyên tắc trên.</li><li>Mô hình đang dùng nhỏ (CNN 1,4 MB cùng bộ xếp hạng) và chạy offline. Bản demo web dùng đúng cấu hình dùng để đo.</li></ul>
+    </section>
+    <section class="sec"><h2>Kết quả</h2>
+      <p>Tốc độ đo trên một luồng CPU laptop với 300 câu dev, mô hình đã nạp sẵn: trung bình 74,9 ms, trung vị 72,8 ms, phân vị 95 là 138,9 ms.</p>
+      <div class="tbl"><table><thead><tr><th>Tập</th><th>Đúng cả 6 trường</th><th>Khẳng định sai mã xã</th></tr></thead><tbody>
+<tr><td>dev_osm_that: 400 địa chỉ OSM thật (số chính)</td><td>86,8% (95% CI 83,1–89,7)</td><td>12 (3,0%)</td></tr>
+<tr><td>dev_sinh: 1.200 địa chỉ sinh từ danh mục</td><td>97,2%</td><td>0</td></tr>
+<tr><td>Bộ khó (1.500)</td><td>86,9%</td><td>14 (0,9%)</td></tr>
+<tr><td>test400 (nhãn do AI gán, chưa duyệt tay)</td><td>69,8%</td><td>37 (9,2%)</td></tr>
+</tbody></table></div>
+    </section>
+    <section class="sec"><h2>Cách đọc các con số</h2>
+      <ul><li>86,8% là số trên tập dev. Tập dev đã được dùng để chọn cấu hình nên không phải phép đo độc lập.</li><li>Bộ sinh và bộ khó do cùng một trợ lý AI viết như dữ liệu huấn luyện (khác seed và tên đường), nên mức tăng trên đó có thể bị thổi phồng.</li><li>test400 có nhãn do AI gán chưa ai duyệt và đã bị mở nhiều lần, nên không còn là tập giữ kín. Bước tiếp theo là một tập giữ kín được duyệt tay.</li></ul>
+    </section>
+    <section class="sec"><h2>Những hướng đã thử và bỏ</h2>
+      <ul><li>ViDeBERTa-xsmall: kém CNN 1–2 điểm ở mọi phép đo và chậm gần gấp đôi trên CPU (117 ms so với 54 ms mỗi câu) nên bị bỏ. PhoBERT dừng ở khâu chuẩn bị.</li><li>Huấn luyện thêm 15.000 địa chỉ OSM gán nhãn từ thẻ làm kết quả test tệ đi (248 xuống 227 đúng), vì OSM gộp số nhà vào tên đường.</li><li>Thêm 10.000 địa chỉ nhiễu tổng hợp đưa bộ khó từ 57,2% lên 82,7% trong khi dev giữ nguyên; hướng này được giữ.</li><li>Bảng tra giải xã bị chia theo tên đường (197 dòng, 66 xã) giữ đúng 280/280 điểm kiểm tra.</li></ul>
+    </section>
+    <section class="sec"><h2>Lỗi đã biết</h2>
+      <ul><li>Ranh giới thôn xóm khi không có dấu phẩy (“xóm 5 xã mỹ hưng huyện…”); bản sửa đang dở ở nhánh riêng.</li><li>Viết tắt bỏ nguyên âm (“hnoi”) chưa tra được, đang để trống.</li><li>Điểm yếu trên bộ phủ rộng: nhóm xã mới (khoảng 86% đúng), tên cũ, và địa chỉ chỉ ghi tên xã.</li></ul>
+    </section>
+    <section class="sec"><h2>Liên kết</h2><p class="actions"><a class="btn" href="https://github.com/AnDpTri/vietnamese-address-normalization" target="_blank" rel="noopener">Repo <span aria-hidden="true">&#8599;</span></a></p></section>
+    <p class="allp"><a href="/projects/vi/">Tất cả dự án &rarr;</a></p>
+  </main>
+  <footer class="foot">
+    <p>Số liệu lấy từ báo cáo và repo của từng dự án. Thấy chỗ nào chưa khớp, nhắn <a href="mailto:andanghoang0@gmail.com">andanghoang0@gmail.com</a>.</p>
+    <p><a href="https://github.com/AnDpTri">github.com/AnDpTri</a> · <a href="/">andptri.github.io</a></p>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0a0a0a">
+  <meta name="description" content="Đồ án cuối chương trình: hệ thống quản lý tài chính cá nhân tích hợp AI agent. Backend và web app viết bằng TypeScript, kiểm thử nhiều lớp và dựng lên bằng một lệnh Docker Compose.">
+  <title>Chương trình đào tạo backend — Viettel Software — Đặng Hoàng An</title>
+  <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+  <link rel="alternate" hreflang="en" href="/projects/viettel-backend/en/">
+  <link rel="alternate" hreflang="vi" href="/projects/viettel-backend/vi/">
+  <link rel="stylesheet" href="/assets/fonts/fonts.css">
+  <link rel="stylesheet" href="/projects/project.css">
+</head>
+<body>
+  <a class="skip" href="#main">Bỏ qua điều hướng</a>
+  <header class="bar">
+    <a class="back" href="/projects/vi/">← Dự án</a>
+    <nav class="langs" aria-label="Ngôn ngữ"><a href="/projects/viettel-backend/en/" lang="en" hreflang="en">EN</a><a href="/projects/viettel-backend/vi/" lang="vi" hreflang="vi" aria-current="true">VI</a></nav>
+  </header>
+  <main id="main">
+    <header class="hero">
+      <p class="eyebrow">Chương trình đào tạo · 07–10/2026</p>
+      <h1>Chương trình đào tạo backend — Viettel Software</h1>
+      <p class="lead">Đồ án cuối chương trình: hệ thống quản lý tài chính cá nhân tích hợp AI agent. Backend và web app viết bằng TypeScript, kiểm thử nhiều lớp và dựng lên bằng một lệnh Docker Compose.</p>
+      <p class="meta">Chương trình đào tạo backend, hệ thực tập sinh · Đồ án cá nhân</p>
+    </header>
+    <section class="stats" aria-label="Tóm tắt nhanh"><div class="stat"><b>158</b><span>test đơn vị và API (đều đạt)</span></div><div class="stat"><b>97%</b><span>độ phủ câu lệnh (nhánh 88%, hàm 97%, dòng 99%)</span></div><div class="stat"><b>119</b><span>luồng API end-to-end</span></div><div class="stat"><b>25</b><span>hành trình giao diện (máy tính và điện thoại)</span></div></section>
+    <section class="sec"><h2>Đây là gì</h2>
+      <p>Ứng dụng web để ghi thu chi cá nhân: nhiều ví, ngân sách và mục tiêu tiết kiệm, báo cáo, nhắc hóa đơn, cộng tác trong gia đình và một trợ lý làm việc bằng tiếng Việt. Đây là progressive web app nên cài được lên điện thoại.</p>
+    </section>
+    <section class="sec"><h2>Công nghệ</h2>
+      <ul><li>TypeScript 5.9, Express 4, Prisma 6, Zod 3, PostgreSQL 17; front end React.</li><li>Docker Compose dựng ba dịch vụ: cơ sở dữ liệu, hộp thư thử khi phát triển (Mailpit) và API kèm web app; nó chờ database sẵn sàng, chạy migration và tạo tài khoản thử.</li><li>Vitest và Supertest cho test đơn vị và API (có cổng độ phủ 80%), Playwright cho các hành trình giao diện.</li></ul>
+    </section>
+    <section class="sec"><h2>Tính năng chính</h2>
+      <ul><li>Tài khoản: đăng ký, đăng nhập, đăng xuất, refresh token, đổi và quên mật khẩu, phiên đa thiết bị, OAuth.</li><li>Tiền: ví với số dư tính từ sổ cái, cây danh mục, giao dịch thu chi và chuyển khoản, xuất CSV và tải hóa đơn có phân quyền.</li><li>Lập kế hoạch: ngân sách, mục tiêu tiết kiệm, giao dịch định kỳ, nhắc hóa đơn, quy tắc tự động, cộng tác gia đình, báo cáo.</li><li>Chất lượng: định dạng phản hồi thống nhất, xử lý lỗi tập trung, tài liệu OpenAPI, migration có index và ràng buộc kiểm tra.</li></ul>
+    </section>
+    <section class="sec"><h2>AI agent</h2>
+      <p>Trợ lý là một agent trong một khung chat. DeepSeek hoặc OpenAI tự quyết định trả lời trực tiếp hay gọi công cụ (native tool calling); không có mô hình dự phòng chạy local, và thiếu khóa nhà cung cấp thì phần còn lại của ứng dụng vẫn chạy. Backend, không phải prompt, cưỡng chế quyền truy cập, kiểm tra sở hữu, xác nhận và hoàn tác.</p>
+      <ul><li>Công cụ đọc (tìm và tổng hợp giao dịch, hóa đơn sắp đến hạn, lịch sử, xuất dữ liệu) chạy ngay; công cụ thay đổi dữ liệu chỉ tạo một hành động chờ kèm bản xem trước.</li><li>Người dùng xác nhận trong 30 phút; backend kiểm tra lại sở hữu, thực thi trong transaction và lưu dữ liệu hoàn tác. Xác nhận, hủy và hoàn tác đều được ghi nhật ký mà không lưu bí mật.</li><li>Mỗi lượt dùng tối đa 4 vòng mô hình – công cụ và 10 lời gọi công cụ; lỗi của công cụ được trả lại cho mô hình để tự sửa đối số hoặc hỏi thêm; thao tác bị giới hạn tốc độ.</li><li>Hội thoại được lưu kèm tóm tắt, bộ nhớ dài hạn chỉ giữ điều người dùng đã xác nhận. Nếu tài khoản dùng tiếng Việt mà mô hình trả lời bằng ngôn ngữ khác, backend yêu cầu viết lại thay vì hiển thị.</li></ul>
+    </section>
+    <section class="sec"><h2>Kiểm thử</h2>
+      <p>158 test Vitest bao phủ toàn bộ mã backend trừ file khởi động tiến trình, và làm hỏng build nếu câu lệnh, nhánh, hàm hoặc dòng xuống dưới 80%. Số hiện tại: câu lệnh 97%, nhánh 88%, hàm 97%, dòng 99%. Ngoài ra có 119 luồng API end-to-end trên hệ thống đang chạy, 25 hành trình giao diện trên máy tính và điện thoại, một nhóm test cho agent trên database thật mà không gọi AI, và các kịch bản agent với nhà cung cấp thật (tự bỏ qua khi chưa có khóa).</p>
+    </section>
+    <section class="sec"><h2>Liên kết</h2><p class="actions"><a class="btn" href="https://github.com/AnDpTri/Viettel-Software" target="_blank" rel="noopener">Repo <span aria-hidden="true">&#8599;</span></a></p></section>
+    <p class="allp"><a href="/projects/vi/">Tất cả dự án &rarr;</a></p>
+  </main>
+  <footer class="foot">
+    <p>Số liệu lấy từ báo cáo và repo của từng dự án. Thấy chỗ nào chưa khớp, nhắn <a href="mailto:andanghoang0@gmail.com">andanghoang0@gmail.com</a>.</p>
+    <p><a href="https://github.com/AnDpTri">github.com/AnDpTri</a> · <a href="/">andptri.github.io</a></p>
+  </footer>
+</body>
+</html>

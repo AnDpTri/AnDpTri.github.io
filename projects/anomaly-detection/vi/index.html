@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0a0a0a">
+  <meta name="description" content="Ba phương pháp không giám sát (Autoencoder, PaDiM, PatchCore) được tự cài đặt và so sánh theo cùng một giao thức trên 9 loại sản phẩm từ ba bộ dữ liệu công khai, rồi thử sức bằng năm thí nghiệm bổ sung.">
+  <title>Phát hiện và định vị bất thường trên sản phẩm công nghiệp bằng học không giám sát — Đặng Hoàng An</title>
+  <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+  <link rel="alternate" hreflang="en" href="/projects/anomaly-detection/en/">
+  <link rel="alternate" hreflang="vi" href="/projects/anomaly-detection/vi/">
+  <link rel="stylesheet" href="/assets/fonts/fonts.css">
+  <link rel="stylesheet" href="/projects/project.css">
+</head>
+<body>
+  <a class="skip" href="#main">Bỏ qua điều hướng</a>
+  <header class="bar">
+    <a class="back" href="/projects/vi/">← Dự án</a>
+    <nav class="langs" aria-label="Ngôn ngữ"><a href="/projects/anomaly-detection/en/" lang="en" hreflang="en">EN</a><a href="/projects/anomaly-detection/vi/" lang="vi" hreflang="vi" aria-current="true">VI</a></nav>
+  </header>
+  <main id="main">
+    <header class="hero">
+      <p class="eyebrow">Đồ án môn Học sâu · 10–11/2026</p>
+      <h1>Phát hiện và định vị bất thường trên sản phẩm công nghiệp bằng học không giám sát</h1>
+      <p class="lead">Ba phương pháp không giám sát (Autoencoder, PaDiM, PatchCore) được tự cài đặt và so sánh theo cùng một giao thức trên 9 loại sản phẩm từ ba bộ dữ liệu công khai, rồi thử sức bằng năm thí nghiệm bổ sung.</p>
+      <p class="meta">Đồ án môn Học sâu · Phần của mình: Autoencoder (PyTorch), ứng dụng minh họa, tài liệu kho mã nguồn; giao thức chung và các lần chạy PatchCore</p>
+    </header>
+    <section class="stats" aria-label="Tóm tắt nhanh"><div class="stat"><b>0,937</b><span>image-AUROC trung bình của PatchCore trên 9 loại</span></div><div class="stat"><b>0,969</b><span>pixel-AUROC trung bình của PatchCore</span></div><div class="stat"><b>75%</b><span>ảnh lỗi bắt được khi báo nhầm 6% (PatchCore, ngưỡng đặt trên ảnh tốt)</span></div><div class="stat"><b>9</b><span>loại sản phẩm từ MVTec AD, MVTec AD 2 và VisA</span></div></section>
+    <section class="sec"><h2>Bài toán</h2>
+      <p>Ảnh sản phẩm lỗi hiếm, đa dạng và tốn công gán nhãn, trong khi ảnh tốt thì nhiều. Mô hình chỉ học từ ảnh tốt và phải báo mọi thứ lệch khỏi đó: phát hiện ảnh lỗi (image-AUROC) và khoanh vùng lỗi theo pixel (pixel-AUROC và AUPRO).</p>
+    </section>
+    <section class="sec"><h2>Phương pháp và dữ liệu</h2>
+      <ul><li><b>Autoencoder</b> học tái tạo ảnh từ đầu và dùng sai số tái tạo làm tín hiệu bất thường.</li><li><b>PaDiM</b> mô hình hóa đặc trưng patch bình thường bằng một phân phối Gauss theo từng vị trí; <b>PatchCore</b> giữ một kho bộ nhớ các đặc trưng patch bình thường. Cả hai dùng Wide-ResNet-50-2 đã huấn luyện trước, nên khác biệt giữa chúng đến từ cơ chế chứ không phải backbone.</li><li>Cả ba đều do nhóm tự cài đặt. Dữ liệu: grid, screw, transistor (MVTec AD); vial, sheet_metal (MVTec AD 2, ảnh test chụp nhiều điều kiện ánh sáng); pcb1 đến pcb4 (VisA).</li></ul>
+    </section>
+    <section class="sec"><h2>Kết quả chính</h2>
+      <div class="tbl"><table><thead><tr><th>Phương pháp</th><th>image-AUROC trung bình (9 loại)</th></tr></thead><tbody>
+<tr><td>Autoencoder</td><td>0,820</td></tr>
+<tr><td>PaDiM</td><td>0,828</td></tr>
+<tr><td>PatchCore (tốt nhất ở cả ba bộ)</td><td>0,937</td></tr>
+</tbody></table></div>
+      <ul><li>PatchCore: pixel-AUROC 0,969 và AUPRO 0,848. Đây là phương pháp duy nhất còn dùng được ở ngưỡng cố định: bắt 75% ảnh lỗi với 6% báo nhầm.</li><li>PaDiM kém hẳn ở screw, loại duy nhất xoay tự do, đúng như dự đoán từ việc gắn thống kê với vị trí. Autoencoder thấp nhất trên MVTec AD nhưng hơn PaDiM trên bảng mạch VisA (0,925), nơi lỗi làm đổi màu cả một vùng.</li></ul>
+    </section>
+    <section class="sec"><h2>Năm thí nghiệm bổ sung</h2>
+      <ul><li><b>Tập huấn luyện lẫn ảnh lỗi (5–20%):</b> cả ba vẫn khá bền; PaDiM bền nhất, PatchCore giảm đều.</li><li><b>Ít ảnh (few-shot):</b> PatchCore đạt AUROC 0,966 ở transistor chỉ với 4 ảnh. Ở screw, dưới khoảng 8 ảnh cả ba đều dưới 0,5; nguyên nhân là góc xoay và độ sáng trong dữ liệu chứ không phải số ảnh. Căn thẳng hướng vít giúp PaDiM (0,722 lên 0,835) nhưng làm PatchCore kém đi (0,955 xuống 0,915).</li><li><b>Dùng mô hình sản phẩm A cho sản phẩm B:</b> không dùng được. Ngoài đường chéo AUROC chỉ 0,3–0,7 và mọi ảnh tốt của sản phẩm mới đều bị báo lỗi (tỉ lệ báo nhầm 1,00). Thêm vài ảnh tốt của sản phẩm mới thì PatchCore thích nghi được.</li><li><b>Thay đổi ánh sáng và nhiễu:</b> mỗi phương pháp hỏng theo một cách. Autoencoder thua khi độ sáng đổi, PaDiM thua nhiễu và lệch vị trí (sụp ở loại vial khi quá sáng hoặc thiếu sáng), PatchCore thua làm mờ và ảnh quá tối. Nhiều trường hợp AUROC gần như không đổi trong khi tỉ lệ báo nhầm ở ngưỡng cố định lên 100%.</li><li><b>Theo từng kiểu lỗi:</b> phân tích theo từng kiểu lỗi kèm dấu hiệu trên bản đồ bất thường cho từng trường hợp hỏng; xem trong báo cáo.</li></ul>
+    </section>
+    <section class="sec"><h2>Giới hạn và cách đọc</h2>
+      <ul><li>Mọi thứ được đánh giá trên ảnh có sẵn, chưa triển khai trên dây chuyền. Ngưỡng chỉ đặt trên ảnh tốt.</li><li>Kết quả Autoencoder dao động theo seed nhiều hơn mức giảm đo được ở một số thí nghiệm bổ sung, nên các so sánh đó yếu hơn với nó.</li><li>Các bản trước của dự án dùng cả 15 loại của MVTec AD; báo cáo hiện tại thay bằng nghiên cứu 9 loại ở trên, và hai bộ số không nên trộn với nhau.</li></ul>
+    </section>
+    <section class="sec"><h2>Liên kết</h2><p class="actions"><a class="btn" href="https://github.com/AnDpTri/mvtec-anomaly-detection" target="_blank" rel="noopener">Repo <span aria-hidden="true">&#8599;</span></a></p></section>
+    <p class="allp"><a href="/projects/vi/">Tất cả dự án &rarr;</a></p>
+  </main>
+  <footer class="foot">
+    <p>Số liệu lấy từ báo cáo và repo của từng dự án. Thấy chỗ nào chưa khớp, nhắn <a href="mailto:andanghoang0@gmail.com">andanghoang0@gmail.com</a>.</p>
+    <p><a href="https://github.com/AnDpTri">github.com/AnDpTri</a> · <a href="/">andptri.github.io</a></p>
+  </footer>
+</body>
+</html>

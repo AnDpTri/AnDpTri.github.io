@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0a0a0a">
+  <meta name="description" content="Đồ án nhóm cuối khóa AI của Samsung Innovation Campus: nhận diện biển báo giao thông Việt Nam theo thời gian thực bằng YOLOv8, sau đó nhóm mở rộng thêm theo dõi và mô hình ngôn ngữ – thị giác.">
+  <title>Samsung Innovation Campus — Nhận diện biển báo giao thông Việt Nam — Đặng Hoàng An</title>
+  <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+  <link rel="alternate" hreflang="en" href="/projects/sic-traffic-sign/en/">
+  <link rel="alternate" hreflang="vi" href="/projects/sic-traffic-sign/vi/">
+  <link rel="stylesheet" href="/assets/fonts/fonts.css">
+  <link rel="stylesheet" href="/projects/project.css">
+</head>
+<body>
+  <a class="skip" href="#main">Bỏ qua điều hướng</a>
+  <header class="bar">
+    <a class="back" href="/projects/vi/">← Dự án</a>
+    <nav class="langs" aria-label="Ngôn ngữ"><a href="/projects/sic-traffic-sign/en/" lang="en" hreflang="en">EN</a><a href="/projects/sic-traffic-sign/vi/" lang="vi" hreflang="vi" aria-current="true">VI</a></nav>
+  </header>
+  <main id="main">
+    <header class="hero">
+      <p class="eyebrow">Đồ án cuối khóa AI · 06–08/2025</p>
+      <h1>Samsung Innovation Campus — Nhận diện biển báo giao thông Việt Nam</h1>
+      <p class="lead">Đồ án nhóm cuối khóa AI của Samsung Innovation Campus: nhận diện biển báo giao thông Việt Nam theo thời gian thực bằng YOLOv8, sau đó nhóm mở rộng thêm theo dõi và mô hình ngôn ngữ – thị giác.</p>
+      <p class="meta">Nhóm 3 người · Python · PyTorch · Ultralytics YOLOv8</p>
+    </header>
+    <section class="stats" aria-label="Tóm tắt nhanh"><div class="stat"><b>YOLOv8m</b><span>mô hình medium, nâng từ bản nano</span></div><div class="stat"><b>25 → 100</b><span>epoch huấn luyện</span></div><div class="stat"><b>3</b><span>thành viên</span></div></section>
+    <section class="sec"><h2>Đây là gì</h2>
+      <p>Pipeline phát hiện biển báo giao thông Việt Nam trong ảnh và video bằng mô hình YOLOv8-medium huấn luyện trên bộ dữ liệu Vietnam Traffic Signs (Kaggle) định dạng YOLO. Repo có mô-đun huấn luyện, pipeline dự đoán, bản thời gian thực, bản thời gian thực có làm mượt, và bản lai thêm mô hình ngôn ngữ.</p>
+    </section>
+    <section class="sec"><h2>Phần mình làm</h2>
+      <ul><li>Huấn luyện và tinh chỉnh detector: từ bản nano lên YOLOv8-medium, từ 25 lên 100 epoch, và chuyển sang phiên bản dữ liệu thứ hai.</li><li>Viết pipeline dự đoán và đổi đầu vào, đầu ra từ file text sang JSON.</li><li>Lưu trọng số huấn luyện và cấu hình trong repo.</li></ul>
+    </section>
+    <section class="sec"><h2>Phần các bạn trong nhóm</h2>
+      <ul><li>Theo dõi bằng SORT và làm mượt đầu ra thời gian thực.</li><li>Mô hình ngôn ngữ – thị giác Vintern-1B, thêm vào sau phần huấn luyện chính, để đọc chữ và hướng chỉ dẫn trên biển báo, và công việc về dữ liệu của nó sau đó. Phần này do các bạn trong nhóm làm, chủ yếu sau khi chương trình kết thúc.</li></ul>
+    </section>
+    <section class="sec"><h2>Cách đọc</h2>
+      <ul><li>Đây là đồ án nhóm sinh vi và là dự án học máy đầu tiên của cả ba người. Repo không công bố độ chính xác cuối cùng nên mình không nêu con số nào ở đây.</li><li>Repo của nhóm nằm dưới tài khoản một bạn trong nhóm; commit của mình ở đó chủ yếu là phần huấn luyện và dự đoán tháng 6/2025.</li></ul>
+    </section>
+    <section class="sec"><h2>Liên kết</h2><p class="actions"><a class="btn" href="https://github.com/HoanBuCon/Traffic-Sign-Detection" target="_blank" rel="noopener">Repo của nhóm <span aria-hidden="true">&#8599;</span></a></p></section>
+    <p class="allp"><a href="/projects/vi/">Tất cả dự án &rarr;</a></p>
+  </main>
+  <footer class="foot">
+    <p>Số liệu lấy từ báo cáo và repo của từng dự án. Thấy chỗ nào chưa khớp, nhắn <a href="mailto:andanghoang0@gmail.com">andanghoang0@gmail.com</a>.</p>
+    <p><a href="https://github.com/AnDpTri">github.com/AnDpTri</a> · <a href="/">andptri.github.io</a></p>
+  </footer>
+</body>
+</html>
