@@ -15,6 +15,8 @@
   <noscript><link rel="stylesheet" href="assets/fonts/fonts.css"></noscript>
 </head>
 <body>
+  <!-- The opening's first screen is up from the first paint, so the profile never flashes before the scripts load. -->
+  <script>document.body.classList.add('intro-active')</script>
   <div id="warp">
   <div id="scroller">
   <a class="skip-link" href="#main">Skip to personal file</a>
@@ -69,20 +71,22 @@
     <footer><p>© 2026 Đặng Hoàng An</p><p class="attribution">Non-commercial fan study. Cyberpunk: Edgerunners © CD PROJEKT RED / Studio Trigger. Some original frames are used in the middle section.</p></footer>
   </div>
   </div>
-  <div id="opening" hidden aria-label="Personal file connection sequence">
+  <div id="opening" aria-label="Personal file connection sequence">
     <canvas id="intro-canvas" aria-hidden="true"></canvas>
     <div id="boot">
       <p id="boot-title">Link established.<span class="boot-cursor" aria-hidden="true">_</span></p>
       <p id="boot-status">Opening An’s personal file.</p>
-      <pre id="system-log" aria-hidden="true"></pre>
+      <pre id="system-log" aria-hidden="true">archive.mount / personal_file.enc
+read-only session requested
+waiting for handshake_</pre>
       <button id="jack-in" type="button">Connect with sound ↵</button>
     </div>
     <div id="signal-card" hidden><p>NO SIGNAL</p></div>
     <p id="opening-announcement" class="opening-sr" role="status" aria-live="polite"></p>
   </div>
   </div>
-  <aside id="hud" aria-label="Session status"><time id="hud-clock"></time><span id="hud-network">NET: ONLINE</span><span>SESSION: guest</span><span id="hud-uptime">UP: 00:00:00</span><span id="opening-controls"><button id="skip-opening" type="button" aria-label="Skip opening and show profile" hidden>[skip]</button><button id="skip-toggle" type="button" aria-pressed="false" aria-label="Toggle skipping the opening on load">[ SKIP: OFF ]</button><button id="sound-toggle" type="button" aria-pressed="false" aria-label="Toggle sound">[ SND: OFF ]</button></span></aside>
-  <noscript><style>#archive{display:block!important}.shell,#all-projects,#sound-toggle{display:none}</style></noscript>
+  <aside id="hud" aria-label="Session status"><time id="hud-clock"></time><span id="hud-network">NET: ONLINE</span><span>SESSION: guest</span><span id="hud-uptime">UP: 00:00:00</span><span id="opening-controls"><button id="skip-opening" type="button" aria-label="Skip opening and show profile" hidden>[skip]</button><button id="skip-toggle" type="button" aria-pressed="true" aria-label="Toggle skipping the opening on load">[ SKIP: ON ]</button><button id="sound-toggle" type="button" aria-pressed="false" aria-label="Toggle sound">[ SND: OFF ]</button></span></aside>
+  <noscript><style>#archive{display:block!important}.shell,#all-projects,#sound-toggle,#skip-toggle,#opening{display:none!important}</style></noscript>
   <script type="module" src="crt.js?v=1793731000"></script>
   <script type="module" src="app.js?v=1794050000"></script>
 </body></html>
